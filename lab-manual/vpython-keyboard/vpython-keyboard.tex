@@ -1,0 +1,199 @@
+\lab{PROGRAM -- Keyboard Interactions}
+
+\apparatus
+\equip{Computer}
+\equip{VPython -- www.vpython.org}
+
+\longgoal
+
+The purpose of this activity is to incorporate keyboard and mouse interactions into a VPython program.
+
+\procedure
+
+\begin{enumerate}
+
+	\subsection*{Using the keyboard to set the velocity of an object}
+
+	\item Open the program from \emph{PROGRAM--Lists, Loops, and Ifs} of the four balls bouncing back and forth within the scene. We will use this program as our starting point. If you did not do this exercise, then the code for the program is shown below.
+	
+\begin{myvpython}
+from visual import *
+
+scene.range=5
+scene.autoscale=False
+
+ball1=sphere(pos=(-5,3,0), radius=0.2, color=color.magenta)
+ball2=sphere(pos=(-5,1,0), radius=0.2, color=color.cyan)
+ball3=sphere(pos=(-5,-1,0), radius=0.2, color=color.yellow)
+ball4=sphere(pos=(-5,-3,0), radius=0.2, color=color.orange)
+
+ball1.v=0.5*vector(1,0,0)
+ball2.v=1*vector(1,0,0)
+ball3.v=1.5*vector(1,0,0)
+ball4.v=2*vector(1,0,0)
+
+ballsList = [ball1, ball2, ball3, ball4]
+
+t=0
+dt=0.01
+
+while 1:
+    rate(100)
+    for thisball in ballsList:
+        thisball.pos=thisball.pos+thisball.v*dt
+        if thisball.pos.x>5:
+            thisball.v=-1*thisball.v
+        elif thisball.pos.x<-5:
+            thisball.v=-1*thisball.v
+    t=t+dt
+\end{myvpython}
+
+	\item Above your \code{while} loop, create a box that is at the position $(-4.5, -4.5, 0)$. Name it \texttt{shooter} and make its width, length, and height appropriate units so that it looks like it is sitting on the bottom of the window.
+	
+	\item Run your program and verify that the box is of correct dimensions and is in the left corner of the screen without appearing off screen.
+	
+	\item Define the velocity of the box to be to the right with a speed of 2 m/s. Name it \texttt{shooter.v}.
+	
+%\begin{myvpython}
+%shooter.v=2*vector(1,0,0)
+%\end{myvpython}
+
+Now we want to use the keyboard to make the box move. For right now, we are going to use the following strategy:
+
+\begin{itemize}
+	\item Look to see if a key is pressed.
+	\item Check to see which key is pressed.
+	\item If the right-arrow is pressed, set the velocity of the shooter to be to the right.
+	\item If the left-arrow is pressed, set the velocity of the shooter to be to the left.
+	\item If any other key is pressed, set the velocity of the shooter to be zero.
+	\item Move the box.
+\end{itemize}
+
+	\item At the end of your \code{while} loop, before you update the clock, type the following \code{if} statement.
+	
+\begin{myvpython}
+    if scene.kb.keys:
+            k = scene.kb.getkey()
+            if k == "right":
+                shooter.v=2*vector(1,0,0)
+            elif k == "left":
+                shooter.v=2*vector(-1,0,0)
+            else:
+                shooter.v=vector(0,0,0)
+    shooter.pos = shooter.pos + shooter.v*dt
+\end{myvpython}
+
+	\item Run your program and press the right arrow key, left arrow key, or any other key in order to see how it works.
+	
+	\item Now study the \code{if} statement and understand what each line does:
+
+\begin{myvpython}
+    if scene.kb.keys: 
+\end{myvpython}
+	
+	The list \code{scene.kb.keys} is a list of keys that have been pressed on the keyboard. The \code{if} statement checks to see whether this list exists because it only exists if at least one key has been pressed. Every time you press a key, the keystroke is appended to the end of this list.
+	
+\begin{myvpython}
+            k = scene.kb.getkey()
+\end{myvpython}
+
+	The function \code{scene.kb.getkey()} will get the last key that was pressed and will remove it from the end of the list. In this case, this keystroke is assigned to the variable $k$. The following \code{if-elif-else} statement checks the value of $k$ to see whether it was the left arrow key or right arrow key. For the left arrow key, the velocity is defined to the left. For the right arrow key, the velocity is defined to the right. For any other key (\code{else}), the velocity is set to zero.
+	
+	\subsection*{Using the keyboard to create a moving object}
+
+We are now going to use the keyboard to launch bullets from our shooter. We need another list where we can store the bullets. Before the \code{while} loop, create an empty list called \texttt{bulletsList}.
+
+\begin{myvpython}
+bulletsList=[]
+\end{myvpython}
+
+	\item In your \code{if} statement where you check for keyboard events, add the following \code{elif} statement.
+	
+\begin{myvpython}
+            elif k==" ":
+                bullet=sphere(pos=shooter.pos, radius=0.1, color=color.white)
+                bullet.v=3*vector(0,1,0)
+                bulletsList.append(bullet)
+\end{myvpython}
+            
+            Study this section of code and know what each line does. If you press the spacebar, a white sphere is created at the position of the shooter. Its name is assigned to be \texttt{bullet}. Then, its velocity is set to be in the $+y$ direction with a speed of 3 m/s. Finally, and this is really important, the bullet is added (i.e. appended) to the end of the \texttt{bulletsList}. This is so that we can later update the positions of all of the bullets in this list.
+            
+            \item In your \code{while} statement before you update the clock, add a \code{for} loop that updates the positions of the bullets.
+            
+\begin{myvpython}
+    for thisbullet in bulletsList:
+        thisbullet.pos=thisbullet.pos+thisbullet.v*dt
+\end{myvpython}  
+    
+Your final \code{while} loop should look like this:
+
+\begin{myvpython}
+while 1:
+    rate(100)
+    for thisball in ballsList:
+        thisball.pos=thisball.pos+thisball.v*dt
+        if thisball.pos.x>5:
+            thisball.v=-1*thisball.v
+        elif thisball.pos.x<-5:
+            thisball.v=-1*thisball.v
+
+    if scene.kb.keys:
+            k = scene.kb.getkey()
+            if k == "right":
+                shooter.v=2*vector(1,0,0)
+            elif k == "left":
+                shooter.v=2*vector(-1,0,0)
+            elif k==" ":
+                bullet=sphere(pos=shooter.pos, radius=0.1, color=color.white)
+                bullet.v=3*vector(0,1,0)
+                bulletsList.append(bullet)
+            else:
+                shooter.v=vector(0,0,0)
+    shooter.pos = shooter.pos + shooter.v*dt
+
+    for thisbullet in bulletsList:
+        thisbullet.pos=thisbullet.pos+thisbullet.v*dt
+    
+    t=t+dt
+\end{myvpython}  
+
+You should study this code and know what each line means.
+
+\item Run your program.
+
+\end{enumerate}
+
+\pagebreak
+
+\analysis
+
+\begin{description}
+
+\item[C] Do all of the following.
+\begin{enumerate}
+	\item Assign variables to the speed of the shooter and the speed of the bullet.
+	\item Replace all instances of "2" for the shooter with the variable for the speed of the shooter.
+	\item Replace all instances of "3" with the variable for the speed of the bullet of the bullet.
+\end{enumerate}
+
+\item[B] Do everything for {\bf C} and the following.
+
+\begin{enumerate}
+	\item Fire the bullets from the center of the top plane of the box instead of its center.
+	\item Add a counter called \texttt{shots} and set \vpythonline{shots=0} before your \code{while} loop. Update the value of \texttt{shots} and print the value of \texttt{shots} every time a bullet is fired.
+	\item Check to see if the up arrow key is pressed or the down arrow key is pressed. If one of these keys is pressed, set the velocity of the shooter to be up or down, respectively.
+\end{enumerate}
+
+\item[A] Do everything for {\bf B} with the following modifications and additions.
+
+\begin{enumerate}
+	\item Add additional keystrokes that will fire a bullet to the left, to the right, or downward.
+	\item Suppose that the shooter only has 10 bullets. When the shooter reaches a maximum of 10 bullets, hitting the spacebar will no longer file a bullet.
+	\item Create a keystroke that will replenish the shooter, meaning that after hitting this keystroke, you can fire 10 more bullets.
+\end{enumerate}
+
+
+
+
+\end{description}
+

@@ -1,0 +1,155 @@
+
+\lab{PROGRAM -- Modeling motion of a fancart}
+
+\apparatus
+
+\equip{VPython}
+\equip{computer}
+
+\longgoal
+
+In this activity, you will learn how to use a computer to model motion with a constant net force. Specifically, you will model the motion of a fan cart on a track.
+
+\introduction
+
+We are going to model the motion of a cart using the following data.
+
+\bigskip
+\noindent
+\begin{tabular}{|p{1in}|p{2in}|}
+	\hline
+	mass of cart & 0.8 kg\\
+	\hline
+	$\vec{F}_{\mbox{net on cart}}$ & $<0.15,0,0>$ N\\
+	\hline
+\end{tabular}
+
+\procedure
+
+\begin{enumerate}
+	\item Begin with a program that simulates a cart moving with constant velocity on a track.
+	
+\begin{vpythonblock}
+from visual import *
+
+track = box(pos=vector(0,-0.05,0), size=(3.0,0.05,0.1), color=color.white)
+cart = box(pos=vector(-1.4,0,0), size=(0.1,0.04,0.05), color=color.green)
+
+cart.m = 0.8
+cart.v = vector(1,0,0)
+
+dt = 0.01
+t = 0
+
+scene.mouse.getclick()
+
+while cart.pos.x < 1.5 and cart.pos.x >-1.5:
+	rate(100)
+	cart.pos = cart.pos + cart.v*dt
+	t = t+dt
+\end{vpythonblock}
+
+	\item Run the program
+
+\smallframe{What does line 12 do? It may help to comment it out and re-run your program to see how it changes things.}
+
+\smallframe{What line updates the position of the cart for each time step?}
+
+\smallframe{What line updates the clock for each time step?}
+
+\smallframe{Is the clock used in any calculations? Is it required for our program?}
+
+\smallframe{What line causes the program to stop if the cart goes off the end of the track?}
+
+
+We will now apply Newton's second law in order to apply a force to the cart and update its velocity for each time step. There are generally three things that must be done in each iteration of the loop:
+	
+	\begin{enumerate}
+		\item calculate the net force (thought it will be constant in this case)
+		\item update the velocity of the cart
+		\item update the position of the cart
+		\item update the clock (\emph{this is not necessary but is often convenient})
+	\end{enumerate}
+
+Your program is already doing the third and fourth items in this list. However, the first two items must be added to your program.
+
+\item Between the \code{rate()} statement and the position update calculation, insert the following two lines of code:
+
+\begin{myvpython}
+	Fnet=vector(-0.15,0,0)
+	cart.v = cart.v + (Fnet/cart.m)*dt
+\end{myvpython}
+
+The first line calculates the net force on the cart (though it is just constant in this case). The second line updates the velocity of the cart in accordance with Newton's second law. After making this change, your \code{while} loop will look like:
+
+\begin{vpythonblock}
+while cart.pos.x < 1.5 and cart.pos.x >-1.5:
+	rate(100)
+	Fnet=vector(-0.15,0,0)
+	cart.v = cart.v + (Fnet/cart.m)*dt
+	cart.pos = cart.pos + cart.v*dt
+	t = t+dt
+\end{vpythonblock}
+
+This block of code performs the necessary calculations of net force, velocity, position, and clock reading.
+
+\item Run your program and view the motion.
+
+\smallframe{What is the direction of the net force on the cart? Sketch a side view of the fancart that shows the orientation of the fan.}
+
+Now we will add an arrow object in order to visualize the net force on the cart.  An arrow in VPython is specified by its position (the location of the tail) and its axis (the vector that the arrow represents), as shown in Figure \ref{vpython-fancart/arrow}. The axis contains both magnitude and direction information. The magnitude of the axis is the arrow's length and the unit vector of the axis is the arrow's direction. The components of the axis are simply the components of the vector that the arrow represents.
+
+\scaledimage{vpython-fancart/arrow}{A arrow in VPython.}{0.75}
+
+\item Near the top of your program after creating the track and cart, add the following two lines to define a scale and to create an arrow that has the same components $(-0.15,0,0)$ as the net force on the cart.
+
+\begin{myvpython}
+scale=1.0
+forcearrow = arrow(pos=cart.pos, axis=scale*vector(-0.15,0,0), color=color.yellow)
+\end{myvpython}
+
+\item Run your program.
+
+\item Increase the scale and re-run your program.
+
+\smallframe{What does changing the scale do? Why do we want to use this variable and adjust it?}
+
+\smallframe{Why does the arrow not move with the cart?}
+
+\item We want to make the arrow move with the cart. Thus, in our loop we need to update the position of the arrow after we update the position of the cart. Also, in some situations, the force changes, so in general it's a good idea to update the arrow's axis as well. At the bottom of your \code{while} loop, after you've updated the clock, add the following lines in order to update the position of the arrow and the axis of the arrow.
+
+\begin{myvpython}
+	forcearrow.pos=cart.pos
+	forcearrow.axis=scale*Fnet
+\end{myvpython}
+
+\item Run your program.
+
+\end{enumerate}
+
+\report
+
+\begin{description}
+
+\item[C]  Complete the experiment and report your answers for the following questions.
+
+\begin{enumerate}
+	 \item Does the simulation behave like a real fancart?
+	\item Though the velocity of the cart changes as it moves, does the force change or is the force constant?
+	\item Does the acceleration of the cart change or is the car's acceleration constant?
+	\item When the cart passes $x=0$, turn off the fan (i.e. set the net force on the cart to zero). Describe the resulting motion of the cart. What is the velocity of the cart after the fan turns off?
+\end{enumerate}
+
+\item[B] Do all parts for {\bf C} do the following.
+
+\begin{enumerate}
+ \item Add a second arrow that represents the velocity of the cart. Update its position and its axis. Give it an appropriate scale.
+\end{enumerate}
+
+\item[A] Do all parts for {\bf C} and {\bf B} and do the following.
+
+\begin{enumerate}
+ \item Add keyboard interactions that allow the user to make the force zero (i.e. turn off the fan), turn on a constant force to the right, or turn on a constant force to the left. In all of these cases, the arrow should indicate the state of the fan.
+ \item Check that your code results in correct motion. Compare to how a real fan cart would behave. Describe what you did to test your code, and describe what observations you made that convince you that it works correctly. Your description of the motion of the cart should be accompanied by pictures with force and velocity arrows.
+\end{enumerate}
+\end{description}

@@ -1,0 +1,253 @@
+\lab{GAME -- Tank Wars}
+
+\apparatus
+\equip{Computer}
+\equip{VPython -- www.vpython.org}
+
+\longgoal
+
+The purpose of this activity is to create a Tank Wars game where you will move a tank and adjust the launch angle and launch speed to hit a target.
+
+\procedure
+
+\begin{enumerate}
+        
+\item Download the program \file{tank-wars-template.py} from our course web site. For your reference, the program is printed below.
+
+\begin{vpythonblock}
+from visual import *
+
+def rad(degrees): #converts an angle in degrees to an angle in radians
+    radians=degrees*pi/180
+    return radians
+
+scene.range=20
+scene.width=800
+scene.height=800
+
+#create objects
+ground = box(pos=vector(0,-15,0), size=(40.0,1,2), color=color.green)
+tank = box(pos=vector(-18,-13,0), size=(2,2,2), color=color.yellow)
+turret = cylinder(pos=tank.pos, axis=(0,0,0), radius=0.5, color=tank.color)
+turret.pos.y=turret.pos.y+tank.height/2
+angleBar = cylinder(pos=vector(-18,-19,0), axis=(1,0,0), radius=1, color=color.magenta)
+speedBar = cylinder(pos=vector(5,-19,0), axis=(1,0,0), radius=1, color=color.cyan)
+
+#turret
+theta=rad(45)
+dtheta=rad(1)
+L=3
+turret.axis=L*vector(cos(theta),sin(theta),0)
+
+#bullets
+bulletsList=[]
+m=1
+muzzlespeed=15
+dspeed=1
+
+#Bar
+angleBar.axis=(5*theta)*vector(1,0,0)
+speedBar.axis=(muzzlespeed/2+0.5)*vector(1,0,0)
+
+#motion
+g=vector(0,-10,0)
+dt = 0.01
+t = 0
+
+while 1:
+    scene.mouse.getclick()
+    while 1:
+        rate(100)
+        if scene.kb.keys:
+            k = scene.kb.getkey()
+            if k == "up":
+                theta=theta+dtheta
+                turret.axis=L*vector(cos(theta),sin(theta),0)
+                angleBar.axis=(5*theta)*vector(1,0,0)
+            elif k == "down":
+                theta=theta-dtheta
+                turret.axis=L*vector(cos(theta),sin(theta),0)
+                angleBar.axis=(5*theta)*vector(1,0,0)
+            elif k == "left":
+                muzzlespeed=muzzlespeed-dspeed
+                speedBar.axis=(muzzlespeed/2+0.5)*vector(1,0,0)
+            elif k == "right":
+                muzzlespeed=muzzlespeed+dspeed
+                speedBar.axis=(muzzlespeed/2+0.5)*vector(1,0,0)
+            elif k==" ":
+                bullet=sphere(pos=turret.pos+turret.axis, radius=0.5, color=color.white)
+                bullet.v=muzzlespeed*vector(cos(theta),sin(theta),0)
+                bulletsList.append(bullet)
+            elif k=="Q":
+                break
+
+        if muzzlespeed>20:
+            muzzlespeed=20
+        if muzzlespeed<1:
+            muzzlespeed=1
+        if theta>rad(90):
+            theta=rad(90)
+        if theta<0:
+            theta=0
+
+        for thisbullet in bulletsList:
+            if(thisbullet.pos.y<ground.y+ground.height/2):
+                thisbullet.Fnet=vector(0,0,0)
+                thisbullet.v=vector(0,0,0)
+            else:
+                thisbullet.Fnet=m*g
+#            thisbullet.v=
+#            thisbullet.pos=
+
+        t=t+dt
+
+\end{vpythonblock}
+
+\item Read the program above and answer the following questions.
+
+\smallframe{What should lines 82 and 83 be in order to correctly update a bullet's velocity and position for each time step?}
+
+\smallframe{Is the world in this simulation Earth?  Cite a particular line number in the code in order to support your answer.}
+
+\smallframe{What does the \code{rad()} function do?}
+
+\smallframe{What does the variable $L$ tell you?}
+
+\smallframe{What is the variable name for the initial speed of the bullet? How much does the launch speed of the bullet change when you press the right or left arrow key?}
+
+\smallframe{What is the variable name for the angle the bullet is launched at? How much does the angle change when you press the right or left arrow key and is the unit radians or degrees?}
+
+
+\smallframe{After a bullet hits the ground, what is the net force on the bullet and what is its velocity? Cite the particular line numbers that support your answer.}
+
+\smallframe{What key strokes are used to change the launch angle?}
+
+\smallframe{What keystrokes are used to change the launch speed?}
+
+\smallframe{What is the maximum and minimum launch speeds allowed? Which line numbers tell you this?}
+
+\smallframe{What is the maximum and minimum angles allowed? Which line numbers tell you this?}
+
+	\item Edit lines 82 and 83 so that they use correct physics to update the velocity and position of each bullet and run the program.
+	
+The reason that there are nested \code{while} loops is that you are going to create a target, and after a bullet hits the target, you may want to pause the game, reset certain variables, add a barrier, count a score, etc. The inner while loop handles the animation and the outer while loop is where you'll do other things after the target is hit. At this point, the outer loop only runs one iteration and only pauses the program, waiting for a mouse click.
+
+We are now going to add a few features to the game.
+
+\subsection*{Creating a Target}
+
+	\item Create a target that is a box named \code{target} that is the size of the tank and place it somewhere else on the terrain. Run your program to see the target.
+	
+We will need to check for collisions between a bullet and the target. It is convenient to create a function that does the math to see if the bullet (sphere) and target (box) overlap. If they do overlap, it returns \code{True}. If they do not overlap, the it returns \code{False}.
+
+	\item At the top of your program near where the \code{rad()} function is defined, add the following function. You do not have to type the commented lines. You will need to double check your typing to make sure you do not have any typos. The condition of the \code{if} statement is rather long, so check it for accuracy.
+	
+\begin{myvpython}
+#determines whether a sphere and box intersect or not
+#returns boolean
+def collisionSphereAndBox(sphereObj, boxObj):
+    result=True
+    if((sphereObj.pos.x-sphereObj.radius<boxObj.pos.x+boxObj.length/2 and sphereObj.pos.x+sphereObj.radius>boxObj.pos.x-boxObj.length/2) and (sphereObj.pos.y-sphereObj.radius<boxObj.pos.y+boxObj.height/2 and sphereObj.pos.y+sphereObj.radius>boxObj.pos.y-boxObj.height/2)):
+        result=True
+        dist=sqrt((sphereObj.pos.x-boxObj.pos.x)**2+(sphereObj.pos.y-boxObj.pos.y)**2)
+        if(dist>sphereObj.radius+sqrt((boxObj.length/2)**2+(boxObj.width/2)**2)):
+            result=False
+        return result
+    else:
+        result=False
+    return result
+\end{myvpython}
+
+	\item At the \code{if} statement at line 77 in the above printout where the program checks whether the bullet hits the ground, add an \code{elif} statement (between the if and else) to check whether the bullet collides with the target. It should look like this.
+	
+\begin{myvpython}
+            elif collisionSphereAndBox(thisbullet,target):
+                thisbullet.Fnet=vector(0,0,0)
+                thisbullet.v=vector(0,0,0)
+                print("direct hit!")
+                break
+\end{myvpython}
+
+	\item Run your program. Fire a bullet that hits the target and observe the console after the collision. You should see it printing ``direct hit!'' over and over.
+	
+\smallframe{Why does it continuously print ``direct hit!'' instead of printing it just one time?}
+
+	We need a boolean variable that keeps track of whether the target is hit or not. If it is hit, then we will set this boolean to True and break out of the inner while statement. In fact, we will make this the condition of the inner while statement. We will only go through the inner while loop as long as the target is not hit.
+	
+	\item Before the outer \code{while} loop, add the following code:
+	
+\begin{myvpython}
+	hit = False
+\end{myvpython}
+
+This variable \code{hit} will be False until the target is hit. After the target is hit, we will set the variable to \code{True}.
+
+	\item Change the condition of the inner while loop to read:
+	
+\begin{myvpython}
+    while hit==False:
+\end{myvpython}
+    
+    It is no longer an infinite loop. It only runs while \code{hit=False}. If \code{hit} is chagned to \code{True}, then the inner loop will end, and the outer loop will iterate.
+    
+	\item Inside the \code{elif} statement where you check for a collision between the bullet and target and print ``direct hit!'', set \code{hit=True} before the \code{break} statement.
+	
+	\item Run your program.
+	
+\smallframe{After the target is hit, the program seems to stop. The reality is that it is stuck in the infinite outer loop and never running back through the inner loop. Why?}
+
+	\item We would like to do three things before running the inner loop again (or after--it doesn't matter). These three things effectively resets the game back to the initial state.
+	
+	\begin{enumerate}
+		\item Set the hit variable to False.
+		\item Erase all of the bullets in the scene.
+		\item Reset the bulletsList to an empty list.
+	\end{enumerate}
+	
+	Add the following code before the inner \code{while} loop and after the \code{getclick()} statement.
+	
+\begin{myvpython}
+    hit = False
+    for thisbullet in bulletsList:
+        thisbullet.visible=False
+    bulletsList=[]
+\end{myvpython}
+    
+    These three lines do the three things outlined above to reset the game back to the initial conditions. (Technically we haven't completely reset it. It might be nice to reset the launch speed and launch angle back to their initial values for example.)
+    
+    \item Run your program. Verify that it works as expected.
+
+\end{enumerate}
+
+\pagebreak
+
+\analysis
+
+\begin{description}
+
+\item[C] Complete this exercise and do the following.
+
+\begin{enumerate}
+	\item Print the launch speed of the bullet, the launch angle of the bullet, and the x-position of the bullet (called the range) when the bullet hits the target or ground.
+	\item Change the maximum speed of the bullet to 30.
+	\item Set the initial launch angle to 60 degrees (do this in the code) and find the launch speed necessary to hit the target if the target is at $x=18$. Set the initial launch speed to this value in the code so that when your code is run for the first time, the projectile will be launched at 60 degrees and will hit the target which is at $x=18$.
+\end{enumerate}
+
+\item[B] Do everything for {\bf C} and the following.
+
+\begin{enumerate}
+	\item Add a key stroke that will move the tank left and right, but do not allow the tank to go past the center of the screen or off the left side of the screen.
+\end{enumerate}
+
+\item[A] Do everything for {\bf B} with the following modifications and additions.
+
+\begin{enumerate}
+	\item Create a barrier (a box) that sits between the tank and the target. If a bullet hits the barrier, it will stop just it stops when it hits the ground. Remember to use your \code{collisionSphereAndBox()} function to check for a collision between the bullet and barrier.
+	\item Create different levels of the game. Create a variable called \code{level} that is an integer from 1--5. In the first level, there is no barrier. In the second level, there is a barrier. For other levels, place the tank at a different height or the target at a different height, for example. After getting to the fifth level, either end the game or go back to the first level.
+\end{enumerate}
+
+
+
+
+\end{description}
+

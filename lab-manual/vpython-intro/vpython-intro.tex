@@ -1,0 +1,348 @@
+\lab{PROGRAM:  Introduction to VPython}
+
+\apparatus
+\equip{Computer}
+\equip{VPython -- www.vpython.org}
+
+\longgoal
+
+The purpose of this experiment is to write your first program in a language called Python. We will use a package Visual that gives Python the capability of doing vector algebra and creating 3D objects in a 3D scene. The use of Python with the Visual package is called VPython. The capability of 3D graphics with vector mathematics makes it a great tool for simulating physics phenomena. In this lab, you will learn:
+
+\begin{itemize}
+	\item how to use VIDLE, the integrated development editor for VPython.
+	\item how to structure a simple computer program in VPython.
+	\item how to create 3D objects such as spheres and arrows.
+%	\item how to define vectors in VPython.
+%	\item how to add and subtract vectors in VPython.
+\end{itemize}
+
+\setup
+
+If not already installed, be sure to install Python and Visual on your computer. It is available for Mac, Linux, and Windows. Be sure to follow the download instructions at \href{http://www.vpython.org}{http://www.vpython.org}.
+
+\procedure
+
+\begin{enumerate}
+
+	\subsection*{Opening the editor VIDLE}
+
+	\item After installation of both Python and Visual, find the application ``IDLE'' or maybe ``VIDLE'' and open it. This is a text editor where you will write and run your programs.
+	
+	\subsection*{Starting a program:  Setup statements}
+	
+	\item Enter the following two statements in the IDLE editor window.
+	
+\begin{myvpython}
+from  __future__  import division
+from visual import *
+\end{myvpython}
+	
+Every VPython program begins with these setup statements. 
+
+The first statement (\texttt{from space underscore underscore future underscore underscore space import space *}) tells the Python language to treat 1/2 as 0.5. Without the first statement, the Python programming language does integer division with truncation and 1/2 is zero!
+
+The second statement tells the program to use the package ``visual'' which will give Python the capability to handle 3D graphics and vector arithmetic.
+
+	\item Save the program. In the VIDLE editor, from the \texttt{File} menu, select \texttt{Save}.  Browse to a location where you can save the file, and give it the name ``vectors.py''. YOU MUST TYPE the ``.py'' file extension because VIDLE will NOT automatically add it. Without the ``.py'' file extension VIDLE won't display statements in a different font color.
+	
+	\subsection*{Creating an object}
+
+	\item Now tell VPython to make a sphere. On the next line, type:
+
+\begin{myvpython}
+sphere()
+\end{myvpython}
+
+This statement tells the computer to create a sphere object.
+
+	\item Run the program by pressing F5 on the keyboard. Two new windows appear in addition to the editing window. One of them is the 3-D graphics window, which now contains a sphere.
+	
+	\subsection*{The 3-D graphics scene}
+	
+By default the sphere is at the center of the scene, and the ``camera'' (that is, your point of view) is looking directly at the center.
+	
+	\item Hold down both mouse buttons and move the mouse forward and backward to make the camera move closer or farther away from the center of the scene. (On a Mac, hold down the option key while moving the mouse forward and backward.)
+	\item Hold down the right mouse button alone and move the mouse to make the camera ``revolve'' around the scene, while always looking at the center. (On a Mac, in order to rotate the view, hold down the Command key while you click and drag the mouse.)
+
+When you first run the program, the coordinate system has the positive x direction to the right, the positive y direction pointing up, toward the top edge of the monitor, and the positive z direction coming out of the screen toward you. You can then rotate the camera view to make these axes point in other directions. 
+	
+	\subsection*{The Python Shell window is important -- Error messages appear here}
+	
+IMPORTANT: Arrange the windows on your screen so the Shell window is always visible.  
+DO NOT CLOSE THE SHELL WINDOW.
+KILL the program by closing only the graphic display window.
+
+The second new window that opened when you ran the program is the Python Shell window. If you include lines in the program that tell the computer to print text, the text will appear in this window.
+
+\scaledimage{vpython-intro/vpython-windows}{Arrange the IDLE windows so that you can see the Shell.}{1}
+
+	\item Use the mouse to make the Python Shell window smaller, and move it to the lower part of the screen as shown below. Keep it open when you are writing and running programs so you can easily spot error messages, which appear in this window. 
+	\item Make your edit window small enough that you can see both the edit window and the Python Shell window at all times. Do not expand the edit window to fill the whole screen. You will lose important information if you do!
+	\item To kill the program, close only the graphics window. Do not close the Python Shell window.
+		
+	\subsection*{Error messages: Making and fixing an error}
+	
+	To see an example of an error message, let's try making a spelling mistake.
+	
+	\item Change the third statement of the program to the following:
+	
+\begin{myvpython}
+phere()
+\end{myvpython}
+
+	\item Run the program.
+
+There is no function or object in VPython called phere(). As a result, you get an error message in red text in the Python Shell window. The message gives the filename, the line where the error occurred, and a description of the error. For example:
+
+\begin{verbatimtab}
+Traceback (most recent call last):
+  File "/Users/atitus/Documents/courses/PHY221/presentations/chapter-01/lab/
+vpython/vectors.py", line 4, in <module>
+    phere()
+NameError: name 'phere' is not defined
+\end{verbatimtab}
+
+Read error messages from the bottom up. The bottom line contains the information about the location of the error.
+
+	\item Correct the error in the program. Whenever your program fails to run properly, look for a red error message in the Python Shell window.
+
+Even if you don't understand the error message, it is important to be able to see it, in order to find out that there is an error in your code. This helps you distinguish between a typing or coding mistake, and a program that runs correctly but does something other than what you intended.
+	
+	\subsection*{Changing ``attributes'' (position, size, color, shape, etc.) of an object}
+	
+Now let's give the sphere a different position in space and a radius. 
+
+	\item Change the last line of the program to the following:
+	
+sphere(pos=(-5,2,3), radius=0.40, color=color.red)
+
+	\item Run the program.  Experiment with other changes to pos, radius, and color, running the program each time you change something.
+	\item Find answers to the following questions:
+	
+	\tightframe{
+QUESTIONS TO ANSWER ABOUT SPHERES:
+
+What does changing the pos attribute of a sphere do?\\
+\vspace{0.25in}
+
+What does changing the radius attribute of a sphere do?\\
+\vspace{0.25in}
+
+What does changing the color attribute of a sphere do? What colors can you use? (Note: you can try color=(1,0.5,0) for example. The numbers stand for RGB (Red, Green, Blue) and can have values between 0 and 1. Can you make an purple sphere? Note that colors such as cyan, yellow, and magenta are defined, but not all possible colors are defined. Choose random numbers between 0 and 1 for the (Red, Green, Blue) and see what you get. \\
+\vspace{0.25in}
+
+}
+
+	\subsection*{Autoscaling and units}
+
+VPython automatically zooms the camera in or out so that all objects appear in the window. Because of this autoscaling, the numbers for the pos and radius can be in any consistent set of units, like meters, centimeters, inches, etc. For example, this could represent a sphere with a radius 0.20 m at the position (2,4,0) m. In this course we will often use SI units in our programs (``Systeme International'', the system of units based on meters, kilograms, and seconds).
+
+	\subsection*{Creating a box object}
+
+Another object that we will often create is a box. A box is defined by its position, axis, length, width, and height as shown in Figure \ref{vpython-intro/box}.
+
+\scaledimage{vpython-intro/box}{Attributes of a box.}{0.7}
+
+	\item Type the following on a new line, then run the program:
+
+\begin{myvpython}
+box(pos=(0,0,0), length=2, height=1, width=0.5, color=color.orange)
+\end{myvpython}
+
+	\item Change the length to 4 and rerun the program.
+	
+	\item Now change its height and rerun the program.
+	
+	\item Similarly change its width and position.
+
+\tightframe{
+QUESTIONS TO ANSWER ABOUT BOXES:
+
+Which dimension (length, width, or height) should be changed to make a box that is longer along the y-axis?\\
+\vspace{0.25in}
+
+What point does the position refer to: the center of the box, one of its corners, the center of one of its faces, or some other point?
+\vspace{0.25in}
+}
+
+	\subsection*{Comment lines (lines ignored by the computer)}
+
+Comment lines start with a \# (pound sign). 
+A comment line can be a note to yourself, such as:
+
+\begin{myvpython}
+# units are meters
+\end{myvpython}
+
+Or a comment can be used to remove a line of code temporarily, without erasing it.
+
+	\item Put a \# at the beginning of the line creating the box, as shown below.
+
+\begin{myvpython}
+#box(pos=(0,0,0), length=2, height=1, width=0.5, color=color.orange)
+\end{myvpython}
+
+	\item Run the program. What did you observe?
+	
+	\item Uncomment that line by deleting the \# and run the program again. The box now appears.
+	
+	\subsection*{Naming objects; Using object names and attributes}
+	
+We will draw a tennis court and will change the position of a tennis ball.
+
+	\item Clean up your program so it contains only the following objects:  
+
+A green box that represents a tennis court. Make it 78 ft long, 36 ft wide, and 4 ft tall. Place its center at the origin.
+
+An orange sphere (representing a tennis ball) at location \triple{-28}{5}{8} ft, with radius 1 ft. Of course a tennis ball is much smaller than this in real life, but we have to make it big enough to see it clearly in the scene. Sometimes we use unphysical sizes just to make the scene pretty.
+
+(Remember, that you don't type the units into your program. But rather, you should use a consistent set of units and know what they are.)
+
+	\item Run your program and verify that it looks as expected. Use your mouse to rotate the scene so that you can see the ball relative to the court. 
+
+	\item Change the initial position of the tennis ball to \triple{0}{6}{0} ft. 
+
+	\item Run the program.
+
+	\item Sometimes we want to change the position of the ball after we've defined it. Thus, give a name to the sphere by changing the \code{sphere} statement in the program to the following:
+
+\begin{myvpython}
+tennisball = sphere(pos=(0,6,0), radius=1, color=color.orange)
+\end{myvpython}
+
+We've now given a name to the sphere. We can use this name later in the program to refer to the sphere. Furthermore, we can specifically refer to the attributes of the sphere by writing, for example, \code{tennisball.pos} to refer to the tennis ball's position attribute, or \code{tennisball.color} to refer to the tennis ball's color attribute. To see how this works, do the following exercise.
+
+	\item Start a new line at the end of your program and type:
+
+\begin{myvpython}
+print(tennisball.pos)
+\end{myvpython}
+
+If you are using an older version of VPython, you may have to print the position using the syntax:
+
+\begin{myvpython}
+print "tennisball.pos"
+\end{myvpython}
+
+
+	\item Run the program.
+
+	\item Look at the text output window. The printed vector should be the same as the tennis ball's position.
+
+	\item Add a new line to the end of your program and type:
+	
+\begin{myvpython}
+tennisball.pos=vector(32,7,-12)
+\end{myvpython}
+	
+	When running the program, the ball is first drawn at the original position but is then drawn at the last position. Note that whenever you set the position of the tennis ball to a new value in your program, the tennis ball will be drawn at that position. You may have notice a very quick flash after you first run your program, showing the ball drawn at the first position and then redrawn at the new position.
+	
+	\item Add a new line to the end of your program and type:
+	
+\begin{myvpython}
+print(tennisball.pos)
+\end{myvpython}
+
+(Or just copy and paste your previous print statement.)
+
+	\item Run your program. It now draws the ball, prints its position, redraws the ball at a new position, and prints its position again. As a result, you should see the following two lines printed:
+	
+\begin{verbatim}
+<0, 6, 0>
+<32, 7, -12>
+\end{verbatim}
+	
+	Of course, this happens faster than your eye can see it which is why printing the values is so useful.
+		
+%	\subsection*{Multiplying by a scalar; Scaling an arrow's axis}
+
+%Since position of a sphere is a vector, we can perform scalar multiplication on it.
+
+%	\item Place the tennis ball at the position \triple{2}{0}{0} m.
+
+%	\item Modify the position of the tennis ball by changing the statement to the following, and note what happens.
+%	
+%\begin{myvpython}
+%tennisball = sphere(pos=2*vector(2,0,0), radius=0.2, color=color.green)
+%\end{myvpython}
+
+%\tightframe{
+%QUESTIONS TO ANSWER ABOUT SCALING ARROWS:
+
+%To move the tennis ball three times further on the x-axis, what scalar would you multiply its position by?\\
+%\vspace{0.25in}
+
+%To move the tennis ball to the other side of the origin by multiplying by a scalar factor, what factor should you use?\\
+%\vspace{0.25in}
+%
+%}	
+
+%	\subsection*{Vector addition and subtraction}
+
+%The \emph{relative position} of an object is the object's position relative to a location other than the origin. If point P is a given location in space, then the position of an object relative to P is
+
+%\begin{eqnarray*}
+%	\vectsub{r}{relative to P} & = & \vect{r} - \vectsub{r}{P} \\
+%\end{eqnarray*}
+
+%VPython can subtract vectors. So now, you can create a second object, a baseball, and draw an arrow from the tennis ball to the baseball.
+
+%\item Place the tennis ball at the position \triple{2}{0}{0} m.
+
+%\item Create a baseball at the position $\triple{-1}{4}{0}$ m and name the sphere \code{baseball}.
+
+%\item Create an arrow that represents the position of the baseball. It should point from the origin to \code{baseball.pos}, so its \code{pos} is $(0,0,0)$ and its axis is \code{baseball.pos}. To do this, type the line below.
+
+%\begin{myvpython}
+%arrow(pos=vector(0,0,0), axis=baseball.pos, color=color.white)
+%\end{myvpython}
+
+%\item Create an arrow that represents the position of the baseball relative to the tennis ball. Note that its tail is at the position of the tennis ball, and its head is at the position of the baseball. The axis of the arrow represents the relative position vector and is calculated by:
+
+%\begin{eqnarray*}
+%	\vectsub{r}{baseball relative to tennisball} & = & \vectsub{r}{baseball} - \vectsub{r}{tennis ball} \\
+%\end{eqnarray*}
+
+%In symbolic notation in VPython, write, this is calculated as \code{baseball.pos-tennisball.pos}. So, write:
+
+%\begin{vpythonblock}
+%arrow(pos=tennisball.pos, axis=baseball.pos-tennisball.pos, color=color.white)
+%\end{vpythonblock}
+
+%Note that \code{pos} represents the tail of the arrow. The vector is the \code{axis} of the arrow which is really the position of the head relative to the position of the tail.
+
+\end{enumerate}
+
+\analysis
+
+We are going to begin writing a program that will later become the game Missile Command, and we will use what we learned in this tutorial.
+
+\begin{description}
+
+\item[C] Do all of the following.
+\begin{enumerate}
+	\item Create a new blank file and name it \emph{missile-command.py}. 
+	\item Create a green box that is at the location (0,-950,0), has a length=2000, height=100, and width=50 units.
+	\item Create a red sphere at (-500,950,0) with a radius of 50.
+	\item Create a magenta box at (750,-850,0) with a length=100, height=100, and width=50 units.
+\end{enumerate}
+
+\item[B] Do everything for {\bf C} and the following.
+
+\begin{enumerate}
+	\item Name the sphere \code{source1}.
+	\item Name the box \code{city1}.
+\end{enumerate}
+
+\item[A] Do everything for {\bf B} with the following modifications and additions.
+
+\begin{enumerate}
+	\item Create a total of 3 red spheres that are equally spaced across the top of the window. Remember that the green box has a length of 2000 which determines the width of the window. Name the spheres from left to right: \code{source1}, \code{source2}, and \code{source3}.
+	\item Create a total of 6 magenta cities that are equally spaced across the top of the green box. Name them \code{city1} through \code{city6}, from left to right.
+\end{enumerate}
+
+
+
+
+\end{description}
+

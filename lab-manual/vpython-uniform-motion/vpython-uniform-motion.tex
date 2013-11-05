@@ -1,0 +1,287 @@
+\lab{PROGRAM -- Uniform Motion}
+
+\apparatus
+\equip{Computer}
+\equip{VPython -- www.vpython.org}
+
+\longgoal
+
+The purpose of this activity is to learn how to use VPython to model uniform motion (i.e. motion with a constant velocity).
+
+\introduction
+
+\subsection*{General structure of a program}
+
+In general, every program that models the motion of physical objects has two main parts:
+
+\begin{enumerate}
+	\item {\bf Before the loop}:  The first part of the program tells the computer to:
+	\begin{enumerate}
+		\item Create 3D objects.
+		\item Give them initial positions and velocities.
+		\item Define numerical values for constants we might need.
+	\end{enumerate}
+	\item {\bf The \texttt{while} loop}:  The second part of the program, the loop, contains the lines that the computer reads to tell it how to update the positions of the objects over and over again, making them move on the screen. \end{enumerate}
+
+To learn how to model the motion of an object, we will write a program to model the motion of a ball moving with a constant velocity.
+
+\procedure
+
+Before you begin, it will be useful to look back at your notes or a previous program to see how you created a sphere and box.
+
+\begin{enumerate}
+
+	\item Open a new window in VIDLE. 
+	
+	\item Enter the following two statements in the IDLE editor window.
+	
+\begin{myvpython}	
+from visual import *
+\end{myvpython}
+
+\item Save this file with a new name like \texttt{ball-uniform-motion.py}.
+
+\item Add the line below to create a track that is at the origin and has a length of 3 m, a width of 0.1 m, and a height of 0.05 m. Note that the y-position is -0.075 m (below zero) so that we can place a ball at $y=0$ such that it appears to be on top of the track..
+
+\begin{myvpython}
+track=box(pos=vector(0,-0.075,0), size=(3,0.05,0.1), color=color.white)
+\end{myvpython}
+
+\item Create a ball (i.e. sphere) at the position $(-1.4,0,0)\ \meter$. Choose its radius to be an appropriate size so that the ball appears to be on top of the track.
+
+\item Run your program. The ball should appear to be on the top of the track and should be on the left side of the track as shown in Figure \ref{vpython-uniform-motion/track}.
+
+\scaledimage{vpython-uniform-motion/track}{A ball on a track.}{0.5}
+
+Now, we will define the velocity of the ball to be to the right with a speed of 0.3 m/s. A unit vector that points to the right is (1,0,0). So, the velocity of the ball can be written on paper as:
+
+\begin{eqnarray*}
+	\vect{v} & = & \vectmag{v}\hat{v} \\
+	& = & 0.3*(1,0,0) 
+\end{eqnarray*} 
+
+Next we will see how to write this in VPython.
+
+\item Just as the position of the ball is referenced as \code{ball.pos}, let's define the ball's velocity as \code{ball.v} which indicates that v is a property of the object named \code{ball}.  To do all of this, type this line at the end of your program.
+	
+\begin{myvpython}
+ball.v=0.3*vector(1,0,0)
+\end{myvpython}
+
+This statement creates a property of the ball  \code{ball.v} that is a vector quantity with a magnitude 0.3 that points to the right. 
+
+\item Whenever you want to refer to the velocity of the ball, you must refer to \type{ball.v}. For example, type the following at the end of your program.
+
+\begin{myvpython}
+print(ball.v)
+\end{myvpython}
+
+\item When you run the program, it will print the velocity of the ball as a 3-D vector as shown below:
+
+\begin{verbatim}
+<0.3, 0, 0>
+\end{verbatim}
+
+\subsection*{Define values for constants we might need}
+
+%To make the cart move, we calculate its new position after each time interval $\Delta t$ using the equation:
+% 
+%\begin{eqnarray*}
+%	\mbox{new position coordinates} & = &  \mbox{current position coordinates} + \mbox{velocity} \times \mbox{time interval} \\
+%\end{eqnarray*}
+ 
+To make an object move, we will update its position every $\Delta t$ seconds. In general, $\Delta t$ should be small enough such that the displacement of the object is small. The size of $\Delta t$ also affects the speed at which your program runs. If it is exceedingly small, then the computer has to do lots of calculations just to make your object move across your screen. This will slow down the computer.
+
+\item For now, let's use 1 hundredth of a second as the time interval, $\Delta t$. At the end of your program, define a variable $dt$ for the time interval.
+
+\begin{myvpython}
+dt=0.01
+\end{myvpython}
+
+\item Also, let's define the total time $t$ for the clock. The clock starts out at $t=0$, so type the following line.
+
+\begin{myvpython}
+t=0
+\end{myvpython}
+
+That completes the first part of the program which tells the computer to:
+
+	\begin{enumerate}
+		\item Create the 3D objects.
+		\item Give the ball an initial position and velocity.
+		\item Define variable names for the clock reading $t$ and the time interval $dt$.
+	\end{enumerate}
+	
+\subsection*{Create a ``while" loop to continuously calculate the position of the object.}
+
+We will now create a \code{while} loop. Each time the program runs through this loop, it will do two things:
+
+	\begin{enumerate}
+		\item Calculate the displacement of the ball and add it to the ball's previous position in order to find its new position. This is known as the ``position update''.
+		\item Calculate the total time by incrementing $t$ by an amount $dt$ through each iteration of the loop.
+		\item Repeat.
+	\end{enumerate}
+
+	\item For now, let's run the animation for 10.0 s. On a new line, begin the \code{while} statement. This tells the computer to repeat these instructions as long as $t < 10.0$ s.
+	
+\begin{myvpython}
+while t < 10.0:
+\end{myvpython}
+	
+	Make sure that the \type{while} statement ends with \type{:} because Python uses this to identify the beginning of a loop. 
+	
+	To understand what a while loop does, let's update and then  print the clock reading.
+
+\item After the \code{while} statement, add the following line. Note that it must be indented.
+
+\begin{myvpython}
+	t=t+dt
+\end{myvpython}
+
+After adding this line, your \code{while} loop will look like:
+
+\begin{myvpython}
+while t < 10.0:
+	t=t+dt
+\end{myvpython}
+
+Note that this line takes the clock reading $t$, adds the time step $dt$, and then assigns the result to the clock reading. Thus, through each pass of the loop, the program updates the clock reading.
+
+\item Print the clock reading by typing the following line at the end of the while loop (again, make sure it's indented) and run your program.
+
+\begin{myvpython}
+	print(t)
+\end{myvpython}
+
+After adding the \code{print} statement, your \code{while} loop will look like:
+
+\begin{myvpython}
+while t < 10.0:
+	t=t+dt
+	print(t)
+\end{myvpython}
+
+\item Save and run the program. View the clock readings printed in the console window. After closing your simulation window, you can still view the printed times in the console.
+
+\item You can make it run indefinitely (i.e. without stopping) by saying ``while true'' and in Python the number 1 is the same as ``true'' so you can change the \code{while} statement to read:
+
+	\begin{verbatimtab}
+	while 1:
+	\end{verbatimtab}	
+
+Change the \code{while} statement in your code to be \code{while 1:}.
+
+Your program should look like:
+
+\begin{myvpython}
+while 1:
+	t=t+dt
+	print(t)
+\end{myvpython}
+
+\item Save and run the program.  Now, it will print clock readings continually until you close the simulation window.
+
+\tightframe{Stop and reflect on what is going on in this \code{while} loop. Your understanding of this code is essential for being able to write games.}
+
+Just as we updated the clock using \code{t=t+dt}, we also want to update the object's position. Physics tells us that the object's new position is given by:
+
+\begin{eqnarray*}
+	\mbox{new position coordinates} & = &  \mbox{current position coordinates} + \mbox{velocity} \times \mbox{time interval} \\
+\end{eqnarray*}
+
+This is called the \emph{position update equation}. It says, ``take the current position of the object, add its displacement, and this gives you the new position of the object.'' In VPython the ``='' sign is an \emph{assignment} operator. It takes the result on the right side of the = sign and assigns its value to the variable on the left. 
+
+Now we will update the ball's position after each time step \code{dt}.
+
+\item Inside the \code{while} loop \emph{before you update the clock}, update the position of the ball by typing:
+
+\begin{myvpython}
+	ball.pos=ball.pos+ball.v*dt
+\end{myvpython}
+
+After typing this line, your \code{while} loop should look like:
+
+\begin{myvpython}
+while 1:
+	ball.pos=ball.pos+ball.v*dt
+	t=t+dt
+	print(t)
+\end{myvpython}
+
+\item Change the print statement to print both the clock reading and the position of the ball. Separate the variables by commas as shown:
+
+\begin{myvpython}
+	print(t, ball.pos)
+\end{myvpython}
+
+\item Run your program. You will see the ball move across the screen to the right. Because we have an infinite loop, it'll continue to move to the right. After the ball travels past the edge of the track, the camera will zoom backward to keep all of the objects in the scene.
+
+\item Printing the values of the time and the ball's position slows down the computer. Comment out your print statement by typing the \# sign in front of the \code{print} statement (as in \code{\#print)}.
+
+\item Run your program again and note how fast the ball appears to move. 
+
+The computer is calculating the ball's position faster than we can watch it. The $t$ variable in our program is not real-time. Thus we must add a rate statement to slow down the animation.
+
+\item Type the following line just after the \code{while} statement.
+
+\begin{myvpython}
+	rate(100)
+\end{myvpython}
+
+Your \code{while} loop should now look like:
+
+
+\begin{myvpython}
+while 1:
+	rate(100)
+	ball.pos=ball.pos+ball.v*dt
+	t=t+dt
+#	print(t)
+\end{myvpython}
+
+
+\item Run your program again. You will notice that the animation is much slower. In fact, it will depend on the speed of your computer. 
+
+\item Adjust the \code{rate} statement and try values of 10 or 200, for example. How does increasing or decreasing the argument of the rate function affect the animation?
+
+The \code{rate(100)} statement specifies that the while loop will not be executed more than 100 times per second, even if your computer is capable of many more than 100 loops per second. (The way it works is that each time around the loop VPython checks to see whether 1/100 second of real time has elapsed since the previous loop. If not, VPython waits until that much time has gone by. This ensures that there are no more than 100 loops performed in one second.)
+
+\end{enumerate}
+
+\ \\
+
+\newpage
+
+
+\analysis
+
+\begin{description}
+
+\item[C] Do all of the following.
+\begin{enumerate}
+	\item Start with your program from this activity and save it as a different name.
+	\item Simulate the motion of a ball that starts on the right and travels to the left with a speed of 0.5 m/s. The ball's initial position should be $(1.5,0,0)$ m. The \code{while} loop should run while $t<5$ s. Print the time and position of the ball.
+\end{enumerate}
+
+\item[B] Do everything for {\bf C} and the following.
+
+\begin{enumerate}
+	\item Create two balls:  Ball A starts on the left side at $(-1.5,0,0)$ m and Ball B starts on the right side at  $(1.5,0,0)$ m. Name them \code{ballA} and \code{ballB} in your program.
+	\item Ball A travels to the right with a speed of 0.3 m/s and Ball B travels to the left with a speed of 0.5 m/s. Define each of their velocities as \code{ballA.v} and \code{ballB.v}, respectively.
+	\item Set the \code{while} loop to run while $t<5$ s. 
+	\item Print the clock reading \code{t} and the position of each ball up to $t=5$ s.
+	\item At what clock reading $t$ do they pass through each other?
+\end{enumerate}
+
+\item[A] Do everything for {\bf B} with the following modifications and additions.
+
+\begin{enumerate}
+	\item Change the width of the track to be 3 m so that the track then appears as a table top.
+	\item Create three balls that all start at $(x=-1.5, y=0)$; however, stagger their z-positions so that one travels down the middle of the table, one travels down one edge of the table, and the other travels down the other edge of the table. Name them \code{ballA}, \code{ballB}, and, \code{ballC}, respectively, and give them different colors.
+	\item Give them x-velocities of (A) 0.25 m/s, (B) 0.5 m/s, and (C) 0.75 m/s.
+	\item At what time does Ball C reach the end of the table?
+	\item What are the positions of all three balls when Ball C reaches the end of the table?
+\end{enumerate}
+
+\end{description}
+

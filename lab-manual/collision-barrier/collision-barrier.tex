@@ -1,0 +1,135 @@
+\lab{Collision with a Stationary Rigid Barrier}
+
+\section*{Introduction}
+
+Collisions, in general, are an important part of physics. At the Large Hadron Collider, physicists accelerate particles like protons and antiprotons to speeds very close to the speed of light and then collide them. The collision produces all kinds of other particles, including quarks, the fundamental particles of which protons are made.
+
+Collisions are an important part of games as well. You have already learn how to check for collisions between spheres in VPython. But how should objects react after colliding?  Our goals are to:
+
+\begin{enumerate}
+	\item understand the physics of collisions in the real world.
+	\item understand how to use physics to create realistic collisions.
+	\item understand how to violate the laws of physics in specific ways in order to make a game that is more enjoyable to play. Or saying it another way, understand the machinery required to make objects in a game model real objects in nature. That is, know how to intelligently lie so that you can say that the game behaves in a physically correct way.
+\end{enumerate}
+
+We will begin by studying collisions between balls and massive rigid barriers, like a floor or wall or bumper on a billiards table.
+
+\section*{Coefficient of restitution}
+
+When a ball collides with a stationary, rigid barrier, it will either rebound with the same speed or it will slow down as a result of the collision. If it rebounds with the same speed, then it is an \emph{elastic} collision. If it slows down as a result of the collision, then it is an \emph{inelastic} collision. In nature, when a ball bounces off the floor or wall or something like that, it nearly always slows down. 
+
+The coefficient of restitution (COR) for an object colliding with a stationary, rigid barrier is defined as:
+
+\begin{eqnarray*}
+	C_R & = & \frac{v_f}{v_i} \\
+\end{eqnarray*}
+
+where $v_f$ is the speed of the object after the collision and $v_i$ is the speed of the object before the collision. Note that COR is always less than or equal to 1. If COR$=1$, then it is an elastic collision. If COR$<1$, then it's an inelastic collision.
+
+Note that COR depends on the materials of both the object and the barrier. If you change the material of the object or the material of the barrier, you will affect the COR.
+
+The COR tells you how ``bouncy'' a ball-floor system is, for example. If you drop a ball on the floor and it rebounds close to the same height it was dropped from, then the COR is high (meaning closer to 1). If you drop a ball on the floor and it barely rebounds at all, then the COR is low (meaning closer to zero). If you change the ball or if you change the floor from tile to wood, for example, you will measure a different COR.
+
+\section*{1-D collision}
+
+In a one-dimensional collision of an object with a stationary rigid barrier, the direction of the object reverses and the speed after the collision will be less than or equal to the speed before the collision.
+
+\scaledimage{collision-barrier/ball-1d}{A ball collides with a rigid wall.}{0.5}
+
+The velocity of the ball is a vector. Thus, you must find the speed using
+
+\begin{eqnarray*}
+	v_i & = & \sqrt{v_{i,x}^2} \\
+\end{eqnarray*}
+
+(If the ball is moving in the y or z directions, then use the appropriate component of the velocity.)
+
+\subsection*{Example}
+
+\tightframe{
+
+{\bf Question:}
+
+A rubber ball has a velocity (3,0,0) m/s before it collides with a concrete wall and (-2,0,0) m/s after it collides with the wall. What is the COR of the ball and wall?
+
+{\bf Answer:}
+
+The initial speed of the ball is 3 m/s. The final speed of the ball is 2 m/s. Thus, the COR is
+
+\begin{eqnarray*}
+	C_{R} & = & \frac{2\ \meter\per\second}{3\ \meter\per\second} \\
+	& = & 0.67
+\end{eqnarray*}
+}
+
+\tightframe{
+
+{\bf Question:}
+
+If you use a different wall, perhaps one that is made of drywall nailed to wood studs, will the COR be the same or different?
+
+{\bf Answer:}
+
+The COR depends on the material of both the ball and wall. If you change the material of the wall, you will likely get a different final speed after the collision.
+
+}
+
+\section*{2-D collision -- frictionless}
+
+When an object collides with a frictionless, stationary barrier, the collision only changes the component of the velocity that is perpendicular to the surface. The component of the velocity parallel to the surface stays the same. 
+
+In the example in Figure \ref{collision-barrier/ball-2d-no-friction}, the ball has an initial velocity in the +x and +y directions. The velocity of the ball is written as $\vec{v}=(v_x,v_y)$ (in two dimensions). However, it is important to rewrite it in terms of the collision where one component is parallel to the surface and one component is perpendicular to the surface that it collides with. In this example, $\vec{v}=(v_\perp,v_\parallel)$ (in two dimensions) where $v_\perp$ is in the x-direction and $v_\parallel$ is in the y-direction.
+
+\scaledimage{collision-barrier/ball-2d-no-friction}{A 2-D collision with a frictionless rigid wall.}{0.5}
+
+After colliding with the wall, the y-component of the ball (which is parallel to the surface of the wall) remains the same. However, the x-velocity of the ball (which is perpendicular to the wall) changes direction.  Only the component of the velocity perpendicular to the surface changes due to the collision. Not only does it reverse direction, but it may also decrease in magnitude. The perpendicular component of the velocity after the collision will be
+
+\begin{eqnarray*}
+	v_{\perp,f} & = & C_R v_{\perp,i}
+\end{eqnarray*}
+
+If it is an elastic collision, then $v_{\perp,f}$ merely changes direction as is shown in Figure \ref{collision-barrier/ball-2d-no-friction}.
+
+\vspace{1.5in}
+
+\section*{2-D collision -- friction}
+
+Friction acts parallel to the surfaces in contact and changes the parallel component of the velocity of the object. For a collision with a stationary rigid barrier, then in this case friction always causes the $v_\parallel$ to decrease in magnitude. If the barrier is moving, then it's possible to increase $v_\parallel$.
+
+Consider a hockey puck bouncing off of a rigid hockey stick as shown in Figure \ref{collision-barrier/ball-2d-friction}. Let's assume, for the sake of simplicity, that it is an elastic collision. In this case, the frictional force on the ball is opposite to $v_{\parallel}$ and thus decreases the value of $v_{\parallel}$.
+
+What if the hockey stick is moving in the $+y$ direction when the puck hits the stick?  Then, the direction of the frictional force depends on the velocity of the puck \emph{relative to the stick}. If the stick is moving faster than the puck (in the parallel direction), the frictional force is in the direction of $v_{\parallel}$ and causes it to increase. If the stick is moving slower than the puck, the frictional force is opposite to the direction of $v_{\parallel}$ and causes it to decrease. If the stick is moving with a speed equal to $v_{\parallel}$, then the frictional force is zero and $v_{\parallel}$ is constant.
+
+\scaledimage{collision-barrier/ball-2d-friction}{A 2-D collision with a frictionless rigid wall.}{0.5}
+
+
+\pagebreak
+
+\section{Homework}
+
+\begin{enumerate}
+	\item	A golf ball is falling vertically and has a speed of 1.5 m/s just before it bounces off the floor. After the bounce, it has a speed of 0.6 m/s. What is the coefficient of restitution of the ball and floor?
+	\item If the golf ball in the previous question were dropped off a table instead of the floor, is the coefficient of restitution going to be the same or different?
+	\item A hockey puck on an air hockey table has a velocity of $(2.0,\ -1.2)$ m/s when it collides from a side wall of a hockey rink as shown in Figure \ref{collision-barrier/ball-2d-hw}. 
+	
+\scaledimage{collision-barrier/ball-2d-hw}{A 2-D collision with a frictionless rigid wall.}{0.5}
+
+	\begin{enumerate}
+		\item What is $v_{\parallel}$ before the collision?
+		\item What is $v_{\perp}$ before the collision?
+		\item If the wall is frictionless and if the collision is elastic, what is the velocity of the puck after the collision?
+		\item If the wall is frictionless and if the COR is 0.4, what is the velocity of the puck after the collision?
+	\end{enumerate}
+	
+	\item A pickup truck is moving to the right when a ball is tossed into the back of the truck as shown in Figure \ref{collision-barrier/ball-2d-fric-hw}. The truck's velocity is $(3,0)$ m/s.
+	
+	\begin{enumerate}
+		\item Suppose that there is friction between the bed of the truck and the ball during the collision. Assume that the collision is elastic. If the ball's velocity relative to the ground before the collision is $(2.0,\ -1.2)$ m/s, in what direction is the frictional force on the ball and does $v_{\parallel}$ increase, decrease, or remain constant as a result of the collision?
+		\item Suppose that there is friction between the bed of the truck and the ball during the collision. If the ball's velocity relative to the ground before the collision is $(4.0,\ -1.2)$ m/s, in what direction is the frictional force on the ball and does $v_{\parallel}$ increase, decrease, or remain constant?
+		\item Suppose that there is friction between the bed of the truck and the ball during the collision. If the ball's velocity relative to the ground before the collision is $(3.0,\ -1.2)$ m/s, in what direction is the frictional force on the ball and does $v_{\parallel}$ increase, decrease, or remain constant?
+	\end{enumerate}
+
+\scaledimage{collision-barrier/ball-2d-fric-hw}{A 2-D collision with a moving rigid object.}{0.5}
+
+	
+\end{enumerate}

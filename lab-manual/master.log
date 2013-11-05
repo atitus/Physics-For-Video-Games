@@ -1,0 +1,2013 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  22 JUL 2013 15:32
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**master.tex
+(./master.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, arabic, armenian
+, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutch, u
+kenglish, usenglishmax, esperanto, estonian, farsi, finnish, french, galician, 
+german, ngerman, swissgerman, monogreek, greek, hungarian, icelandic, assamese,
+ bengali, gujarati, hindi, kannada, malayalam, marathi, oriya, panjabi, tamil, 
+telugu, indonesian, interlingua, irish, italian, kurmanji, lao, latin, latvian,
+ lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, roma
+nian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish,
+ turkmen, ukrainian, uppersorbian, welsh, loaded.
+(./tituslab.cls
+Document Class: tituslab 
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/Users/atitus/Library/texmf/tex/latex/misc/wrapfig.sty
+\wrapoverhang=\dimen103
+\WF@size=\dimen104
+\c@WF@wrappedlines=\count88
+\WF@box=\box26
+\WF@everypar=\toks14
+Package: wrapfig 1995/11/02  v 3.1
+)
+(/Users/atitus/Library/texmf/tex/latex/misc/fancyhdr.sty
+\headwidth=\dimen105
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count89
+\calc@Bcount=\count90
+\calc@Adimen=\dimen106
+\calc@Bdimen=\dimen107
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count91
+\calc@Cskip=\skip45
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2007/08/12 v2.8 Sectioning titles
+\ttl@box=\box27
+\beforetitleunit=\skip46
+\aftertitleunit=\skip47
+\ttl@plus=\dimen108
+\ttl@minus=\dimen109
+\ttl@toksa=\toks15
+\titlewidth=\dimen110
+\titlewidthlast=\dimen111
+\titlewidthfirst=\dimen112
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2007/08/12 v1.6 TOC entries
+\ttl@leftsep=\dimen113
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/Users/atitus/Library/texmf/tex/latex/misc/moreverb.sty
+Package: moreverb 1997/12/07 v2.2d.2 `more' verbatim facilities
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks17
+\verbatim@line=\toks18
+\verbatim@in@stream=\read1
+)
+\verbatim@out=\write3
+\tab@position=\count92
+\tab@size=\count93
+\listing@line=\count94
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
+\Gread@gobject=\count95
+))
+(./lmmath.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks19
+\ex@=\dimen114
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen115
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count96
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count97
+\leftroot@=\count98
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count99
+\DOTSCASE@=\count100
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen116
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count101
+\c@MaxMatrixCols=\count102
+\dotsspace@=\muskip10
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
+\tag@help=\toks20
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
+\andhelp@=\toks21
+\eqnshift@=\dimen117
+\alignsep@=\dimen118
+\tagshift@=\dimen119
+\tagwidth@=\dimen120
+\totwidth@=\dimen121
+\lineht@=\dimen122
+\@envbody=\toks22
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+\c@prelabctr=\count108
+\c@labpartctr=\count109
+\c@appendixctr=\count110
+\egindent=\skip51
+\saveleftskip=\skip52
+\myfooterspace=\skip53
+\myfooterspacep=\skip54
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks24
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen123
+\Gin@req@width=\dimen124
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2010/06/18 v6.81g Hypertext links for LaTeX
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2010/04/26 v1.7 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2010/03/01 v1.9 Key value parser (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2010/01/28 v1.3 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdfescape.sty
+Package: pdfescape 2010/03/01 v1.9 Provides hex, PDF name and string conversion
+s (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
+
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2010/01/28 v2.1 Provides the ifpdf switch (HO)
+
+
+! Package ifpdf Error: Name clash, \ifpdf is already defined.
+
+See the ifpdf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153     }
+           %
+? 
+) (/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/hycolor.sty
+Package: hycolor 2009/12/12 v1.6 Color options of hyperref/bookmark (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/xcolor-patch.sty
+Package: xcolor-patch 2009/12/12 xcolor patch
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/letltxmacro.sty
+Package: letltxmacro 2008/06/24 v1.3 Let assignment for LaTeX macros (HO)
+)
+\@linkdim=\dimen125
+\Hy@linkcounter=\count111
+\Hy@pagecounter=\count112
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2010/06/18 v6.81g Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/intcalc.sty
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/02/22 v3.7 Keyval support for LaTeX options (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 3658.
+Package hyperref Info: Link nesting OFF on input line 3663.
+Package hyperref Info: Hyper index ON on input line 3666.
+Package hyperref Info: Plain pages OFF on input line 3673.
+Package hyperref Info: Backreferencing OFF on input line 3678.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3874.
+(/Users/atitus/Library/texmf/tex/latex/joe-heafner/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4159.
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/bitset.sty
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/bigintcalc.sty
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+))
+\Fld@menulength=\count113
+\Field@Width=\dimen126
+\Fld@charsize=\dimen127
+\Field@toks=\toks25
+Package hyperref Info: Hyper figures OFF on input line 5137.
+Package hyperref Info: Link nesting OFF on input line 5142.
+Package hyperref Info: Hyper index ON on input line 5145.
+Package hyperref Info: backreferencing OFF on input line 5152.
+Package hyperref Info: Link coloring OFF on input line 5157.
+Package hyperref Info: Link coloring with OCG OFF on input line 5162.
+Package hyperref Info: PDF/A mode OFF on input line 5167.
+LaTeX Info: Redefining \ref on input line 5207.
+LaTeX Info: Redefining \pageref on input line 5211.
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2010/03/25 v1.12 At begin shipout hook (HO)
+)
+\Hy@abspage=\count114
+\c@Item=\count115
+\c@Hfootnote=\count116
+)
+* hyperref using default driver hpdftex *
+(/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2010/06/18 v6.81g Hyperref driver for pdfTeX
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/atveryend.sty
+Package: atveryend 2010/03/24 v1.5 Hooks at very end of document (HO)
+Package atveryend Info: \enddocument detected (standard).
+)
+\Fld@listcount=\count117
+\c@bookmark@seq@number=\count118
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2010/03/16 v1.6 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/uniquecounter.sty
+Package: uniquecounter 2009/12/18 v1.1 Provides unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+71.
+)
+\Hy@SectionHShift=\skip55
+)
+(/Users/atitus/Library/texmf/tex/latex/mandi131.sty
+(/Users/atitus/Library/texmf/tex/latex/joe-heafner/extarrows/extarrows.sty
+Package: extarrows 2008/05/15 v1.0b Some extensible arrows
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2007/09/30 v1.0 Managing graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 436.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+)
+(/Users/atitus/Library/texmf/tex/latex/joe-heafner/listings/listings.sty
+\lst@mode=\count119
+\lst@gtempboxa=\box30
+\lst@token=\toks26
+\lst@length=\count120
+\lst@currlwidth=\dimen128
+\lst@column=\count121
+\lst@pos=\count122
+\lst@lostspace=\dimen129
+\lst@width=\dimen130
+\lst@newlines=\count123
+\lst@lineno=\count124
+\lst@maxwidth=\dimen131
+
+(/Users/atitus/Library/texmf/tex/latex/joe-heafner/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count125
+\lst@skipnumbers=\count126
+\lst@framebox=\box31
+)
+(/Users/atitus/Library/texmf/tex/latex/joe-heafner/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/Users/atitus/Library/texmf/tex/latex/misc/SIunits.sty
+Package: SIunits 2002/08/01 v1.33 Support for the International System of units
+ (MH)
+
+
+\@qskwidth=\skip56
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 46.
+\symgreek=\mathgroup6
+(/Users/atitus/Library/texmf/tex/latex/joe-heafner/siunits/SIunits.cfg)
+LaTeX Info: Redefining \usk on input line 558.
+
+Option `cdot' provided!
+LaTeX Info: Redefining \@qsk on input line 558.
+Option `thickqspace' provided!
+Option `amssymb' provided!
+) (/usr/local/texlive/2010/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5 Variant command support
+)
+(/Users/atitus/Library/texmf/tex/latex/xargs.sty
+Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
+
+(/Users/atitus/Library/texmf/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2005/11/25 v2.5e package option processing (HA)
+
+(/Users/atitus/Library/texmf/tex/latex/xkeyval/xkeyval.tex
+\XKV@toks=\toks27
+\XKV@depth=\count127
+File: xkeyval.tex 2005/11/25 v2.5e key=value parser (HA)
+))
+\xargs@max=\count128
+\xargs@toksa=\toks28
+\xargs@toksb=\toks29
+)
+(/Users/atitus/Library/texmf/tex/latex/joe-heafner/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen132
+\extrarowheight=\dimen133
+\NC@list=\toks30
+\extratabsurround=\skip57
+\backup@length=\skip58
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (./master.aux
+(./coordinates/coordinates.aux) (./lab-coordinates/lab-coordinates.aux)
+(./vpython-intro/vpython-intro.aux) (./vectors/vectors.aux)
+(./uniform-motion/uniform-motion.aux)
+(./video-uniform-motion/video-uniform-motion.aux)
+(./vpython-uniform-motion/vpython-uniform-motion.aux)
+(./vpython-lists-and-ifs/vpython-lists-and-ifs.aux)
+(./vpython-keyboard/vpython-keyboard.aux)
+(./vpython-collision-detection/vpython-collision-detection.aux)
+(./galilean-relativity/galilean-relativity.aux)
+(./collision-barrier/collision-barrier.aux)
+(./lab-coefficient-of-restitution/lab-coefficient-of-restitution.aux)
+(./game-pong/game-pong.aux) (./video-fancart/video-fancart.aux)
+(./newtons-second-law/newtons-second-law.aux)
+(./vpython-fancart/vpython-fancart.aux)
+(./game-lunar-lander/game-lunar-lander.aux)
+(./video-projectile-motion/video-projectile-motion.aux)
+(./video-angry-birds/video-angry-birds.aux)
+(./game-tank-wars/game-tank-wars.aux) (./vpython-friction/vpython-friction.aux)
+(./video-center-of-mass/video-center-of-mass.aux
+
+LaTeX Warning: Label `default' multiply defined.
+
+) (./game-asteroids/game-asteroids.aux) (./project1/project1.aux)
+(./project-final/project-final.aux) (./appendix-tracker/appendix-tracker.aux))
+\openout1 = `master.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 205.
+LaTeX Font Info:    ... okay on input line 205.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 205.
+LaTeX Font Info:    ... okay on input line 205.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 205.
+LaTeX Font Info:    ... okay on input line 205.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 205.
+LaTeX Font Info:    ... okay on input line 205.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 205.
+LaTeX Font Info:    ... okay on input line 205.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 205.
+LaTeX Font Info:    ... okay on input line 205.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 205.
+LaTeX Font Info:    ... okay on input line 205.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 205.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 205.
+
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 205.
+
+(/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count129
+\scratchdimen=\dimen134
+\scratchbox=\box32
+\nofMPsegments=\count130
+\nofMParguments=\count131
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen135
+\MPnumerator=\count133
+\everyMPtoPDFconversion=\toks32
+)
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring OFF on input line 205.
+ (/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
+)
+\c@section@level=\count134
+)
+LaTeX Info: Redefining \ref on input line 205.
+LaTeX Info: Redefining \pageref on input line 205.
+LaTeX Info: Redefining \nameref on input line 205.
+
+(./master.out) (./master.out)
+\@outlinefile=\write4
+\openout4 = `master.out'.
+
+\c@lstlisting=\count135
+
+Option `amssymb' provided! 
+ Command \square redefined by SIunits package!
+
+LaTeX Font Info:    Try loading font information for T1+phv on input line 213.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 213.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 213.
+LaTeX Font Info:    Try loading font information for U+msa on input line 218.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 218.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+
+{/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (17.67337pt too wide) in paragraph at lines 223--234
+\T1/cmr/m/n/10 also copy this book un-der the GNU Free Doc-u-men-ta-tion Li-cen
+se ver-sion 1.2, http://www.gnu.org/licenses/fdl.txt,
+ []
+
+[2]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 236.
+ (./master.toc)
+\tf@toc=\write5
+\openout5 = `master.toc'.
+
+ [3
+
+] [4
+
+]
+\normalparindent=\skip59
+\openout2 = `coordinates/coordinates.aux'.
+
+ (./coordinates/coordinates.tex [5
+
+
+]
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
+<coordinates/2d-coordsystem.jpg, id=204, 459.7175pt x 367.3725pt>
+File: coordinates/2d-coordsystem.jpg Graphic file (type jpg)
+
+<use coordinates/2d-coordsystem.jpg>
+<coordinates/3d-coordsystem.jpg, id=206, 466.74374pt x 398.48875pt>
+File: coordinates/3d-coordsystem.jpg Graphic file (type jpg)
+
+<use coordinates/3d-coordsystem.jpg> [6 <./coordinates/2d-coordsystem.jpg> <./c
+oordinates/3d-coordsystem.jpg>]
+<coordinates/x-y-points.jpg, id=217, 459.7175pt x 369.38pt>
+File: coordinates/x-y-points.jpg Graphic file (type jpg)
+
+<use coordinates/x-y-points.jpg> [7 <./coordinates/x-y-points.jpg>]
+<coordinates/comp-coords.png, id=230, 498.86375pt x 371.3875pt>
+File: coordinates/comp-coords.png Graphic file (type png)
+
+<use coordinates/comp-coords.png>
+<coordinates/points.png, id=232, 586.3506pt x 601.2864pt>
+File: coordinates/points.png Graphic file (type png)
+
+<use coordinates/points.png> [8 <./coordinates/comp-coords.png (PNG copy)> <./c
+oordinates/points.png (PNG copy)>]
+<coordinates/puck.png, id=240, 412.4208pt x 309.3156pt>
+File: coordinates/puck.png Graphic file (type png)
+
+<use coordinates/puck.png>) [9 <./coordinates/puck.png>]
+\openout2 = `lab-coordinates/lab-coordinates.aux'.
+
+
+(./lab-coordinates/lab-coordinates.tex
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+) [10
+
+
+
+]
+\openout2 = `vpython-intro/vpython-intro.aux'.
+
+ (./vpython-intro/vpython-intro.tex [11
+
+
+
+]
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 42.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [12]
+<vpython-intro/vpython-windows.png, id=278, 177.66376pt x 148.555pt>
+File: vpython-intro/vpython-windows.png Graphic file (type png)
+
+<use vpython-intro/vpython-windows.png> [13 <./vpython-intro/vpython-windows.pn
+g>] [14] <vpython-intro/box.jpg, id=313, 194.7275pt x 254.9525pt>
+File: vpython-intro/box.jpg Graphic file (type jpg)
+
+<use vpython-intro/box.jpg> [15 <./vpython-intro/box.jpg>] [16]) [17]
+\openout2 = `vectors/vectors.aux'.
+
+
+(./vectors/vectors.tex
+Chapter 4.
+<vectors/vector.png, id=376, 462.72874pt x 372.39125pt>
+File: vectors/vector.png Graphic file (type png)
+
+<use vectors/vector.png>
+<vectors/vector-components.png, id=378, 529.98pt x 375.4025pt>
+File: vectors/vector-components.png Graphic file (type png)
+
+<use vectors/vector-components.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18
+
+
+
+ <./vectors/vector.png (PNG copy)>] [19 <./vectors/vector-components.png (PNG c
+opy)>]pdfTeX warning (ext4): destination with the same identifier (name{labpart
+ctr.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.87 \subsection*{Examples}
+                           
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
+
+ []
+
+[20]pdfTeX warning (ext4): destination with the same identifier (name{labpartct
+r.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.139 \subsection*{Example}
+                           
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+
+ []
+
+<vectors/vector_times_scalar.png, id=401, 295.1025pt x 157.58875pt>
+File: vectors/vector_times_scalar.png Graphic file (type png)
+
+<use vectors/vector_times_scalar.png>pdfTeX warning (ext4): destination with th
+e same identifier (name{labpartctr.3}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.175 \subsection*{Example}
+                           
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+
+ []
+
+[21 <./vectors/vector_times_scalar.png (PNG copy)>]pdfTeX warning (ext4): desti
+nation with the same identifier (name{labpartctr.4}) has been already used, dup
+licate ignored
+<to be read again> 
+                   \relax 
+l.231 \subsection*{Example}
+                           
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
+
+ []
+
+
+Underfull \vbox (badness 1221) has occurred while \output is active []
+
+ [22]
+Underfull \hbox (badness 10000) in paragraph at lines 268--268
+
+ []
+
+<vectors/position.jpg, id=415, 439.6425pt x 428.60126pt>
+File: vectors/position.jpg Graphic file (type jpg)
+
+<use vectors/position.jpg> [23 <./vectors/position.jpg>]pdfTeX warning (ext4): 
+destination with the same identifier (name{labpartctr.5}) has been already used
+, duplicate ignored
+<to be read again> 
+                   \relax 
+l.284 ...ing by a scalar; Scaling an arrow's axis}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{labpartctr.6}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.307 ...section*{Vector addition and subtraction}
+                                                   [24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 364--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--376
+
+ []
+
+) [26]
+\openout2 = `uniform-motion/uniform-motion.aux'.
+
+ (./uniform-motion/uniform-motion.tex [27
+
+
+
+]
+Chapter 5.
+<uniform-motion/vw-disp.png, id=462, 499.8675pt x 370.38374pt>
+File: uniform-motion/vw-disp.png Graphic file (type png)
+
+<use uniform-motion/vw-disp.png>
+<uniform-motion/vw-disp-vector.png, id=464, 494.84875pt x 375.4025pt>
+File: uniform-motion/vw-disp-vector.png Graphic file (type png)
+
+<use uniform-motion/vw-disp-vector.png>pdfTeX warning (ext4): destination with 
+the same identifier (name{labpartctr.1}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.27 \subsection*{Example}
+                          
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+
+ []
+
+<uniform-motion/pickup-disp.png, id=466, 475.7775pt x 383.4325pt>
+File: uniform-motion/pickup-disp.png Graphic file (type png)
+
+<use uniform-motion/pickup-disp.png>
+<uniform-motion/pickup-disp-vector.png, id=467, 461.725pt x 397.485pt>
+File: uniform-motion/pickup-disp-vector.png Graphic file (type png)
+
+<use uniform-motion/pickup-disp-vector.png> [28 <./uniform-motion/vw-disp.png (
+PNG copy)> <./uniform-motion/vw-disp-vector.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29 <./uniform-motion/pickup-disp.png (PNG copy)> <./uniform-motion/pickup-dis
+p-vector.png (PNG copy)>]
+<uniform-motion/pickup-three.png, id=479, 469.755pt x 372.39125pt>
+File: uniform-motion/pickup-three.png Graphic file (type png)
+
+<use uniform-motion/pickup-three.png>pdfTeX warning (ext4): destination with th
+e same identifier (name{labpartctr.2}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.74 \subsection*{Example}
+                          
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+
+ []
+
+[30 <./uniform-motion/pickup-three.png (PNG copy)>]
+<uniform-motion/constv-cart-2.pdf, id=490, 501.875pt x 179.67125pt>
+File: uniform-motion/constv-cart-2.pdf Graphic file (type pdf)
+
+<use uniform-motion/constv-cart-2.pdf> [31 <./uniform-motion/constv-cart-2.pdf>
+] <uniform-motion/constv-graph.png, id=528, 1026.83624pt x 606.265pt>
+File: uniform-motion/constv-graph.png Graphic file (type png)
+
+<use uniform-motion/constv-graph.png>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32 <./uniform-motion/constv-graph.png (PNG copy)>]pdfTeX warning (ext4): dest
+ination with the same identifier (name{labpartctr.3}) has been already used, du
+plicate ignored
+<to be read again> 
+                   \relax 
+l.148 \subsection*{Example}
+                           
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
+
+<uniform-motion/x-t-graph.pdf, id=533, 361.35pt x 252.945pt>
+File: uniform-motion/x-t-graph.pdf Graphic file (type pdf)
+
+<use uniform-motion/x-t-graph.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33 <./uniform-motion/x-t-graph.pdf>] [34]
+<uniform-motion/ball.png, id=561, 511.9125pt x 531.9875pt>
+File: uniform-motion/ball.png Graphic file (type png)
+
+<use uniform-motion/ball.png> [35 <./uniform-motion/ball.png>] [36]pdfTeX warni
+ng (ext4): destination with the same identifier (name{labpartctr.4}) has been a
+lready used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.299 \subsection*{Example}
+                           
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+<uniform-motion/y-t-hw.pdf, id=580, 361.35pt x 252.945pt>
+File: uniform-motion/y-t-hw.pdf Graphic file (type pdf)
+
+<use uniform-motion/y-t-hw.pdf>) [38 <./uniform-motion/y-t-hw.pdf>]
+\openout2 = `video-uniform-motion/video-uniform-motion.aux'.
+
+
+(./video-uniform-motion/video-uniform-motion.tex [39
+
+
+
+]
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
+
+ []
+
+<video-uniform-motion/x-y-plane.jpg, id=624, 321.2pt x 276.03125pt>
+File: video-uniform-motion/x-y-plane.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/x-y-plane.jpg> [40 <./video-uniform-motion/x-y-plane.
+jpg>]
+<video-uniform-motion/video-import.jpg, id=634, 534.99875pt x 149.55875pt>
+File: video-uniform-motion/video-import.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/video-import.jpg>
+<video-uniform-motion/zoom.jpg, id=636, 31.11626pt x 27.10126pt>
+File: video-uniform-motion/zoom.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/zoom.jpg>
+<video-uniform-motion/page-arrange.jpg, id=638, 867.24pt x 587.19376pt>
+File: video-uniform-motion/page-arrange.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/page-arrange.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[41 <./video-uniform-motion/video-import.jpg> <./video-uniform-motion/zoom.jpg>
+] <video-uniform-motion/step-size.jpg, id=652, 864.22874pt x 79.29625pt>
+File: video-uniform-motion/step-size.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/step-size.jpg>
+<video-uniform-motion/coord-icon.jpg, id=654, 33.12375pt x 29.10875pt>
+File: video-uniform-motion/coord-icon.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/coord-icon.jpg> [42 <./video-uniform-motion/page-arra
+nge.jpg> <./video-uniform-motion/step-size.jpg> <./video-uniform-motion/coord-i
+con.jpg>]
+<video-uniform-motion/coord-sys.jpg, id=668, 547.04375pt x 402.50375pt>
+File: video-uniform-motion/coord-sys.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/coord-sys.jpg>
+<video-uniform-motion/ruler.jpg, id=670, 32.12pt x 30.1125pt>
+File: video-uniform-motion/ruler.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/ruler.jpg>
+<video-uniform-motion/set-scale.jpg, id=672, 469.755pt x 351.3125pt>
+File: video-uniform-motion/set-scale.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/set-scale.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<video-uniform-motion/add-markers.jpg, id=674, 268.00125pt x 303.1325pt>
+File: video-uniform-motion/add-markers.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/add-markers.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[43 <./video-uniform-motion/coord-sys.jpg> <./video-uniform-motion/ruler.jpg>]
+<video-uniform-motion/set-trail.jpg, id=692, 34.1275pt x 29.10875pt>
+File: video-uniform-motion/set-trail.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/set-trail.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<video-uniform-motion/final-dots.jpg, id=694, 865.2325pt x 603.25375pt>
+File: video-uniform-motion/final-dots.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/final-dots.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.129 \subsection*{$x$ vs. $t$ graph}
+                                      [44 <./video-uniform-motion/set-scale.jpg
+> <./video-uniform-motion/add-markers.jpg>]
+<video-uniform-motion/curve-fit.jpg, id=706, 623.32875pt x 451.6875pt>
+File: video-uniform-motion/curve-fit.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/curve-fit.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[45 <./video-uniform-motion/set-trail.jpg> <./video-uniform-motion/final-dots.j
+pg>]pdfTeX warning (ext4): destination with the same identifier (name{labpartct
+r.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.152 \subsection*{$v_x$ vs. $t$ graph}
+                                        [46 <./video-uniform-motion/curve-fit.j
+pg>] <video-uniform-motion/x-velocity.jpg, id=723, 869.2475pt x 607.26875pt>
+File: video-uniform-motion/x-velocity.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/x-velocity.jpg>
+<video-uniform-motion/velocity-data.jpg, id=725, 866.23625pt x 571.13374pt>
+File: video-uniform-motion/velocity-data.jpg Graphic file (type jpg)
+
+<use video-uniform-motion/velocity-data.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[47 <./video-uniform-motion/x-velocity.jpg>]
+Underfull \vbox (badness 1325) has occurred while \output is active []
+
+ [48 <./video-uniform-motion/velocity-data.jpg>] [49]) [50]
+\openout2 = `vpython-uniform-motion/vpython-uniform-motion.aux'.
+
+
+(./vpython-uniform-motion/vpython-uniform-motion.tex [51
+
+
+
+]
+Chapter 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.13 \subsection*{General structure of a program}
+                                                 
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 24.
+ [52]
+<vpython-uniform-motion/track.png, id=783, 432.61626pt x 102.3825pt>
+File: vpython-uniform-motion/track.png Graphic file (type png)
+
+<use vpython-uniform-motion/track.png>pdfTeX warning (ext4): destination with t
+he same identifier (name{labpartctr.2}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.85 ...Define values for constants we might need}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{labpartctr.3}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.115 ...ly calculate the position of the object.}
+                                                   [53 <./vpython-uniform-motio
+n/track.png (PNG copy)>] [54] [55]
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+
+ []
+
+[56]) [57]
+\openout2 = `vpython-lists-and-ifs/vpython-lists-and-ifs.aux'.
+
+ (./vpython-lists-and-ifs/vpython-lists-and-ifs.tex
+Chapter 8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.13 \subsection*{Lists and For Loops}
+                                      pdfTeX warning (ext4): destination with t
+he same identifier (name{labpartctr.2}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.33 ...ode{for} loop and the \code{range()} list}
+                                                   [58
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.3}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 \subsection*{Lists}
+                        
+<vpython-lists-and-ifs/4-balls.png, id=903, 511.9125pt x 531.9875pt>
+File: vpython-lists-and-ifs/4-balls.png Graphic file (type png)
+
+<use vpython-lists-and-ifs/4-balls.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.4}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.101 \subsection*{Motion}
+                           [59] [60 <./vpython-lists-and-ifs/4-balls.png>]pdfTe
+X warning (ext4): destination with the same identifier (name{labpartctr.5}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.161 \subsection*{IF statements}
+                                  [61]
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+ []
+
+[62]
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
+
+ []
+
+) [63]
+\openout2 = `vpython-keyboard/vpython-keyboard.aux'.
+
+ (./vpython-keyboard/vpython-keyboard.tex
+Chapter 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 ...keyboard to set the velocity of an object}
+                                                   [64
+
+
+
+]pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.2
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.102 ...g the keyboard to create a moving object}
+                                                   [65] [66]) [67]
+\openout2 = `vpython-collision-detection/vpython-collision-detection.aux'.
+
+
+(./vpython-collision-detection/vpython-collision-detection.tex
+Chapter 10.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 \subsection*{Distance between spheres}
+                                           
+<vpython-collision-detection/spheres.pdf, id=1112, 443.6575pt x 577.15625pt>
+File: vpython-collision-detection/spheres.pdf Graphic file (type pdf)
+
+<use vpython-collision-detection/spheres.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<vpython-collision-detection/d-spheres.png, id=1114, 493.845pt x 388.45125pt>
+File: vpython-collision-detection/d-spheres.png Graphic file (type png)
+
+<use vpython-collision-detection/d-spheres.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.2}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.45 \subsection*{Exercises}
+                             [68
+
+
+
+] [69 <./vpython-collision-detection/spheres.pdf> <./vpython-collision-detectio
+n/d-spheres.png (PNG copy)>]pdfTeX warning (ext4): destination with the same id
+entifier (name{labpartctr.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.56 \subsection*{Starting program}
+                                    [70]pdfTeX warning (ext4): destination with
+ the same identifier (name{labpartctr.4}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.118 \subsection*{Defining a function}
+                                        [71]
+Underfull \vbox (badness 5924) has occurred while \output is active []
+
+ [72])
+[73]
+\openout2 = `galilean-relativity/galilean-relativity.aux'.
+
+ (./galilean-relativity/galilean-relativity.tex
+Chapter 11.
+<galilean-relativity/soccer-ball.png, id=1290, 1061.9675pt x 632.3625pt>
+File: galilean-relativity/soccer-ball.png Graphic file (type png)
+
+<use galilean-relativity/soccer-ball.png>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74
+
+
+
+ <./galilean-relativity/soccer-ball.png>]pdfTeX warning (ext4): destination wit
+h the same identifier (name{labpartctr.1}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.52 \subsection*{Example}
+                          
+Underfull \vbox (badness 1622) has occurred while \output is active []
+
+ [75]pdfTeX warning (ext4): destination with the same identifier (name{labpartc
+tr.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.83 \subsection*{Example}
+                          
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [76]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77])
+[78]
+\openout2 = `collision-barrier/collision-barrier.aux'.
+
+ (./collision-barrier/collision-barrier.tex [79
+
+
+
+]
+Chapter 12.
+<collision-barrier/ball-1d.pdf, id=1326, 266.9975pt x 288.07625pt>
+File: collision-barrier/ball-1d.pdf Graphic file (type pdf)
+
+<use collision-barrier/ball-1d.pdf> [80]pdfTeX warning (ext4): destination with
+ the same identifier (name{labpartctr.1}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.47 \subsection*{Example}
+                           [81 <./collision-barrier/ball-1d.pdf>]
+<collision-barrier/ball-2d-no-friction.pdf, id=1389, 483.8075pt x 289.08pt>
+File: collision-barrier/ball-2d-no-friction.pdf Graphic file (type pdf)
+
+<use collision-barrier/ball-2d-no-friction.pdf> [82 <./collision-barrier/ball-2
+d-no-friction.pdf>]
+<collision-barrier/ball-2d-friction.pdf, id=1476, 539.01375pt x 288.07625pt>
+File: collision-barrier/ball-2d-friction.pdf Graphic file (type pdf)
+
+<use collision-barrier/ball-2d-friction.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [83 <./collision-barrier/ball-2d-friction.pdf>]
+<collision-barrier/ball-2d-hw.pdf, id=1572, 331.2375pt x 163.61125pt>
+File: collision-barrier/ball-2d-hw.pdf Graphic file (type pdf)
+
+<use collision-barrier/ball-2d-hw.pdf>
+<collision-barrier/ball-2d-fric-hw.pdf, id=1574, 406.51875pt x 177.66376pt>
+File: collision-barrier/ball-2d-fric-hw.pdf Graphic file (type pdf)
+
+<use collision-barrier/ball-2d-fric-hw.pdf>) [84 <./collision-barrier/ball-2d-h
+w.pdf> <./collision-barrier/ball-2d-fric-hw.pdf>]
+\openout2 = `lab-coefficient-of-restitution/lab-coefficient-of-restitution.aux'
+.
+
+
+(./lab-coefficient-of-restitution/lab-coefficient-of-restitution.tex [85
+
+
+
+]
+Chapter 13.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--10
+
+ []
+
+
+<lab-coefficient-of-restitution/video-import.jpg, id=1699, 534.99875pt x 149.55
+875pt>
+File: lab-coefficient-of-restitution/video-import.jpg Graphic file (type jpg)
+ <use lab-coefficient-of-restitution/video-import.jpg>
+<lab-coefficient-of-restitution/zoom.jpg, id=1701, 31.11626pt x 27.10126pt>
+File: lab-coefficient-of-restitution/zoom.jpg Graphic file (type jpg)
+
+<use lab-coefficient-of-restitution/zoom.jpg> [86 <./lab-coefficient-of-restitu
+tion/video-import.jpg> <./lab-coefficient-of-restitution/zoom.jpg>]
+<lab-coefficient-of-restitution/clip-settings-icon.jpg, id=1715, 26.0975pt x 25
+.09375pt>
+File: lab-coefficient-of-restitution/clip-settings-icon.jpg Graphic file (type 
+jpg)
+ <use lab-coefficient-of-restitution/clip-settings-icon.jpg>
+<lab-coefficient-of-restitution/step-size.jpg, id=1717, 864.22874pt x 79.29625p
+t>
+File: lab-coefficient-of-restitution/step-size.jpg Graphic file (type jpg)
+ <use lab-coefficient-of-restitution/step-size.jpg>
+<lab-coefficient-of-restitution/ruler.jpg, id=1719, 32.12pt x 30.1125pt>
+File: lab-coefficient-of-restitution/ruler.jpg Graphic file (type jpg)
+
+<use lab-coefficient-of-restitution/ruler.jpg>
+<lab-coefficient-of-restitution/coord-icon.jpg, id=1721, 33.12375pt x 29.10875p
+t>
+File: lab-coefficient-of-restitution/coord-icon.jpg Graphic file (type jpg)
+ <use lab-coefficient-of-restitution/coord-icon.jpg> [87 <./lab-coefficient-of-
+restitution/clip-settings-icon.jpg> <./lab-coefficient-of-restitution/step-size
+.jpg> <./lab-coefficient-of-restitution/ruler.jpg> <./lab-coefficient-of-restit
+ution/coord-icon.jpg>]
+<lab-coefficient-of-restitution/set-trail.jpg, id=1738, 34.1275pt x 29.10875pt>
+File: lab-coefficient-of-restitution/set-trail.jpg Graphic file (type jpg)
+<use lab-coefficient-of-restitution/set-trail.jpg>
+<lab-coefficient-of-restitution/create-menu.jpg, id=1740, 169.63374pt x 263.986
+25pt>
+File: lab-coefficient-of-restitution/create-menu.jpg Graphic file (type jpg)
+ <use lab-coefficient-of-restitution/create-menu.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<lab-coefficient-of-restitution/select-masses-menu.jpg, id=1742, 169.63374pt x 
+128.48pt>
+File: lab-coefficient-of-restitution/select-masses-menu.jpg Graphic file (type 
+jpg)
+ <use lab-coefficient-of-restitution/select-masses-menu.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.102 \subsection*{$x$ vs. $t$ graph}
+                                      [88 <./lab-coefficient-of-restitution/set
+-trail.jpg>] [89 <./lab-coefficient-of-restitution/create-menu.jpg> <./lab-coef
+ficient-of-restitution/select-masses-menu.jpg>]) [90]
+\openout2 = `game-pong/game-pong.aux'.
+
+
+(./game-pong/game-pong.tex [91
+
+
+
+]
+Chapter 14.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 \subsection*{Playing Pong}
+                               
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.2}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.39 ...on*{Creating a ``bouncing'' puck in a box}
+                                                   [92]pdfTeX warning (ext4): d
+estination with the same identifier (name{labpartctr.3}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.75 \subsection*{Creating inelastic collisions}
+                                                 [93]pdfTeX warning (ext4): des
+tination with the same identifier (name{labpartctr.4}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.97 \subsection*{Adding friction to a collision}
+                                                 pdfTeX warning (ext4): destina
+tion with the same identifier (name{labpartctr.5}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.117 \subsection*{Making a 1-player Pong game}
+                                                [94]
+Underfull \vbox (badness 1769) has occurred while \output is active []
+
+ [95])
+[96]
+\openout2 = `video-fancart/video-fancart.aux'.
+
+ (./video-fancart/video-fancart.tex [97
+
+
+
+]
+Chapter 15.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--10
+
+ []
+
+<video-fancart/video-import.jpg, id=1892, 534.99875pt x 149.55875pt>
+File: video-fancart/video-import.jpg Graphic file (type jpg)
+
+<use video-fancart/video-import.jpg> [98 <./video-fancart/video-import.jpg>]
+<video-fancart/coord-icon.jpg, id=1903, 33.12375pt x 29.10875pt>
+File: video-fancart/coord-icon.jpg Graphic file (type jpg)
+
+<use video-fancart/coord-icon.jpg>
+<video-fancart/ruler.jpg, id=1905, 32.12pt x 30.1125pt>
+File: video-fancart/ruler.jpg Graphic file (type jpg)
+
+<use video-fancart/ruler.jpg>
+<video-fancart/set-trail.jpg, id=1907, 34.1275pt x 29.10875pt>
+File: video-fancart/set-trail.jpg Graphic file (type jpg)
+
+<use video-fancart/set-trail.jpg> [99 <./video-fancart/coord-icon.jpg> <./video
+-fancart/ruler.jpg> <./video-fancart/set-trail.jpg>] [100]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [101]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [102]
+[103]) [104]
+\openout2 = `newtons-second-law/newtons-second-law.aux'.
+
+ (./newtons-second-law/newtons-second-law.tex [105
+
+
+
+]
+Chapter 16.
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 ...ng up and slowing down in a straight line}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{labpartctr.2}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.19 \subsection*{Example}
+                          
+<newtons-second-law/puck.png, id=1967, 523.9575pt x 47.17625pt>
+File: newtons-second-law/puck.png Graphic file (type png)
+
+<use newtons-second-law/puck.png>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [106 <./newtons-second-law/puck.png (PNG copy)>]pdfTeX warning (ext4): destina
+tion with the same identifier (name{labpartctr.3}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.60 ...n*{Changing direction with constant speed}
+                                                  
+<newtons-second-law/v-vectors.png, id=1973, 417.56pt x 386.44376pt>
+File: newtons-second-law/v-vectors.png Graphic file (type png)
+
+<use newtons-second-law/v-vectors.png>pdfTeX warning (ext4): destination with t
+he same identifier (name{labpartctr.4}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.76 \subsection*{Example}
+                          
+<newtons-second-law/wall.pdf, id=1974, 223.83624pt x 260.975pt>
+File: newtons-second-law/wall.pdf Graphic file (type pdf)
+
+<use newtons-second-law/wall.pdf>
+<newtons-second-law/collision-acc.pdf, id=1975, 177.66376pt x 124.465pt>
+File: newtons-second-law/collision-acc.pdf Graphic file (type pdf)
+
+<use newtons-second-law/collision-acc.pdf> [107 <./newtons-second-law/v-vectors
+.png (PNG copy)>] [108 <./newtons-second-law/wall.pdf> <./newtons-second-law/co
+llision-acc.pdf>]pdfTeX warning (ext4): destination with the same identifier (n
+ame{labpartctr.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.157 \subsection*{Example}
+                            [109]
+Overfull \vbox (14.12495pt too high) has occurred while \output is active []
+
+
+[110]
+<newtons-second-law/football-bounce.pdf, id=2092, 185.69376pt x 90.83937pt>
+File: newtons-second-law/football-bounce.pdf Graphic file (type pdf)
+
+<use newtons-second-law/football-bounce.pdf>) [111 <./newtons-second-law/footba
+ll-bounce.pdf>]
+\openout2 = `vpython-fancart/vpython-fancart.aux'.
+
+ (./vpython-fancart/vpython-fancart.tex
+Chapter 17.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+[112
+
+
+
+] [113] <vpython-fancart/arrow.jpg, id=2185, 175.65625pt x 258.9675pt>
+File: vpython-fancart/arrow.jpg Graphic file (type jpg)
+
+<use vpython-fancart/arrow.jpg> [114 <./vpython-fancart/arrow.jpg>] [115])
+[116]
+\openout2 = `game-lunar-lander/game-lunar-lander.aux'.
+
+ (./game-lunar-lander/game-lunar-lander.tex [117
+
+
+
+]
+Chapter 18.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.28 \subsection*{A bouncing ball}
+                                   [118] [119]pdfTeX warning (ext4): destinatio
+n with the same identifier (name{labpartctr.2}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.79 \subsection*{Moon Lander}
+                               [120] [121]) [122]
+\openout2 = `video-projectile-motion/video-projectile-motion.aux'.
+
+
+(./video-projectile-motion/video-projectile-motion.tex [123
+
+
+
+]
+Chapter 19.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
+
+ []
+
+
+<video-projectile-motion/projectile-with-axes.jpg, id=2362, 482.80376pt x 205.7
+6875pt>
+File: video-projectile-motion/projectile-with-axes.jpg Graphic file (type jpg)
+ <use video-projectile-motion/projectile-with-axes.jpg>
+<video-projectile-motion/projectile-x.jpg, id=2366, 482.80376pt x 205.76875pt>
+File: video-projectile-motion/projectile-x.jpg Graphic file (type jpg)
+
+<use video-projectile-motion/projectile-x.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [124 <./video-projectile-motion/projectile-with-axes.jpg>]
+Underfull \vbox (badness 2213) has occurred while \output is active []
+
+ [125 <./video-projectile-motion/projectile-x.jpg>]
+<video-projectile-motion/video-import.jpg, id=2379, 534.99875pt x 149.55875pt>
+File: video-projectile-motion/video-import.jpg Graphic file (type jpg)
+
+<use video-projectile-motion/video-import.jpg>
+<video-projectile-motion/coord-icon.jpg, id=2381, 33.12375pt x 29.10875pt>
+File: video-projectile-motion/coord-icon.jpg Graphic file (type jpg)
+
+<use video-projectile-motion/coord-icon.jpg>
+<video-projectile-motion/ruler.jpg, id=2383, 32.12pt x 30.1125pt>
+File: video-projectile-motion/ruler.jpg Graphic file (type jpg)
+
+<use video-projectile-motion/ruler.jpg> [126 <./video-projectile-motion/video-i
+mport.jpg> <./video-projectile-motion/coord-icon.jpg>]
+<video-projectile-motion/set-scale.jpg, id=2398, 639.38875pt x 477.785pt>
+File: video-projectile-motion/set-scale.jpg Graphic file (type jpg)
+
+<use video-projectile-motion/set-scale.jpg>
+<video-projectile-motion/set-trail.jpg, id=2400, 34.1275pt x 29.10875pt>
+File: video-projectile-motion/set-trail.jpg Graphic file (type jpg)
+
+<use video-projectile-motion/set-trail.jpg>
+<video-projectile-motion/trail.jpg, id=2402, 639.38875pt x 477.785pt>
+File: video-projectile-motion/trail.jpg Graphic file (type jpg)
+
+<use video-projectile-motion/trail.jpg> [127 <./video-projectile-motion/ruler.j
+pg> <./video-projectile-motion/set-scale.jpg> <./video-projectile-motion/set-tr
+ail.jpg>] [128 <./video-projectile-motion/trail.jpg>]
+<video-projectile-motion/x-t-fit.jpg, id=2426, 728.7225pt x 551.05875pt>
+File: video-projectile-motion/x-t-fit.jpg Graphic file (type jpg)
+
+<use video-projectile-motion/x-t-fit.jpg> [129 <./video-projectile-motion/x-t-f
+it.jpg>] [130]
+<video-projectile-motion/vy-t-fit.jpg, id=2442, 728.7225pt x 551.05875pt>
+File: video-projectile-motion/vy-t-fit.jpg Graphic file (type jpg)
+
+<use video-projectile-motion/vy-t-fit.jpg> [131 <./video-projectile-motion/vy-t
+-fit.jpg>]) [132]
+\openout2 = `video-angry-birds/video-angry-birds.aux'.
+
+ (./video-angry-birds/video-angry-birds.tex [133
+
+
+
+]
+Chapter 20.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--8
+
+ []
+
+[134] [135] [136] [137]
+<video-angry-birds/x-t-graph.pdf, id=2495, 361.35pt x 252.945pt>
+File: video-angry-birds/x-t-graph.pdf Graphic file (type pdf)
+
+<use video-angry-birds/x-t-graph.pdf>
+<video-angry-birds/vy-t-graph.pdf, id=2496, 361.35pt x 252.945pt>
+File: video-angry-birds/vy-t-graph.pdf Graphic file (type pdf)
+
+<use video-angry-birds/vy-t-graph.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [138 <./video-angry-birds/x-t-graph.pdf>] [139 <./video-angry-birds/vy-t-grap
+h.pdf>]
+\openout2 = `game-tank-wars/game-tank-wars.aux'.
+
+ (./game-tank-wars/game-tank-wars.tex
+Chapter 21.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Underfull \vbox (badness 1968) has occurred while \output is active []
+
+ [140
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [141]
+Underfull \vbox (badness 4072) has occurred while \output is active []
+
+ [142]
+[143]pdfTeX warning (ext4): destination with the same identifier (name{labpartc
+tr.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.137 \subsection*{Creating a Target}
+                                      [144] [145]) [146]
+\openout2 = `vpython-friction/vpython-friction.aux'.
+
+
+(./vpython-friction/vpython-friction.tex [147
+
+
+
+]
+Chapter 22.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+[148] [149]) [150]
+\openout2 = `video-center-of-mass/video-center-of-mass.aux'.
+
+ (./video-center-of-mass/video-center-of-mass.tex [151
+
+
+
+]
+Chapter 23.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+[152] [153]
+<video-center-of-mass/define-menu.jpg, id=2826, 396.48125pt x 353.32pt>
+File: video-center-of-mass/define-menu.jpg Graphic file (type jpg)
+
+<use video-center-of-mass/define-menu.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<video-center-of-mass/create-menu.jpg, id=2828, 169.63374pt x 263.98625pt>
+File: video-center-of-mass/create-menu.jpg Graphic file (type jpg)
+
+<use video-center-of-mass/create-menu.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<video-center-of-mass/cm-menu.jpg, id=2830, 304.13625pt x 293.095pt>
+File: video-center-of-mass/cm-menu.jpg Graphic file (type jpg)
+
+<use video-center-of-mass/cm-menu.jpg>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<video-center-of-mass/select-masses-menu.jpg, id=2832, 169.63374pt x 128.48pt>
+File: video-center-of-mass/select-masses-menu.jpg Graphic file (type jpg)
+
+<use video-center-of-mass/select-masses-menu.jpg> [154]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 1478) has occurred while \output is active []
+
+ [155 <./video-center-of-mass/define-menu.jpg> <./video-center-of-mass/create-m
+enu.jpg> <./video-center-of-mass/cm-menu.jpg>]
+Underfull \vbox (badness 2119) has occurred while \output is active []
+
+ [156 <./video-center-of-mass/select-masses-menu.jpg>] [157]) [158]
+\openout2 = `game-asteroids/game-asteroids.aux'.
+
+
+(./game-asteroids/game-asteroids.tex [159
+
+
+
+]
+Chapter 24.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.16 \subsection*{Playing Asteroids}
+                                     [160]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [161]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [162]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [163]
+[164]pdfTeX warning (ext4): destination with the same identifier (name{labpartc
+tr.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.258 \subsection*{Adding Asteroids Fragments}
+                                               [165] [166]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [167])
+[168]
+\openout2 = `project1/project1.aux'.
+
+ (./project1/project1.tex [169
+
+
+
+]
+Chapter .
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+[170]) [171]
+\openout2 = `project-final/project-final.aux'.
+
+ (./project-final/project-final.tex
+Chapter .
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+[172
+
+
+
+]) [173]
+\openout2 = `appendix-tracker/appendix-tracker.aux'.
+
+ (./appendix-tracker/appendix-tracker.tex
+Chapter .
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 \subsection*{Description}
+                             
+Overfull \hbox (14.85571pt too wide) in paragraph at lines 5--6
+[]\T1/cmr/m/n/10 This one-page ``cheat sheet'' will show you the most com-mon s
+teps re-quired to an-a-lyze videos with Tracker.Tracker
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{labpartctr.2}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7 \subsection*{Preliminary Steps}
+                                   
+<./appendix-tracker/import.png, id=3291, 538.01pt x 198.7425pt>
+File: ./appendix-tracker/import.png Graphic file (type png)
+
+<use ./appendix-tracker/import.png>
+<./appendix-tracker/movie-settings.png, id=3292, 26.0975pt x 24.09pt>
+File: ./appendix-tracker/movie-settings.png Graphic file (type png)
+
+<use ./appendix-tracker/movie-settings.png>
+<./appendix-tracker/calibration.png, id=3293, 40.15pt x 29.10875pt>
+File: ./appendix-tracker/calibration.png Graphic file (type png)
+
+<use ./appendix-tracker/calibration.png>
+<./appendix-tracker/coord-sys.png, id=3294, 28.105pt x 26.0975pt>
+File: ./appendix-tracker/coord-sys.png Graphic file (type png)
+
+<use ./appendix-tracker/coord-sys.png>pdfTeX warning (ext4): destination with t
+he same identifier (name{labpartctr.3}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.22 \subsection*{Mark an object}
+                                 
+<./appendix-tracker/massA.png, id=3295, 191.71625pt x 25.09375pt>
+File: ./appendix-tracker/massA.png Graphic file (type png)
+
+<use ./appendix-tracker/massA.png>pdfTeX warning (ext4): destination with the s
+ame identifier (name{labpartctr.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30 \subsection*{Analyze a graph}
+                                  ) [174
+
+
+
+ <./appendix-tracker/import.png (PNG copy)> <./appendix-tracker/movie-settings.
+png (PNG copy)> <./appendix-tracker/calibration.png (PNG copy)> <./appendix-tra
+cker/coord-sys.png (PNG copy)> <./appendix-tracker/massA.png (PNG copy)>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
+ (./master.aux (./coordinates/coordinates.aux) (./lab-coordinates/lab-coordinat
+es.aux) (./vpython-intro/vpython-intro.aux)
+(./vectors/vectors.aux) (./uniform-motion/uniform-motion.aux)
+(./video-uniform-motion/video-uniform-motion.aux)
+(./vpython-uniform-motion/vpython-uniform-motion.aux)
+(./vpython-lists-and-ifs/vpython-lists-and-ifs.aux)
+(./vpython-keyboard/vpython-keyboard.aux)
+(./vpython-collision-detection/vpython-collision-detection.aux)
+(./galilean-relativity/galilean-relativity.aux)
+(./collision-barrier/collision-barrier.aux)
+(./lab-coefficient-of-restitution/lab-coefficient-of-restitution.aux)
+(./game-pong/game-pong.aux) (./video-fancart/video-fancart.aux)
+(./newtons-second-law/newtons-second-law.aux)
+(./vpython-fancart/vpython-fancart.aux)
+(./game-lunar-lander/game-lunar-lander.aux)
+(./video-projectile-motion/video-projectile-motion.aux)
+(./video-angry-birds/video-angry-birds.aux)
+(./game-tank-wars/game-tank-wars.aux) (./vpython-friction/vpython-friction.aux)
+(./video-center-of-mass/video-center-of-mass.aux)
+(./game-asteroids/game-asteroids.aux) (./project1/project1.aux)
+(./project-final/project-final.aux) (./appendix-tracker/appendix-tracker.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
+Package rerunfilecheck Info: File `master.out' has not changed.
+(rerunfilecheck)             Checksum: 191540E6603C993214E03CB52C380021;1813.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 12423 strings out of 493747
+ 185286 string characters out of 3143546
+ 501090 words of memory out of 3000000
+ 13420 multiletter control sequences out of 15000+200000
+ 33867 words of font info for 52 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 42i,15n,74p,816b,1846s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
+/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texl
+ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
+ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
+e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/
+2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
+10/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2010/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2010/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2010/tex
+mf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2010/texmf
+-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2010/texmf-d
+ist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2010/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2010/texmf-dist/
+fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2010/texmf-dist/fo
+nts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2010/texmf-dist/font
+s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1
+/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/urw/h
+elvetic/uhvr8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/urw/zapfding
+/uzdr.pfb>
+Output written on master.pdf (174 pages, 3285493 bytes).
+PDF statistics:
+ 3740 PDF objects out of 4296 (max. 8388607)
+ 3260 compressed objects within 33 object streams
+ 1787 named destinations out of 2073 (max. 500000)
+ 652 words of extra memory for PDF output out of 10000 (max. 10000000)
+

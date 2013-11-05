@@ -1,0 +1,198 @@
+
+\lab{LAB:  Video Analysis of a Fan Cart}
+
+\apparatus
+
+\equip{Tracker software (free; download from \href{http://www.cabrillo.edu/~dbrown/tracker/}{http://www.cabrillo.edu/$\sim$dbrown/tracker/})}
+\equip{video: \file{SpeedAway.mov} available from our course web site.}
+\equip{video: \file{SpeedTo.mov} available from our course web site.}
+\equip{video: \file{SloToward.mov} available from our course web site.}
+
+\longgoal
+
+In this experiment, you will measure and graph the x-velocity of a cart as a function of time as the cart is accelerating.
+
+\section*{Speeding up to the right}
+
+\procedure
+
+In all cases, we will define the $+x$ direction to be to the right. When describing the direction of the velocity of the cart, \emph{positive} means that the cart is moving to the right and \emph{negative} means that it is moving to the left.
+
+\begin{enumerate}
+	\item Download the file \texttt{SpeedAway.mov} by right-clicking on the link and choosing {\bf Save As...} to save it to your desktop.
+	\item Open the \file{Tracker} software on your computer.
+	\item Use the menu \menu{Video$\to$Import...} to import your video, as shown in Figure \ref{video-fancart/video-import}.
+
+\scaledimage{video-fancart/video-import}{Video$\to$Import menu}{0.5}
+	\item Play the video and watch the motion of the two carts. 
+	
+	\smallframe{Describe in words the motion of the cart.}
+
+	\item You now need to define the origin of the coordinate system. In the toolbar, click the \menu{Axes} icon shown in Fig. \ref{video-fancart/coord-icon} to show the axes of the coordinate system.
+	
+	\image{video-fancart/coord-icon}{Icon used to set the coordinate system axes.}
+
+	\item Click and drag on the video to place the origin of the coordinate system. Let's define $x=0$ to be the location of the motion detector at the left end of the track.
+				
+	\item Next, we will use the meterstick to set the scale for the video. It is 1.0 m.  In the toolbar, click on the \menu{Calibration} icon shown in Figure \ref{video-fancart/ruler} to set the scale for the video.
+		
+	\scaledimage{video-fancart/ruler}{Icon used to set the scale.}{1}
+
+	\item A blue double-sided arrow will appear. Move the left end of the arrow to the left end of the meterstick, and move the right end of the arrow to the right end of the meterstick. Double-click the number that is in the center of the arrow, and enter the length of the meterstick 1.0. (Our units are meters, but Tracker does not use units. You must remember that the number 1.0 is given in meters.)
+	
+	\item Click the tape measure icon again to hide the blue scale from the video.
+	
+	\item To mark the position of the fancart in each frame, first click on the \button{Create} button and select \menu{Point Mass}. Then, {\bf mass A} will be created, and a new $x$ vs. $t$ graph will appear in a different pane. You will now be able to mark the position of the cart which will be referred to as {\bf mass A}.
+
+	\item Now, to mark the position of the fancart, hold down the shift key and click on the red dot on the fancart. (This is called a shift-click). The video will advance one frame. Continue to shift-click on the red dot on the fancart until you have marked the location of the cart in all frames of the video.
+		
+		\item It's possible that only a few of the marks are shown in the video pane. To display all of the marks or a few of the marks or none of the marks, use the \menu{Set Trail Length} icon shown in Figure \ref{video-fancart/set-trail}. You can select no trail, short trail, and full trail which will show you no marks, a few marks, or all marks, respectively. 
+
+	\scaledimage{video-fancart/set-trail}{The Set Trail icon is used to vary the number of marks shown.}{1}
+
+	
+\end{enumerate}
+
+\analysis	
+
+\begin{enumerate}
+	\item On the graph, click on the vertical axis variable and select the x-velocity. View the $v_x$ vs. $t$ graph. 
+		
+	\item Play the video. (You can hide the marks if you wish by clicking the \menu{Show or hide positions} icon, and you can show the path by clicking the \menu{Show or hide paths} icon. Both of these icons are in the toolbar.) Note how the graph and video are synced. The data point corresponding to the given video frame is shown in the graph using a filled rectangle.
+	
+	Also, when you click on a data point on the graph, the video moves to the corresponding frame.
+
+		
+	\tinyframe{Describe in words the type of function that describes this graph of $v_x$ vs. t? (i.e. linear, quadratic, square root, sinusoidal, etc.)}
+	
+	\smallframe{According to the $v_x$ vs. $t$ graph, is the x-velocity constant, increasing, or decreasing? Explain your answer.}
+					
+	\item  Right-click on the graph (or ctrl-click for Mac users) and select \menu{Analyze...}. In the resulting window, check the checkbox for \menu{Fit}, and additional input boxes will appear. Select the linear curve fit. Check the checkbox for \menu{Autofit} and the best-fit curve will appear in the graph.
+			
+	\smallframe{Neatly sketch the graph, including axes and labels, below.}
+	
+	\smallframe{Record the function and the values of the constants for your curve fit. Write the function for $v_x(t)$, with the appropriate constants (also called fit parameters).}
+	
+	\smallframe{What does the slope tell you and what are its units?}
+	
+	\smallframe{What does the intercept tell you and what are its units?}
+		
+\end{enumerate}
+
+\section*{Speeding up to the left}
+
+\procedure
+
+\begin{enumerate}
+	\item Download the video \file{SpeedTo.mov}. Play the video.
+	
+	\smallframe{Describe its motion in words.}
+	
+	\smallframe{Sketch a prediction of what you think that the x-velocity vs. time graph will be. Think carefully about this before you move on.}
+	
+	\item Analyze this video. Fit a curve to the x-velocity vs. time graph.
+	
+\end{enumerate}
+
+\analysis
+
+
+	\smallframe{Sketch the $v_x(t)$ graph and record the curve fit.}
+	
+	\smallframe{What is the acceleration of the cart?}
+
+	\smallframe{What is the initial velocity of the cart?}
+	
+	\smallframe{What does the sign of the initial velocity tell you?}
+	
+	\smallframe{Some people think that a negative acceleration means that the object is slowing down. Is this idea consistent with what you measured for the acceleration?}
+	
+	\smallframe{Does the acceleration and initial velocity have the same sign or different signs?}
+	
+
+\section*{Slowing down to the left}
+
+\procedure
+
+\begin{enumerate}
+	\item Download the video \file{SloToward.mov}. Play the video.
+	
+	\smallframe{Describe the cart's motion in words.}
+	
+	\smallframe{Sketch a prediction of what you think that the x-velocity vs. time graph will be. Think carefully about this before you move on.}
+	
+	\item Analyze this video. Fit a curve to the x-velocity vs. time graph.
+	
+\end{enumerate}
+
+\analysis
+
+
+
+	\smallframe{Sketch the $v_x(t)$ graph and record the curve fit.}
+	
+	\smallframe{What is the acceleration of the cart?}
+
+	\smallframe{What is the initial velocity of the cart?}
+	
+	\smallframe{What does the sign of the initial velocity tell you?}
+	
+	\smallframe{Some people think that a negative acceleration means that the object is slowing down. Is this idea consistent with what you measured for the acceleration?}
+	
+	\smallframe{Does the acceleration and initial velocity have the same sign or different signs?}
+
+\report
+
+\begin{description}
+
+\item[C]  Complete the experiment and report your answers for the following questions.
+
+\begin{enumerate}
+	 \item In the video \file{SpeedAway.mov}, what was the acceleration and initial velocity of the cart?
+	 \item In the video \file{SpeedTo.mov}, what was the acceleration and initial velocity of the cart?
+	 \item In the video \file{SloToward.mov}, what was the acceleration and initial velocity of the cart?
+\end{enumerate}
+
+\item[B] Do all parts for {\bf C} and answer the following questions.
+
+\begin{enumerate}
+ \item In general, how do you get the initial velocity from a $v_x(t)$ graph that is linear?
+ \item In general, what does the slope of a $v_x(t)$ graph tell you and what are its units if velocity is in m/s and time is in s?
+ \item If you only know that an object has a positive acceleration (and you know nothing else), can you say whether it is speeding up or slowing down?
+ \item If you only know that an object has a negative acceleration (and you know nothing else), can you say whether it is speeding up or slowing down?
+ \item If you are told whether the initial velocity is positive or negative and if you are told whether the acceleration is positive or negative, how can you know whether the object is speeding up or slowing down?
+\end{enumerate}
+
+\item[A] Do all parts for {\bf B} and answer the following questions.
+
+\begin{enumerate}
+ \item A car is traveling in the -x direction when the driver pushes the brakes. Is the car's acceleration positive or negative?
+ \item A car is traveling in the -x direction when the driver pushes the gas pedal to the floor. Is the car's acceleration positive or negative?
+ \item A car is moving at a x-velocity of 30 m/s and a clock reads 12:35:25 PM when the driver hits the brakes and slows down. When her x-velocity is 10 m/s, a clock reads 12:35:35 PM. What is her acceleration during this time interval?
+ \item Driver A is moving with a x-velocity of 25 m/s when she hits the brakes and comes to a stop. It takes 15 s for her come to rest. Driver B is moving with a x-velocity of 25 m/s when she hits a barrier head-on and comes to rest in 2  s. which driver has a greater acceleration?
+\end{enumerate}
+\end{description}
+
+%Key
+%
+%C
+
+%1. a = 0.26 m/s^2, v_0 = -0.018 m/s
+%2.  a = -0.23 m/s^2, v_0=-0.046
+%3.  c = 0.34 m/s^2, v_0=-0.725 m/s
+
+%B
+
+%1.  y-intercept
+%2.  acceleration m/s^2 or m/s/s
+%3.  no
+%4.  no
+%5.  If a and v_0 have opposite signs, then the object will slow down; if they have the same sign they the object will speed up.
+
+%A
+
+%1.  positive
+%2.  negative
+%3.  a = (10-30) m/s /10 s = -2 m/s^2
+%4.  Driver B because she has the same change in velocity but in less time.
+

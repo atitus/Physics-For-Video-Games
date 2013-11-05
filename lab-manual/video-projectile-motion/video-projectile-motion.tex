@@ -1,0 +1,201 @@
+\lab{LAB: Video Analysis of Projectile Motion}
+
+\apparatus
+
+%public web site
+%\equip{Tracker software (free; download from \href{http://www.cabrillo.edu/~dbrown/tracker/}{http://www.cabrillo.edu/$\sim$dbrown/tracker/})}
+%\equip{video: \code{basketball.mov} from \href{http://physics.highpoint.edu/~atitus/videos/}{http://physics.highpoint.edu/$\sim$atitus/videos/}}
+
+%our course web site
+\equip{Tracker software (free; download from \href{http://www.cabrillo.edu/~dbrown/tracker/}{http://www.cabrillo.edu/$\sim$dbrown/tracker/})}
+\equip{video: \code{basketball.mov} from our course web site.}
+
+\longgoal
+
+In this experiment, you will measure and graph the x-position, y-position, x-velocity, and y-velocity of a projectile, in this case a basketball as it moves freely through air with negligible air resistance. 
+
+\introduction
+
+Suppose a projectile moves along a parabolic path. Fig. \ref{video-projectile-motion/projectile-with-axes} shows an object at intervals of 1/30 s between the first image A and the last image I.
+
+\scaledimage{video-projectile-motion/projectile-with-axes}{Position of a projectile at equal time intervals of 1/30 s.}{0.8}
+
+\tightframe{Suppose that we define $t=0$ to occur at the first position of the object. In Fig. \ref{video-projectile-motion/projectile-with-axes}, label the time $t$ for each subsequent position of the object.}
+
+\tightframe{Draw a vertical line at the location of each image. Where each vertical line intersects the x-axis, sketch a circle on the x-axis at the x-coordinate of each image in Fig. \ref{video-projectile-motion/projectile-with-axes}. An example is shown in Fig. \ref{video-projectile-motion/projectile-x}.}
+
+\scaledimage{video-projectile-motion/projectile-x}{x-positions of the projectile.}{0.8}
+
+\smallframe{By examining the x-coordinate of the object, is the x-motion characterized by uniform motion (i.e. zero net force) or constant acceleration (i.e. constant net force)? Give a reason for your answer.}
+
+\smallframe{If you were to graph $x$ vs. $t$, what would it look like? Draw a sketch.}
+
+\smallframe{In Fig. \ref{video-projectile-motion/projectile-with-axes}, mark the y-position of the projectile by drawing horizontal lines from the object to the y-axis and drawing a circle where this line intersects the y-axis. Is the y-motion characterized by uniform motion (zero net force) or constant acceleration (constant net force)? Give a reason for your answer.}
+
+\smallframe{If you were to graph $y$ vs. $t$, what would it look like? Draw a sketch.}
+
+
+\procedure
+
+\begin{enumerate}
+
+	\item Download the file \texttt{basketball.mov} by right-clicking on the link and choosing {\bf Save As...} to save it to your desktop.
+	\item Open the \file{Tracker} software on your computer.
+	\item Use the menu \menu{Video$\to$Import...} to import your video, as shown in Figure \ref{video-projectile-motion/video-import}.
+
+\scaledimage{video-projectile-motion/video-import}{Video$\to$Import menu}{0.5}
+
+	\item Play the video and watch the motion of the basketball. 
+	
+	\smallframe{What is the shape of its path?}
+
+	\smallframe{After the ball leaves the player's hand, what interacts with the ball and in what direction does it exert a force on the ball?}
+
+	\item Use the video control bar to advance the video to the first frame after the ball leaves the player's hand. We are only studying the motion of the ball while it is in the air, not while it is in his hand. Use the Video Settings to make this the first frame of the video. Also set the last frame of the video to be the frame when the ball hits the floor.
+
+	\item You now need to define the origin of the coordinate system. In the toolbar, click the \menu{Axes} icon shown in Fig. \ref{video-projectile-motion/coord-icon} to show the axes of the coordinate system.
+	
+	\image{video-projectile-motion/coord-icon}{Icon used to set the coordinate system axes.}
+
+	\item Click and drag on the video to place the origin of the coordinate system at the location where you would like to define (0,0). For consistency with your classmates, place the origin on the floor at the center of the player's feet.
+		
+%	\scaledimage{video-projectile-motion/coord-sys}{Click and drag to set the origin of the coordinate system}{0.3}
+		
+	\item We will use the 2-m long stick that is along the base of the wall to set the scale for the video.  In the toolbar, click on the \menu{Tape Measure} icon shown in Figure \ref{video-projectile-motion/ruler} to set the scale for the video.
+		
+	\scaledimage{video-projectile-motion/ruler}{Icon used to set the scale.}{1}
+
+	\item A blue double-sided arrow will appear. Move the left end of the arrow to the left end of the stick, and move the right end of the arrow to the right end of the stick. Double-click the number that is in the center of the arrow, and enter the length of the stick (2.0). (Our units are meters, but Tracker does not use units. You must remember that the number 2.0 is given in meters.) The scale will appear as shown in Figure \ref{video-projectile-motion/set-scale}.
+
+	\scaledimage{video-projectile-motion/set-scale}{Enter the length of the stick, 2.0 m.}{0.3}
+
+	\item Click the tape measure icon again to hide the blue scale from the video.
+	
+	\item To mark the position of the basketball in each frame, first click on the \button{Create} button and select \menu{Point Mass}. Then, {\bf mass A} will be created, and a new $x$ vs. $t$ graph will appear in a different pane. You will now be able to mark the position of the ball which will be referred to as {\bf mass A}.
+
+	\item Now, to mark the position of the basketball, hold down the shift key and click on the ball. (This is called a shift-click). The video will advance one frame. Continue to shift-click on the ball until you have marked the location of the ball in all frames of the video.
+	
+	Keep in mind that you only want to analyze frames where the ball is in the air. Therefore, you should have skipped the first few frames when it is in the player's hand, and you should stop marking the position of the ball just before it hits the floor.
+	
+		\item It's possible that only a few of the marks are shown in the video pane. To display all of the marks or a few of the marks or none of the marks, use the \menu{Set Trail Length} icon shown in Figure \ref{video-projectile-motion/set-trail}. Clicking this icon continuously will cycle through no trail, short trail, and full trail which will show you no marks, a few marks, or all marks. 
+
+	\scaledimage{video-projectile-motion/set-trail}{The Set Trail icon is used to vary the number of marks shown.}{1}
+
+	A picture of the basketball with marks is shown in Figure \ref{video-projectile-motion/trail}.
+	
+	\scaledimage{video-projectile-motion/trail}{Marks showing the motion of the basketball.}{0.3}	
+
+\end{enumerate}
+
+\analysis
+
+\begin{enumerate}
+	\item View the $x$ vs. $t$ graph. You can click and drag the border of the video pane to make it smaller so that you can focus on the graph.
+	
+	\item Play the video. (You can hide the marks if you wish by clicking the \menu{Show or hide positions} icon, and you can show the path by clicking the \menu{Show or hide paths} icon. Both of these icons are in the toolbar.) Note how the graph and video are synced. The data point corresponding to the given video frame is shown in the graph using a filled rectangle.
+	
+	Also, when you click on a data point on the graph, the video moves to the corresponding frame.
+		
+	\tinyframe{Describe in words the type of function that describes this graph of x vs. t? (i.e. linear, quadratic, square root, sinusoidal, etc.)}
+	
+	\smallframe{According to the $x$ vs. $t$ graph, is the x-velocity constant, increasing, or decreasing? Explain your answer.}
+	
+	\smallframe{Based on this graph, what is the x-component of the net force on the ball while it is in the air, $F_{net,x}$?}
+					
+	\item  Right-click on the graph (or ctrl-click for Mac users) and select \menu{Analyze...}. In the resulting window, check the checkbox for \menu{Fit}, and additional input boxes will appear, as shown in Figure \ref{video-projectile-motion/x-t-fit}. Select the Fit Name ``Line,'' and the equation will be $x=a*t+b$ where $a$ and $b$ are coefficients (or parameters) of the curve fit. Check the checkbox for \menu{Autofit} and the best-fit curve will appear in the graph.
+	
+	\scaledimage{video-projectile-motion/x-t-fit}{The Data Tool for finding the best-fit curve for the data.}{0.3}
+	
+	
+	\item  Find the best-fit curve for the graph. Be sure to select the linear fit.
+		
+	\smallframe{Neatly sketch the graph, including axes and labels, below.}
+	
+	\smallframe{Record the function and the values of the constants for your curve fit. Write the function for x(t), with the appropriate constants (also called fit parameters).}
+		
+	\smallframe{What do you expect the x-velocity vs. time graph to look like? Sketch your prediction below.}
+		
+	\item Close the Data Tool window and return to the main Tracker window. Click on the label of the vertical axis on the graph and select \menu{vx}.
+		
+	\smallframe{What function describes this graph of $v_x$ vs. $t$? (i.e. linear, quadratic, square root, sinusoidal, etc.)}
+	
+	\item Right-click the graph and select \menu{Analyze} to analyze the $v_x$ vs. $t$ graph. You may notice that the data for both $x$ and $v_x$ are displayed on the same graph. If this occurs, uncheck the checkboxes for $x$ in the upper right corner of the window.
+			
+	\smallframe{Neatly sketch the graph of $v_x$ vs. $t$, including axes and labels, below.}
+	
+	\smallframe{Use this graph and data to determine $v_x$. Describe in detail how you determined $v_x$. }
+	
+	\item Close this window and return to the main window. Change the label on the vertical axis to $y$ vs. $t$ and examine this graph.
+
+	\smallframe{According to the $y$ vs. $t$ graph, during what time interval is the magnitude of the y-velocity decreasing? During what time interval is the magnitude of the y-velocity increasing? At what time is the y-velocity zero?}
+
+	\item Change the label on the vertical axis to $v_y$ vs. t and examine this graph. 
+
+	\smallframe{Based on this graph, is the y-component of the net force on the ball, $F_{net,y}$, zero or constant (non-zero)? If it is constant (and non-zero), explain your reasoning and say whether the net force on the ball is in the +y or -y direction.}
+	
+	\item Right-click the graph and select \menu{Analyze} to analyze the $v_y$ vs. $t$ graph. Fit a curve to the data and record the best-fit function, including the fit parameters. An example is shown in Figure \ref{video-projectile-motion/vy-t-fit}.
+	
+	\smallframe{\ }
+
+	\scaledimage{video-projectile-motion/vy-t-fit}{The Data Tool for finding the best-fit curve for the $v_y$ vs. t data.}{0.3}
+
+	
+	\smallframe{What is the y-velocity $v_y$ of the ball at the moment it leaves the player's hand?}
+	
+	\smallframe{What is the ball's y-acceleration, $a_y$?  Since the mass of a basketball is about 0.62 kg, also calculate the y-component of the net force on the basketball, $F_{net,y}$.}
+		
+\end{enumerate}
+
+\report
+
+\begin{description}
+
+\item[C]  Complete the experiment and report your answers to the following questions.
+
+\begin{enumerate}
+	 \item What is the x-component of the net force on the ball? (Explain your reasoning or show your calculation.)
+	 \item What is the x-velocity of the basketball as determined by the $x(t)$ graph? (Explain your reasoning.)
+	 \item What is the y-acceleration of the ball as determined by the $v_y(t)$ graph? (Explain your reasoning.)
+	 \item What is the y-component of the net force on the ball? (Explain your reasoning or show your calculation.)
+\end{enumerate}
+
+\item[B] Do all parts for {\bf C} and answer the following questions.
+
+\begin{enumerate}
+	\item What is the velocity of the ball at the instant it leaves the player's hand ($t=0$)? Write it as a vector and sketch it.
+	\item What is the position (x and y components) of the basketball at the first instant that it leaves the player's hand ($t=0$)?
+	\item At what clock reading $t$ is the ball at its peak and explain how you can get this independently by looking at the $y(t)$ graph and by looking at the $v_y(t)$ graph.
+	\item What is the velocity of the ball when it is at its peak? Express your answer as a vector.
+\end{enumerate}
+
+\item[A] Do all parts for {\bf B} and answer the following questions.
+
+\begin{enumerate}
+	\item Starting with Newton's second law and the initial position and velocity of the ball, calculate the position and velocity of the ball at 0.05 s time steps. What is its position and velocity at $t=0.25\ \second$?
+	\item Compare your theoretical calculation in the previous question with the actual data for position and velocity at or near $t = 0.25$ s. How do they compare? (Note that the iterative calculation is approximate and is only accurate for very small time steps. There may be some discrepancy since we used a larger time step.)
+	\item Go back to your iterative calculation and continue until the ball reaches its maximum height (i.e. $v_y\approx0$). What is the approximate clock reading $t$ when the ball reaches its peak? Compare your theoretical calculation with what you measured. (Again there may be some discrepancy due to the fact that the iterative method is an approximation.)
+\end{enumerate}
+\end{description}
+
+%Answer Key
+
+%[C]
+%
+%(a) zero; because the x-velocity is constant
+%(b) 3.07 m/s
+%(c) -9.8 m/s/s
+%(d) Fnety = m*ay and is in the -y direction
+%
+%[B] 
+%
+%(a) v = (3.07, 4.52) m/s.  The initial y-velocity is the intercept on the vy vs. t graph
+%(b) r = (0.52, 2.66) m. This is the first data point for (x,y)
+%(c) from y(t), it is t=0.47 s where y is a max; from vy(t), it is t=0.47, where vy=0.
+%(d) v = (3.07,0) m/s
+%
+%[A]
+%
+%(a) at t=0.25, r=(1.2875, 3.4225, 0) m, and v= (3.07, 2.07, 0) m/s
+%(b) at t=0.25, r ~ (1.3,3.5) m and v ~ (3.05, 2.0) m/s.  To one decimal place, these values are within 0.1 of the measured values.
+%(c) vy=0 between t=0.5 and t=0.55 s. The peak occurs at 0.47 s according to the data. The prediction and the actual time are off by about one time step.
+

@@ -1,0 +1,260 @@
+%Aaron Titus
+%PHY 2010 Lab Manual
+%
+%lab.cls file is from Benjamin Crowell, www.lightandmatter.com
+
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{mandi131}
+\usepackage{listings}
+\usepackage{moreverb}
+\usepackage{array}
+
+\topmargin = 0in
+\headheight = 0in
+\headsep = 0in
+\textwidth = 6.5in
+\oddsidemargin = 0in
+\evensidemargin = 0in
+\footskip = 0.5in
+\textheight = 9in
+\pagestyle{plain}
+
+
+% Typeset a block of code
+% Use this as an alias for the lstlisting environment provided by listings package
+\lstnewenvironment{myvpython}{\lstset{language=Python,numbers=none,upquote=true,breaklines}}{}
+
+%commands for frames
+\newcommand{\tightframe}[1] {
+	\ \\
+	\noindent
+	\fbox{
+			\parbox[l]{6.0in}{
+			#1 
+		}
+	}
+}
+
+\newcommand{\tinyanswerspace}{
+\vspace{0.25in}
+}
+\newcommand{\smallanswerspace}{
+\vspace{0.5in}
+}
+
+\newcommand{\tinyframe}[1] {
+	\ \\
+	\noindent
+	\fbox{
+			\parbox[l]{6.0in}{
+			#1 
+			\vspace{0.5in}
+		}
+	}
+}
+
+\newcommand{\smallframe}[1] {
+	\ \\
+	\noindent
+	\fbox{
+			\parbox[l]{6.0in}{
+			#1 
+			\vspace{1in}
+		}
+	}
+}
+
+\newcommand{\medframe}[1] {
+	\ \\
+	\noindent
+	\fbox{
+			\parbox[l]{6.0in}{
+			#1 
+			\vspace{2in}
+		}
+	}
+}
+
+\newcommand{\bigframe}[1] {
+	\ \\
+	\noindent
+	\fbox{
+			\parbox[l]{6.0in}{
+			#1 
+			\vspace{4in}
+		}
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% commands for images
+%an image with caption
+\newcommand{\image}[2]{
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=1]{#1}
+\caption{#2}
+\label{#1}
+\end{center}
+\end{figure}
+}
+
+%an image with caption and scale
+\newcommand{\scaledimage}[3]{
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=#3]{#1}
+\caption{#2}
+\label{#1}
+\end{center}
+\end{figure}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%commands for menu names, filenames, hyperlinks,  ...
+%scientific notation with no units
+\newcommand{\menu}[1]{
+	{\bf #1}
+}
+\newcommand{\link}[1]{
+	\texttt{#1}
+}
+\newcommand{\file}[1]{
+	\emph{#1}
+}
+\newcommand{\button}[1]{
+	\fbox{#1}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%units and constants
+
+%units and common expressions
+\newcommand{\kg}{\ensuremath{\kilogram}}
+\newcommand{\m}{\ensuremath{\meter}}
+\newcommand{\km}{\ensuremath{\kilo\meter}}
+\newcommand{\mps}{\ensuremath{\meter\per\second}}
+\newcommand{\mpss}{\ensuremath{\meter\per\second \squared}}
+\newcommand{\kgmps}{\ensuremath{\kilogram \usk \meter\per\second}}
+\newcommand{\angmom}{\ensuremath{\kilogram \usk \meter \squared \per\second}}
+\newcommand{\rps}{\ensuremath{\radian \per\second}}
+\newcommand{\npkg}{\ensuremath{\newton \per \kilogram}}
+\newcommand{\N}{\ensuremath{\newton}}
+\newcommand{\n}{\ensuremath{\newton}}
+\newcommand{\gearth}{\ensuremath{\unit{9.8}{\npkg}}}
+\newcommand{\gpm}{\ensuremath{\gram \per \mole}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%math formatting
+
+%adds parenthesis, especially useful for numerical constants
+\newcommand{\lr}[1]{\ensuremath{\left(#1\right)}} %adds \left and \right parenthesis around quantity
+
+%a vector with no units
+\newcommand{\triple}[3]{
+	\ensuremath{\langle #1, #2 , #3 \rangle}
+}
+
+%scientific notation with no units
+\newcommand{\sci}[2]{
+	\ensuremath{#1 \times 10^{#2}}
+}
+\newcommand{\scie}[2]{
+	\ensuremath{#1 \mbox{e} {#2}}
+}
+\newcommand{\sciE}[2]{
+	\ensuremath{#1 \mbox{E} {#2}}
+}
+
+%zero vector with units
+\newcommand{\vectzero}[1]{\ensuremath{\vectncomps{0}{0}{0}{#1}}}
+%zero vector with no units
+\newcommand{\zerovect}{\ensuremath{\triple{0}{0}{0}}}
+%zero vector with units
+\newcommand{\zerovectunits}[1]{\ensuremath{\vectncomps{0}{0}{0}{#1}}}
+
+%unit vector with subscript
+\newcommand{\hatsub}[2]{\ensuremath{\vectsubhat{#1}{#2}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%computer code
+\newcommand{\type}[1]{
+	{\texttt{#1}}
+}
+\newcommand{\code}[1]{
+	{\texttt{#1}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%lab manual commands
+\newcommand{\equip}[1]{
+	{#1\\}
+}
+
+\newcommand{\lab}[1]{
+	\section*{#1}
+}
+\newcommand{\apparatus}{
+	\subsection*{Apparatus}
+}
+\newcommand{\longgoal}{
+	\subsection*{Goal}
+}
+\newcommand{\introduction}{
+	\subsection*{Introduction}
+}
+\newcommand{\setup}{
+	\subsection*{Setup}
+}
+\newcommand{\procedure}{
+	\subsection*{Procedure}
+}
+\newcommand{\analysis}{
+	\subsection*{Analysis}
+}
+\newcommand{\extension}{
+	\subsection*{Application}
+}
+
+\newcommand{\report}{
+	\newpage 
+	\subsection*{Lab Report}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\include{coordinates/coordinates}
+%\include{lab-coordinates/lab-coordinates}
+%\include{vectors/vectors}
+%\include{vpython-intro-vectors/vpython-intro}
+%\include{uniform-motion/uniform-motion}
+%\include{video-uniform-motion/video-uniform-motion}
+%\include{vpython-uniform-motion/vpython-uniform-motion}
+%\include{vpython-lists-and-ifs/vpython-lists-and-ifs}
+%\include{vpython-keyboard/vpython-keyboard}
+%\include{vpython-collision-detection/vpython-collision-detection}
+%\include{project1/project1}
+%\include{galilean-relativity/galilean-relativity}
+%\include{collision-barrier/collision-barrier}
+%\include{lab-coefficient-of-restitution/lab-coefficient-of-restitution}
+%\include{game-pong/game-pong}
+\include{video-fancart/video-fancart}
+%\include{newtons-second-law/newtons-second-law}
+%\include{vpython-fancart/vpython-fancart}
+%\include{game-lunar-lander/game-lunar-lander}
+%\include{video-projectile-motion/video-projectile-motion}
+
+%\include{video-angry-birds/video-angry-birds}
+%\include{game-tank-wars/game-tank-wars}
+%\include{vpython-friction/vpython-friction}
+%\include{video-center-of-mass/video-center-of-mass}
+%\include{game-asteroids/game-asteroids}
+%\include{project-final/project-final}
+
+
+\end{document}

@@ -1,0 +1,198 @@
+\lab{GAME -- Lunar Lander}
+
+\apparatus
+\equip{Computer}
+\equip{VPython -- www.vpython.org}
+
+\longgoal
+
+The purpose of this activity is to create a Lunar Lander game where you have to land the lunar module on the moon with as small a speed as possible and as quickly as possible. If the speed is too high, it crashes. If it takes you forever, then you run out of fuel.
+
+\procedure
+
+In the previous simulation that you wrote, you learned how to model the motion of an object on which the net force was constant. In that case, it was a fancart. You learned how to apply Newton's second law to update the velocity of an object given the net force on the object. Once you can do this, you can model the motion of \emph{any} object. As a reminder, the important steps are to:
+
+	\begin{enumerate}
+		\item calculate the net force (though it will be constant in this case)
+		\item update the velocity of the cart
+		\item update the position of the cart
+		\item update the clock (\emph{this is not necessary but is often convenient})
+	\end{enumerate}
+	
+for each iteration of the loop. The net force may not be constant. For example, you can check for keyboard interactions and turn a force on or off, or the net force might depend on direction of motion (such as friction) or speed (such as drag) or position (such as gravitational force of a star on a planet). This is why you have to calculate the net force during each iteration of the loop.
+
+To develop a lunar lander game, we are going to begin with a bouncing ball that makes an elastic collision with the floor. 
+
+\begin{enumerate}
+
+\subsection*{A bouncing ball}
+
+\item Here is a template for a program that simulates a bouncing ball. {\bf However, a few essential lines are missing.} Type the template below.
+
+\begin{vpythonblock}
+from visual import *
+
+scene.range=20
+
+ground = box(pos=vector(0,-10.05,0), size=(40.0,1,1), color=color.white)
+ball = sphere(pos=(0,9,0), radius=2, color=color.yellow)
+
+ball.m = 1
+ball.v = vector(0,0,0)
+g=vector(0,-10,0)
+
+dt = 0.01
+t = 0
+
+scale=0.5
+FgravArrow = arrow(pos=ball.pos, axis=scale*ball.m*g, color=color.red)
+
+scene.mouse.getclick()
+
+while 1:
+        rate(100)
+#        Fgrav=
+        Fnet=Fgrav
+#        ball.v = 
+#        ball.pos = 
+        if(ball.pos.y-ball.radius < ground.pos.y+ground.height/2):
+                ball.v=-ball.v
+        t = t+dt
+        FgravArrow.pos=ball.pos
+        FgravArrow.axis=scale*Fgrav
+\end{vpythonblock}
+
+\smallframe{Line 10 defines a vector $\vec{g}$. What is this vector called? What is its direction, and what is its magnitude?}
+
+\smallframe{What is the purpose of lines 26 and 27?}
+
+\item The commented lines must be completed for the program to work. Complete each of these lines and run your program.
+
+\smallframe{If line 26 was changed to \code{if(ball.pos.y < ground.pos.y):}, what would occur and why is this worse than the original version of line 26? (You should comment out line 26 and type this new code in order to check your answer.)}
+
+\smallframe{Is the gravitational force on the ball constant or does it change? Explain your answer.}
+
+\item The Moon has a gravitational field that is 1/6 that of Earth. Change $\vec{g}$ to model the motion of a bouncing ball on the Moon and re-run your program.
+
+\smallframe{What is the difference in the motion of a ball dropped from a height $h$ on the Moon and a ball dropped from a height $h$ on Earth?}
+
+\subsection*{Moon Lander}
+
+\item We will now model the motion of a lunar module. Start a new file. Type the following template. Fill in the missing (commented out) lines. Run your program.
+
+\begin{myvpython}
+from visual import *
+
+scene.range=20
+
+ground = box(pos=vector(0,-10.05,0), size=(40.0,1,1), color=color.white)
+spaceship = box(pos=vector(0,8,0), size=(2,5,2), color=color.yellow)
+
+spaceship.m = 1
+spaceship.v = vector(0,0,0)
+g=1/6*vector(0,-10,0)
+
+dt = 0.01
+t = 0
+
+scale=5.0
+FgravArrow = arrow(pos=spaceship.pos, axis=scale*spaceship.m*g, color=color.red)
+
+while 1:
+        rate(100)
+#        Fgrav=
+#        Fnet=
+#        spaceship.v = 
+#        spaceship.pos = 
+        if(spaceship.pos.y-spaceship.height/2<ground.pos.y+ground.height/2):
+                print("spaceship has landed")
+                break
+        t = t+dt
+        FgravArrow.pos=spaceship.pos
+        FgravArrow.axis=scale*Fgrav
+\end{myvpython}
+
+\item We are now going to add a force of thrust due to rocket engines. Before the \code{while} loop, define a thrust force.
+
+\begin{myvpython}
+	Fthrust=vector(0,4,0)
+\end{myvpython}
+
+\item After defining the thrust vector, create another arrow that will represent the thrust force. Call it \code{FthrustArrow} as shown.
+
+\begin{myvpython}
+FthrustArrow = arrow(pos=spaceship.pos, axis=Fthrust, color=color.cyan)
+\end{myvpython}
+
+\item In the while loop, change the net force so that it is the sum of the gravitational force and the thrust of the rocket engine.
+
+\begin{myvpython}
+        Fnet=Fgrav+Fthrust
+\end{myvpython}
+
+\item Also, in the while loop, update the thrust arrow's position and axis.
+
+\begin{myvpython}
+        FthrustArrow.pos=spaceship.pos
+        FthrustArrow.axis=scale*Fthrust
+\end{myvpython}
+
+\item Run your program and verify that the motion of the spaceship is what we expect from Newton's second law. 
+
+\smallframe{Change the thrust to 10/6 N (in the $+y$ direction. Describe the motion. Is this consistent with Newton's second law?}
+
+\item Let's use the keyboard to turn on and off the engine. In this case, ``on'' means that the thrust is non-zero and ``off'' means that the thrust is zero. In the while loop, after calculating \code{Fgrav}, type the following \code{if} statement:
+ 
+\begin{myvpython}
+        if scene.kb.keys:
+            k = scene.kb.getkey()
+            if k == "up":
+                Fthrust=vector(0,4,0)
+            else:
+                Fthrust=vector(0,0,0)
+\end{myvpython}
+
+\smallframe{What key is used to turn the thrust on? What key is used to turn the thrust off?}
+        
+\item Run your program and verify that it works.
+
+\end{enumerate}
+
+\pagebreak
+
+\analysis
+
+\begin{description}
+
+\item[C] Complete this exercise and do the following.
+
+\begin{enumerate}
+	\item Print the speed of the spaceship and the clock reading when it lands.
+\end{enumerate}
+
+
+\item[B] Do everything for {\bf C} and the following.
+
+\begin{enumerate}
+	\item If the speed of the spaceship is greater than 1 m/s, print ``You lose.''
+	\item If the speed of the spaceship is less than 1m/s, print ``You win.''
+\end{enumerate}
+
+\item[A] Do everything for {\bf B} with the following modifications and additions.
+
+\begin{enumerate}
+	\item Use the down arrow to turn off the thrust (instead of any key).
+	\item Create an engine that fires in the $+x$ direction (the engine is on the left so the arrow points to the right). When the right arrow key is pressed, this engine turns on. When the left arrow key is pressed, this engine turns off.
+	\item Create an engine that fires in the $-x$ direction (the engine is on the right so the arrow points to the left). When the ``a'' key is pressed, this engine turns on. When the ``d'' key is pressed, this engine turns off.
+	\item Place a target on the ground.
+	\item Check that the lunar module lands on the target.
+	\item Check that the x-velocity is very small (perhaps less than 1 m/s for example) when the spaceship hits the target and print ``You win'' if and only if the spaceship has a very small x-velocity.
+	\item Since you don't want to waste fuel, assign points based on the time elapsed and fail the player if the clock reading exceeds some amount.
+	\item Test your game with other users.	
+\end{enumerate}
+
+
+
+
+\end{description}
+

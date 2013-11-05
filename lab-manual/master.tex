@@ -1,0 +1,283 @@
+%Aaron Titus
+%PHY 2010 Lab Manual
+%
+%lab.cls file is from Benjamin Crowell, www.lightandmatter.com
+
+\documentclass[10pt]{tituslab}
+\usepackage{hyperref}
+\usepackage{mandi131}
+\usepackage{listings}
+\usepackage{moreverb}
+\usepackage{array}
+\usepackage{pifont}
+
+
+% Typeset a block of code
+% Use this as an alias for the lstlisting environment provided by listings package
+\lstnewenvironment{myvpython}{\lstset{language=Python,numbers=none,upquote=true,breaklines}}{}
+
+%commands for frames
+\newcommand{\tightframe}[1] {
+	\ \\
+	\noindent
+	\fbox{
+			\parbox[l]{5.5in}{
+			#1 
+		}
+	}
+}
+
+\newcommand{\tinyanswerspace}{
+\vspace{0.25in}
+}
+\newcommand{\smallanswerspace}{
+\vspace{0.5in}
+}
+
+\newcommand{\tinyframe}[1] {
+	\ \\
+	\noindent
+	\fbox{
+			\parbox[l]{5.5in}{
+			#1 
+			\vspace{0.5in}
+		}
+	}
+}
+
+\newcommand{\smallframe}[1] {
+	\ \\
+	\noindent
+	\fbox{
+			\parbox[l]{5.5in}{
+			#1 
+			\vspace{1in}
+		}
+	}
+}
+
+\newcommand{\medframe}[1] {
+	\ \\
+	\noindent
+	\fbox{
+			\parbox[l]{5.5in}{
+			#1 
+			\vspace{2in}
+		}
+	}
+}
+
+\newcommand{\bigframe}[1] {
+	\ \\
+	\noindent
+	\fbox{
+			\parbox[l]{5.5in}{
+			#1 
+			\vspace{4in}
+		}
+	}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% commands for images
+%an image with caption
+\newcommand{\image}[2]{
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=1]{#1}
+\caption{#2}
+\label{#1}
+\end{center}
+\end{figure}
+}
+
+%an image with caption and scale
+\newcommand{\scaledimage}[3]{
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=#3]{#1}
+\caption{#2}
+\label{#1}
+\end{center}
+\end{figure}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%commands for menu names, filenames, hyperlinks,  ...
+%scientific notation with no units
+\newcommand{\menu}[1]{
+	{\bf #1}
+}
+\newcommand{\link}[1]{
+	\texttt{#1}
+}
+\newcommand{\file}[1]{
+	\emph{#1}
+}
+\newcommand{\button}[1]{
+	\fbox{#1}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%units and constants
+
+%units and common expressions
+\newcommand{\kg}{\ensuremath{\kilogram}}
+\newcommand{\m}{\ensuremath{\meter}}
+\newcommand{\km}{\ensuremath{\kilo\meter}}
+\newcommand{\mps}{\ensuremath{\meter\per\second}}
+\newcommand{\mpss}{\ensuremath{\meter\per\second \squared}}
+\newcommand{\kgmps}{\ensuremath{\kilogram \usk \meter\per\second}}
+\newcommand{\angmom}{\ensuremath{\kilogram \usk \meter \squared \per\second}}
+\newcommand{\rps}{\ensuremath{\radian \per\second}}
+\newcommand{\npkg}{\ensuremath{\newton \per \kilogram}}
+\newcommand{\N}{\ensuremath{\newton}}
+\newcommand{\n}{\ensuremath{\newton}}
+\newcommand{\gearth}{\ensuremath{\unit{9.8}{\npkg}}}
+\newcommand{\gpm}{\ensuremath{\gram \per \mole}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%math formatting
+
+%adds parenthesis, especially useful for numerical constants
+\newcommand{\lr}[1]{\ensuremath{\left(#1\right)}} %adds \left and \right parenthesis around quantity
+
+%a vector with no units
+\newcommand{\triple}[3]{
+	\ensuremath{\langle #1, #2 , #3 \rangle}
+}
+
+%scientific notation with no units
+\newcommand{\sci}[2]{
+	\ensuremath{#1 \times 10^{#2}}
+}
+\newcommand{\scie}[2]{
+	\ensuremath{#1 \mbox{e} {#2}}
+}
+\newcommand{\sciE}[2]{
+	\ensuremath{#1 \mbox{E} {#2}}
+}
+
+%zero vector with units
+\newcommand{\vectzero}[1]{\ensuremath{\vectncomps{0}{0}{0}{#1}}}
+%zero vector with no units
+\newcommand{\zerovect}{\ensuremath{\triple{0}{0}{0}}}
+%zero vector with units
+\newcommand{\zerovectunits}[1]{\ensuremath{\vectncomps{0}{0}{0}{#1}}}
+
+%common math equations; the entire equation with & = &
+%unit vector
+\newcommand{\equnitvectsub}[2]{\ensuremath{\vectsubhat{#1}{#2} & = & \frac{\vectsub{#1}{#2}}{\vectsubmag{#1}{#2}}}}
+%momentum principle delta p = Fnet delta t
+\newcommand{\eqmpDp}{\ensuremath{\Delta \vec{p} & = & \vectsub{F}{net}\Delta t}}
+%momentum principle delta p = Fnet delta t
+\newcommand{\eqmpupdate}{\ensuremath{ \pfin & = & \pinit + \vectsub{F}{net}\Delta t}}
+%traditional f=ma
+\newcommand{\eqmpma}{\ensuremath{\vectsub{F}{net} & = & \frac{\Delta \vec{p}}{\Delta t}\\
+& = & m\frac{\Delta \vectsub{v}{cm}}{\Delta t}\\
+& = & m \vectsub{a}{cm}\\
+}}
+
+%pf
+\newcommand{\pfin}{\ensuremath{\vectsub{p}{f}}}
+%pi
+\newcommand{\pinit}{\ensuremath{\vectsub{p}{i}}}
+
+%unit vector with subscript
+\newcommand{\hatsub}[2]{\ensuremath{\vectsubhat{#1}{#2}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%computer code
+\newcommand{\type}[1]{
+	{\texttt{#1}}
+}
+\newcommand{\code}[1]{
+	{\texttt{#1}}
+}
+
+\newcommand{\report}{
+	\newpage 
+	\section*{Lab Report}
+}
+
+
+\begin{document}
+\myeqnspacing % Do this early and often, since it gets reset by \normalsize
+%========================= frontmatter =========================
+\frontmatter
+\yesiwantarabic
+\frontmatter
+\thispagestyle{empty}
+\noindent\vspace{0mm}\\
+\noindent\vspace{10mm}\hspace{6mm}\textsf{\textbf{\Huge{PHY 1200: Physics for Video Games}}}\\
+\noindent\vspace{4mm}\hspace{4in}\textsf{\Large{Notes, Labs, and Programs}}\\
+\noindent\vspace{4mm}\hspace{4in}\textsf{\Large{Aaron Titus}}\\
+\noindent\vspace{4mm}\hspace{4in}\textsf{\Large{High Point University}}\\
+\noindent\vspace{4mm}\hspace{4in}\textsf{Spring 2013}\\
+\noindent\vspace{4mm}\hspace{4in}\textsf{http://physics.highpoint.edu/$\sim$atitus/}
+\yesiwantarabic
+\mynormaltype
+
+\pagebreak[4]
+\noindent
+Copyright (c) 2011 by A. Titus. This lab manual is
+    licensed under the Creative Commons
+    Attribution-ShareAlike license, version 1.0, 
+    http://creativecommons.org/licenses/by-sa/1.0/.
+    If you agree to the license, it grants you certain privileges that
+    you would not otherwise have, such as the right to copy the book,
+    or download the digital version free of charge from
+    \href{http://physics.highpoint.edu/~atitus/}{http://physics.highpoint.edu/$\sim$atitus/}. At your option, you may also copy this book
+    under the GNU Free Documentation License version 1.2, http://www.gnu.org/licenses/fdl.txt,
+    with no invariant sections, no front-cover texts, and no back-cover texts.
+
+
+\tableofcontents
+%========================= main matter =========================
+\mainmatter
+\startchaptersonleftpage
+%-- I want the whole book numbered sequentially, arabic:
+\pagenumbering{arabic} 
+\addtocounter{page}{4} 
+\parafmt
+\myeqnspacing % Do this early and often, since it gets reset by \normalsize
+%\twocolumn
+
+\include{coordinates/coordinates}
+\include{lab-coordinates/lab-coordinates}
+\include{vpython-intro/vpython-intro}
+\include{vectors/vectors}
+\include{uniform-motion/uniform-motion}
+\include{video-uniform-motion/video-uniform-motion}
+\include{vpython-uniform-motion/vpython-uniform-motion}
+\include{vpython-lists-and-ifs/vpython-lists-and-ifs}
+\include{vpython-keyboard/vpython-keyboard}
+\include{vpython-collision-detection/vpython-collision-detection}
+\include{galilean-relativity/galilean-relativity}
+\include{collision-barrier/collision-barrier}
+\include{lab-coefficient-of-restitution/lab-coefficient-of-restitution}
+\include{game-pong/game-pong}
+\include{video-fancart/video-fancart}
+\include{newtons-second-law/newtons-second-law}
+\include{vpython-fancart/vpython-fancart}
+\include{game-lunar-lander/game-lunar-lander}
+\include{video-projectile-motion/video-projectile-motion}
+\include{video-angry-birds/video-angry-birds}
+\include{game-tank-wars/game-tank-wars}
+\include{vpython-friction/vpython-friction}
+\include{video-center-of-mass/video-center-of-mass}
+\include{game-asteroids/game-asteroids}
+
+
+%Appendices
+% Turn off lab numbering
+\formatappendixtoc
+%
+%\include{appendix-lab-notebook/appendix-lab-notebook}
+%\include{appendix-functions-and-graphs/appendix-functions-and-graphs}
+\include{project1/project1}
+\include{project-final/project-final}
+\include{appendix-tracker/appendix-tracker}
+
+\end{document}

@@ -1,0 +1,386 @@
+\lab{Vectors}
+
+\section*{Definition of a Vector}
+
+To put it simply, a vector is an arrow. The arrow has a tail and a head, each of which is at a point on a coordinate system. Thus, the arrow can be defined by the coordinates of its head and the coordinates of its tail. In Figure \ref{vectors/vector}, the head of the vector is at $(+1,+4)\ \meter$, and the tail is at $(-4,-2)\ \meter$.
+
+\scaledimage{vectors/vector}{A vector is simply an arrow.}{0.5}
+
+
+\section*{Vector Components}
+
+You can define a vector another way -- by specifying the coordinates of the tail and then specifying how many units over and upward (or downward) you have to count in order to get to the head of the vector. 
+
+For example, in Figure \ref{vectors/vector-components}, the tail of the vector is at $(-4,-2)\ \meter$. To get to the head of the arrow, you can ``walk'' to the right 5 meters and then ``walk'' upward 6 meters. (By ``walking,'' I mean take your pencil and count over to the right along the dashed line until you get to the $+1$ coordinate. Then, count upward along the dotted line until you get to the head of the arrow.)
+
+\scaledimage{vectors/vector-components}{The x and y components of a vector.}{0.5}
+
+The dashed line, the dotted line, and the arrow form a right-triangle. The horizontal dashed line is parallel to the x-axis and is called the \emph{x-component} of the vector. The vertical dotted line is parallel to the y-axis and is called the \emph{y-component} of the vector. 
+
+In the example in Figure \ref{vectors/vector-components}, the x-component of the vector is $+5$ meters, and the y-component of the vector is $+6$ vectors. We will write a vector's components using parentheses as well, such as $(+5,+6)\ \meter$. But note that coordinates $(x,y)$ are different than vector components (horizontal component, vertical component). They have different meanings.
+
+The $+$ sign on the x-component means that we had to count over \emph{to the right}. The $+$ sign on the y-component means that we had to counter \emph{upward}. If we had counted to the left, then the x-component would be negative. If we had counted downward, then the y-component would be negative. 
+
+Symbols for a vector are written with an arrow on top of them. For example, we could name this vector $\vect{A}$. Then, $\vect{A}=(+5,+6)\ \meter$. The x and y components are written as $A_x$ and $A_y$, respectively. So, in general  $\vect{A}=(A_x,A_y)$.
+
+We can define the vector by the coordinates of its tail and its head. Alternatively, we can define the vector by the coordinates of its tail and the vector's components. These methods are identical and lead one to draw the same arrow. (See the summary in Table \ref{vectors/definition}.)
+
+\begin{table}[htdp]
+\caption{Two ways to define vector $\vec{A}$ in this example.}
+\begin{center}
+\begin{tabular}{|m{3in}|m{3in}|}
+
+\hline
+\hline
+\begin{center}{\bf Method 1 to describe vector $\vect{A}$ }\end{center}  & \begin{center}{\bf Method 2 to describe vector $\vect{A}$ }\end{center} \\
+tail location is at: $(-4,-2)\ \meter$ &  tail location is at: $(-4,-2)\ \meter$ \\
+head location is at: $(+1,+4)\ \meter$ & vector components are: $(+5,+6)\ \meter$ \\
+\hline
+\hline
+\end{tabular}
+\end{center}
+\label{vectors/definition}
+\end{table}%
+
+
+\section*{Head = Tail + Vector Components}
+
+If you know the tail of a vector and you know its components, then you can calculate the coordinates of the head of the vector.
+
+\begin{eqnarray*}
+	\mbox{(head)}& = & \mbox{(tail)} + \mbox{(vector components)} \\
+	\mbox{for example: } (+1,+4)\ \meter & = & (-4,-2) \ \meter + (+5,+6)\ \meter 
+\end{eqnarray*}
+
+To add the tail and vector components, you add the x-values and y-values separately. Thus,
+
+\begin{eqnarray*}
+	\mbox{x: }\qquad +1 & = & -4 +5 \\
+	\mbox{y: }\qquad +4 &=& -2 + 6
+\end{eqnarray*}
+
+which gives the location of the head as:  $(+1,+4)\ \meter$. Maybe it is easier to write it vertically, as shown below.
+
+\begin{eqnarray*}
+	&  & (-4,-2) \ \meter \\
+	& + & (+5,+6) \ \meter \\
+	&  &\overline{ (+1,+4)\ \meter} 
+\end{eqnarray*}
+
+\section*{Vector Components = Head - Tail}
+
+If you know the coordinates of the head and tail of a vector, you can calculate the vector's components by:
+
+\begin{eqnarray*}
+	\mbox{(vector components)}& = & \mbox{(head)} - \mbox{(tail)}\\
+	\mbox{for example: }  (+5,+6)\ \meter & = &  (+1,+4)\ \meter - (-4,-2) \ \meter 
+\end{eqnarray*}
+
+Writing it vertically looks like:
+
+\begin{eqnarray*}
+	&  & (+1,+4) \ \meter \\
+	& - & (-4,-2) \ \meter \\
+	&  &\overline{ (+5,+6)\ \meter} 
+\end{eqnarray*}
+
+\subsection*{Examples}
+
+\tightframe{
+
+{\bf Question:}
+
+The tail of vector is at (+3,-4) m. Its head is at (+1,-1) m. Does the vector point to the right or to the left?  Does the vector point upward or downward? \\
+
+{\bf Answer:}
+
+Find the vector components. 
+
+\begin{eqnarray*}
+	\mbox{(vector components)}& = & \mbox{(head)} - \mbox{(tail)}\\
+	 & = &  (+1,-1)\ \meter -  (+3,-4) \ \meter \\
+	 & = &  (-2,+3) \ \meter 
+\end{eqnarray*}
+
+Because the vector's x-component is negative, the vector points to the left. Because its y-component is positive, the vector points upward. You can also answer this question by drawing the vector on a coordinate system and observing that it points to the left and upward.
+
+}
+
+\bigskip
+
+\tightframe{
+
+{\bf Question:}
+
+Computers, by default, define the $+x$ axis to the right and the $+y$ axis downward, with the origin at the top left corner of the monitor. The tail of vector $\vect{B}$ is at (300,100) pixels, and $\vect{B}=(150,200)$ pixels. Where is the head of $\vect{B}$? \\
+
+{\bf Answer:}
+
+\begin{eqnarray*}
+	\mbox{(head)}& = & \mbox{(tail)} + \mbox{(vector components)} \\
+	& = & (300,100)\ \mathrm{pixels} + (150,200)\ \mathrm{pixels} \\
+	& = & (450,300)\ \mathrm{pixels} 
+\end{eqnarray*}
+
+}
+
+\section*{Magnitude of a Vector}
+
+Vectors have two essential properties:  (1) length and (2) direction. The length of a vector is also called its \emph{magnitude} and is written $|\vect{A}|$. 
+
+The vector and its components make up a right triangle, as shown in Figure \ref{vectors/vector-components}. The vector is the hypotenuse, and the components are the sides.
+
+Pythagorean's theorem for a right triangle is $c^2  =  a^2 + b^2$. When applied to a right triangle, Pythagorean theorem gives:
+
+\begin{eqnarray*}
+	|\vect{A}|^2 & = & A_x^2 + A_y^2 \\
+\end{eqnarray*}
+
+\subsection*{Example}
+
+\tightframe{
+
+{\bf Question:}
+
+What is the length (i.e. magnitude) of $\vect{A}$ in Figure \ref{vectors/vector-components}? \\
+
+{\bf Answer:}
+
+$\vect{A}= (+5,+6)\ \meter$, so $|\vect{A}|$ is
+
+\begin{eqnarray*}
+	|\vect{A}| & = & \sqrt{A_x^2 + A_y^2} \\
+	& = & \sqrt{(5\ \meter)^2 + (6\ \meter)^2} \\
+	& = & 7.81\ \meter
+\end{eqnarray*}
+
+Notice that the hypotenuse is longer than each side of the right triangle, as expected.
+
+}
+
+\section*{Multiplying a vector by a scalar}
+
+When you multiply a vector by a scalar, you multiply each component by that scalar. If $a$ is a scalar quantity, then
+
+\begin{equation*}
+	a\vec{r}= <ar_x, ar_y, ar_z>
+\end{equation*}
+
+The magnitude of this vector is thus $a|\vec{r}|$. Multiplying a vector by a scalar just \emph{scales} the vector--this only changes the magnitude of the vector and not the direction unless the scalar is negative. Multiplying a vector by $-1$, ``reverses'' the vector. In other words, $-\vec{r}$ points in the opposite direction as $\vec{r}$.
+
+Figure \ref{vectors/vector_times_scalar} shows vector $\vec {B}$ and the result of multiplying it by 2 and the result of multiplying it by $-1$.
+
+\scaledimage{vectors/vector_times_scalar}{Multiplying a vector by a scalar.}{0.5}
+
+\subsection*{Example}
+
+\tightframe{
+
+{\bf Question:}
+
+A missile has a velocity vector $\vectsub{v}{1}=(100,20,-50)$ m/s. What is its speed (i.e. the magnitude of its velocity)?  If another missile has moving twice as fast, what is its velocity vector? \\
+
+{\bf Answer:}
+
+$\vectsub{v}{1}=(100,20,-50)\ \meter \per \second$, so $|\vect{v}|$ is
+
+\begin{eqnarray*}
+	|\vectsub{v}{1}| & = & \sqrt{v_x^2 + v_y^2 + v_z^2} \\
+	& = & \sqrt{(100)^2 + (20)^2 + (50)^2}\ \meter \per \second \\
+	& = & 114\ \meter \per \second
+\end{eqnarray*}
+
+The second missile is traveling twice as fast. Its speed is $2|\vectsub{v}{1}|=227\ \meter \per \second$. (Note that 114 m/s was a rounded quantity.) Its velocity vector is $2\vectsub{v}{1}$:
+
+\begin{eqnarray*}
+	\vectsub{v}{2}=2\vectsub{v}{1} & = & 2(100,20,-50)\ \meter \per \second \\
+	& = & (200, 40, -100)\ \meter \per \second \\
+\end{eqnarray*}
+
+}
+
+
+\section*{Direction of a Vector}
+
+The direction of a vector is specified by a unit vector. A \emph{unit vector} is a vector with a magnitude of 1. But if we know a vector, how do we find its associated unit vector (i.e. its direction)?  A unit vector in the direction of $\vec{r}$ is calculated by
+
+\begin{equation*}
+	\hat{r} = \frac{\vec{r}}{|\vec{r}|}
+\end{equation*}
+
+\begin{equation*}
+	\hat{r} = \left<\frac{r_x}{|\vec{r}|}, \frac{r_z}{|\vec{r}|}, \frac{r_z}{|\vec{r}|}\right>
+\end{equation*}
+
+Note that a unit vector is written $\hat{r}$ with a ``hat'' on top of the variable. It is pronounced ``r-hat.''
+
+A few specially defined unit vectors are $\hat{i}$, $\hat{j}$, and $\hat{k}$ which point along the x, y and z axes, respectively. They are written as
+
+\begin{equation*}
+	\hat{i} = <1, 0, 0>
+\end{equation*}
+\begin{equation*}
+	\hat{j} = <0, 1, 0>
+\end{equation*}
+\begin{equation*}
+	\hat{k} = <0, 0, 1>
+\end{equation*}
+
+Suppose that a vector points in the $-x$ direction, then its unit vector is $<-1, 0, 0>$. Likewise $<0,-1,0>$ points in the --y direction, and $<0,0,-1>$ points in the --z direction.
+
+\subsection*{Example}
+
+\tightframe{
+
+{\bf Question:}
+
+A missile has a velocity vector $\vectsub{v}{1}=(100,20,-50)$ m/s. What is its direction? (Note: the direction of a vector is specified by its unit vector.) \\
+
+{\bf Answer:}
+
+$\vect{v}=(100,20,-50)\ \meter \per \second$, so $\hat{v}$ is
+
+\begin{eqnarray*}
+	\hat{v} & = & \frac{\vect{v}}{|\vect{v}|} \\
+	& = & \frac{(100,20,-50)\ \meter \per \second}{114\ \meter \per \second}\\
+	& = & (0.880, 0.176, -0.440)
+\end{eqnarray*}
+
+Note that there are no units because they cancel out. A unit vector only gives us direction, and nothing else.
+}
+
+\tightframe{
+
+{\bf Question:}
+
+A missile is traveling with a speed of 50 m/s in the -y direction. What is its velocity vector? \\
+
+{\bf Answer:}
+
+$\vect{v}=|\vect{v}|\hat{v}$.
+
+\begin{eqnarray*}
+	|\vect{v}| & = & |\vect{v}|\hat{v} \\
+	& = & 50(0,-1,0) \\
+	& = & (0,-50,0) \meter \per \second
+\end{eqnarray*}
+
+}
+
+\section*{Position}
+
+The coordinates of an object on a coordinate system are really a vector, with the tail of the vector at the origin. In Figure \ref{vectors/position}, an object at the coordinates (2,3) has a position vector $\vect{r}=(2,3)$ m (if the units are assumed to be meters). 
+
+\scaledimage{vectors/position}{A position of an object is a vector from the origin to the coordinates of the object.}{0.35}
+
+\section*{Vectors in VPython}
+
+One of the reasons that we are using the \code{visual} package and Python is that it knows how to add and subtract vectors and it knows how to multiply a vector and a scalar. Let's experiment with this now.
+
+\begin{enumerate}
+
+	\item First, create a new VPython program with the standard import statements at the beginning. (See your previous program as an example.)
+
+	\subsection*{Multiplying by a scalar; Scaling an arrow's axis}
+
+Since position of a sphere is a vector, we can perform scalar multiplication on it.
+
+	\item Place the tennis ball at the position \triple{2}{0}{0} m.
+
+	\item Modify the position of the tennis ball by changing the statement to the following, and note what happens.
+	
+\begin{myvpython}
+tennisball = sphere(pos=2*vector(2,0,0), radius=0.2, color=color.green)
+\end{myvpython}
+
+\tightframe{
+QUESTIONS TO ANSWER ABOUT SCALING ARROWS:
+
+To move the tennis ball three times further on the x-axis, what scalar would you multiply its position by?\\
+\vspace{0.25in}
+
+To move the tennis ball to the other side of the origin by multiplying by a scalar factor, what factor should you use?\\
+\vspace{0.25in}
+
+}	
+
+	\subsection*{Vector addition and subtraction}
+
+The \emph{relative position} of an object is the object's position relative to a location other than the origin. If point P is a given location in space, then the position of an object relative to P is
+
+\begin{eqnarray*}
+	\vectsub{r}{relative to P} & = & \vect{r} - \vectsub{r}{P} \\
+\end{eqnarray*}
+
+VPython can subtract vectors. So now, you can create a second object, a baseball, and draw an arrow from the tennis ball to the baseball.
+
+\item Place the tennis ball at the position \triple{2}{0}{0} m.
+
+\item Create a sphere at the position $\triple{-1}{4}{0}$ m and name the sphere \code{baseball}.
+
+\item Create an arrow that represents the position of the baseball. It should point from the origin to \code{baseball.pos}, so its \code{pos} is $(0,0,0)$ and its axis is \code{baseball.pos}. To do this, type the line below.
+
+\begin{myvpython}
+arrow(pos=vector(0,0,0), axis=baseball.pos, color=color.white)
+\end{myvpython}
+
+\item Create an arrow that represents the position of the baseball relative to the tennis ball. Note that its tail is at the position of the tennis ball, and its head is at the position of the baseball. The axis of the arrow represents the relative position vector and is calculated by:
+
+\begin{eqnarray*}
+	\vectsub{r}{baseball relative to tennisball} & = & \vectsub{r}{baseball} - \vectsub{r}{tennis ball} \\
+\end{eqnarray*}
+
+In symbolic notation in VPython, write, this is calculated as \code{baseball.pos-tennisball.pos}. So, write:
+
+\begin{vpythonblock}
+arrow(pos=tennisball.pos, axis=baseball.pos-tennisball.pos, color=color.white)
+\end{vpythonblock}
+
+Note that \code{pos} represents the tail of the arrow. The vector is the \code{axis} of the arrow which is really the position of the head relative to the position of the tail.
+
+\end{enumerate}
+
+\newpage
+
+\section*{Homework}
+
+\begin{enumerate}
+	\item The source of a missile is at (100, 20, 0) pixels. A city is at (600, 400, 0) pixels. What is the vector that points from the source (tail) to the city (head)?
+	\item The vector that points from a source of a missile at (500, 20, 0) pixels to a city that is at (200, 500, 0) pixels has the components (-300, 480, 0) pixels. What is the magnitude of this vector and what is its direction?
+	\item In the game \emph{Frogger}, a log is at (10,5,0) m. It moves with a speed of 1 m/s in the $-x$ direction. What is its velocity vector?
+	\item You have learned how to create spheres and arrows in VPython. In this activity, you will practice what you've learned by creating a new program.
+
+Start a new file by going to the \code{File} menu and selecting \code{New window}.  Again, the first two lines of your program will be:
+
+\begin{myvpython}
+from  __future__  import division
+from visual import *
+\end{myvpython}
+
+The program you will write makes a model of the Sun and various planets.  The distances are given in scientific notation.  In VPython, to write numbers in scientific notation, use the letter ``e'' to represent the phrase ``times ten to the.''  For example, the number \sci{6.4}{7} is written as \scie{6.4}{7} in a VPython program.
+
+Create a model of Sun and three of the inner planets:  Mercury, Venus, and Earth.  The distances from Sun to each of the planets are given by the following:
+
+Mercury: \sci{5.8}{10} m from the sun\\
+Venus: \sci{1.1}{11} m from the sun\\
+Earth:  \sci{1.5}{11} m from the sun\\
+
+The inner planets all orbit Sun in roughly the same plane, so place them in the x-y plane.  Place Sun at the origin, place Mercury at $<d_i , 0, 0>$, place Venus at $< -d_i, 0, 0>$, and place Earth at $<0, d_i, 0>$, where $d_i$ represents the distance from Sun to the particular planet $i$.
+
+If you use the real radii of the Sun and the planets in your model, they will be too small for you to see.  So use these values:\\
+
+Radius of Sun: \sci{7.0}{9} m\\
+Radius of Mercury:  \sci{2.4}{9} m\\
+Radius of Venus: \sci{6.0}{9} m\\
+Radius of Earth: \sci{6.4}{9} m\\
+
+The radius of Sun in this program is ten times larger than the real radius, while the radii of the planets in this program are 1000 times larger than the real radii.
+
+Finally make two arrows:
+
+\begin{enumerate}
+	\item Create an arrow that points from Earth to Mercury. Do not use any numbers to specify the position and axis of the arrow.
+	\item Imagine that a space probe is on its way to Venus, and that it is currently halfway between Earth and Venus.  Make a relative position vector that points from the Earth to the current position of the probe. Do not use any numbers to specify the position and axis of the arrow.
+\end{enumerate}
+
+\end{enumerate}
