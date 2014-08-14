@@ -17,15 +17,15 @@
 \contentsline {chapter}{\numberline {14}GAME -- Pong}{92}{chapter.14}
 \contentsline {chapter}{\numberline {15}LAB: Video Analysis of a Fan Cart}{98}{chapter.15}
 \contentsline {chapter}{\numberline {16}Newton's Second Law}{106}{chapter.16}
-\contentsline {chapter}{\numberline {17}PROGRAM -- Modeling motion of a fancart}{112}{chapter.17}
-\contentsline {chapter}{\numberline {18}GAME -- Lunar Lander}{118}{chapter.18}
-\contentsline {chapter}{\numberline {19}LAB: Video Analysis of Projectile Motion}{124}{chapter.19}
-\contentsline {chapter}{\numberline {20}LAB: Angry Birds}{134}{chapter.20}
-\contentsline {chapter}{\numberline {21}GAME -- Tank Wars}{140}{chapter.21}
-\contentsline {chapter}{\numberline {22}PROGRAM -- Modeling motion with friction}{148}{chapter.22}
-\contentsline {chapter}{\numberline {23}LAB -- Center of Mass Velocity During an Elastic Collision}{152}{chapter.23}
-\contentsline {chapter}{\numberline {24}GAME -- Asteroids}{160}{chapter.24}
-\contentsline {chapter}{\numberline {}Appendix \ref {appendix:project1}: Project 1 -- Developing your first game with constant velocity motion}{170}{chapter.25}
-\contentsline {chapter}{\numberline {}Appendix \ref {appendix:project-final}: Final Project -- Developing an Original Game}{172}{chapter.26}
-\contentsline {chapter}{\numberline {}Appendix \ref {appendix:tracker}: Tracker Cheat Sheet}{174}{chapter.27}
+\contentsline {chapter}{\numberline {17}PROGRAM -- Modeling motion of a fancart}{114}{chapter.17}
+\contentsline {chapter}{\numberline {18}GAME -- Lunar Lander}{120}{chapter.18}
+\contentsline {chapter}{\numberline {19}LAB: Video Analysis of Projectile Motion}{126}{chapter.19}
+\contentsline {chapter}{\numberline {20}LAB: Angry Birds}{136}{chapter.20}
+\contentsline {chapter}{\numberline {21}GAME -- Tank Wars}{142}{chapter.21}
+\contentsline {chapter}{\numberline {22}PROGRAM -- Modeling motion with friction}{150}{chapter.22}
+\contentsline {chapter}{\numberline {23}LAB -- Center of Mass Velocity During an Elastic Collision}{154}{chapter.23}
+\contentsline {chapter}{\numberline {24}GAME -- Asteroids}{162}{chapter.24}
+\contentsline {chapter}{\numberline {}Appendix \ref {appendix:project1}: Project 1 -- Developing your first game with constant velocity motion}{172}{chapter.25}
+\contentsline {chapter}{\numberline {}Appendix \ref {appendix:project-final}: Final Project -- Developing an Original Game}{174}{chapter.26}
+\contentsline {chapter}{\numberline {}Appendix \ref {appendix:tracker}: Tracker Cheat Sheet}{176}{chapter.27}
 \contentsfinish 
