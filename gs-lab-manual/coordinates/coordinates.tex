@@ -1,0 +1,69 @@
+\lab{Coordinates}
+
+\section*{Cartesian Coordinate System}
+
+To specify the location of an object, we use a coordinate system. The one shown in Figure \ref{coordinates/2d-coordsystem} is a two-dimensional (2-D) Cartesian coordinate system with the $+x$ direction defined to the right and the $+y$ direction defined to be upward, toward the top of the page.
+
+\scaledimage{coordinates/2d-coordsystem}{A 2-D Cartesian coordinate system.}{0.5}
+
+A three-dimensional (3-D) coordinate system with the $+z$ axis defined to be outward toward you, perpendicular to the page, is shown in Figure \ref{coordinates/3d-coordsystem}.
+
+\scaledimage{coordinates/3d-coordsystem}{A 3-D Cartesian coordinate system.}{0.5}
+
+A coordinate system is defined by:
+
+\begin{enumerate}
+	\item an origin
+	\item a scale (determined by the tick marks, numbers, and units)
+	\item an orientation; the direction of the +x, +y, and +z directions, respectively. 
+\end{enumerate}
+
+The orientation is described verbally by saying something like ``The +x direction is toward the right of the origin.'' Or, ``The +y direction is upward toward the top of the page.''
+
+\section*{Coordinates}
+
+A point on a Cartesian coordinate system is designated by a pair of numbers in 2-D and a triplet of numbers in 3-D. On a 2-D coordinate system, the pair of numbers represents the $(x,y)$ coordinates of the point.
+
+On the coordinate system in Figure \ref{coordinates/x-y-points}, the red dot is at the location $(+1,+3)$ meters. And the blue dot is at the location $(+4,-4)$ meters. Thus, we say that the x-position of the red dot is $+1$ m, and the y-position of the red dot is +3 m. Likewise, the x-position of the blue dot is +4 m, and the y-position of the blue dot is -4 m.
+
+\scaledimage{coordinates/x-y-points}{Coordinates of certain points on a coordinate system.}{0.5}
+
+The sign of the coordinate tells us the side of the origin that the point is on. Thus, $x=+1$ means that the point is on the right-side of the origin. If $x=-1$ then the point is on the left-side of the origin.
+
+Likewise, $y=+3$ means that the point is above the origin, and $y=-4$ means that the point is below the origin.
+
+\tightframe{
+{\bf Question:}  State in words the location of a point with a positive z-coordinate.
+
+{\bf Answer:}  Using the coordinate system in Figure 1.2, a positive value of z means that the point is in front of the page (which we assume to be the x-y plane), toward you. For example if you are reading this page, then your eyes have positive z coordinates.
+}
+
+\section*{Computer Convention}
+
+Programming languages define the origin of the monitor to be at the top left corner. The $+x$ axis is to the right, and the $+y$ axis is downward, as shown in Figure \ref{coordinates/comp-coords}. 
+
+The units, in computer graphics, are pixels. If the resolution of a monitor is is $1440 \times 900$, it means that the monitor displays 1440 pixels horizontally and 900 pixels vertically. Since the origin is in the top left corner, the coordinates of a single pixel on a monitor are always positive.
+
+\scaledimage{coordinates/comp-coords}{Convention for pixel coordinates on a computer monitor.}{0.5}
+
+\section*{Example}
+
+\tightframe{
+{\bf Question:}  What are the coordinates of point A in Figure \ref{coordinates/points}?
+
+{\bf Answer:}  For point A, $x=+2\ \meter$ and $y=+3\ \meter$. Thus, it's coordinates are $(+2, +3)\ \meter$.
+}
+
+\scaledimage{coordinates/points}{Three points on a Cartesian coordinate system.}{0.4}
+
+\pagebreak
+
+\section*{Homework}
+
+\begin{enumerate}
+	\item What are the coordinates of points B and C in Figure \ref{coordinates/points}?
+	\item A puck travels across the monitor in a computer game as shown in Figure \ref{coordinates/puck}. The top left corner of the image is the origin. Each line on the grid represents 10 pixels. The puck moves from the top, right side of the monitor to the bottom, left side of the monitor. What are the coordinates in pixels of each image of the puck?
+
+\scaledimage{coordinates/puck}{A puck on a computer monitor.}{1}
+	
+\end{enumerate}

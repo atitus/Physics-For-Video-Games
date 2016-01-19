@@ -1,0 +1,322 @@
+\lab{PROGRAM:  Introduction to GlowScript and VPython}
+
+\apparatus
+\equip{Computer}
+\equip{GlowScript -- www.glowscript.org}
+
+\longgoal
+
+The purpose of this activity is to write your first program in a language called Python. We will use the web app GlowScript that converts Python to JavaScript so the program can run in a web browser. GlowScript provides the same functions available in the Python module called Visual. Together Python and Visual are named VPython. As a result, GlowScript can be considered the web-based version of VPython. You will probably read or hear the terms GlowScript and VPython used interchangeably; however, there are some important differences. I tend to think of the language as VPython (Python + Visual) and the web app as GlowScript.
+
+We use VPython because it allows you to do vector algebra and to create 3D objects in a 3D scene. The capability of 3D graphics with vector mathematics makes it a great tool for simulating physics phenomena. In this activity, you will learn:
+
+\begin{itemize}
+	\item how to use GlowScript, the web-based integrated development editor (IDE) for writing and running VPython.
+	\item how to structure a simple computer program in VPython.
+	\item how to create 3D objects such as spheres and arrows.
+%	\item how to define vectors in VPython.
+%	\item how to add and subtract vectors in VPython.
+\end{itemize}
+
+\setup
+
+Go to \href{http://www.glowscript.org/}{http://www.glowscript.org/} and create an account. You will need a Google account because GlowScript uses your Google account for authentication. After logging in, you will see a link to ``your programs are here.'' Click this link to enter the IDE. 
+
+\procedure
+
+\begin{enumerate}
+
+	\subsection*{Creating folders and files}
+	
+	\item Once you log in and follow the link to your programs, you are in the GlowScript IDE. Click the \includegraphics[scale=0.75]{glowscript-intro/gs-add-folder} tab to create a new folder. A pop-up window appears as shown in Figure \ref{glowscript-intro/gs-new-folder}. Because I must run your programs, make the folder public.
+	
+	%{\bf \emph{Uncheck}} Public in order to make the folder PRIVATE. This is important so others cannot see your work as you are developing. After you create games for your projects, you will copy them to a public folder to share them with the world. Name the folder ``phy1200private'' or whatever you wish. Later you will probably make a ``phy1200public'' folder.
+	
+	\scaledimage{glowscript-intro/gs-new-folder}{Create a new folder in GlowScript.}{0.5}
+
+
+	\item With the folder name highlighted orange (showing you are in the folder), click the link {\bf Create New Program} and name the program \code{intro}.
+	
+		
+	\subsection*{Starting a program:  Setup statements}
+	
+	\item Notice GlowScript types the first line of the program for you.
+	
+\begin{myvpython}
+GlowScript 1.1 VPython
+\end{myvpython}
+	
+Every GlowScript program begins with this setup statement. It tells GlowScript you are writing VPython code.
+
+	\item Also, notice there is no ``save'' menu. Like Google Docs, GlowScript automatically saves your program as you are typing it. 
+	
+	\subsection*{Creating an object}
+
+	\item Now for your first VPython command, let's make a sphere. Skip a line in order to make your code more readable, and on line 3, type:
+
+\begin{myvpython}
+sphere()
+\end{myvpython}
+
+This statement tells the computer to create a sphere object.
+
+	\item Run the program by clicking {\bf Run this program}. GlowScript exits the edit mode and enters the run mode. You should see a white sphere on a black background like Figure \ref{glowscript-intro/sphere}. This is called the \code{scene}.
+
+	\scaledimage{glowscript-intro/sphere}{Your first VPython program--a sphere.}{0.5}
+
+
+	\subsection*{The 3-D graphics scene}
+	
+By default the sphere is at the center of the scene, and the ``camera'' (your point of view) is looking directly at the center.
+	
+	\item If you are on a PC, hold down both mouse buttons and move the mouse forward and backward to make the camera move closer or farther away from the center of the scene. On a Mac, hold down the option key while moving the mouse forward and backward. This is how you \emph{zoom} in VPython.
+	
+	\item Hold down the right mouse button alone and move the mouse to make the camera ``revolve'' around the scene, while always looking at the center. On a Mac, in order to rotate the view, hold down the Control key while you click and drag the mouse. This is how you \emph{rotate} the scene in VPython.
+
+By default, when you first run the program, the coordinate system is defined with the positive x direction to the right, the positive y direction pointing up toward the top edge of the monitor, and the positive z direction coming out of the screen toward you. You can then rotate the camera view to make these axes point in other directions relative to the camera. 
+		
+	\subsection*{Error messages: Making and fixing an error}
+	
+	GlowScript tells you when there is a syntax error in  your program. (Logic errors are much more difficult to fix!) To see an example of an error message, let's try making a spelling mistake.
+	
+	\item Change line 3 of the program to the following:
+	
+\begin{myvpython}
+phere()
+\end{myvpython}
+
+	\item Run the program.
+
+There is no function or object in VPython called phere(). As a result, an error message pops up. The message gives the \emph{approximate} line number where the error occurred and a description of the error, as shown in Figure \ref{glowscript-intro/gs-error}.
+
+	\scaledimage{glowscript-intro/gs-error}{An error message in GlowScript.}{0.5}
+
+The line number may be off, as it is in this case but is usually close.
+
+	\item Correct the error in the program by clicking {\bf Edit this program} and returning to the editor. Once in editing mode, you can click the \frame{X} to close the error message.
+
+There are two types of errors: (1) syntax errors which might be a typing or coding mistake and (2) a programmatic errors so the program runs correctly but does something other than what you intended. The error message helps you find the first of these. Finding errors that cause a program to act differently than you intended is much more difficult and is a skill you will develop in this course.
+	
+	\subsection*{Changing attributes (position, size, color, shape, etc.) of an object}
+	
+Now let's give the sphere a different position in space and a radius. 
+
+	\item Change line 3 of the program to the following:
+
+\begin{myvpython}	
+sphere(pos=vector(-5,2,3), radius=0.40, color=color.red)
+\end{myvpython}
+
+	\item Run the program.  Experiment with other changes to pos, radius, and color, running the program each time you change an attribute.
+	
+	\item Answer the following questions:
+	
+	\tightframe{
+What does changing the \code{pos} attribute of a sphere do?\\
+\vspace{0.25in}
+
+What does changing the \code{radius} attribute of a sphere do?\\
+\vspace{0.25in}
+
+What does changing the \code{color} attribute of a sphere do? What colors can you use?  You can try \code{color=vector(1,0.5,0)} for example. The numbers stand for RGB (Red, Green, Blue) and can have values between 0 and 1. Can you make a purple sphere? Note that colors such as cyan, yellow, and magenta are defined, but not all possible colors are defined. Choose random numbers between 0 and 1 for the (Red, Green, Blue) and see what you get. \\
+\vspace{0.25in}
+
+}
+
+	\subsection*{Autoscaling and units}
+
+VPython automatically zooms the camera in or out so all objects appear in the window. Because of this autoscaling, the numbers for the \code{pos} and \code{radius} can be in any consistent set of units, like meters, centimeters, inches, etc. For example, this could represent a sphere with a radius 0.20 m at the position $(2,4,0)$ m. In this course we will often use SI units in our programs (``Systeme International'', the system of units based on meters, kilograms, and seconds).
+
+	\subsection*{Creating a box object}
+
+Another object we will often create is a box. A box is defined by its position, axis, length, width, and height as shown in Figure \ref{glowscript-intro/box}\footnote{Image from  \url{http://www.glowscript.org/docs/VPythonDocs/box.html}}.
+
+\scaledimage{glowscript-intro/box}{Attributes of a box.}{0.7}
+
+	\item Type the following on a new line, then run the program:
+
+\begin{myvpython}
+box(pos=vector(0,0,0), size=vector(2,1,0.5), color=color.orange)
+\end{myvpython}
+
+The length, width, and height of the box are expressed as a vector with the attribute: \code{size=vector(L,H,W)}.  
+
+	\item Change the length to 4 and rerun the program.
+	
+	\item Now change its height and rerun the program.
+	
+	\item Similarly change its width and position.
+
+\tightframe{
+Which dimension (length, width, or height) should be changed to make a box longer along the y-axis? Change your code now to check your answer.\\
+\vspace{0.25in}
+
+What point does the position of the box refer to?
+\begin{enumerate}
+\item the center of the box
+\item one of its corners
+\item the center of one of its faces
+\item some other point
+
+\end{enumerate}
+}
+
+	\subsection*{Comment lines (lines ignored by the computer)}
+
+Comment lines start with a \# (pound sign). 
+A comment line can be a note to yourself, such as:
+
+\begin{myvpython}
+# units are meters
+\end{myvpython}
+
+Or a comment can be used to remove a line of code temporarily, without erasing it.
+
+	\item Put a \# at the beginning of the line creating the box, as shown below.
+
+\begin{myvpython}
+#box(pos=vector(0,0,0), size=vector(2,1,0.5), color=color.orange)
+\end{myvpython}
+
+	\item Run the program. What did you observe?
+	
+	\item Uncomment this line by deleting the \# and run the program again. The box now appears.
+	
+	\subsection*{Naming objects; Using object names and attributes}
+	
+We will draw a tennis court and will change the position of a tennis ball.
+
+	\item Clean up your program so it contains only the following objects:  
+
+A green box that represents a tennis court. Make it 78 ft long, 36 ft wide, and 4 ft tall. Place its center at the origin.
+
+An orange sphere (representing a tennis ball) at location \triple{-28}{5}{8} ft, with radius 1 ft. Of course a tennis ball is much smaller than this in real life, but we have to make it big enough to see it clearly in the scene. Sometimes we use unphysical sizes just to make the scene pretty.
+
+(Remember, you don't type the units into your program. But rather, you should use a consistent set of units and know what they are.)
+
+	\item Run your program and verify that it looks as expected. Use your mouse to rotate the scene so you can see the ball relative to the court. Your program should look like the one below.
+	
+\begin{vpythonprogram}
+GlowScript 1.1 VPython
+
+box(pos=vector(0,0,0), size=vector(78,4,36), color=color.green)
+
+sphere(pos=vector(-28, 5, 8), radius=1, color=color.orange)
+
+\end{vpythonprogram}
+	
+	
+	\item Change the position of the tennis ball to \triple{0}{6}{0} ft. 
+
+	\item Run the program.
+
+	\item Sometimes we want to change the position of the ball after we defined it. Thus, give a name to the sphere by changing the \code{sphere} statement in the program to the following:
+
+\begin{myvpython}
+tennisball=sphere(pos=vector(0, 6, 0), radius=1, color=color.orange)
+\end{myvpython}
+
+We've now given a name to the sphere. We can use this name later in the program to refer to the sphere. Furthermore, we can specifically refer to the attributes of the sphere by writing, for example, \code{tennisball.pos} to refer to the tennis ball's position attribute, or \code{tennisball.color} to refer to the tennis ball's color attribute. To see how this works, do the following exercise.
+
+	\item Start a new line at the end of your program (perhaps line 7) and type:
+
+\begin{myvpython}
+print(tennisball.pos)
+\end{myvpython}
+
+
+	\item Run the program.
+
+	\item Look at the text below the 3D scene. The printed vector should be the same as the tennis ball's position.
+
+	\item Add a new line to the end of your program (perhaps line 9) and type:
+	
+\begin{myvpython}
+tennisball.pos=vector(32,7,-12)
+\end{myvpython}
+	
+	When running the program, the ball is first drawn at the original position but is then drawn at the last position. (Note: whenever you set the position of the tennis ball to a new value in your program, the tennis ball will be drawn at that position.) This may happen so quickly that you do not notice the tennis ball drawn at the two locations.
+	
+	\item Add a new line to the end of your program (perhaps line 11) and type:
+	
+\begin{myvpython}
+print(tennisball.pos)
+\end{myvpython}
+
+(Or just copy and paste your previous print statement.)
+
+	\item Run your program. It now draws the ball, prints its position, redraws the ball at a new position, and prints its position again. As a result, you should see the following two lines printed:
+	
+\begin{verbatim}
+<0, 6, 0>
+<32, 7, -12>
+\end{verbatim}
+	
+	Of course, this happens faster than your eye can see it which is why printing the values is so useful.
+
+\end{enumerate}
+
+\analysis
+
+All games with graphics include objects on the screen. The game programmer must specify the positions and dimensions (sizes) of the objects using 2D or 3D vectors.
+
+\begin{description}
+
+\item[C] Do all of the following.
+You are going to create objects for the game \emph{Frogger}. We will only use spheres and boxes for this part.
+\begin{enumerate}
+	\item Create a new blank file and name it \emph{frogger-C}. 
+	\item Create a green box for the frog that is at the location $<0,-100,0>$, has a length=10, height=10, and width=10 units. Name the box \code{frog}.
+	\item Create a yellow sphere for a lily pad at $<-60,100,0>$ with a radius of 10. Name the sphere \code{lilypad}.
+	\item Create a blue box for the water that is at the location $<0,0,-10>$, has a length=150, height=220, and width=10 units. Name the box \code{water}.
+	\item Rotate the scene. Is the lily pad inside the water or on top of the water?  Is the frog inside the water or on top of the water?
+	\item Is physics used in this program? Why does the frog not move in this program?
+\end{enumerate}
+
+\item[B] Do everything for {\bf C} along with the following modifications and additions.
+
+\begin{enumerate}
+	\item Create a new blank file and name it \emph{frogger-B}. 
+	\item Copy from your previous program (labeled C) and paste it into this program. Often, this is the fastest way to start a new program.
+	\item Create another yellow sphere for a lily pad at $<60,100,0>$ with a radius of 10. Name the sphere \code{lilypad4}.
+	\item In between these two lily pads, create two more named  \code{lilypad2} and  \code{lilypad3} so the lily pads are equally spaced.
+	\item Create a gray road that is exactly half the height of the water. It should extend from the middle of the blue box to the bottom end of the blue box.
+	\item Create a long cyan box on the left side of the road and a short magenta box on the right side of the road, between the frog and the water. Name them \code{car1} and \code{car2}.
+	\item Print the positions of the cars and the frog.
+\end{enumerate}
+
+Figure \ref{glowscript-intro/gs-frogger-B} is an example program that fits the criteria for a B.
+
+	\scaledimage{glowscript-intro/gs-frogger-B}{The scene required for a B.}{0.5}
+
+
+\item[A] Do everything for {\bf B} along with the following modifications and additions.
+
+\begin{enumerate}
+	\item Create a new blank file and name it \emph{frogger-A}. 
+	\item Copy from your previous program (labeled B) and paste it into this program.
+	\item In the top right corner of the GlowScript window, click the link to {\bf Help}. This opens the documentation window. Click the menu to {\bf Choose a 3D object} and view the list of objects shown in Figure \ref{glowscript-intro/gs-frogger-B}.
+
+	\scaledimage{glowscript-intro/gs-help}{The scene required for a B.}{0.5}
+
+	\item Select the cylinder and read how to create a cylinder.
+	
+	\item Change the lily pads so they are thin cylinders that appear to float on top of the water.
+	
+	\item Use the cylinder object to create 3 logs of different lengths in the water.
+	
+	\item Now, click the menu to {\bf Work with 3D objects} in the documentation and select {\bf Textures}. Read how to specify a texture. You will probably want to click the link to the example program that demonstrates the pre-defined textures.
+	
+	\item Change the three wooden logs so they use the wood texture.
+
+\end{enumerate}
+
+Figure \ref{glowscript-intro/gs-frogger-A} is an example program that fits the criteria for a B.
+
+	\scaledimage{glowscript-intro/gs-frogger-A}{The scene required for an A.}{0.5}
+
+
+
+
+\end{description}
+

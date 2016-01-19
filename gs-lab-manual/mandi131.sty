@@ -1,0 +1,1577 @@
+%%%%%%%%%%
+% File mandi.sty that provides various formatting commands consistent with notation used in Matter & Interactions.
+% These commands must be used with the siunits package.
+% Commands for typesetting VPython code require the listings package.
+% Written by Paul J. Heafner, but with some ideas taken from a similar project by Aaron Titus.
+
+% This work is licensed under the Creative Commons Attribution-Noncommercial-No Derivative Works 3.0
+% Unported License. To view a copy of this license, visit 
+%
+% http://creativecommons.org/licenses/by-nc-nd/3.0/ 
+%
+% or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+% I've tried to only import packages that are absolutely necessary.
+\RequirePackage{amsmath}                           % needed for certain math stuff
+\RequirePackage{amssymb}                           % needed for SIunits package
+\RequirePackage{extarrows}                         % needed for certain relationship operators
+\RequirePackage[T1]{fontenc}                       % needed for the listings package
+\RequirePackage{graphicx}                          % needed for \miimage
+\RequirePackage{epstopdf}                          % needed for \miimage
+\RequirePackage{textcomp}                          % needed for, and must precede, the listings package
+\RequirePackage{listings}                          % needed for formatting VPython
+\RequirePackage[amssymb,cdot,thickqspace]{SIunits} % needed for typesetting units
+\RequirePackage{suffix}                            % needed for defining starred commands
+\RequirePackage{xargs}                             % needed for commands with multiple optional arguments
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+%%%%% Current version
+\newcommand{\mandiversion}{1.3.1}
+% NOTE: This version is frozen and will not be modified except to fix bugs in the existing
+% commands. No new features will be added to this version.
+%%%%%
+
+%%%%% Flag for choosing italic or Roman vector kernels
+\newif\ifitalicvectors
+% UNCOMMENT \italicvectorstrue TO GET ITALIC KERNELS.
+%\italicvectorstrue
+%%%%%
+
+%%%%% Flag for enabling more logical command names
+\newif\iflogicalnames
+% UNCOMMEMT \logicalnamestrue TO ENABLE MORE LOGICAL COMMAND NAMES
+\logicalnamestrue
+%%%%%
+
+%%%%% Modification dates, most recent at top
+% Modified on 2009-08-09
+% Modified on 2009-07-08
+% Modified on 2009-07-06
+% Modified on 2009-07-02
+% Modified on 2009-07-01
+% Modified on 2009-06-28
+% Modified on 2009-06-26
+% Modified on 2009-03-09
+% Modified on 2009-01-27
+% Modified on 2008-10-16
+% Modified on 2008-09-04
+% Modified on 2008-06-09
+% Modified on 2008-03-12
+% Modified on 2007-05-16
+% Modified on 2007-05-15
+% Modified on 2007-05-14
+% Modified on 2007-05-08
+% Modified on 2007-03-13
+% Modified on 2007-02-09
+%%%%%
+
+%%%%% Changelog, most recent at top, to be copied into mandidoc.tex
+% Changes in Version 1.3.1
+% added \miimage
+% used xargs package to re-implement some commands with optional arguments
+% added \ncompsvect as an alternative to \vectncomps, but with optional unit
+% added \ncompsmagvect as an alaternative to \vectmagncomps, but with optional unit. A starred form
+% is defined for having the unit outside the radical.
+% modified \scin to use two levels for exponents
+%
+% Changes in Version 1.3
+% added \changein 
+% extensive updates to documentation
+%
+% Changes in Version 1.2.9
+% added option to define more logical names (easier to remember) for many commands
+% updated documentation
+%
+% Changes in Version 1.2.8
+% added the option to typeset all vector kernels in math mode (italics) rather than in Roman
+% changed \ee and \EE to their more logical functions, and added starred versions to omit units
+% added \scin for scientific notation, and added starred version to omit units
+% added \Qelectronn and \Qprotonn as aliases
+% changed all physical constants to use \scin rather than \ee
+% ensured all symbolic astronomical quantities have \tiny subscripts
+% added \dex (function name) and \dexp for decimal exponentiation
+% renamed \sud to \ssud for consistency
+% added \msub for mathematical subscripts
+% added \msud for combinations of mathematical superscripts and subscripts
+% ensured all indices (text subscripts and superscripts) are never set in italics
+% added \ESdist, \ESdistn, \MEdist, \MEdistn as aliases
+% general cosmetic code cleanup
+% updated documentation
+%
+% Changes in Version 1.2.7
+% \vectncomps now has variable sized parentheses
+% added starred version of \vectncomps to explicitly omit units
+% added starred version of \vectmagncomps to put units outside the radical
+% \usepackage{suffix} must be in the mandi.sty file in addition to the main document's preamble
+% modified indexed vectors to allow for math symbols, provided they're enclosed by $...$
+% added \usepackage{suffix} to mandi.sty to allow for starred version of commands
+%
+% Changes in Version 1.2.6.7
+% changed VPython formatting to use straight double quotes rather than curly double quotes
+%
+% Changes in Version 1.2.6.6
+% changed \mathrm to \mbox for indexed quantities to automatically handle spaces
+% documented and clarified the correct use of indices (i.e. no math notation)
+%
+% Changes in Version 1.2.6.5
+% added \cB to accommodate Moore's notation for cB (speed of light times magnetic field)
+%
+% Changes in Version 1.2.6.4
+% modified \ssup and \sud to use three levels for superscripts
+% added \msup to accommodate mathematical superscripts
+% removed the B from \kboltz
+%
+% Changes in Version 1.2.6.3
+% added \Fnetsys
+%
+% Changes in Version 1.2.6.2
+% added \relgamma and \relgammaalt commands for relativistic gamma expression
+%
+% Changes in Version 1.2.6.1
+% now released under Creative Commons licensing
+% updated preamble
+% added \allagree to color responses that all students must agree on
+%
+% Changes in Version 1.2.6
+% added \brelatedto{}{}, \lrelatedto{}{}, \rrelatedto{}{}, all of which require the extarrows package
+% cleaned up documentation
+%
+% Changes in Version 1.2.5
+% modified \defines, \associates, \becomes commands to be more efficient
+% renamed \ez and \kz to \ezero and \kzero respectively
+% added \e{} and \g{} as aliases for \ek{} and \gk{} respectively
+% added \ihat, \jhat, and \khat commands for traditional unit vectors
+% added \euxxxx and \guxxxx commands for basis vectors with superscripts
+% added \eu{} and \gu{} as aliases for \euk{} and \guk{} respectively
+% added \sud{}{}{} for superscripting and subscripting a kernel, particularly for geometric algebra
+% added \checkpoint for adding checkpoints to documents, especially activities
+%
+% Changes in Version 1.2.4
+% added \becomes command
+% added \logb function
+% added \exxxxx commands for basis vectors in geometric algebra
+% added \gxxxxx commands for basis vectors in geometric algebra
+% added \echarge and \echargen commands
+% moved \mandiversion from mandidoc.tex into mandi.sty and defined it as a command
+% added a changelog (What's New?) in mandidoc.tex
+% added mnemonics in mandidoc.tex for some commands to help users remember how to name them
+% added \ev as an alias for \eV in case user forgets to capitalize the V
+%
+% Changes in Version 1.2.3
+% added \associates command
+%%%%%
+%%%%%%%%%%
+
+%%%%%%%%%% Numerical vectors
+% Quick way to write a vector with numerical components. 
+% Input: three numerical components and an associated unit
+\newcommand{\vectncomps}[4]{\ensuremath{\unit{\left\langle{#1},{#2},{#3}\right\rangle}{#4}}}
+% Use starred version to omit units.
+\WithSuffix\newcommand\vectncomps*[3]{\ensuremath{\left\langle{#1},{#2},{#3}\right\rangle}}
+\iflogicalnames
+  \newcommandx{\ncompsvect}[4][4=\!\!]{\ensuremath{\unit{\left\langle{#1},{#2},{#3}\right\rangle}{#4}}}
+  %%%%%\newcommand{\ncompsvect}{\vectncomps}
+  \WithSuffix\newcommand\ncompsvect*{\vectncomps*}
+\fi
+
+% Quick way to write out the magnitude of a vector in terms of numerical components and units.
+% Input: three numerical components and an associated unit
+\newcommand{\vectmagncomps}[4]{\ensuremath{\sqrt{\left({\unit{#1}{#4}}\right)^2 + \left({\unit{#2}{#4}}\right)^2 + \left({\unit{#3}{#4}}\right)^2 }}}
+% Use starred version to put units outside the radical.
+\WithSuffix\newcommand\vectmagncomps*[4]{\ensuremath{\unit{\left(\sqrt{\left({#1}\right)^{2}+\left({#2}\right)^{2}+\left({#3}\right)^{2}}\;\right)}{{#4}}}}
+\iflogicalnames
+  \newcommandx{\ncompsmagvect}[4][4=\!\!]{\ensuremath{\sqrt{\left({\unit{#1}{#4}}\right)^{^{^{\scriptstyle{2}}}} + \left({\unit{#2}{#4}}\right)^{^{^{\scriptstyle{2}}}} + \left({\unit{#3}{#4}}\right)^{^{^{\scriptstyle{2}}}}}}}
+  %%%%%\newcommand{\ncompsmagvect}{\vectmagncomps}
+  %%%%%\WithSuffix\newcommand\ncompsmagvect*{\vectmagncomps*}
+  \WithSuffix\newcommandx\ncompsmagvect*[4][4=\!\!]{\ensuremath{\unit{\sqrt{\left({#1}\right)^{^{^{\scriptstyle{2}}}}+\left({#2}\right)^{^{^{\scriptstyle{2}}}}+\left({#3}\right)^{^{^{\scriptstyle{2}}}}}}{#4}}}
+\fi
+%%%%%%%%%%
+
+%%%%%%%%%% Symbolic vectors
+% Quick way to write a vector with symbolic or numerical expressions as components.
+% Input: three expressions
+\newcommand{\vectsym}[3]{\ensuremath{\left\langle{#1},{#2},{#3}\right\rangle}}
+\iflogicalnames
+  \newcommand{\symvect}{\vectsym}
+\fi
+%%%%%%%%%%
+
+%%%%%%%%%% Unindexed vectors
+% Quick way to use an arrow to write the name of an unindexed vector.
+% Input: letter representing vector quantity
+\ifitalicvectors
+  \newcommand{\vect}[1]{\ensuremath{\vec{#1}}}
+\else
+  \newcommand{\vect}[1]{\ensuremath{\vec{\mathrm{#1}}}}
+\fi
+
+% Quick way to write the names of the components of an unindexed vector.
+% Do not use for position vectors unless you want to denote position components with r_x, r_y, r_z.
+% Input: letter representing vector quantity
+\ifitalicvectors
+  \newcommand{\vectscomps}[1]{\ensuremath{\left\langle{#1}_{_{_{x}}},{#1}_{_{_{y}}},{#1}_{_{_{z}}}\right\rangle}}
+\else
+  \newcommand{\vectscomps}[1]{\ensuremath{\left\langle\mathrm{#1}_{_{_{x}}},\mathrm{#1}_{_{_{y}}},\mathrm{#1}_{_{_{z}}}\right\rangle}}
+\fi
+\iflogicalnames
+  \newcommand{\scompsvect}{\vectscomps}
+\fi
+
+% Quick way to write the name of an individual x, y, or z component of an unindexed vector.
+% Input: letter representing vector quantity, letter specifying component
+\ifitalicvectors
+  \newcommand{\vectxcomp}[2]{\ensuremath{{{#1}}_{_{_{#2}}}}}
+\else
+  \newcommand{\vectxcomp}[2]{\ensuremath{{\mathrm{#1}}_{_{_{#2}}}}}
+\fi
+\iflogicalnames
+  \newcommand{\xcompvect}{\vectxcomp}
+\fi
+
+% Quick way to use absolute value bars to write the name of the magnitude of an unindexed vector.
+% Do not use this command for the name of the magnitude of a rational expression, e.g. dp/dt. You'll get two arrows! 
+% For rational expressions, use the \vectmagder command, defined below.
+% Input: letter representing vector quantity
+\newcommand{\vectmag}[1]{\ensuremath{\left|\vect{#1}\right|}}
+\iflogicalnames
+  \newcommand{\magvect}{\vectmag}
+\fi
+
+% Quick way to write out the magnitude of an unindexed vector in terms of the names of its components. No numbers are used.
+% Input: letter representing vector quantity
+% For some reason, an extra level of subscript positioning is necessary for x and z in order for the parentheses to scale correctly, so I also lowered y by one level.
+\ifitalicvectors
+  \newcommand{\vectmagscomps}[1]{\ensuremath{\sqrt{\left({#1}_{_{_{_{x}}}}\right)^2 + \left({#1}_{_{_{_{y}}}}\right)^2 + \left({#1}_{_{_{_{z}}}}\right)^2 }}}
+\else
+  \newcommand{\vectmagscomps}[1]{\ensuremath{\sqrt{\left(\mathrm{#1}_{_{_{_{x}}}}\right)^2 + \left(\mathrm{#1}_{_{_{_{y}}}}\right)^2 + \left(\mathrm{#1}_{_{_{_{z}}}}\right)^2 }}}
+\fi
+\iflogicalnames
+  \newcommand{\scompsmagvect}{\vectmagscomps}
+\fi
+
+% Quick way to use a hat to write the name of an unindexed unit vector.
+% Input: letter representing vector quantity
+\ifitalicvectors
+  \newcommand{\vecthat}[1]{\ensuremath{\hat{{#1}}}}
+\else
+  \newcommand{\vecthat}[1]{\ensuremath{\hat{\mathrm{#1}}}}
+\fi
+\iflogicalnames
+  \newcommand{\dirvect}{\vecthat}
+\fi
+
+% Quick way to write the names of the components of an unindexed position vector.
+% Use this for denoting position components with x, y, z.
+% Input: none
+\newcommand{\posscomps}{\ensuremath{\left\langle x,y,z \right\rangle}}
+\iflogicalnames
+  \newcommand{\scompspos}{\posscomps}
+\fi
+
+% Quick way to write the name of an individual x,  y, or z component of an unindexed position vector.
+% Input: letter representing component
+\newcommand{\posxcomp}[1]{\ensuremath{{#1}}}
+\iflogicalnames
+  \newcommand{\xcomppos}{\posxcomp}
+\fi
+
+% Quick way to write the name of the differential of an unindexed vector.
+% Use \Diffvect for Delta.
+% Input: letter representing vector quantity
+\newcommand{\diffvect}[1]{\ensuremath{d\vect{#1}}}
+\newcommand{\Diffvect}[1]{\ensuremath{\Delta \vect{#1}}}
+\iflogicalnames
+  \newcommand{\dvect}{\diffvect}
+  \newcommand{\Dvect}{\Diffvect}
+\fi
+
+% Quick way to write the names of the components of the differential of an unindexed vector.
+% Use this for denoting differential components with dF_x, dF_y, dF_z. Use \Diffvectscomps for Deltas.
+% Input: letter representing vector quantity
+\ifitalicvectors
+  \newcommand{\diffvectscomps}[1]{\ensuremath{\left\langle d{#1}_{_{_{x}}},d{#1}_{_{_{y}}},d{#1}_{_{_{z}}} \right\rangle}}
+  \newcommand{\Diffvectscomps}[1]{\ensuremath{\left\langle \Delta{#1}_{_{_{x}}},\Delta{#1}_{_{_{y}}},\Delta{#1}_{_{_{z}}} \right\rangle}}
+\else
+  \newcommand{\diffvectscomps}[1]{\ensuremath{\left\langle d\mathrm{#1}_{_{_{x}}},d\mathrm{#1}_{_{_{y}}},d\mathrm{#1}_{_{_{z}}} \right\rangle}}
+  \newcommand{\Diffvectscomps}[1]{\ensuremath{\left\langle \Delta\mathrm{#1}_{_{_{x}}},\Delta\mathrm{#1}_{_{_{y}}},\Delta\mathrm{#1}_{_{_{z}}} \right\rangle}}
+\fi
+\iflogicalnames
+  \newcommand{\scompsdvect}{\diffvectscomps}
+  \newcommand{\scompsDvect}{\Diffvectscomps}
+\fi
+
+% Quick way to write the name of an individual x, y, or z component of the differential of an unindexed vector.
+% Use \Diffvectxcomp for Delta.
+% Input: letter representing vector quantity, letter representing component
+\ifitalicvectors
+  \newcommand{\diffvectxcomp}[2]{\ensuremath{d{#1}_{_{_{#2}}}}}
+  \newcommand{\Diffvectxcomp}[2]{\ensuremath{\Delta{#1}_{_{_{#2}}}}}
+\else
+  \newcommand{\diffvectxcomp}[2]{\ensuremath{d\mathrm{#1}_{_{_{#2}}}}}
+  \newcommand{\Diffvectxcomp}[2]{\ensuremath{\Delta\mathrm{#1}_{_{_{#2}}}}}
+\fi
+\iflogicalnames
+  \newcommand{\xcompdvect}{\diffvectxcomp}
+  \newcommand{\xcompDvect}{\Diffvectxcomp}
+\fi
+
+% Quick way to write the names of the components of an unindexed displacement vector.
+% Use this for denoting displacement components with dx, dy, dz. Use \Diffposscomps for Deltas.
+% Input: none
+\newcommand{\diffposscomps}{\ensuremath{\left\langle dx,dy,dz \right\rangle}}
+\newcommand{\Diffposscomps}{\ensuremath{\left\langle \Delta x,\Delta y,\Delta z \right\rangle}}
+\iflogicalnames
+  \newcommand{\scompsdpos}{\diffposscomps}
+  \newcommand{\scompsDpos}{\Diffposscomps}
+\fi
+
+% Quick way to write the name of an individual x, y, or z component of an unindexed displacement vector.
+% Use this for denoting displacement components with dx, dy, or dz. Use \Diffposxcomp for Delta.
+% Input: letter representing component
+\newcommand{\diffposxcomp}[1]{\ensuremath{d{#1}}}
+\newcommand{\Diffposxcomp}[1]{\ensuremath{\Delta {#1}}}
+\iflogicalnames
+  \newcommand{\xcompdpos}{\diffposxcomp}
+  \newcommand{\xcompDpos}{\Diffposxcomp}
+\fi
+
+%%%%% Derivatives of unindexed vectors
+% Quick way to write the name of the derivative of an unindexed vector.
+% Use \vectDer for Deltas.
+% Input: letter representing vector quantity, letter representing independent variable
+\newcommand{\vectder}[2]{\ensuremath{\frac{\diffvect{#1}}{d{#2}}}}
+\newcommand{\vectDer}[2]{\ensuremath{\frac{\Diffvect{#1}}{\Delta{#2}}}}
+\iflogicalnames
+  \newcommand{\dervect}{\vectder}
+  \newcommand{\Dervect}{\vectDer}
+\fi
+
+% Quick way to write the names of the components of the derivative of an unindexed vector, which is also an unindexed vector.
+% Use \vectDerscomps for Delta.
+% Input: letter representing vector quantity, letter representing the independent variable
+\ifitalicvectors
+  \newcommand{\vectderscomps}[2]{\ensuremath{\left\langle\frac{d{#1}_{_{_{x}}}}{d{#2}},\frac{d{#1}_{_{_{y}}}}{d{#2}},\frac{d{#1}_{_{_{z}}}}{d{#2}}\right\rangle}}
+  \newcommand{\vectDerscomps}[2]{\ensuremath{\left\langle\frac{\Delta{#1}_{_{_{x}}}}{\Delta{#2}},\frac{\Delta{#1}_{_{_{y}}}}{\Delta{#2}},\frac{\Delta{#1}_{_{_{z}}}}{\Delta{#2}}\right\rangle}}
+\else
+  \newcommand{\vectderscomps}[2]{\ensuremath{\left\langle\frac{d\mathrm{#1}_{_{_{x}}}}{d{#2}},\frac{d\mathrm{#1}_{_{_{y}}}}{d{#2}},\frac{d\mathrm{#1}_{_{_{z}}}}{d{#2}}\right\rangle}}
+  \newcommand{\vectDerscomps}[2]{\ensuremath{\left\langle\frac{\Delta\mathrm{#1}_{_{_{x}}}}{\Delta{#2}},\frac{\Delta\mathrm{#1}_{_{_{y}}}}{\Delta{#2}},\frac{\Delta\mathrm{#1}_{_{_{z}}}}{\Delta{#2}}\right\rangle}}
+\fi
+\iflogicalnames
+  \newcommand{\scompsdervect}{\vectderscomps}
+  \newcommand{\scompsDervect}{\vectDerscomps}
+\fi
+
+% Quick way to write the name of an individual x, y, or z component of the derivative of an unindexed vector, which is also an unindexed vector.
+% Use \vectDerxcomp for Delta.
+% Input: letter representing vector quantity, letter representing independent variable, letter specifying component
+\ifitalicvectors
+  \newcommand{\vectderxcomp}[3]{\ensuremath{\frac{d{#1}_{_{_{#3}}}}{d{#2}}}}
+  \newcommand{\vectDerxcomp}[3]{\ensuremath{\frac{\Delta{#1}_{_{_{#3}}}}{\Delta{#2}}}}
+\else
+  \newcommand{\vectderxcomp}[3]{\ensuremath{\frac{d\mathrm{#1}_{_{_{#3}}}}{d{#2}}}}
+  \newcommand{\vectDerxcomp}[3]{\ensuremath{\frac{\Delta\mathrm{#1}_{_{_{#3}}}}{\Delta{#2}}}}
+\fi
+\iflogicalnames
+  \newcommand{\xcompdervect}{\vectderxcomp}
+  \newcommand{\xcompDervect}{\vectDerxcomp}
+\fi
+
+% Quick way to use absolute value bars to write the name of the magnitude of the derivative of an unindexed vector.
+% Use \vectmagDer for Delta.
+% Input: letter representing vector quantity, letter representing the independent variable
+\newcommand{\vectmagder}[2]{\ensuremath{\left|\frac{d\vect{#1}}{d{#2}}\right|}}
+\newcommand{\vectmagDer}[2]{\ensuremath{\left|\frac{\Delta\vect{#1}}{\Delta{#2}}\right|}}
+\iflogicalnames
+  \newcommand{\magdervect}{\vectmagder}
+  \newcommand{\magDervect}{\vectmagDer}
+\fi
+
+% Quick way to write the names of the components of the derivative of an unindexed position vector, which is also an unindexed vector.
+% Use \posDerscomps for Delta.
+% Input: letter representing the independent variable
+\newcommand{\posderscomps}[1]{\ensuremath{\left\langle\frac{dx}{d{#1}},\frac{dy}{d{#1}},\frac{dz}{d{#1}}\right\rangle}}
+\newcommand{\posDerscomps}[1]{\ensuremath{\left\langle\frac{\Delta x}{\Delta{#1}},\frac{\Delta y}{\Delta{#1}},\frac{\Delta z}{\Delta{#1}}\right\rangle}}
+\iflogicalnames
+  \newcommand{\scompsderpos}{\posderscomps}
+  \newcommand{\scompsDerpos}{\posDerscomps}
+\fi
+
+% Quick way to write the name of an individual x, y, or z component of the derivative of an unindexed position vector, which is also an unindexed vector.
+% Use \posDerxcomp for Delta.
+% Input: letter specifying component, letter representing independent variable
+\newcommand{\posderxcomp}[2]{\ensuremath{\frac{d{#1}}{d{#2}}}}
+\newcommand{\posDerxcomp}[2]{\ensuremath{\frac{\Delta{#1}}{\Delta{#2}}}}
+\iflogicalnames
+  \newcommand{\xcompderpos}{\posderxcomp}
+  \newcommand{\xcompDerpos}{\posDerxcomp}
+\fi
+%%%%%
+%%%%%%%%%%
+
+%%%%%%%%%% Indexed vectors
+%
+% For clarification, an ``index'' refers to a text label applied to a kernel as either a 
+% subscript or superscript. The ``index'' should clarify the meaning of the kernel. Thus 
+% an ``indexed vector'' is a vector quantity whose symbol has clarifying text written as 
+% a superscript and/or a subscript. Indices are not intended to contain mathematical 
+% symbols, but they may do so if the mathematical symbols are enclosed by $...$
+% 
+
+% Quick way to use an arrow to write the name of an indexed vector.
+% Input: letter representing vector quantity, index to be used as subscript
+\newcommand{\vectsub}[2]{\ensuremath{\vect{#1}_{_{_{\mbox{\tiny{#2}}}}}}}
+% This command has no "more logical" name.
+
+% Quick way to write the names of the components of an indexed vector.
+% Do not use for position vectors unless you want to denote position components with r_x, r_y, r_z.
+% Input: letter representing vector quantity, index to be used as subscript
+\ifitalicvectors
+  \newcommand{\vectsubscomps}[2]{\ensuremath{\left\langle{#1}_{_{_{\mbox{\tiny{#2}},x}}},{#1}_{_{_{\mbox{\tiny{#2}},y}}},{#1}_{_{_{\mbox{\tiny{#2}},z}}}\right\rangle}}
+\else
+  \newcommand{\vectsubscomps}[2]{\ensuremath{\left\langle\mathrm{#1}_{_{_{\mbox{\tiny{#2}},x}}},\mathrm{#1}_{_{_{\mbox{\tiny{#2}},y}}},\mathrm{#1}_{_{_{\mbox{\tiny{#2}},z}}}\right\rangle}}
+\fi
+\iflogicalnames
+  \newcommand{\scompsvectsub}{\vectsubscomps}
+\fi
+
+% Quick way to write the name of an individual x, y, or z component of an indexed vector.
+% Input: letter representing vector quantity, index to be used as subscript, letter specifying component
+\ifitalicvectors
+  \newcommand{\vectsubxcomp}[3]{\ensuremath{{{#1}}_{_{_{\mbox{\tiny{#2}},{#3}}}}}}
+\else
+  \newcommand{\vectsubxcomp}[3]{\ensuremath{{\mathrm{#1}}_{_{_{\mbox{\tiny{#2}},{#3}}}}}}
+\fi
+\iflogicalnames
+  \newcommand{\xcompvectsub}{\vectsubxcomp}
+\fi
+
+% Quick way to use absolute value bars to write the name of the magnitude of an indexed vector.
+% Do not use this command for the name of the magnitude of a rational expression, e.g. dp/dt. You'll get two arrows! 
+% Use the \vectsubmagder command, defined below.
+% Input: letter representing vector quantity, index to be used as subscript
+\ifitalicvectors
+  \newcommand{\vectsubmag}[2]{\ensuremath{\abs{\vec{{#1}}_{_{_{\mbox{\tiny{#2}}}}}}}}
+\else
+  \newcommand{\vectsubmag}[2]{\ensuremath{\abs{\vec{\mathrm{#1}}_{_{_{\mbox{\tiny{#2}}}}}}}}
+\fi
+\iflogicalnames
+  \newcommand{\magvectsub}{\vectsubmag}
+\fi
+
+% Quick way to write out the magnitude of an indexed vector in terms of the names of its components. No numbers are used.
+% Input: letter representing vector quantity, index to be used as subscript
+\ifitalicvectors
+  \newcommand{\vectsubmagscomps}[2]{\ensuremath{\sqrt{\left({#1}_{_{_{\mbox{\tiny{#2}},x}}}\right)^2 + \left({#1}_{_{_{\mbox{\tiny{#2}},y}}}\right)^2 + \left({#1}_{_{_{\mbox{\tiny{#2}},z}}}\right)^2 }}}
+\else
+  \newcommand{\vectsubmagscomps}[2]{\ensuremath{\sqrt{\left(\mathrm{#1}_{_{_{\mbox{\tiny{#2}},x}}}\right)^2 + \left(\mathrm{#1}_{_{_{\mbox{\tiny{#2}},y}}}\right)^2 + \left(\mathrm{#1}_{_{_{\mbox{\tiny{#2}},z}}}\right)^2 }}}
+\fi
+\iflogicalnames
+  \newcommand{\scompsmagvectsub}{\vectsubmagscomps}
+\fi
+
+% Quick way to use a hat to write the name of an indexed unit vector.
+% Input: letter representing vector quantity, index to be used as subscript
+\ifitalicvectors
+  \newcommand{\vectsubhat}[2]{\ensuremath{\hat{{#1}}_{_{_{\mbox{\tiny{#2}}}}}}}
+\else
+  \newcommand{\vectsubhat}[2]{\ensuremath{\hat{\mathrm{#1}}_{_{_{\mbox{\tiny{#2}}}}}}}
+\fi
+\iflogicalnames
+  \newcommand{\dirvectsub}{\vectsubhat}
+\fi
+
+% Quick way to write the names of the components of an indexed position vector. 
+% Use this for denoting position components with x, y, z.
+% Input: index to be used as subscript
+\newcommand{\possubscomps}[1]{\ensuremath{\left\langle x_{_{_{\mbox{\tiny {#1}}}}},y_{_{_{\mbox{\tiny {#1}}}}},z_{_{_{\mbox{\tiny{#1}}}}} \right\rangle}}
+\iflogicalnames
+  \newcommand{\scompspossub}{\possubscomps}
+\fi
+
+% Quick way to write the name of an individual x, y, or z component of an indexed position vector.
+% Input: index to be used as subscript, letter specifying component
+\newcommand{\possubxcomp}[2]{\ensuremath{{#2}_{_{_{\mbox{\tiny{#1}}}}}}}
+\iflogicalnames
+  \newcommand{\xcomppossub}{\possubxcomp}
+\fi
+
+% Quick way to write the name of the differential of an indexed vector.
+% Use \Diffvectsub for Delta.
+% Input: letter representing vector quantity, index to be used as subscript
+\newcommand{\diffvectsub}[2]{\ensuremath{d\vect{#1}_{_{_{\mbox{\tiny{#2}}}}}}}
+\newcommand{\Diffvectsub}[2]{\ensuremath{\Delta \vect{#1}_{_{_{\mbox{\tiny{#2}}}}}}}
+\iflogicalnames
+  \newcommand{\dvectsub}{\diffvectsub}
+  \newcommand{\Dvectsub}{\Diffvectsub}
+\fi
+
+% Quick way to write the names of the components of the differential of an indexed vector.
+% Use this for denoting differential components with dF_x, dF_y, dF_z. Use \Diffvectsubscomps for Deltas.
+% Input: letter representing vector quantity, index to be used as subscript
+\ifitalicvectors
+  \newcommand{\diffvectsubscomps}[2]{\ensuremath{\left\langle d{#1}_{_{_{\mbox{\tiny{#2}},x}}},d{#1}_{_{_{\mbox{\tiny{#2}},y}}},d{#1}_{_{_{\mbox{\tiny{#2}},z}}} \right\rangle}}
+  \newcommand{\Diffvectsubscomps}[2]{\ensuremath{\left\langle\Delta{#1}_{_{_{\mbox{\tiny{#2}},x}}},\Delta{#1}_{_{_{\mbox{\tiny{#2}},y}}},\Delta{#1}_{_{_{\mbox{\tiny{#2}},z}}} \right\rangle}}
+\else
+  \newcommand{\diffvectsubscomps}[2]{\ensuremath{\left\langle d\mathrm{#1}_{_{_{\mbox{\tiny{#2}},x}}},d\mathrm{#1}_{_{_{\mbox{\tiny{#2}},y}}},d\mathrm{#1}_{_{_{\mbox{\tiny{#2}},z}}} \right\rangle}}
+  \newcommand{\Diffvectsubscomps}[2]{\ensuremath{\left\langle\Delta\mathrm{#1}_{_{_{\mbox{\tiny{#2}},x}}},\Delta\mathrm{#1}_{_{_{\mbox{\tiny{#2}},y}}},\Delta\mathrm{#1}_{_{_{\mbox{\tiny{#2}},z}}} \right\rangle}}
+\fi
+\iflogicalnames
+  \newcommand{\scompsdvectsub}{\diffvectsubscomps}
+  \newcommand{\scompsDvectsub}{\Diffvectsubscomps}
+\fi
+
+% Quick way to write the name of an individual x, y, or z component of the differential of an indexed vector.
+% Use \Diffvectsubxcomp for Delta.
+% Input: letter representing vector quantity, index to be used as subscript, letter representing component
+\ifitalicvectors
+  \newcommand{\diffvectsubxcomp}[3]{\ensuremath{d{#1}_{_{_{\mbox{\tiny{#2}},{#3}}}}}}
+  \newcommand{\Diffvectsubxcomp}[3]{\ensuremath{\Delta{#1}_{_{_{\mbox{\tiny{#2}},{#3}}}}}}
+\else
+  \newcommand{\diffvectsubxcomp}[3]{\ensuremath{d\mathrm{#1}_{_{_{\mbox{\tiny{#2}},{#3}}}}}}
+  \newcommand{\Diffvectsubxcomp}[3]{\ensuremath{\Delta\mathrm{#1}_{_{_{\mbox{\tiny{#2}},{#3}}}}}}
+\fi
+\iflogicalnames
+  \newcommand{\xcompdvectsub}{\diffvectsubxcomp}
+  \newcommand{\xcompDvectsub}{\Diffvectsubxcomp}
+\fi
+
+% Quick way to write the names of the components of an indexed displacement vector.
+% Use this for denoting displacement components with dx, dy, dz. Use \Diffpossubscomps for Deltas.
+% Input:  index to be used as subscript
+\newcommand{\diffpossubscomps}[1]{\ensuremath{\left\langle dx_{_{_{\mbox{\tiny{#1}}}}},dy_{_{_{\mbox{\tiny{#1}}}}},dz_{_{_{\mbox{\tiny{#1}}}}} \right\rangle}}
+\newcommand{\Diffpossubscomps}[1]{\ensuremath{\left\langle \Delta x_{_{_{\mbox{\tiny{#1}}}}},\Delta y_{_{_{\mbox{\tiny{#1}}}}},\Delta z_{_{_{\mbox{\tiny{#1}}}}} \right\rangle}}
+\iflogicalnames
+  \newcommand{\scompsdpossub}{\diffpossubscomps}
+  \newcommand{\scompsDpossub}{\Diffpossubscomps}
+\fi
+
+% Quick way to write the name of an individual x, y, or z component of an indexed displacement vector.
+% Use \Diffpossubxcomp for Delta.
+% Input: letter representing component, index to be used as subscript
+\newcommand{\diffpossubxcomp}[2]{\ensuremath{d{#1}_{_{_{\mbox{\tiny{#2}}}}}}}
+\newcommand{\Diffpossubxcomp}[2]{\ensuremath{\Delta{#1}_{_{_{\mbox{\tiny{#2}}}}}}}
+\iflogicalnames
+  \newcommand{\xcompdpossub}{\diffpossubxcomp}
+  \newcommand{\xcompDpossub}{\Diffpossubxcomp} 
+\fi
+
+%%%%% Derivatives of indexed vectors
+% Quick way to write the name of the derivative of an indexed vector.
+% Use \vectsubDer for Deltas.
+% Input: letter representing vector quantity, index to be used as subscript, letter representing independent variable
+\newcommand{\vectsubder}[3]{\ensuremath{\frac{\diffvectsub{#1}{#2}}{d{#3}}}}
+\newcommand{\vectsubDer}[3]{\ensuremath{\frac{\Diffvectsub{#1}{#2}}{\Delta{#3}}}}
+\iflogicalnames
+  \newcommand{\dervectsub}{\vectsubder}
+  \newcommand{\Dervectsub}{\vectsubDer}
+\fi
+
+% Quick way to write the names of the components of the derivative of an indexed vector, which is also an indexed vector.
+% Use \vectsubDerscomps for Delta.
+% Input: letter representing vector quantity, index to be used as subscript, letter representing the independent variable
+\ifitalicvectors
+  \newcommand{\vectsubderscomps}[3]{\ensuremath{\left\langle\frac{d{#1}_{_{_{{\mbox{\tiny{#2}}},x}}}}{d{#3}},\frac{d{#1}_{_{_{{\mbox{\tiny{#2}}},y}}}}{d{#3}},\frac{d{#1}_{_{_{{\mbox{\tiny{#2}}},z}}}}{d{#3}}\right\rangle}}
+  \newcommand{\vectsubDerscomps}[3]{\ensuremath{\left\langle\frac{\Delta{#1}_{_{_{{\mbox{\tiny{#2}}},x}}}}{\Delta{#3}},\frac{\Delta{#1}_{_{_{{\mbox{\tiny{#2}}},y}}}}{\Delta{#3}},\frac{\Delta{#1}_{_{_{{\mbox{\tiny{#2}}},z}}}}{\Delta{#3}}\right\rangle}}
+\else
+  \newcommand{\vectsubderscomps}[3]{\ensuremath{\left\langle\frac{d\mathrm{#1}_{_{_{{\mbox{\tiny{#2}}},x}}}}{d{#3}},\frac{d\mathrm{#1}_{_{_{{\mbox{\tiny{#2}}},y}}}}{d{#3}},\frac{d\mathrm{#1}_{_{_{{\mbox{\tiny{#2}}},z}}}}{d{#3}}\right\rangle}}
+  \newcommand{\vectsubDerscomps}[3]{\ensuremath{\left\langle\frac{\Delta\mathrm{#1}_{_{_{{\mbox{\tiny{#2}}},x}}}}{\Delta{#3}},\frac{\Delta\mathrm{#1}_{_{_{{\mbox{\tiny{#2}}},y}}}}{\Delta{#3}},\frac{\Delta\mathrm{#1}_{_{_{{\mbox{\tiny{#2}}},z}}}}{\Delta{#3}}\right\rangle}}
+\fi
+\iflogicalnames
+  \newcommand{\scompsdervectsub}{\vectsubderscomps}
+  \newcommand{\scompsDervectsub}{\vectsubDerscomps}
+\fi
+
+% Quick way to write the name of an individual x, y, or z component of the derivative of an indexed vector, which is also an indexed vector.
+% Use \vectsubDerxcomp for Delta.
+% Input: letter representing vector quantity, index to be used as subscript, letter representing independent variable, letter specifying component
+\ifitalicvectors
+  \newcommand{\vectsubderxcomp}[4]{\ensuremath{\frac{d{#1}_{_{_{{\mbox{\tiny{#2}}},{#4}}}}}{d{#3}}}}
+  \newcommand{\vectsubDerxcomp}[4]{\ensuremath{\frac{\Delta{#1}_{_{_{{\mbox{\tiny{#2}}},{#4}}}}}{\Delta{#3}}}}
+\else
+  \newcommand{\vectsubderxcomp}[4]{\ensuremath{\frac{d\mathrm{#1}_{_{_{{\mbox{\tiny{#2}}},{#4}}}}}{d{#3}}}}
+  \newcommand{\vectsubDerxcomp}[4]{\ensuremath{\frac{\Delta \mathrm{#1}_{_{_{{\mbox{\tiny{#2}}},{#4}}}}}{\Delta{#3}}}}
+\fi
+\iflogicalnames
+  \newcommand{\xcompdervectsub}{\vectsubderxcomp}
+  \newcommand{\xcompDervectsub}{\vectsubDerxcomp}
+\fi
+
+% Quick way to use absolute value bars to write the name of the magnitude of the derivative of an indexed vector.
+% Use \vectsubmagDer for Delta.
+% Input: letter representing vector quantity, index to be used as subscript, letter representing the independent variable
+\newcommand{\vectsubmagder}[3]{\ensuremath{\left|\frac{d\vect{#1}_{_{_{{\mbox{\tiny{#2}}}}}}}{d{#3}}\right|}}
+\newcommand{\vectsubmagDer}[3]{\ensuremath{\left|\frac{\Delta\vect{#1}_{_{_{{\mbox{\tiny{#2}}}}}}}{\Delta{#3}}\right|}}
+\iflogicalnames
+  \newcommand{\magdervectsub}{\vectsubmagder}
+  \newcommand{\magDervectsub}{\vectsubmagDer}
+\fi
+
+% Quick way to write the names of the components of the derivative of an indexed position vector, which is also an indexed vector.
+% Use \possubDerscomps for Delta.
+% Input: index to be used as subscript, letter representing the independent variable
+\newcommand{\possubderscomps}[2]{\ensuremath{\left\langle\frac{dx_{_{_{{\mbox{\tiny{#1}}}}}}}{d{#2}},\frac{dy_{_{_{{\mbox{\tiny{#1}}}}}}}{d{#2}},\frac{dz_{_{_{{\mbox{\tiny{#1}}}}}}}{d{#2}}\right\rangle}}
+\newcommand{\possubDerscomps}[2]{\ensuremath{\left\langle\frac{\Delta x_{_{_{{\mbox{\tiny{#1}}}}}}}{\Delta{#2}},\frac{\Delta y_{_{_{{\mbox{\tiny{#1}}}}}}}{\Delta{#2}},\frac{\Delta z_{_{_{{\mbox{\tiny{#1}}}}}}}{\Delta{#2}}\right\rangle}}
+\iflogicalnames
+  \newcommand{\scompsderpossub}{\possubderscomps}
+  \newcommand{\scompsDerpossub}{\possubDerscomps}
+\fi
+
+% Quick way to write the name of an individual x, y, or z component of the derivative of an indexed position vector, which is also an indexed vector.
+% Use \possubDerxcomp for Delta.
+% Input: index to be used as subscript, letter representing independent variable, letter specifying component
+\newcommand{\possubderxcomp}[3]{\ensuremath{\frac{d{#3}_{_{_{{\mbox{\tiny{#1}}}}}}}{d{#2}}}}
+\newcommand{\possubDerxcomp}[3]{\ensuremath{\frac{\Delta{#3}_{_{_{{\mbox{\tiny{#1}}}}}}}{\Delta{#2}}}}
+\iflogicalnames
+  \newcommand{\xcompderpossub}{\possubderxcomp}
+  \newcommand{\xcompDerpossub}{\possubDerxcomp}
+\fi
+%%%%%
+%%%%%%%%%%
+
+%%%%%%%%%% Special indexed vectors
+% Quick way to write the name of the position of n relative to m.
+% Input: index to be used as subscript
+\newcommand{\relpos}[1]{\ensuremath{\vect{r}_{_{_{\mbox{\tiny{#1}}}}}}}
+
+% Quick way to write the name of the velocity of n relative to m.
+% Input: index to be used as subscript
+\newcommand{\relvel}[1]{\ensuremath{\vect{v}_{_{_{\mbox{\tiny{#1}}}}}}}
+
+% Quick way to write the name of the momentum of n relative to m.
+% Input: index to be used as subscript
+\newcommand{\relmom}[1]{\ensuremath{\vect{p}_{_{_{\mbox{\tiny{#1}}}}}}}
+
+% Quick way to write the name of the force on n due to m.
+% Input: index to be used as subscript
+\newcommand{\relfor}[1]{\ensuremath{\vect{F}_{_{_{\mbox{\tiny{#1}}}}}}}
+
+% Quick way to write the name of a net force.
+% Input: none
+\newcommand{\Fnet}{\ensuremath{\vect{F}_{_{_{\mbox{\tiny{net}}}}}}}
+
+% Quick way to write the name of a net external force.
+% Input: none
+\newcommand{\Fnetext}{\ensuremath{\vect{F}_{_{_{\mbox{\tiny{net,ext}}}}}}}
+
+% Quick way to write the net force on a system
+% Input: none
+\newcommand{\Fnetsys}{\ensuremath{\vect{F}_{_{_{\mbox{\tiny{net,sys}}}}}}}
+
+% Quick way to write the name of an indexed force. Do not use for components. Use \vectsubxcomp instead.
+% Input: index to be used as subscript
+\newcommand{\Fsub}[1]{\ensuremath{\vect{F}_{_{_{\mbox{\tiny{#1}}}}}}}
+%%%%%%%%%%
+
+%%%%%%%%%% Dot products
+% Commands ending in "scomps" or containing "dots" indicate the name of the dot product written in terms of symbolic components.
+% Commands ending in "e" or containing "dote" indicate expanded summations over the terms. 
+% Some of these can probably be combined and simplified.
+
+% Name of the dot product of any two vectors
+% In order to accommodate vector differentials, the user must supply correctly adorned symbols to this function.
+% Input: symbols for the two vectors
+\newcommand{\vectdotvect}[2]{\ensuremath{{#1} \bullet {#2}}}
+
+%%%%% Dot product of unindexed vectors
+% Name of the dot product of two unindexed vectors in terms of components
+% Input: letter representing first vector, letter representing second vector
+\newcommand{\vectdotvectscomps}[2]{\ensuremath{\vectscomps{#1} \bullet \vectscomps{#2}}}
+\iflogicalnames
+  \newcommand{\vectdotsvect}{\vectdotvectscomps}
+\fi
+
+% Dot product of two unindexed vectors expanded as a sum
+% Input: letter representing first vector, letter representing second vector
+\newcommand{\vectdotvecte}[2]{\ensuremath{\vectxcomp{#1}{x}\vectxcomp{#2}{x}+\vectxcomp{#1}{y}\vectxcomp{#2}{y}+\vectxcomp{#1}{z}\vectxcomp{#2}{z}}}
+\iflogicalnames
+  \newcommand{\vectdotevect}{\vectdotvecte}
+\fi
+
+% Name of the dot product of an unindexed vector and an unindexed position vector in terms of components
+% Input: letter representing first vector
+\newcommand{\vectdotposscomps}[1]{\ensuremath{\vectscomps{#1} \bullet \posscomps}}
+\iflogicalnames
+  \newcommand{\vectdotspos}{\vectdotposscomps}
+\fi
+
+% Dot product of an unindexed vector and an unindexed position vector expanded as a sum
+% Input: letter representing first vector
+\newcommand{\vectdotpose}[1]{\ensuremath{\vectxcomp{#1}{x}\posxcomp{x}+\vectxcomp{#1}{y}\posxcomp{y}+\vectxcomp{#1}{z}\posxcomp{z}}}
+\iflogicalnames
+  \newcommand{\vectdotepos}{\vectdotpose}
+\fi
+
+% Name of the dot product of an unindexed vector and an unindexed differential in terms of components
+% Use \vectdotDiffvectscomps for Delta.
+% Input: letter representing first vector, letter representing differential
+\newcommand{\vectdotdiffvectscomps}[2]{\ensuremath{\vectscomps{#1} \bullet \diffvectscomps{#2}}}
+\newcommand{\vectdotDiffvectscomps}[2]{\ensuremath{\vectscomps{#1} \bullet \Diffvectscomps{#2}}}
+\iflogicalnames
+  \newcommand{\vectdotsdvect}{\vectdotdiffvectscomps}
+  \newcommand{\vectdotsDvect}{\vectdotDiffvectscomps}
+\fi
+
+% Dot product of an unindexed vector and an unindexed differential expanded as a sum
+% Use \vectdotDiffvecte for Delta.
+% Input: letter representing first vector, letter representing differential
+\newcommand{\vectdotdiffvecte}[2]{\ensuremath{\vectxcomp{#1}{x}\diffvectxcomp{#2}{x}+\vectxcomp{#1}{y}\diffvectxcomp{#2}{y}+\vectxcomp{#1}{z}\diffvectxcomp{#2}{z}}}
+\newcommand{\vectdotDiffvecte}[2]{\ensuremath{\vectxcomp{#1}{x}\Diffvectxcomp{#2}{x}+\vectxcomp{#1}{y}\Diffvectxcomp{#2}{y}+\vectxcomp{#1}{z}\Diffvectxcomp{#2}{z}}}
+\iflogicalnames
+  \newcommand{\vectdotedvect}{\vectdotdiffvecte}
+  \newcommand{\vectdoteDvect}{\vectdotDiffvecte}
+\fi
+
+% Name of the dot product of an unindexed vector and an unindexed displacement in terms of components
+% Use \vectdotDiffposscomps for Delta.
+% Input: letter representing vector
+\newcommand{\vectdotdiffposscomps}[1]{\ensuremath{\vectscomps{#1} \bullet \diffposscomps}}
+\newcommand{\vectdotDiffposscomps}[1]{\ensuremath{\vectscomps{#1} \bullet \Diffposscomps}}
+\iflogicalnames
+  \newcommand{\vectdotsdpos}{\vectdotdiffposscomps}
+  \newcommand{\vectdotsDpos}{\vectdotDiffposscomps}
+\fi
+
+% Dot product of an unindexed vector and an unindexed displacement expanded as a sum
+% Use \vectdotDiffpose for Delta.
+% Input: letter representing first vector
+\newcommand{\vectdotdiffpose}[1]{\ensuremath{\vectxcomp{#1}{x}\diffposxcomp{x}+\vectxcomp{#1}{y}\diffposxcomp{y}+\vectxcomp{#1}{z}\diffposxcomp{z}}}
+\newcommand{\vectdotDiffpose}[1]{\ensuremath{\vectxcomp{#1}{x}\Diffposxcomp{x}+\vectxcomp{#1}{y}\Diffposxcomp{y}+\vectxcomp{#1}{z}\Diffposxcomp{z}}}
+\iflogicalnames
+  \newcommand{\vectdotedpos}{\vectdotdiffpose}
+  \newcommand{\vectdoteDpos}{\vectdotDiffpose}
+\fi
+%%%%%
+
+%%%%% Dot product of indexed vectors
+% Name of the dot product of two indexed vectors in terms of components
+% Input: letter representing first vector, subscript for index of first vector, letter representing second vector, subscript for index of second vector
+\newcommand{\vectsubdotvectsubscomps}[4]{\ensuremath{\vectsubscomps{#1}{#2} \bullet \vectsubscomps{#3}{#4}}}
+\iflogicalnames
+  \newcommand{\vectsubdotsvectsub}{\vectsubdotvectsubscomps}
+\fi
+
+% Dot product of two indexed vectors expanded as a sum
+% Input: letter representing first vector, subscript for index of first vector, letter representing second vector, subscript for index of second vector
+\newcommand{\vectsubdotvectsube}[4]{\ensuremath{\vectsubxcomp{#1}{#2}{x}\vectsubxcomp{#3}{#4}{x}+\vectsubxcomp{#1}{#2}{y}\vectsubxcomp{#3}{#4}{y}+\vectsubxcomp{#1}{#2}{z}\vectsubxcomp{#3}{#4}{z}}}
+\iflogicalnames
+  \newcommand{\vectsubdotevectsub}{\vectsubdotvectsube}
+\fi
+
+% NOT YET IMPLEMENTED
+% Dot product of an indexed vector and an indexed position vector in terms of components
+% Input: letter representing first vector, subscript for index of first vector, subscript for index of position vector
+% \newcommand{\vectsubdotpossubscomps}{}{}
+
+% NOT YET IMPLEMENTED
+% Dot product of an indexed vector and an indexed position vector expanded as a sum
+% Input: letter representing first vector, subscript for index of first vector, subscript for index of position vector
+% \newcommand{\vectsubdotpossube}{}{}
+
+% Name of the dot product of an indexed vector and an indexed differential in terms of components
+% Use \vectsubdotDiffvectsubscomps for Delta.
+% Input: letter representing the first vector, subscript for index of first vector, letter representing differential, subscript for index of differential
+\newcommand{\vectsubdotdiffvectsubscomps}[4]{\ensuremath{\vectsubscomps{#1}{#2} \bullet \diffvectsubscomps{#3}{#4}}}
+\newcommand{\vectsubdotDiffvectsubscomps}[4]{\ensuremath{\vectsubscomps{#1}{#2} \bullet \Diffvectsubscomps{#3}{#4}}}
+\iflogicalnames
+  \newcommand{\vectsubdotsdvectsub}{\vectsubdotdiffvectsubscomps}
+  \newcommand{\vectsubdotsDvectsub}{\vectsubdotDiffvectsubscomps}
+\fi
+
+% Dot product of an indexed vector and an indexed differential expanded as a sum
+% Use \vectsubdotDiffvectsube for Delta.
+% Input: letter representing the first vector, subscript for index of first vector, letter representing differential, subscript for index of differential
+\newcommand{\vectsubdotdiffvectsube}[4]{\ensuremath{\vectsubxcomp{#1}{#2}{x}\diffvectsubxcomp{#3}{#4}{x}+\vectsubxcomp{#1}{#2}{y}\diffvectsubxcomp{#3}{#4}{y}+\vectsubxcomp{#1}{#2}{z}\diffvectsubxcomp{#3}{#4}{z}}}
+\newcommand{\vectsubdotDiffvectsube}[4]{\ensuremath{\vectsubxcomp{#1}{#2}{x}\Diffvectsubxcomp{#3}{#4}{x}+\vectsubxcomp{#1}{#2}{y}\Diffvectsubxcomp{#3}{#4}{y}+\vectsubxcomp{#1}{#2}{z}\Diffvectsubxcomp{#3}{#4}{z}}}
+\iflogicalnames
+  \newcommand{\vectsubdotedvectsub}{\vectsubdotdiffvectsube}
+  \newcommand{\vectsubdoteDvectsub}{\vectsubdotDiffvectsube}
+\fi
+
+% NOT YET IMPLEMENTED
+% Dot product of an indexed vector and an indexed displacement in terms of components
+% Use \vectsubdotDiffpossubscomps for Delta
+% \newcommand{\vectsubdotdiffpossubscomps}{}{}
+% \newcommand{\vectsubdotDiffpossubscomps}{}{}
+
+% NOT YET IMPLEMENTED
+% Dot product of an indexed vector and an indexed displacement expanded as a sum
+% Use \vectsubdotDiffpossube for Delta
+% \newcommand{\vectsubdotdiffpossube}{}{}
+% \newcommand{\vectsubdotDiffpossube}{}{}
+%%%%%
+
+%%%%% Mixed dot products
+% Name of the dot product of an indexed vector and an unindexed differential in terms of components
+% Use \vectsubdotDiffvectscomps for Delta.
+% Input: letter representing the first vector, subscript for index of first vector, letter representing differential
+\newcommand{\vectsubdotdiffvectscomps}[3]{\ensuremath{\vectsubscomps{#1}{#2} \bullet \diffvectscomps{#3}}}
+\newcommand{\vectsubdotDiffvectscomps}[3]{\ensuremath{\vectsubscomps{#1}{#2} \bullet \Diffvectscomps{#3}}}
+\iflogicalnames
+  \newcommand{\vectsubdotsdvect}{\vectsubdotdiffvectscomps}
+  \newcommand{\vectsubdotsDvect}{\vectsubdotDiffvectscomps}
+\fi
+
+% Dot product of an indexed vector and an unindexed differential expanded as a sum
+% Use \vectsubdotDiffvecte for Delta.
+% Input: letter representing the first vector, subscript for index of first vector, letter representing differential
+\newcommand{\vectsubdotdiffvecte}[3]{\ensuremath{\vectsubxcomp{#1}{#2}{x}\diffvectxcomp{#3}{x}+\vectsubxcomp{#1}{#2}{y}\diffvectxcomp{#3}{y}+\vectsubxcomp{#1}{#2}{z}\diffvectxcomp{#3}{z}}}
+\newcommand{\vectsubdotDiffvecte}[3]{\ensuremath{\vectsubxcomp{#1}{#2}{x}\Diffvectxcomp{#3}{x}+\vectsubxcomp{#1}{#2}{y}\Diffvectxcomp{#3}{y}+\vectsubxcomp{#1}{#2}{z}\Diffvectxcomp{#3}{z}}}
+\iflogicalnames
+  \newcommand{\vectsubdotedvect}{\vectsubdotdiffvecte}
+  \newcommand{\vectsubdoteDvect}{\vectsubdotDiffvecte}
+\fi
+
+% NOT YET IMPLEMENTED
+% Dot product of an indexed vector and an unindexed position vector in terms of components
+% Input: letter representing the first vector, subscript for index of first vector
+% \newcommand{\vectsubdotposscomps}{}{}
+
+% NOT YET IMPLEMENTED
+% Dot product of an indexed vector and an unindexed position vector expanded as a sum
+% Input: letter representing the first vector, subscript for index of first vector
+% \newcommand{\vectsubdotpose}{}{}
+
+% Name of the dot product of an indexed vector and an unindexed displacement in terms of components
+% Use \vectsubdotDiffposscomps for Delta
+% Input: letter representing the first vector, subscript for index of first vector
+\newcommand{\vectsubdotdiffposscomps}[2]{\ensuremath{\vectsubscomps{#1}{#2} \bullet \diffposscomps}}
+\newcommand{\vectsubdotDiffposscomps}[2]{\ensuremath{\vectsubscomps{#1}{#2} \bullet \Diffposscomps}}
+\iflogicalnames
+  \newcommand{\vectsubdotsdpos}{\vectsubdotdiffposscomps}
+  \newcommand{\vectsubdotsDpos}{\vectsubdotDiffposscomps}
+\fi
+
+% Dot product of an indexed vector and an unindexed displacement expanded as a sum
+% Use \vectsubdotDiffpose for Delta
+% Input: letter representing the first vector, subscript for index of first vector
+\newcommand{\vectsubdotdiffpose}[2]{\ensuremath{\vectsubxcomp{#1}{#2}{x}\diffposxcomp{x}+\vectsubxcomp{#1}{#2}{y}\diffposxcomp{y}+\vectsubxcomp{#1}{#2}{z}\diffposxcomp{z}}}
+\newcommand{\vectsubdotDiffpose}[2]{\ensuremath{\vectsubxcomp{#1}{#2}{x}\Diffposxcomp{x}+\vectsubxcomp{#1}{#2}{y}\Diffposxcomp{y}+\vectsubxcomp{#1}{#2}{z}\Diffposxcomp{z}}}
+\iflogicalnames
+  \newcommand{\vectsubdotedpos}{\vectsubdotdiffpose}
+  \newcommand{\vectsubdoteDpos}{\vectsubdotDiffpose}
+\fi
+%%%%%
+
+%%%%% Dot products of derivatives of vectors
+% Name of the dot product of the derivative of an unindexed vector and an unindexed vector in terms of components
+% Use \vectDerdotvectscomps for Delta.
+% Input: letter representing first vector, letter representing independent variable, letter representing second vector
+\newcommand{\vectderdotvectscomps}[3]{\ensuremath{\vectderscomps{#1}{#2} \bullet \vectscomps{#3}}}
+\newcommand{\vectDerdotvectscomps}[3]{\ensuremath{\vectDerscomps{#1}{#2} \bullet \vectscomps{#3}}}
+\iflogicalnames
+  \newcommand{\dervectdotsvect}{\vectderdotvectscomps}
+  \newcommand{\Dervectdotsvect}{\vectDerdotvectscomps}
+\fi
+
+% Dot product of the derivative of an unindexed vector and an unindexed vector expanded as a sum
+% Use \vectDerdotvecte for Delta.
+% Input: letter representing first vector, letter representing independent variable, letter representing second vector
+\newcommand{\vectderdotvecte}[3]{\ensuremath{\vectderxcomp{#1}{#2}{x}\vectxcomp{#3}{x}+\vectderxcomp{#1}{#2}{y}\vectxcomp{#3}{y}+\vectderxcomp{#1}{#2}{z}\vectxcomp{#3}{z}}}
+\newcommand{\vectDerdotvecte}[3]{\ensuremath{\vectDerxcomp{#1}{#2}{x}\vectxcomp{#3}{x}+\vectDerxcomp{#1}{#2}{y}\vectxcomp{#3}{y}+\vectDerxcomp{#1}{#2}{z}\vectxcomp{#3}{z}}}
+\iflogicalnames
+  \newcommand{\dervectdotevect}{\vectderdotvecte}
+  \newcommand{\Dervectdotevect}{\vectDerdotvecte}
+\fi
+
+% Name of the dot product of an unindexed vector and the derivative of an unindexed vector in terms of components
+% Use \vectdotvectDerscomps for Delta.
+% Input: letter representing first vector, letter representing second vector, letter representing independent variable
+\newcommand{\vectdotvectderscomps}[3]{\ensuremath{\vectscomps{#1} \bullet \vectderscomps{#2}{#3}}}
+\newcommand{\vectdotvectDerscomps}[3]{\ensuremath{\vectscomps{#1} \bullet \vectDerscomps{#2}{#3}}}
+\iflogicalnames
+  \newcommand{\vectdotsdervect}{\vectdotvectderscomps}
+  \newcommand{\vectdotsDervect}{\vectdotvectDerscomps}
+\fi
+
+% Dot product of an unindexed vector and the derivative of an unindexed vector expanded as a sum
+% % \vectdotvectDere for Delta.
+% Input: letter representing first vector, letter representing second vector, letter representing independent variable
+\newcommand{\vectdotvectdere}[3]{\ensuremath{\vectxcomp{#1}{x}\vectderxcomp{#2}{#3}{x}+\vectxcomp{#1}{y}\vectderxcomp{#2}{#3}{y}+\vectxcomp{#1}{z}\vectderxcomp{#2}{#3}{z}}}
+\newcommand{\vectdotvectDere}[3]{\ensuremath{\vectxcomp{#1}{x}\vectDerxcomp{#2}{#3}{x}+\vectxcomp{#1}{y}\vectDerxcomp{#2}{#3}{y}+\vectxcomp{#1}{z}\vectDerxcomp{#2}{#3}{z}}}
+\iflogicalnames
+  \newcommand{\vectdotedervect}{\vectdotvectdere}
+  \newcommand{\vectdoteDervect}{\vectdotvectDere}
+\fi
+
+% Name of the dot product of the derivative of an unindexed vector and an unindexed position vector in terms of components
+% Use \vectDerdotposscomps for Delta.
+% Input: letter representing first vector, letter representing independent variable
+\newcommand{\vectderdotposscomps}[2]{\ensuremath{\vectderscomps{#1}{#2} \bullet \posscomps}}
+\newcommand{\vectDerdotposscomps}[2]{\ensuremath{\vectDerscomps{#1}{#2} \bullet \posscomps}}
+\iflogicalnames
+  \newcommand{\dervectdotspos}{\vectderdotposscomps}
+  \newcommand{\Dervectdotspos}{\vectDerdotposscomps}
+\fi
+
+% Dot product of the derivative of an unindexed vector and an unindexed position vector expanded as a sum
+% Use \vectDerdotpose for Delta.
+% Input: letter representing first vector, letter representing independent variable
+\newcommand{\vectderdotpose}[2]{\ensuremath{\vectderxcomp{#1}{#2}{x}\posxcomp{x}+\vectderxcomp{#1}{#2}{y}\posxcomp{y}+\vectderxcomp{#1}{#2}{z}\posxcomp{z}}}
+\newcommand{\vectDerdotpose}[2]{\ensuremath{\vectDerxcomp{#1}{#2}{x}\posxcomp{x}+\vectDerxcomp{#1}{#2}{y}\posxcomp{y}+\vectDerxcomp{#1}{#2}{z}\posxcomp{z}}}
+\iflogicalnames
+  \newcommand{\dervectdotepos}{\vectderdotpose}
+  \newcommand{\Dervectdotepos}{\vectDerdotpose}
+\fi
+
+% Name of the dot product of the derivative of an unindexed vector and an unindexed differential in terms of components
+% Use \vectDerdotDiffvectscomps for Delta.
+% Input: letter representing first vector, letter representing independent variable, letter representing differential
+\newcommand{\vectderdotdiffvectscomps}[3]{\ensuremath{\vectderscomps{#1}{#2} \bullet \diffvectscomps{#3}}}
+\newcommand{\vectDerdotDiffvectscomps}[3]{\ensuremath{\vectDerscomps{#1}{#2} \bullet \Diffvectscomps{#3}}}
+\iflogicalnames
+  \newcommand{\dervectdotsdvect}{\vectderdotdiffvectscomps}
+  \newcommand{\DervectdotsDvect}{\vectDerdotDiffvectscomps}
+\fi
+
+% Dot product of the derivative of an unindexed vector and an unindexed differential expanded as a sum
+% Use \vectDerdotDiffvecte for Delta.
+% Input: letter representing first vector, letter representing independent variable, letter representing differential
+\newcommand{\vectderdotdiffvecte}[3]{\ensuremath{\vectderxcomp{#1}{#2}{x}\diffvectxcomp{#3}{x}+\vectderxcomp{#1}{#2}{y}\diffvectxcomp{#3}{y}+\vectderxcomp{#1}{#2}{z}\diffvectxcomp{#3}{z}}}
+\newcommand{\vectDerdotDiffvecte}[3]{\ensuremath{\vectDerxcomp{#1}{#2}{x}\Diffvectxcomp{#3}{x}+\vectDerxcomp{#1}{#2}{y}\Diffvectxcomp{#3}{y}+\vectDerxcomp{#1}{#2}{z}\Diffvectxcomp{#3}{z}}}
+\iflogicalnames
+  \newcommand{\dervectdotedvect}{\vectderdotdiffvecte}
+  \newcommand{\DervectdoteDvect}{\vectDerdotDiffvecte}
+\fi
+
+% Name of the dot product of the derivative of an unindexed vector and an unindexed displacement in terms of components
+% Use \vectDerdotDiffposscomps for Delta.
+% Input: letter representing first vector, letter representing independent variable
+\newcommand{\vectderdotdiffposscomps}[2]{\ensuremath{\vectderscomps{#1}{#2} \bullet \diffposscomps}}
+\newcommand{\vectDerdotDiffposscomps}[2]{\ensuremath{\vectDerscomps{#1}{#2} \bullet \Diffposscomps}}
+\iflogicalnames
+  \newcommand{\dervectdotsdpos}{\vectderdotdiffposscomps}
+  \newcommand{\DervectdotsDpos}{\vectDerdotDiffposscomps}
+\fi
+
+% Dot product of the derivative of an unindexed vector and an unindexed displacement expanded as a sum
+% Use \vectDerdotDiffpose for Delta.
+% Input: letter representing first vector, letter representing independent variable
+\newcommand{\vectderdotdiffpose}[2]{\ensuremath{\vectderxcomp{#1}{#2}{x}\diffposxcomp{x}+\vectderxcomp{#1}{#2}{y}\diffposxcomp{y}+\vectderxcomp{#1}{#2}{z}\diffposxcomp{z}}}
+\newcommand{\vectDerdotDiffpose}[2]{\ensuremath{\vectDerxcomp{#1}{#2}{x}\Diffposxcomp{x}+\vectDerxcomp{#1}{#2}{y}\Diffposxcomp{y}+\vectDerxcomp{#1}{#2}{z}\Diffposxcomp{z}}}
+\iflogicalnames
+  \newcommand{\dervectdotedpos}{\vectderdotdiffpose}
+  \newcommand{\DervectdoteDpos}{\vectDerdotDiffpose}
+\fi
+%%%%%
+%%%%%%%%%%
+
+%%%%%%%%%% Geometric algebra
+% Basis vectors using e with subscripts
+% Input: none for \ezero, \eone, \etwo, \ethree, and \efour; index for \ek and \e
+\newcommand{\ezero}{\ensuremath{\ssub{\mathbf{e}}{0}}}
+\newcommand{\eone}{\ensuremath{\ssub{\mathbf{e}}{1}}}
+\newcommand{\etwo}{\ensuremath{\ssub{\mathbf{e}}{2}}}
+\newcommand{\ethree}{\ensuremath{\ssub{\mathbf{e}}{3}}}
+\newcommand{\efour}{\ensuremath{\ssub{\mathbf{e}}{4}}}
+\newcommand{\ek}[1]{\ensuremath{\ssub{\mathbf{e}}{#1}}}
+\newcommand{\e}{\ek}
+
+% Basis vectors using e with superscripts
+% Input: none for \euzero, \euone, \eutwo, \euthree, and \eufour; index for \euk and \eu
+\newcommand{\euzero}{\ensuremath{\ssup{\mathbf{e}}{0}}}
+\newcommand{\euone}{\ensuremath{\ssup{\mathbf{e}}{1}}}
+\newcommand{\eutwo}{\ensuremath{\ssup{\mathbf{e}}{2}}}
+\newcommand{\euthree}{\ensuremath{\ssup{\mathbf{e}}{3}}}
+\newcommand{\eufour}{\ensuremath{\ssup{\mathbf{e}}{4}}}
+\newcommand{\euk}[1]{\ensuremath{\ssup{\mathbf{e}}{#1}}}
+\newcommand{\eu}{\euk}
+
+% Basis vectors using \gamma with subscripts
+% Input: none for \gzero, \gone, \gtwo, \gthree, and \gfour; index for \gk and \g
+\newcommand{\gzero}{\ensuremath{\ssub{\mathbf{\gamma}}{0}}}
+\newcommand{\gone}{\ensuremath{\ssub{\mathbf{\gamma}}{1}}}
+\newcommand{\gtwo}{\ensuremath{\ssub{\mathbf{\gamma}}{2}}}
+\newcommand{\gthree}{\ensuremath{\ssub{\mathbf{\gamma}}{3}}}
+\newcommand{\gfour}{\ensuremath{\ssub{\mathbf{\gamma}}{4}}}
+\newcommand{\gk}[1]{\ensuremath{\ssub{\mathbf{\gamma}}{#1}}}
+\newcommand{\g}{\gk}
+
+% Basis vectors using \gamma with superscripts
+% Input: none for \guzero, \guone, \gutwo, \guthree, and \gufour; index for \guk and \gu
+\newcommand{\guzero}{\ensuremath{\ssup{\mathbf{\gamma}}{0}}}
+\newcommand{\guone}{\ensuremath{\ssup{\mathbf{\gamma}}{1}}}
+\newcommand{\gutwo}{\ensuremath{\ssup{\mathbf{\gamma}}{2}}}
+\newcommand{\guthree}{\ensuremath{\ssup{\mathbf{\gamma}}{3}}}
+\newcommand{\gufour}{\ensuremath{\ssup{\mathbf{\gamma}}{4}}}
+\newcommand{\guk}[1]{\ensuremath{\ssup{\mathbf{\gamma}}{#1}}}
+\newcommand{\gu}{\guk}
+%%%%%%%%%%
+
+%%%%%%%%%% Physical constants and units, miscellaneous
+% Commands ending in "n" produce numerical values with SI units.
+
+% Symbolic Coulomb constant
+% USE ONLY ONE OF THE FOLLOWING LINTS DEPENDING ON WHAT STYLE EPSILON YOU WANT.
+%\newcommand{\oofpez}{\ensuremath{\frac{1}{4\pi\epsilon_{_{_{o}}}}}}
+\newcommand{\oofpez}{\ensuremath{\frac{1}{4\pi\varepsilon_{_{_{o}}}}}}
+% Numerical Coulomb constant
+\newcommand{\oofpezn}{\ensuremath{\scin{9}{9}{\frac{\newton\usk\meter\squared}{\coulomb\squared}}}}
+
+% Symbolic permittivity of free space
+% USE ONLY ONE OF THE FOLLOWING LINTS DEPENDING ON WHAT STYLE EPSILON YOU WANT.
+%\newcommand{\epsz}{\ensuremath{\epsilon_{_{_{o}}}}}
+\newcommand{\epsz}{\ensuremath{\varepsilon_{_{_{o}}}}}
+% Numerical permittivity of free space
+\newcommand{\epszn}{\ensuremath{\scin{9}{-12}{\frac{\coulomb\squared}{\newton\usk\meter\squared}}}}
+
+% Symbolic Biot-Savart constant
+\newcommand{\mzofp}{\ensuremath{\frac{\mu_{_{_{o}}}}{4\pi}}}
+\newcommand{\oofpezcs}{\ensuremath{\frac{1}{4\pi\varepsilon_{_{_{o}}}c^2}}}
+% Numerical Biot-Savart constant
+\newcommand{\mzofpn}{\ensuremath{\scin{1}{-7}{\frac{\tesla\usk\meter\squared}{\coulomb\usk\meter\per\second}}}}
+\newcommand{\oofpezcsn}{\ensuremath{\scin{1}{-7}{\frac{\newton}{\left(\coulomb\per\second\right)^2}}}}
+
+% Symbolic permeability of free space
+\newcommand{\muz}{\ensuremath{\mu_{_{_{o}}}}}
+% Numerical permeability of free space
+\newcommand{\muzn}{\ensuremath{\scin{4\pi}{-7}{\frac{\tesla\usk\meter\squared}{\coulomb\usk\meter\per\second}}}}
+
+% Symbolic Boltzmann constant
+\newcommand{\kboltz}{\ensuremath{\ssub{k}{B}}}
+% Numerical Boltzmann constant
+\newcommand{\kboltzn}{\ensuremath{\scin{1.381}{-23}{\frac{\joule}{\kelvin}}}}
+\newcommand{\kboltznev}{\ensuremath{\scin{8.617}{-5}{\frac{\eV}{\kelvin}}}}
+
+% Symbolic Stefan-Boltzmann constant
+\newcommand{\stefan}{\ensuremath{\sigma}}
+% Numerical Stefan-Boltzmann constant
+\newcommand{\stefann}{\ensuremath{\scin{5.670}{-8}{\frac{\watt}{\meter\squared\usk\kelvin^4}}}}
+
+% Symbolic Planck constant
+\newcommand{\planck}{\ensuremath{h}}
+% Numerical Planck constant
+\newcommand{\planckn}{\ensuremath{\scin{6.626}{-34}{\joule\usk\second}}}
+\newcommand{\plancknev}{\ensuremath{\scin{4.136}{-15}{\eV\usk\second}}}
+
+% Symbolic hbar is already defined in LaTeX
+% Numerical hbar
+\newcommand{\hbarn}{\ensuremath{\scin{1.055}{-34}{\joule\usk\second}}}
+\newcommand{\hbarnev}{\ensuremath{\scin{6.582}{-16}{\eV\usk\second}}}
+
+% Symbolic gravitational constant
+\newcommand{\bigG}{\ensuremath{G}}
+% Numerical gravitational constant
+\newcommand{\bigGn}{\ensuremath{\scin{6.6742}{-11}{\frac{\newton\usk\meter\squared}{\kilo\gram\squared}}}}
+
+% Symbolic gravitational field strength near Earth's surface
+\newcommand{\littleg}{\ensuremath{g}}
+% Numerical gravitational field strength near Earth's surface
+\newcommand{\littlegn}{\ensuremath{\unit{9.8}{\frac{\newton}{\kilo\gram}}}}
+\newcommand{\littlegnacc}{\ensuremath{\unit{9.8}{\frac{(\meter\per\second)}{\second}}}}
+
+% Symbolic speed of light
+\newcommand{\clight}{\ensuremath{c}}
+% Numerical speed of light
+\newcommand{\clightn}{\ensuremath{\scin{3}{8}{\frac{\meter}{\second}}}}
+\newcommand{\clightnfn}{\ensuremath{\unit{1}{\frac{ft}{\nano\second}}}}
+
+% Alternate form of \electronvolt
+\newcommand{\eV}{\electronvolt}
+\newcommand{\ev}{\electronvolt}
+
+% Symbolic Earth's mass
+\newcommand{\MEarth}{\ensuremath{M_{_{_{\mbox{\tiny{Earth}}}}}}}
+% Numerical Earth's mass
+\newcommand{\MEarthn}{\ensuremath{\scin{6}{24}{\kilo\gram}}}
+
+% Symbolic Moon's mass
+\newcommand{\MMoon}{\ensuremath{M_{_{_{\mbox{\tiny{Moon}}}}}}}
+% Numerical Moon's mass
+\newcommand{\MMoonn}{\ensuremath{\scin{7}{22}{\kilo\gram}}}
+
+% Symbolic Sun's mass
+\newcommand{\MSun}{\ensuremath{M_{_{_{\mbox{\tiny{Sun}}}}}}}
+% Numerical Sun's mass
+\newcommand{\MSunn}{\ensuremath{\scin{2}{30}{\kilo\gram}}}
+
+% Symbolic Earth's radius
+\newcommand{\REarth}{\ensuremath{R_{_{_{\mbox{\tiny{Earth}}}}}}}
+% Numerical Earth's radius
+\newcommand{\REarthn}{\ensuremath{\scin{6.4}{6}{\meter}}}
+
+% Symbolic Moon's radius
+\newcommand{\RMoon}{\ensuremath{R_{_{_{\mbox{\tiny{Moon}}}}}}}
+% Numerical Moon's radius
+\newcommand{\RMoonn}{\ensuremath{\scin{1.75}{6}{\meter}}}
+
+% Symbolic Sun's radius
+\newcommand{\RSun}{\ensuremath{R_{_{_{\mbox{\tiny{Sun}}}}}}}
+% Numerical Sun's radius
+\newcommand{\RSunn}{\ensuremath{\scin{7}{8}{\meter}}}
+
+% Symbolic Sun-Earth distance
+% The first form is highly recommended.
+\newcommand{\SEdist}{\vectsubmag{r}{SE}}
+\newcommand{\ESdist}{\vectsubmag{r}{ES}}
+% Numerical Sun-Earth distance
+\newcommand{\SEdistn}{\ensuremath{\scin{1.5}{11}{\meter}}}
+\newcommand{\ESdistn}{\SEdistn}
+
+% Symbolic Earth-Moon distance
+% The first form is highly recommended.
+\newcommand{\EMdist}{\vectsubmag{r}{EM}}
+\newcommand{\MEdist}{\vectsubmag{r}{ME}}
+% Numerical Earth-Moon distance
+\newcommand{\EMdistn}{\ensuremath{\scin{4}{8}{\meter}}}
+\newcommand{\MEdistn}{\EMdistn}
+
+% Symbolic Avogadro constant
+\newcommand{\Navogadro}{\ensuremath{N_{_{_{\mbox{\tiny{A}}}}}}}
+% Numerical Avogadro constant
+\newcommand{\Navogadron}{\ensuremath{\scin{6.022}{23}{\reciprocal\mole}}}
+
+% Symbolic typical atomic radius
+\newcommand{\Ratom}{\ensuremath{r_{_{_{\mbox{\tiny{atom}}}}}}}
+% Numerical typical atomic radius
+\newcommand{\Ratomn}{\ensuremath{\scin{1}{-10}{\meter}}}
+
+% Symbolic proton mass
+\newcommand{\Mproton}{\ensuremath{m_{_{_{\mbox{\tiny{proton}}}}}}}
+% Numerical proton mass
+\newcommand{\Mprotonn}{\ensuremath{\scin{1.673}{-27}{\kilo\gram}}}
+
+% Symbolic neutron mass
+\newcommand{\Mneutron}{\ensuremath{m_{_{_{\mbox{\tiny{neutron}}}}}}}
+% Numerical neutron mass
+\newcommand{\Mneutronn}{\ensuremath{\scin{1.675}{-27}{\kilo\gram}}}
+
+% Symbolic hydrogen atom mass
+\newcommand{\Mhydrogen}{\ensuremath{m_{_{_{\mbox{\tiny{hydrogen}}}}}}}
+% Numerical hydrogen atom mass
+\newcommand{\Mhydrogenn}{\ensuremath{\scin{1.673}{-27}{\kilo\gram}}}
+
+% Symbolic electron mass
+\newcommand{\Melectron}{\ensuremath{m_{_{_{\mbox{\tiny{electron}}}}}}}
+% Numerical electron mass
+\newcommand{\Melectronn}{\ensuremath{\scin{9.109}{-31}{\kilo\gram}}}
+
+% Symbolic electron charge
+% Note the two forms.
+\newcommand{\Qelectron}{\ensuremath{Q_{_{_{\mbox{\tiny{electron}}}}}}}
+\newcommand{\qelectron}{\ensuremath{q_{_{_{\mbox{\tiny{electron}}}}}}}
+% Numerical electron charge
+\newcommand{\qelectronn}{\ensuremath{\scin{-1.602}{-19}{\coulomb}}}
+\newcommand{\Qelectronn}{\qelectronn}
+
+% Symbolic proton charge
+% Note the two forms.
+\newcommand{\Qproton}{\ensuremath{Q_{_{_{\mbox{\tiny{proton}}}}}}}
+\newcommand{\qproton}{\ensuremath{q_{_{_{\mbox{\tiny{proton}}}}}}}
+% Numerical proton charge
+\newcommand{\qprotonn}{\ensuremath{\scin{1.602}{-19}{\coulomb}}}
+\newcommand{\Qprotonn}{\qprotonn}
+
+% Symbolic charge quantum
+\newcommand{\echarge}{\ensuremath{e}}
+% Numerical charge quantum
+\newcommand{\echargen}{\ensuremath{\qprotonn}}
+%%%%%%%%%%
+
+%%%%%%%%%% Astronomical Quantities
+% Light year unit
+% Note the three forms
+\newcommand{\lightyear}{\ensuremath{\mathrm{ly}}}
+\newcommand{\Lightyear}{\ensuremath{\mathrm{LY}}}
+\newcommand{\cyear}{\ensuremath{c\usk\mathrm{year}}}
+\newcommand{\cyr}{\ensuremath{c\usk\mathrm{yr}}}
+
+% Year unit
+% Note the two forms
+\newcommand{\yyear}{\ensuremath{\mathrm{year}}}
+\newcommand{\yr}{\ensuremath{\mathrm{yr}}}
+
+% Parsec unit
+\newcommand{\parsec}{\ensuremath{\mathrm{pc}}}
+
+% Numerical solar luminosity
+\newcommand{\LSunn}{\ensuremath{\scin{4}{26}{\watt}}}
+\newcommand{\Lsolarn}{\ensuremath{\LSunn}}
+
+% Symbolic stellar luminosity
+\newcommand{\Lstar}[1][$\star$]{\ensuremath{L_{_{_{\mbox{\tiny{#1}}}}}}}
+\newcommand{\LSun}{\ensuremath{\Lstar[Sun]}}
+\newcommand{\Lsolar}{\ensuremath{\Lstar[$\odot$]}}
+
+% Symbolic stellar temperature
+\newcommand{\Tstar}[1][$\star$]{\ensuremath{T_{_{_{\mbox{\tiny{#1}}}}}}}
+\newcommand{\TSun}{\Tstar[Sun]}
+\newcommand{\Tsolar}{\ensuremath{\Tstar[$\odot$]}}
+
+% Symbolic stellar radius
+\newcommand{\Rstar}[1][$\star$]{\ensuremath{R_{_{_{\mbox{\tiny{#1}}}}}}}
+% \RSun has already been defined so there's no need to define it here
+\newcommand{\Rsolar}{\ensuremath{\Rstar[$\odot$]}}
+\newcommand{\Rsolarn}{\ensuremath{\RSunn}}
+
+% Symbolic stellar mass
+\newcommand{\Mstar}[1][$\star$]{\ensuremath{M_{_{_{\mbox{\tiny{#1}}}}}}}
+% \MSun has already been defined so there's no need to define it here
+\newcommand{\Msolar}{\ensuremath{\Mstar[$\odot$]}}
+\newcommand{\Msolarn}{\ensuremath{\MSunn}}
+
+% Symbolic stellar flux
+\newcommand{\fstar}[1][$\star$]{\ensuremath{f_{_{_{\mbox{\tiny{#1}}}}}}}
+\newcommand{\Fstar}[1][$\star$]{\ensuremath{F_{_{_{\mbox{\tiny{#1}}}}}}}
+\newcommand{\fSun}{\ensuremath{\fstar[Sun]}}
+\newcommand{\FSun}{\ensuremath{\Fstar[Sun]}}
+\newcommand{\fsolar}{\ensuremath{\fstar[$\odot$]}}
+\newcommand{\Fsolar}{\ensuremath{\Fstar[$\odot$]}}
+
+% Symbolic stellar magnitude
+\newcommand{\magstar}[1][$\star$]{\ensuremath{m_{_{_{\mbox{\tiny{#1}}}}}}}
+\newcommand{\Magstar}[1][$\star$]{\ensuremath{M_{_{_{\mbox{\tiny{#1}}}}}}}
+\newcommand{\magSun}{\ensuremath{\magstar[Sun]}}
+\newcommand{\MagSun}{\ensuremath{\Magstar[Sun]}}
+\newcommand{\magsolar}{\ensuremath{\magstar[$\odot$]}}
+\newcommand{\Magsolar}{\ensuremath{\Magstar[$\odot$]}}
+
+% Symbolic stellar distance
+\newcommand{\dstar}[1][$\star$]{\ensuremath{d_{_{_{\mbox{\tiny{#1}}}}}}}
+\newcommand{\Dstar}[1][$\star$]{\ensuremath{D_{_{_{\mbox{\tiny{#1}}}}}}}
+\newcommand{\dSun}{\ensuremath{\dstar[Sun]}}
+\newcommand{\DSun}{\ensuremath{\Dstar[Sun]}}
+\newcommand{\dsolar}{\ensuremath{\dstar[$\odot$]}}
+\newcommand{\Dsolar}{\ensuremath{\Dstar[$\odot$]}}
+%%%%%%%%%%
+
+%%%%%%%%%% Custom functions
+% Signum function name
+\newcommand{\sgn}{\ensuremath{\mathop{\mathrm{sgn}\,}}}
+% Dex (decimal exponentiation) function name
+\newcommand{\dex}{\ensuremath{\mathop{\mathrm{dex}\,}}}
+
+% Absolute value
+% Input: argument of function
+\newcommand{\abs}[1]{\ensuremath{\left|{#1}\right|}}
+
+% Change in
+% Input: argument of function
+\newcommand{\changein}[1]{\ensuremath{\Delta{#1}}}
+
+% Scientific notation
+% Input: mantissa, exponent, associated unit (not used in starred form)
+% Use starred version to omit units.
+\newcommand{\ee}[3]{\unit{\texttt{{#1}e{#2}}}{#3}}
+\WithSuffix\newcommand\ee*[2]{\texttt{{#1}e{#2}}}
+\newcommand{\EE}[3]{\unit{\texttt{{#1}E{#2}}}{#3}}
+\WithSuffix\newcommand\EE*[2]{\texttt{{#1}E{#2}}}
+%\newcommand{\scin}[3]{\ensuremath{\unit{{#1}\times 10^{^{^{#2}}}}{#3}}}
+%\WithSuffix\newcommand\scin*[2]{\ensuremath{{#1}\times 10^{^{^{#2}}}}}
+\newcommand{\scin}[3]{\ensuremath{\unit{{#1}\times 10^{^{{#2}}}}{{#3}}}}
+\WithSuffix\newcommand\scin*[2]{\ensuremath{{#1}\times 10^{^{{#2}}}}}
+
+% Decimal exponentiation (dex), or order of magnitude 
+\newcommand{\dexp}[1]{\ensuremath{10^{^{^{#1}}}}}
+
+% Indexed non-vector (scalar) (Text subscript)
+% Input: letter representing quantity (should not contain a superscript), index to be used as subscript
+\newcommand{\ssub}[2]{\ensuremath{{#1}_{_{_{\mbox{\tiny{#2}}}}}}}
+
+% Indexed non-vector (scalar) (Text superscript)
+% Input: letter representing quantity (should not contain a subscript), index to be used as superscript
+\newcommand{\ssup}[2]{\ensuremath{{#1}^{^{^{\mbox{\tiny{#2}}}}}}}
+
+% Combination text superscript and subscript
+% Input: letter representing quantity, index for superscript, index for subscript (note order!)
+\newcommand{\ssud}[3]{\ensuremath{\ssub{#1}{#3}^{^{^{\mbox{\tiny{#2}}}}}}}
+
+% Mathematical subscript
+% Input: letter representing quantity, index to be used as subscript
+\newcommand{\msub}[2]{\ensuremath{{#1}_{_{_{#2}}}}}
+
+% Mathematical superscript
+% Input: letter representing quantity, index to be used as superscript
+\newcommand{\msup}[2]{\ensuremath{{#1}^{^{^{#2}}}}}
+
+% Combination mathematical superscript and subscript
+% Input: letter representing quantity, index for superscript, index for subscript (note order!)
+\newcommand{\msud}[3]{\ensuremath{\msup{#1}{#2}_{_{_{#3}}}}}
+
+% Divergence of a vector
+% Input: vector
+% Eventually, the arrow will need to be explicitly supplied by the users.
+\newcommand{\divergence}[1]{\ensuremath{\vectdotvect{\nabla}{\vect{#1}}}}
+% \newcommand{\divergence}[1]{\ensuremath{\vectdotvect{\nabla}{#1}}}
+
+% Curl of a vector
+% Input: vector
+% Eventually, the arrow will need to be explicitly supplied by the users.
+\newcommand{\curl}[1]{\ensuremath{\nabla \times {\vect{#1}}}}
+% \newcommand{\curl}[1]{\ensuremath{\nabla \times {#1}}}
+
+% Expression for relativistic gamma
+% Input: symbol for speed
+\newcommand{\relgamma}[1]{\ensuremath{\frac{1}{\sqrt{1 - \frac{{#1}^{^{2}}}{c^{^{2}}}}}}}
+\newcommand{\relgammaalt}[1]{\ensuremath{\left( 1 - \frac{{#1}^{^{2}}}{c^{^{2}}} \right)^{^{-\frac{1}{2}}}}}
+
+% Definition operator
+% Input: none
+\newcommand{\defines}{\ensuremath{\stackrel{\text{\tiny{def}}}{=}\;}}
+
+% Association operator
+% Input: none
+\newcommand{\associates}{\ensuremath{\xrightarrow{\text{\tiny{assoc}}}\;}}
+
+% Becomes operator
+% Input: none
+\newcommand{\becomes}{\ensuremath{\xrightarrow{\text{\tiny{becomes}}}\;}}
+
+% Related Both Ways to operator
+% Input: optional subscript, optional superscript for arrow
+\newcommand{\brelatedto}[2]{\ensuremath{\xLongleftrightarrow[\text{\tiny{#1}}]{\text{\tiny{#2}}}}}
+
+% Related To The Right operator
+% Input: optional subscript, optional superscript for arrow
+\newcommand{\rrelatedto}[2]{\ensuremath{\xLongrightarrow[\text{\tiny{#1}}]{\text{\tiny{#2}}}}}
+
+% Related To The Left operator
+% Input: optional subscript, optional superscript for arrow
+\newcommand{\lrelatedto}[2]{\ensuremath{\xLongleftarrow[\text{\tiny{#1}}]{\text{\tiny{#2}}}}}
+
+% Logarithm with arbitrary base
+% Input: base
+\newcommand{\logb}[1][\relax]{\ensuremath{\log_{_{#1}}}}
+
+% Alternate notation for magnetic field
+% Input: none
+\newcommand{\cB}{\ensuremath{\mathrm{I\!B\,}}}
+
+% Traditional unit vectors
+% Input: none
+\newcommand{\ihat}{\ensuremath{\hat\imath\;}}
+\newcommand{\jhat}{\ensuremath{\hat\jmath\;}}
+\newcommand{\khat}{\ensuremath{\hat k\;}}
+
+% Unanimous answers
+% Input: none
+% The color can be changed if desired.
+\newcommand{\allagree}{\color{green}}
+%%%%%%%%%%
+
+%%%%%%%%%% Custom macros
+% Answer boxes
+% Put a box around any answer
+% Input: box width, text to put in box
+\newcommand{\answerbox}[2]{\ensuremath{\fbox{\parbox{#1}{#2}}}}
+
+% small 3 lines
+\newcommand{\smallanswerbox}{
+  \vspace{0.25cm}
+  \centerline{
+  \begin{tabular}{|c|}
+    \hline
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hline
+  \end{tabular}
+  }\vspace{0.25cm}
+}
+% medium 5 lines
+\newcommand{\mediumanswerbox}{
+  \vspace{0.25cm}
+  \centerline{
+  \begin{tabular}{|c|}
+    \hline
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hline
+  \end{tabular}
+  }\vspace{0.25cm}
+}
+% large 15 lines
+\newcommand{\largeanswerbox}{
+  \vspace{0.25cm}
+  \centerline{
+  \begin{tabular}{|c|}
+    \hline
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hline
+  \end{tabular}
+  }\vspace{0.25cm}
+}
+% larger 22 lines
+\newcommand{\largeranswerbox}{
+  \vspace{0.25cm}
+  \centerline{
+  \begin{tabular}{|c|}
+    \hline
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hline
+  \end{tabular}
+  }\vspace{0.25cm}
+}
+% huge 30 lines
+\newcommand{\hugeanswerbox}{
+  \vspace{0.25cm}
+  \centerline{
+  \begin{tabular}{|c|}
+    \hline
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hline
+  \end{tabular}
+  }\vspace{0.25cm}
+}
+% bigass 52 lines
+\newcommand{\bigassanswerbox}{
+  \vspace{0.25cm}
+  \centerline{
+  \begin{tabular}{|c|}
+    \hline
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hspace{18cm} \\
+    \hline
+  \end{tabular}
+  }\vspace{0.25cm}
+}
+
+% Checkpoint
+% Input: none
+\newcommand{\checkpoint}{\vspace{1cm}\centerline{--------- CHECKPOINT ---------}}
+%%%%%%%%%%
+
+%%%%%%%%%% Typesetting VPython code
+% Set typesetting parameters. See listings docs for details.
+\lstset{language=Python,numbers=left,numberstyle=\tiny,upquote=true,breaklines}
+
+% Typeset a single line of code
+% Use this as an alias for the lstinline command provided by listings package
+\newcommand{\vpythonline}{\lstinline}
+
+% Typeset a block of code
+% Use this as an alias for the lstlisting environment provided by listings package
+\lstnewenvironment{vpythonblock}{\lstset{language=Python,numbers=left,numberstyle=\tiny,upquote=true,breaklines}}{}
+
+% Input and typeset a program file
+% Use this as an alias for the lstinputlisting command provided by listings package
+\newcommand{\vpythonfile}{\lstinputlisting[language=Python,numbers=left,numberstyle=\tiny,upquote=true,breaklines]}
+
+% Including an image with a caption
+% Input: filename, caption
+\newcommand{\miimage}[2]{
+  \begin{figure}[h!]
+    \begin{center}
+      \includegraphics[scale=1]{#1}
+      \caption{#2}
+      \label{#1}
+    \end{center}
+  \end{figure}
+}
+%%%%%%%%%%
