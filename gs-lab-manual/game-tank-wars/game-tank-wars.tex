@@ -1,0 +1,235 @@
+\lab{GAME -- Tank Wars}
+
+\apparatus
+\equip{Computer}
+\equip{GlowScript -- www.glowscript.org}
+
+\longgoal
+
+The purpose of this activity is to create a Tank Wars game where you move a tank and adjust the launch angle and launch speed to hit a target.
+
+\procedure
+
+\begin{enumerate}
+        
+\item Create a new file in Glowscript and copy and paste the following code template from our Trinket site. For your reference, the program is printed below, but it will be much faster to copy and paste from our Trinket site.
+
+\begin{vpythonblock}
+GlowScript 2.1 VPython
+
+def control(event):
+    global theta, muzzlespeed, bulletsList
+    if event.type=='keydown':
+        k = event.which
+        if k == 38:
+            theta=theta+dtheta
+            if theta>rad(90):
+                theta=rad(90)
+            turret.axis=L*vector(cos(theta),sin(theta),0)
+            angleBar.axis=(5*theta)*vector(1,0,0)
+        elif k == 40:
+            theta=theta-dtheta
+            if theta<0:
+                theta=0            
+            turret.axis=L*vector(cos(theta),sin(theta),0)
+            angleBar.axis=(5*theta)*vector(1,0,0)
+        elif k == 37:
+            muzzlespeed=muzzlespeed-dspeed
+            if muzzlespeed<1:
+                muzzlespeed=1
+            speedBar.axis=(muzzlespeed/2+0.5)*vector(1,0,0)
+        elif k == 39:
+            muzzlespeed=muzzlespeed+dspeed
+            if muzzlespeed>20:
+                muzzlespeed=20
+            speedBar.axis=(muzzlespeed/2+0.5)*vector(1,0,0)
+        elif k==32:
+            bullet=sphere(pos=turret.pos+turret.axis, radius=0.5, color=color.white)
+            bullet.v=muzzlespeed*vector(cos(theta),sin(theta),0)
+            bulletsList.append(bullet)
+
+scene.bind('keydown', control) 
+
+def rad(degrees): #converts an angle in degrees to an angle in radians
+    radians=degrees*pi/180
+    return radians
+
+scene.range=20
+scene.width=600
+scene.height=400
+
+#create objects
+ground = box(pos=vector(0,-15,0), size=vector(60,2,2), color=color.green)
+tank = box(pos=vector(-18,-13,0), size=vector(2,2,2), color=color.yellow)
+turret = cylinder(pos=tank.pos, axis=vector(0,0,0), radius=0.5, color=tank.color)
+turret.pos.y=turret.pos.y+tank.height/2
+angleBar = cylinder(pos=vector(-18,-19,0), axis=vector(1,0,0), radius=1, color=color.magenta)
+speedBar = cylinder(pos=vector(5,-19,0), axis=vector(1,0,0), radius=1, color=color.cyan)
+
+#turret
+theta=rad(45)
+dtheta=rad(1)
+L=3
+turret.axis=L*vector(cos(theta),sin(theta),0)
+
+#bullets
+bulletsList=[]
+m=1
+muzzlespeed=15
+dspeed=1
+
+#Bar
+angleBar.axis=(5*theta)*vector(1,0,0)
+speedBar.axis=(muzzlespeed/2+0.5)*vector(1,0,0)
+
+#motion
+g=vector(0,-10,0)
+dt = 0.01
+t = 0
+
+while True:
+    rate(100)
+    
+    for thisbullet in bulletsList:
+        if(thisbullet.pos.y<ground.pos.y+ground.height/2):
+            thisbullet.Fnet=vector(0,0,0)
+            thisbullet.v=vector(0,0,0)
+        else:
+            thisbullet.Fnet=m*g
+        thisbullet.v=thisbullet.v+thisbullet.Fnet/m*dt
+        thisbullet.pos=thisbullet.pos+thisbullet.v*dt
+
+    t=t+dt
+\end{vpythonblock}
+
+\item Run the program above. Then, study it and use it to answer the following questions.
+
+\tightframe{What line updates the velocity of the bullet? 
+\vspace{0.25in}
+}
+
+\tightframe{What line updates the position of the bullet?
+\vspace{0.25in}
+}
+
+\tightframe{Is the world in this simulation Earth?  Cite a particular line number in the code in order to support your answer.
+\vspace{0.25in}
+}
+
+\smallframe{What does the \code{rad()} function do?}
+
+\smallframe{What does the variable $L$ tell you?}
+
+\smallframe{What is the variable name for the initial speed of the bullet? How much does the launch speed of the bullet increase or decrease when you press the right or left arrow key only once? (And what is this variable called?)}
+
+\smallframe{What is the variable name for the angle the bullet is launched at? How much does the angle increase or decrease when you press the up or down arrow key once? Is the unit radians or degrees?}
+
+\smallframe{After a bullet hits the ground, what is the net force on the bullet and what is its velocity? Cite the particular line numbers that support your answer.}
+
+\smallframe{When the bullet is in the air, what is the net force on the bullet? Cite the particular line number that supports your answer.}
+
+\smallframe{What key strokes are used to change the launch angle?}
+
+\smallframe{What key strokes are used to change the launch speed?}
+
+\smallframe{What is the maximum and minimum launch speed allowed? Which line numbers tell you this?}
+
+\smallframe{What is the maximum and minimum launch angle allowed? Which line numbers tell you this?}
+
+We are now going to add a few features to the game.
+
+\subsection*{Creating a Target}
+
+	\item Create a target that is a box named \code{target} that is the size of the tank and place it somewhere else on the terrain. Run your program to see the target. (You can think of this as the opposing player's tank, perhaps.)
+	
+We will need to check for collisions between a bullet and the target. It is convenient to create a function that does the math to see if the bullet (sphere) and target (box) overlap. If they do overlap, it returns \code{True}. If they do not overlap, the it returns \code{False}.
+
+	\item At the top of your program near where the \code{rad()} function is defined, add the following function. You do not have to type the commented lines. You will need to double check your typing to make sure you do not have any typos. The condition of the \code{if} statement is rather long, so check it for accuracy.  Again, this code snippet is on our Trinket site if you want to copy and paste.
+	
+\begin{myvpython}
+#determines whether a sphere and box intersect or not
+#returns boolean
+def collisionSphereAndBox(sphereObj, boxObj):
+    if((sphereObj.pos.x-sphereObj.radius<boxObj.pos.x+boxObj.length/2 and sphereObj.pos.x+sphereObj.radius>boxObj.pos.x-boxObj.length/2) and (sphereObj.pos.y-sphereObj.radius<boxObj.pos.y+boxObj.height/2 and sphereObj.pos.y+sphereObj.radius>boxObj.pos.y-boxObj.height/2)):
+        result=True
+    else:
+        result=False
+    return result
+\end{myvpython}
+
+	\item At the \code{if} statement at line 77 in the original template above, where the program checks whether the bullet hits the ground, add an \code{elif} statement (between the if and else) to check whether the bullet collides with the target. It should look like this.
+	
+\begin{myvpython}
+        elif collisionSphereAndBox(thisbullet,target):
+            thisbullet.Fnet=vector(0,0,0)
+            thisbullet.v=vector(0,0,0)
+            print("direct hit!")
+\end{myvpython}
+
+
+
+	\item Run your program. Fire a bullet that hits the target and observe the console after the collision. You should see it printing ``direct hit!'' over and over.
+	
+\smallframe{Why does it continuously print ``direct hit!'' instead of printing it just one time?}
+
+We would like to effectively reset the game to its initial state. To do this we will need to:
+	
+	\begin{enumerate}
+		\item Erase all of the bullets in the scene.
+		\item Reset the bulletsList to an empty list.
+	\end{enumerate}
+
+\newpage
+
+	\item Inside the \code{elif} statement that you just created, after you print ``direct hit'' add the following lines:
+	
+\begin{myvpython}
+            scene.waitfor("click")
+            
+            for thisbullet in bulletsList:
+                thisbullet.visible=False
+            bulletsList=[]
+        
+            break
+\end{myvpython}
+
+These lines will pause the game until the user clicks the scene. Then it will make each bullet invisible. Then, it creates an empty list of bullets. Finally, it breaks out of the bullet loop.
+	
+Technically you might want to do other things after a target is hit, like increment a score or reset the launch speed and launch angle back to their initial values for example. Or, you might blow up the target.
+    
+    \item Run your program. Verify that it works as expected.
+
+\end{enumerate}
+
+\newpage
+
+
+\analysis
+
+\begin{description}
+
+\item[C] Complete this exercise and do the following.
+
+\begin{enumerate}
+	\item Print the launch speed of the bullet, the launch angle of the bullet, and the x-distance traveled by the bullet (called the range) when the bullet hits the target or ground. Note that the range is not the same as the x-position of the bullet because the bullet isn't launched from the origin.
+	\item Change the maximum speed of the bullet to 30.
+	\item Set the initial launch angle to 60 degrees (do this in the code) and find the launch speed necessary to hit the target if the target is at $x=18$. Set the initial launch speed to this value in the code so that when your code is run for the first time, the projectile will be launched at 60 degrees and will hit the target which is at $x=18$.
+\end{enumerate}
+
+\item[B] Do everything for {\bf C} and the following.
+
+\begin{enumerate}
+	\item Add a key stroke that will move the tank left and right, but do not allow the tank to go past the center of the screen or off the left side of the screen.
+\end{enumerate}
+
+\item[A] Do everything for {\bf B} with the following modifications and additions.
+
+\begin{enumerate}
+	\item Create a barrier (a box) that sits between the tank and the target. If a bullet hits the barrier, it stops. Remember to use your \code{collisionSphereAndBox()} function to check for a collision between the bullet and barrier.
+	\item Create additional gameplay features like a scoring system and a max number of bullets.
+	\item Create different levels of the game. Create a variable called \code{level} that is an integer from 1--5. In the first level, there is no barrier. In the second level, there is a barrier. For other levels, place the tank at a different height or the target at a different height, for example. After getting to the fifth level, either end the game or go back to the first level.
+\end{enumerate}
+
+
+\end{description}
+

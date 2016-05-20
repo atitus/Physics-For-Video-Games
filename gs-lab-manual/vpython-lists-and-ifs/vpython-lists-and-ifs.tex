@@ -1,0 +1,249 @@
+\lab{PROGRAM -- Lists, Loops, and Ifs}
+
+\apparatus
+\equip{Computer}
+\equip{GlowScript -- www.glowscript.org}
+
+\longgoal
+
+The purpose of this activity is to learn how to use lists, \code{for} loops, and \code{if} statements in VPython.
+
+%\subsection*{Lists and For Loops}
+
+\introduction
+
+When writing a game, you will typically have multiple objects moving on a screen at one time. As a result, it is convenient to store the objects in a list. Then, you can loop through the list and for each object in the list, update the position of the object.
+
+\procedure
+
+Before you begin, it will be useful to look back at your notes or a previous program to see how you create objects such as spheres and boxes and how you make objects move. The instructions in this chapter do not repeat the VPython code that you learned in previous activities. Have those chapters and programs available for reference as you do this activity.
+
+\begin{enumerate}
+
+	\item Create a new program and save it with a name like  \texttt{move-objects.py}. 
+	
+\subsection*{The \code{for} loop and the \code{range()} list}
+
+\item Type the \code{for} loop shown below.
+
+\begin{myvpython}
+for i in range(0,10,1):
+    print(i)
+\end{myvpython}
+    
+\item Save and run your program. The program should print:
+
+\begin{verbatim}
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+\end{verbatim}
+
+In order to see all of the digits, you may have to scroll in the text box or click and drag on the bottom right corner of the box to expand it.
+
+The statement \code{range(0,10,1)} creates a list of numbers: \code{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}. The \code{for} loop goes through this list, one item at a time, starting with the first item. For each \emph{iteration} through the loop, it executes the code within the loop, but the value of \code{i} is replaced with the item from the list. Thus for the first iteration of the loop, the value of \code{i} is 0. Then for the next iteration of the loop, it has the value 1. The loop continues until it has accomplished 10 iterations and \code{i} has taken on the values of 0 through 9, respectively. Note that the number 10 is not in the list.
+
+\item Change the arguments in the \code{range(0,10,1)} function. Change 0 to 5, for example. Or change 1 to 2. You can even change the 1 to --1 to see what this does. Run the program each time you change one of the arguments and figure out how each argument affects the resulting list. Write your answers below.
+
+\tightframe{In the function  \code{range(0,10,1)}, how does changing each argument affect the resulting list of numbers?\\
+
+0:  \\
+
+10: \\
+
+1: \\
+}
+
+\item Delete the entire \code{for} loop for now, and we'll come back to it later.
+
+\subsection*{Lists}
+
+When writing games, you may have a lot of moving objects. As a result, it is convenient to store your objects in a list. Then you can loop through your list and move each object or check for collisions, etc.
+
+\item To show how this works, first create 4 balls that are all at $x=-5, z=0$. However, give them y values that are $y=-3, y=-1, y=1, y=3$, respectively. Name them \texttt{ball1}, \texttt{ball2}, etc. Give them different colors and make their radius something that that looks good on the screen. 
+
+\item Run your program to verify that you have four balls at the given locations. The screen should look like Figure \ref{vpython-lists-and-ifs/4-balls} but perhaps with a black background and different color balls.
+
+\scaledimage{vpython-lists-and-ifs/4-balls}{Four balls}{0.5}
+
+\item Define the balls' velocity vectors such that they will all move to the right but with speeds of 0.5 m/s, 1 m/s, 1.5 m/s, and 2 m/s. Remember that to define a ball's velocity, type:
+
+\begin{myvpython}
+ball1.v=0.5*vector(1,0,0)
+\end{myvpython}
+
+You'll have to do this for all four balls. Be sure to change the name of the object and speed. You should have four different lines which specify the velocities of the four balls.
+
+Now we will create a list of the four balls. VPython uses the syntax: \code{[item1, item2, item3,...]} to create a list where item1, item2, etc. are the list items and the square brackets [ ] denote a list. These items can be integers, strings, or even objects like the balls in this example.
+
+\item To create a list of the four balls, type the following line at the end of your program.
+
+\begin{myvpython}
+ballsList = [ball1, ball2, ball3, ball4]
+\end{myvpython}
+
+Notice that the names of the items in our list are the names we gave to the four spheres. The name of our list is \code{ballsList}. We could have called the list any name we wanted.
+
+\subsection*{Motion}
+
+We are going to make the balls move. Remember, there are three basic steps to making the objects move.
+
+\begin{itemize}
+	\item Define variables for the clock and time step.
+	\item Create a \code{while} loop.
+	\item Update the object's position and update the clock reading.
+\end{itemize}
+
+\item Define variables for the clock and for the time step.
+
+\begin{myvpython}
+t=0
+dt=0.01
+\end{myvpython}
+
+\item Create an infinite \code{while} loop and use a \code{rate()} statement to slow down the animation.
+
+\begin{myvpython}
+while 1:
+    rate(100)
+\end{myvpython}
+
+\item We are now ready to update the position of each ball. However instead of updating each ball individually, we will use a \code{for} loop and our list of balls. Type the following loop to update the position of each ball. Note that it should be indented.
+
+\begin{myvpython}
+    for thisball in ballsList:
+        thisball.pos=thisball.pos+thisball.v*dt    
+\end{myvpython}
+
+This loop will iterate through the list of balls. It begins with \texttt{ball1} and assigns the value of \texttt{thisball} to \texttt{ball1}. Then, it updates the position of \texttt{ball1} using its velocity. On the next iteration, it uses \texttt{ball2}. After iterating through all objects in the list, it completes the loop. And at this point it has updated the position of each ball.
+
+\item Now update the clock. Your while loop  should ultimately look like the following:
+
+\begin{myvpython}
+while 1:
+    rate(100)
+    for thisball in ballsList:
+        thisball.pos=thisball.pos+thisball.v*dt    
+    t=t+dt
+\end{myvpython}
+
+Note that the line \code{t=t+dt} is indented beneath the \code{while} statement but is not indented  beneath the \code{for} loop. As a result, the clock is updated upon each iteration in the \code{while} loop, not the \code{for} loop. The for loop merely iterates through the balls in the ballsList.
+
+Using a \code{for} loop in this manner saves you from having to write a separate line for each ball. Imagine that if you had something like 20 or 50 balls, this would save you a lot of time writing code to update the position of each ball.
+
+\item Run your program. You should see the four balls move to the right with different speeds.
+
+\item When a ball reaches the right side of the window, the camera will automatically zoom out so that the scene remains in view. In game, we wouldn't want this. Therefore, let's set the size of our window and tell the camera not to zoom. Near the beginning of your program, perhaps on line 2 or 3, add the following lines:
+
+\begin{myvpython}
+scene.width=500
+scene.height=500
+scene.range=5
+scene.autoscale=False
+\end{myvpython}
+
+The height and width attributes set the size (in pixels) of the scene. The range attribute of \code{scene} sets the right edge of the window at $x=+5$ and the left edge at $x=-5$. The \code{autoscale} attribute determines whether the camera automatically zooms to keep the objects in the scene. We set autoscale to \code{False} in order to turn it off. Set it to \code{True} if you want to turn on autoscaling.
+
+\item Run your program.
+
+\subsection*{IF statements}
+
+We are going to keep the balls in the window. As a result, our code must check to see if a ball has left the window. If it has, then reverse the velocity. When you need to check \emph{if} something has happened, then you need an \code{if} statement.
+
+Let's check the x-position of the ball. If it exceeds the edge of our window, then we will reverse the velocity. If the x-position of a ball is greater than $x=5$ or is less than $x=-5$, then multiply its velocity by $-1$. Though we can write this with a single \code{if} statement, it might make more sense to you if we use the \emph{if-else} statement. The general syntax is:
+
+\begin{verbatim}
+if condition1 :
+    indentedStatementBlockForTrueCondition1
+elif condition2 :
+    indentedStatementBlockForFirstTrueCondition2
+elif condition3 :
+    indentedStatementBlockForFirstTrueCondition3
+elif condition4 :
+    indentedStatementBlockForFirstTrueCondition4
+else:
+    indentedStatementBlockForEachConditionFalse
+\end{verbatim}
+
+The keyword ``elif'' is short for ``else if''. There can be zero or more \code{elif} parts, and the \code{else} part is optional.
+
+\item After updating the velocity of each ball inside the \code{for} loop, add the following \code{if-elif} statement:
+
+\begin{myvpython}
+        if thisball.pos.x>5:
+            thisball.v=-1*thisball.v
+        elif thisball.pos.x<-5:
+            thisball.v=-1*thisball.v
+\end{myvpython}
+
+Note that it should be indented inside the \code{for} loop because you need to check each ball in the list.
+
+After inserting your code, your \code{while} loop should look like:
+
+\begin{myvpython}
+while 1:
+    rate(100)
+    for thisball in ballsList:
+        thisball.pos=thisball.pos+thisball.v*dt
+        if thisball.pos.x>5:
+            thisball.v=-1*thisball.v
+        elif thisball.pos.x<-5:
+            thisball.v=-1*thisball.v
+    t=t+dt
+\end{myvpython}
+
+\item Run your program. You should see each ball reverse direction after reaching the left or right edge of the scene.
+
+\end{enumerate}
+
+\ \\
+
+\newpage
+
+
+\analysis
+
+\begin{description}
+
+\item[C] Do all of the following.
+\begin{enumerate}
+	\item Start with your program from this activity and save it as a different name.
+	\item When a ball bounces off the right side of the scene, change its color to yellow. 
+	\item When a ball bounces off the left side of the scene, change its color to magenta.
+\end{enumerate}
+
+\item[B] Do everything for {\bf C} and the following.
+
+\begin{enumerate}
+	\item Create a new program and give it a different name.
+	\item Create 10 balls that move horizontally and bounce back and forth within the scene. Make the scene 10 units wide and give the balls initial positions of $x=-10$, and $z=0$, but with $y$ positions that are equally spaced from $y=0$ to $y=9$. Give them different initial velocities. Make their radii and colors such that they can be easily seen but do not overlap.
+\end{enumerate}
+
+\item[A] Do everything for {\bf B} with the following modifications and additions.
+
+\begin{enumerate}
+	\item Create a new program and give it a different name. 
+	\item Copy your program in part (B) and paste it into your new program.
+	\item Set the initial velocity of each ball to be identical. Give them the same speed, but set their velocities to be in the $-y$ direction.
+	\item When a ball reaches the bottom of the scene ($y=-10$), change its velocity to be in the $+x$ direction. When a ball reaches the right side of the scene change its velocity to be in the $+y$ direction. When a ball reaches the top of the scene, change its velocity to be in the $-x$ direction. Finally, when it reaches the left side of the scene, change its velocity to be in the $-y$ direction. In this way, make the balls move around the edge of the scene.\\
+	\item Run your program. You might find that the balls do not move as you expect. The reason is that if you update a ball's position and it just barely goes out of the scene, then you need to move the ball back within the scene. For example, in the python code below, if the ball's position is updated and it goes past the right edge of the scene at $x=10$, then the line within the IF statement moves the ball one step backward, back into the scene again. In other words, it reverses the position update statement. (Note the negative sign.)
+
+\begin{myvpython}
+        thisball.pos=thisball.pos+thisball.v*dt
+        if thisball.pos.x>10:
+            thisball.pos=thisball.pos-thisball.v*dt
+\end{myvpython}
+
+You need to make sure that in each \code{if} or \code{elif} statement where you check that the ball is at the edge of the screen, you move the ball back to its previous position.
+	
+\end{enumerate}
+
+\end{description}
+

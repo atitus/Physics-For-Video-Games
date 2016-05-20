@@ -28,10 +28,11 @@
 
 % Typeset a block of code
 % Use this as an alias for the lstlisting environment provided by listings package
-\lstnewenvironment{myvpython}{\lstset{language=Python,numbers=none,upquote=true,breaklines}}{}
+\lstnewenvironment{myvpython}{\lstset{language=Python,numbers=none,upquote=true,breaklines,showstringspaces=false}}{}
 \definecolor{vpythoncolor}{rgb}{0.95,0.95,0.95}
 \lstset{backgroundcolor=\color{vpythoncolor}} 
-\lstnewenvironment{vpythonprogram}{\lstset{language=Python,numbers=left,upquote=true,breaklines}}{}
+\lstnewenvironment{vpythonprogram}{\lstset{language=Python,numbers=left,upquote=true,breaklines,showstringspaces=false}}{}
+\lstnewenvironment{arduinoblock}{\lstset{language=C,numbers=left,numberstyle=\tiny,upquote=true,breaklines}}{}
 
 %commands for frames
 \newcommand{\tightframe}[1] {
@@ -238,7 +239,7 @@
 
 %\include{coordinates/coordinates}
 %\include{lab-coordinates/lab-coordinates}
-\include{glowscript-intro/glowscript-intro}
+%\include{glowscript-intro/glowscript-intro}
 %\include{vectors/vectors}
 %\include{vpython-intro-vectors/vpython-intro}
 %\include{uniform-motion/uniform-motion}
@@ -257,12 +258,12 @@
 %\include{vpython-fancart/vpython-fancart}
 %\include{game-lunar-lander/game-lunar-lander}
 %\include{video-projectile-motion/video-projectile-motion}
-
 %\include{video-angry-birds/video-angry-birds}
 %\include{game-tank-wars/game-tank-wars}
 %\include{vpython-friction/vpython-friction}
 %\include{video-center-of-mass/video-center-of-mass}
 %\include{game-asteroids/game-asteroids}
+\include{arduino-gamecontroller/arduino-gamecontroller}
 %\include{project-final/project-final}
 
 

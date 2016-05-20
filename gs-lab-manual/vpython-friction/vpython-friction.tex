@@ -1,0 +1,254 @@
+
+\lab{PROGRAM -- Modeling motion with friction}
+
+\apparatus
+
+\equip{computer}
+\equip{GlowScript}
+
+\longgoal
+
+In this activity, you will learn how to add a frictional force to a simulation.
+\introduction
+
+We are going to model the motion of a puck in air hockey that is slowed by a frictional force between the puck and the table. Though in practice, a puck in air hockey may be more influenced by air drag than friction with the table, we will treat the frictional force as \emph{sliding friction}.  Sliding friction occurs when one objects slides against the surface of another object. In the simplest situations, slide friction is:
+
+\begin{eqnarray*}
+	\vec{f}_{slide} & = & \mu_k F_{\perp}(-\hat{v}) \\
+\end{eqnarray*}
+
+where $\mu_k$ is the coefficient of kinetic friction, $F_{\perp}$ is the perpendicular component of the contact force, and $\hat{v}$ is the unit vector pointing in the direction of the velocity of the object. In the case of a puck sliding on a level air hockey table, $F_{\perp}=mg$, the weight of the puck. Notice the negative sign for the direction of the frictional force. This means that sliding friction is always opposite the velocity of the object relative to the surface it is in contact with.
+
+The coefficient of kinetic friction $\mu_k$ is a constant that depends on the materials in contact. For example, wood sliding on glass, wood sliding on concrete, and wood sliding on sand paper have different values of $\mu_k$. A higher coefficient of friction means that there is a greater frictional force. Smaller coefficient of friction is less friction, and zero coefficient of friction is what we call ``frictionless'' (which doesn't exist in practice though friction might be negligible if it is small enough).
+
+\subsection*{Rolling friction}
+
+A rolling ball also experiences a frictional force that decreases its center-of-mass velocity. If you push an object on wheels across carpet, you can see the carpet bunch up in front of the wheel. This is what happens at the microscopic scale for any surface.  Rolling friction can be characterized as $\vec{f}_{roll} = \mu_{roll} mg(-\hat{v})$, where $\mu_{roll}$ depends on the properties of the surfaces in contact.
+
+\procedure
+
+In this program, we will model the motion of a golf ball rolling on a level green. This code template can be copied from our course web site on Trinket.
+
+\begin{enumerate}
+
+\item Begin by typing the following template for a golf ball rolling in the x-direction on a green.
+
+\begin{vpythonblock}
+GlowScript 2.1 VPython
+
+scene.range=20
+scene.width=400
+scene.height=400
+
+ground = box(pos=vector(0,0,0), size=vector(40,40,1), color=color.green)
+ball = sphere(pos=vector(-18,0,0), radius=0.5, color=color.white)
+ground.pos.z=ground.pos.z-ground.width/2-ball.radius
+hole = cylinder(pos=vector(15,0,ground.pos.z+ground.width/2),axis=vector(0,0,1), radius=3*ball.radius, color=vector(0.8,0.8,0.8))
+hole.pos.z=hole.pos.z-mag(hole.axis)*0.9
+
+#ball, friction, and grav
+ball.m=0.045
+g=10
+mu=0.1
+
+#speed
+initialspeed=5
+
+#velocity vector
+ball.v=initialspeed*vector(1,0,0)
+scale=5/initialspeed
+varrow = arrow(pos=ball.pos, axis=scale*ball.v, shaftwidth=0.5, color=color.yellow)
+
+
+#clock
+dt=0.01
+t=0
+
+scene.waitfor("click")
+
+while 1:
+        rate(100)
+        vhat=ball.v/mag(ball.v)
+        Fnet=mu*ball.m*g*(-vhat)
+#        ball.v=
+#        ball.pos=
+        
+        varrow.pos=ball.pos
+        varrow.axis=scale*ball.v
+
+        t=t+dt
+\end{vpythonblock}
+
+\item Fill in lines 38 and 39 and run the program.
+
+\smallframe{What does line 36 do?}
+
+\smallframe{If you wanted to add other forces to the simulation, which line would you change?}
+
+\smallframe{What does the arrow represent?}
+
+\smallframe{What variable represents the coefficient of friction?}
+
+\item Try different values of the initial speed until you can get the ball to stop in the hole.
+
+\item Now change the coefficient of friction to either a smaller or larger value and find the new initial speed needed to get the ball into the cup.
+
+
+\subsection*{Motion on a Hill}
+
+Suppose an object like a golf ball travels across a hill of constant slope. Let's define $+y$ in the plane of the hill and directly uphill. Define $+x$ to the right, in the plane of the hill, perpendicular to the $+y$ axis. Then, with this coordinate system, $+z$, is perpendicular to the hill toward the sky (but not directly outward from Earth due to the inclination of the hill). Suppose that the hill is inclined at an angle $\alpha$ relative to vertical (as established by hanging a weight on a string).
+
+\smallframe{Sketch a top view and side view of the hill. Show the $+x$, $+y$, and $+z$ directions in each view.}
+
+The motion of the ball is similar to projectile motion, but its acceleration is modified by the angle of inclination of the hill. (And of course there is rolling friction.) In this case,
+
+\begin{eqnarray*}
+	F_{grav,y} &=& -mg\sin(\alpha)
+\end{eqnarray*}
+
+and 
+
+\begin{eqnarray*}
+	F_{grav,z} &=& -mg\cos(\alpha)
+\end{eqnarray*}
+
+
+Since the ball has no acceleration in the z direction, the perpendicular component of the force by the ground on the ball is equal in magnitude to $F_{grav,z}$, but in the $+z$ direction. Thus,
+
+\begin{eqnarray*}
+	F_{ground,z} &=& mg\cos(\alpha)
+\end{eqnarray*}
+
+Then the rolling frictional force is:
+
+\begin{eqnarray*}
+\vec{f}_{roll} &= &  \mu_{roll} F_{\perp}(-\hat{v}) \\
+& = &  \mu_{roll} mg\cos(\alpha)(-\hat{v}) 
+\end{eqnarray*}
+
+The net force on the ball is the sum of the gravitational force and force by the ground (both parallel and perpendicular to the ground). Thus,
+
+\begin{eqnarray*}
+\vec{F}_{net} & = & \vec{F}_{grav} + \vec{F}_{roll} + \vec{F}_{ground,z} \\
+& = & (0,-mg\sin(\alpha),mg\cos(\alpha)) + \mu_{roll} mg\cos(\alpha)(-\hat{v}) + (0,0,mg\cos(\alpha))
+\end{eqnarray*}
+
+For simplicity, I will combine $\vec{F}_{grav}$ and $ \vec{F}_{ground,z}$ to give:
+
+\begin{eqnarray*}
+\vec{F}_{net} & = & (0,-mg\sin(\alpha),0) + \mu_{roll} mg\cos(\alpha)(-\hat{v})
+\end{eqnarray*}
+
+where $g$ is the magnitude of the gravitational field of Earth at its surface. You can think of this conceptually as the component of the gravitational force parallel to the hill plus the frictional force:
+
+\begin{eqnarray*}
+\vec{F}_{net} & = & \vec{F}_{grav,\parallel} + \vec{F}_{roll}  \\
+\end{eqnarray*}
+
+If you strike the golf ball at an angle $\theta$ relative to the x-axis with a speed $v_i$, then its velocity in the plane of the hill is:
+
+\begin{eqnarray*}
+	\vec{v} &=& v_i(\cos(\theta),\sin(\theta),0)
+\end{eqnarray*}
+
+Using the net force and initial velocity of the ball, you can model the motion of a golf ball that includes both ``break'' (due to the slope of the hill) and rolling friction.
+
+\item Create a new program.
+
+\item Copy and paste the following template from our course web site.
+
+\begin{vpythonblock}
+GlowScript 2.1 VPython
+
+def rad(degrees): #converts an angle in degrees to an angle in radians
+    radians=degrees*pi/180
+    return radians
+
+scene.range=20
+scene.width=400
+scene.height=400
+
+ground = box(pos=vector(0,0,0), size=vector(40,40,1), color=color.green)
+ball = sphere(pos=vector(-18,0,0), radius=0.5, color=color.white, make_trail=True)
+ground.pos.z=ground.pos.z-ground.width/2-ball.radius
+hole = cylinder(pos=vector(15,0,ground.pos.z+ground.width/2),axis=vector(0,0,1), radius=3*ball.radius, color=vector(0.8,0.8,0.8))
+hole.pos.z=hole.pos.z-mag(hole.axis)*0.9
+
+#ball, friction, and grav
+ball.m=0.045
+g=10
+mu=0.2
+alpha=rad(5)
+
+#speed and angle
+initialspeed=12
+theta=15
+
+#velocity vector
+#ball.v=
+scale=5/initialspeed
+varrow = arrow(pos=ball.pos, axis=scale*ball.v, shaftwidth=0.5, color=color.yellow)
+
+
+#clock
+dt=0.01
+t=0
+
+scene.waitfor("click")
+
+while 1:
+        rate(100)
+        vhat=ball.v/mag(ball.v)
+#        Fgrav=
+#        Ffriction=
+        Fnet=Fgrav+Ffriction
+        ball.v=ball.v+Fnet/ball.m*dt
+        ball.pos=ball.pos+ball.v*dt
+        
+        varrow.pos=ball.pos
+        varrow.axis=scale*ball.v
+
+        t=t+dt	
+\end{vpythonblock}
+
+\item Fill in lines 28, 42, and 43 and remove the comment marks. Run the program.
+
+\smallframe{What variable will you change in order to make the hill steeper or less steep?}
+
+\smallframe{What variable will you change to adjust the coefficient of friction?}
+
+\smallframe{What variable will you change to adjust the initial speed of the ball?}
+
+\smallframe{What variable will you change in order to strike the golf ball at a greater or less angle (relative to the $+x$ axis).}
+
+
+\end{enumerate}
+
+\report
+
+\begin{description}
+
+\item[C]  Complete the experiment and report your answers for the following questions.
+
+\begin{enumerate}
+	 \item Go back to your first program of a golf ball rolling on a level green.
+	 \item Place the cup the location $x=15$ m, $y=15$ m, near the top right corner of the green.
+	 \item Find the initial velocity vector needed to get the ball into the cup, if $mu=0.1$.
+\end{enumerate}
+
+\item[B] Do all parts for {\bf C} and do the following.
+
+\begin{enumerate}
+	\item Go back to your program of a golf ball rolling on a hill.
+	\item Add keyboard interaction so that by using the up and down arrows, you can change the angle at which you strike the ball, and by using the left and right arrows, you can change the initial speed of the ball. Then, use the spacebar to putt the ball. (Use your tank wars program for a reminder on how to write the code.) Use the initial position of the hole at $x=15$ m, along the x-axis in order to test out your code.
+	\item Alert the player and stop the ball if the ball goes into the hole.
+	\item Alert the player and stop the ball if the ball goes off screen.
+\end{enumerate}
+
+\item[A] Do all parts for {\bf C} and {\bf B} and do the following.
+
+\begin{enumerate}
+	\item Use your program from Part B.
+	\item Change properties of the green (coefficient of friction or slope of the hill or location of the hole) each time the player sinks a putt and allow the player to play again. Reset the ball to its starting location when the ball misses the hole and stops or if it goes off the screen.
+\end{enumerate}
+\end{description}

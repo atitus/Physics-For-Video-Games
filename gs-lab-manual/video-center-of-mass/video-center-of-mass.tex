@@ -1,0 +1,199 @@
+\lab{LAB -- Center of Mass Velocity During an Elastic Collision}
+
+\apparatus
+\equip{Tracker video analysis software}
+\equip{computer}
+
+\longgoal
+The purpose of this experiment is to measure the velocity of the center of mass of two pucks that make a collision on an air hockey table. You will measure the center-of-mass velocity before the collision and after the collision, and you will compare the results.
+
+\introduction
+
+The location of the center of mass of a system of two particles is
+
+\begin{eqnarray*}
+	\vec{r}_{cm}&=&\frac{m_1\vec{r}_1 + m_2\vec{r}_2}{m_1+m_2} \\
+\end{eqnarray*}
+
+This is a vector equation that must be true for both the x and y directions (for two dimensions).
+
+\begin{eqnarray*}
+	x_{cm} &=&\frac{m_1x_1 + m_2x_2}{m_1+m_2} \\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+	y_{cm} &=&\frac{m_1y_1 + m_2y_2}{m_1+m_2} \\
+\end{eqnarray*}
+
+Likewise, the center-of-mass velocity is
+
+\begin{eqnarray*}
+	\vec{v}_{cm}&=&\frac{m_1\vec{v}_1 + m_2\vec{v}_2}{m_1+m_2} \\
+\end{eqnarray*}
+
+Again, this equation must hold true for both the x and y components of the center-of-mass velocity.
+
+\begin{eqnarray*}
+	{v}_{cm,x}&=&\frac{m_1{v}_{1x} + m_2{v}_{2x}}{m_1+m_2} \\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+	{v}_{cm,y}&=&\frac{m_1{v}_{1y} + m_2{v}_{2y}}{m_1+m_2} \\
+\end{eqnarray*}
+
+\procedure
+
+It is expected that you have completed the other video analysis experiments, so these instructions do not include details about how to use the \emph{Tracker} software.
+
+\begin{enumerate}
+	\item Download the video \file{collision-pucks.mov} from our course web site.
+	\item Open \emph{Tracker} and insert the video.
+	\item Play the video and view the motion of  the colliding pucks.
+	\item Record the mass of each puck that is printed on the video's first frame.
+	
+	\tightframe{
+	\bigskip
+	$m_{blue} = $
+
+	\bigskip
+	$m_{red} = $
+
+	\bigskip
+	}
+	
+	\item Set the origin of your coordinate system. Any location is fine. I happened to choose the center of the blue puck in the first frame.
+	\item Set the calibration using the meterstick on the left side of the video. You will have greater accuracy if you use 5 of the 10-cm segments for your calibration. In other words, stretch the calibration stick across 5 segments for a total length of 0.5 m.
+	\item Mark the blue puck for each frame of the video.
+	\item Mark the red puck for each frame of the video. (You will have to create another point mass first.)
+	\item Using the graphs of $x$ vs. $t$ and $y$ vs. $t$ for each puck, measure the following quantities:
+	
+\begin{table}[htdp]
+\caption{default}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ & $v_{xi}$ & $v_{yi}$ & $v_{xf}$ & $v_{yf}$ \\
+\hline
+\hline
+blue & & & & \\
+\hline
+red & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}%
+
+\end{enumerate}
+
+\analysis
+
+\smallframe{Calculate the x-component of the center-of-mass velocity \emph{before} the collision, ${v}_{cm,ix}$.}
+
+\smallframe{Calculate the y-component of the center-of-mass velocity \emph{before} the collision, ${v}_{cm,iy}$.}
+
+\smallframe{Calculate the x-component of the center-of-mass velocity \emph{after} the collision, ${v}_{cm,fx}$.}
+
+\smallframe{Calculate the y-component of the center-of-mass velocity \emph{after} the collision, ${v}_{cm,fy}$.}
+
+\smallframe{What is $\vec{v}_{cm,i}$? Write and sketch the vector.}
+
+\smallframe{What is $\vec{v}_{cm,f}$? Write and sketch the vector.}
+
+\emph{Tracker} can calculate and track the center of mass for you. The following steps will help you learn how to automatically calculate and tracker the center of mass.
+
+\begin{enumerate}
+	\item We need to define the masses of the pucks. Click the tab for \menu{mass A} in the Track Control toolbar. In the drop-down menu, select \menu{Define...}. In the resulting pop-up window, enter the mass of the puck for the parameter \menu{m} as shown in Figure \ref{video-center-of-mass/define-menu}.
+	
+\scaledimage{video-center-of-mass/define-menu}{Enter of the mass of the puck.}{0.4}
+
+	\item Repeat the previous step for \menu{mass B} and enter its mass.
+
+	\item  Click the \button{Create} button and select \menu{Center of Mass}, as shown in Figure \ref{video-center-of-mass/create-menu}.
+	
+\scaledimage{video-center-of-mass/create-menu}{Select \menu{Center of Mass} from the menu.}{0.5}
+
+	\item You will see a new tab in the Track Control toolbar named {\bf cm}. Click \button{cm} to get the menu for the cm object shown in Figure \ref{video-center-of-mass/cm-menu}.   Click the \menu{Select Masses...} menu item.
+
+\scaledimage{video-center-of-mass/cm-menu}{Click on \menu{Select Masses...} from the menu.}{0.5}
+
+	\item An additional window will pop up. Select both masses ``mass A'' and ``mass B'' in this window and click \button{OK} as shown in Figure \ref{video-center-of-mass/select-masses-menu}.
+	
+\scaledimage{video-center-of-mass/select-masses-menu}{Check both masses (i.e. pucks) in this window.}{0.5}
+		
+	\item You will now see a track for the center of mass and you will see a graph of $x$ vs. $t$. 
+	
+\smallframe{By measuring the slope of $x$ vs. $t$ for the center of mass before the collision, what is $v_{cm,ix}$?}
+
+\smallframe{By measuring the slope of $y$ vs. $t$ for the center of mass before the collision, what is $v_{cm,iy}$?}
+
+\smallframe{By measuring the slope of $x$ vs. $t$ for the center of mass after the collision, what is $v_{cm,fx}$?}
+
+\smallframe{By measuring the slope of $y$ vs. $t$ for the center of mass after the collision, what is $v_{cm,fy}$?}
+
+\smallframe{How did the measurements for the center-of-mass velocity compare to what you calculated in the first part of the experiments?}
+
+\smallframe{Did the collision significantly affect the center-of-mass velocity?}
+		
+\end{enumerate}
+
+\report
+
+%\begin{enumerate}
+%	\item Is the center-of-mass velocity constant or non-constant?
+%	\item What is the net force on the system of pucks?
+%	\item The collision occurs in approximately 1/30 of a second. What is the force by the red puck on the blue puck during the collision? 
+%	\item What is the force by the blue puck on the red puck during the collision?
+%\end{enumerate}
+
+\begin{description}
+
+\item[C]  Complete the experiment and report your answers for the following questions. Please type your report.
+
+\begin{enumerate}
+	 \item Using data from Table 1, what is the center-of-mass velocity vector before the collision?
+	 \item Using data from Table 1, what is the center-of-mass velocity vector after the collision?
+	 \item What is the center-of-mass velocity before the collision, as measured by the slope of the $x$ and $y$ vs. time graphs of the center of mass? Report your answer as a vector.
+	 \item What is the center-of-mass velocity after the collision, as measured by the slope of the $x$ and $y$ vs. time graphs of the center of mass? Report your answer as a vector.
+\end{enumerate}
+
+\item[B] Do all parts for {\bf C} and answer the following questions.
+
+\begin{enumerate}
+	\item Can you conclude that the center-of-mass velocity is constant (or nearly constant) during the collision?
+	\item You used Tracker to calculate the location of the center of mass and mark it on the video.  What does the fact that it is a straight line (both before and after the collision) and the fact that the spacing between marks is uniform (i.e. the same) tell you about the center of mass velocity?
+	\item What is the acceleration of the center of mass?
+	\item What is the net force on the center of mass?  (Hint: use Newton's second law in your reasoning.)
+\end{enumerate}
+
+\item[A] Do all parts for {\bf B} and answer the following questions.
+
+\begin{enumerate}
+	\item The collision occurs in approximately 1/30 of a second, so $\Delta t=1/30\ \second$. Use Newton's second law and the data for $v_{xi}$ , $v_{yi}$ , $v_{xf}$ , and $v_{yf}$ for the blue puck to calculate the force on the blue puck during the collision. Express your answer as a vector.
+	\item Use data for the red puck to calculate the force on the red puck during the collision. Express your answer as a vector.
+	\item Compare the force on the blue puck and the force on the red puck during the collision. What do you notice?  (This is a VERY big observation. It is so important that it is called \emph{Newton's Third Law} and governs objects that interact via electric or gravitational forces).
+\end{enumerate}
+\end{description}
+
+% Answers
+
+%[C]
+%
+%1. vi = (0.290, 0.245) m/s
+%2. vf = (0.290, 0.242) m/s
+%3. vcmi = (0.287, 0.242) m/s
+%4. vcmf = (0.287, 0.242) m/s
+%
+%[B]
+%
+%1.  Yes, cm v is constant.
+%2.  The equal spacing between marks tells you that the cm velocity is constant.
+%3. a = 0
+%4. Fnet =0
+%
+%[A]
+%
+%1. Fnetx on blue puck = -0.639 N; Fnety on blue puck = 0.667 N
+%2. Fnetx on red puck = 0.639 N; Fnety on red puck = 0.674 N
+%3.  The net force on the red puck is the opposite of the net force on the blue puck. The sum of these two forces is zero.
+

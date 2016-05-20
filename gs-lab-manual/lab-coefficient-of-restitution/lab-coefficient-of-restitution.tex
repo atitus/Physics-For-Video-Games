@@ -1,0 +1,137 @@
+
+\lab{LAB:  Coefficient of Restitution}
+
+\apparatus
+
+\equip{Tracker software (free; download from \href{http://www.cabrillo.edu/~dbrown/tracker/}{http://www.cabrillo.edu/$\sim$dbrown/tracker/})}
+\equip{video: \file{cue-ball.mov} from our course web site}
+\equip{video: \file{tennis-ball.mov} from our course web site}
+\equip{video: \file{puck.mp4} from our course web site}
+
+\longgoal
+
+In this experiment, you will measure the coefficient of restitution for both 1-D and 2-D motion using video analysis.
+
+\procedure
+
+\begin{enumerate}
+	\item Download the file \file{cue-ball.mov} from the given web site by right-clicking on the link and choosing {\bf Save As...} to save it to your desktop.
+	\item Open the \file{Tracker} software on your computer.
+	\item Use the menu \menu{Video$\to$Import...} to import your video, as shown in Figure \ref{lab-coefficient-of-restitution/video-import}.
+
+\scaledimage{lab-coefficient-of-restitution/video-import}{Video$\to$Import menu}{0.5}
+	
+	\item To zoom in or out on the video, click on the toolbar's magnifying glass icon that is shown in Figure \ref{lab-coefficient-of-restitution/zoom}. Zoom in and out on the video to see how it works.
+	
+\scaledimage{lab-coefficient-of-restitution/zoom}{The icon used to expand the video.}{1}	
+	
+	\item At this point, it's nice to lay out the video and graphs so you can clearly see everything. The middle border between panes can be dragged left and right to make the video pane smaller and graphs larger. The same is true of any other bar that separates panes in the window. Make your application window and video pane as large as possible on your monitor.
+		
+	\item Note the video controls at the bottom of the video pane. Go ahead and play the video, step it forward, backward, etc. in order to learn how the video controls work. Note the counter that merely shows the frame number for any frame. Also, click on each of the icons in the video control bar to see what they are used for.
+
+	\item Rewind to the first frame of the video. This is the instant that you will begin making measurements of the position of the moving object.
+	
+	\item This video was recorded at 2000 frames per second. We need to tell Tracker the frame rate so that it can calculate the time correctly. Click the clip settings icon (Figure \ref{lab-coefficient-of-restitution/clip-settings-icon}). In the \menu{Clip Settings} windows, set the frame rate to 2000 frames per second. Note that Tracker puts in the unit for you.
+
+\scaledimage{lab-coefficient-of-restitution/clip-settings-icon}{Icon used to change the settings of the video.}{1}
+
+	
+	\item Since there are many frames of video in this clip, we can skip frames between marking the ball and thus take fewer data points. Click on the \menu{Step Size} button, as shown in Figure \ref{lab-coefficient-of-restitution/step-size} and change it to {\bf 5}.
+	
+\scaledimage{lab-coefficient-of-restitution/step-size}{Change the step size in order to skip frames.}{0.5}
+
+	\item Now, you must calibrate distances measured in the video. In the toolbar, click on the \menu{Tape Measure} icon shown in Figure \ref{lab-coefficient-of-restitution/ruler} to set the scale for the video.
+		
+	\scaledimage{lab-coefficient-of-restitution/ruler}{Icon used to set the scale.}{1}
+
+	\item A blue double-sided arrow will appear. Move the left end of the arrow to the left side of the ball, and move the right end of the arrow to the right side of the ball. Double-click the number that is in the center of the arrow, and enter the diameter of the cue ball, 5.715 cm. (Our units are cm, but Tracker does not use units. You must remember that the number 5.715 is given in cm.)
+	
+	\item Click the tape measure icon again to hide the blue scale from the video.
+	
+	\item You now need to define the origin of the coordinate system. In the toolbar, click the \menu{Axes} icon shown in Fig. \ref{lab-coefficient-of-restitution/coord-icon} to show the axes of the coordinate system. (By now, you have probably noticed that you can hover the mouse over each icon to see what they do).
+	
+	\image{lab-coefficient-of-restitution/coord-icon}{Icon used to set the coordinate system axes.}
+
+	\item Click and drag on the video to place the origin of the coordinate system at the location where you would like to define (0,0). You can place the origin at any point you choose, but in this case, it perhaps makes sense to put the origin at the bumper of the pool table. (It won't affect our results.)
+	
+	\item Click the \menu{Axes} tool again to hide the axes from the video pane. You can click this icon at any time to show or hide the axes.
+
+	\item You are ready to add markers to the video to mark the position of the ball. Let's not show the coordinate system and scale. It's too distracting. So, make sure you've clicked the \menu{Axes} and \menu{Tape Measure} icons in the toolbar to hide them.
+		
+	\item To add markers, click on the \button{Create} button and select \menu{Point Mass}. Then, {\bf mass A} will be created, and a new $x$ vs. $t$ graph will appear in a different pane. 
+		
+	{\bf We are going to mark the left edge of the ball and the right edge of the ball. Then we will let Tracker calculate the center of the ball.}
+	
+	\item Click \button{mass A} and select \menu{Name...} to change its name to \emph{right side}.
+	
+	\item  {\bf To mark the right side of the ball, hold the SHIFT key down and click once on the middle, right edge of the ball.} You should notice that a marker appears at the position of the ball where you clicked and that the video advances one step.
+	
+	\item Again, shift-click on the right side of the ball to mark its position. You should now see two marks.
+	
+	\item Continue marking the right-side of the ball until the last frame of the video. Note that only a few of the marks are shown in the video pane. To display all of the marks or a few of the marks or none of the marks, use the \menu{Set Trail Length} icon shown in Figure \ref{lab-coefficient-of-restitution/set-trail}.
+
+	\scaledimage{lab-coefficient-of-restitution/set-trail}{The Set Trail icon is used to vary the number of marks shown.}{1}
+
+	{\bf Now we will mark the left side of the ball.}
+	
+	\item To add a new marker, click on the \button{Create} button and select \menu{Point Mass}. Then, {\bf mass B} will be created. 
+			
+	\item Change the name of mass B to \emph{left side}.
+
+	\item Holding the shift key down, mark the middle left side of the ball in all frames.
+	
+	{\bf Now we will let Tracker calculate the center of the ball.}
+
+	\item  Click the \button{Create} button and select \menu{Center of Mass}, as shown in Figure \ref{lab-coefficient-of-restitution/create-menu}.
+	
+\scaledimage{lab-coefficient-of-restitution/create-menu}{Select \menu{Center of Mass} from the menu.}{0.5}
+
+	\item You will see a new tab in the Track Control toolbar named {\bf cm}.
+	
+	\item An additional window will pop up so that you can select the masses. Select both masses ``mass A'' and ``mass B'' (or left side and right side) in this window and click \button{OK} as shown in Figure \ref{lab-coefficient-of-restitution/select-masses-menu}.
+	
+\scaledimage{lab-coefficient-of-restitution/select-masses-menu}{Check both masses in this window.}{0.5}
+		
+	\item You will see a track for the center of mass and you will see a graph of $x$ vs. $t$ for the center of mass. 
+		
+
+\end{enumerate}
+
+\analysis
+
+\subsection*{$x$ vs. $t$ graph}
+
+\begin{enumerate}
+	\item	With the graph showing $x(t)$ for the center of mass, right-click on the graph and choose \menu{Analyze}.
+	\item In the Graph Analysis window, select the part of the graph that occurred before the collision. Do a linear curve fit, and record $v_{i,x}$.
+	\item Select the part of the graph that occurred after the collision. Do a linear curve fit, and record $v_{f,x}$.
+	\item Calculate the coefficient of restitution $C_R$ for the collision.
+\end{enumerate}
+
+\report
+
+\begin{description}
+
+\item[C]  Complete the experiment and report your results.
+
+\item[B] Do all parts for {\bf C}, analyze the motion of the tennis ball in the video \file{tennis-ball.mov}, and answer the following questions.
+
+\begin{enumerate}
+ \item What is $v_{i,x}$ and $v_{i,y}$ (before the collision with the table)?
+ \item What is $v_{f,x}$, $v_{f,y} (after the collision with the table)$
+ \item Is the surface frictionless?
+ \item Is the collision elastic?
+ \item What is the coefficient of restitution $COR$ for the collision.
+\end{enumerate}
+
+\item[A] Do all parts for {\bf B}, analyze the motion of the puck in the video \file{puck.mp4} and answer the following questions. If you want to see the puck traversing around a square air table and colliding with all of the walls, view the video \file{puck.flv}
+\begin{enumerate}
+ \item What is $v_{i,x}$ and $v_{i,y}$ (before the collision with the wall)?
+ \item What is $v_{f,x}$, $v_{f,y}$ (after the collision with the table)?
+ \item Is the surface frictionless?
+ \item Is the collision elastic?
+ \item What is the coefficient of restitution $COR$ for the collision.
+\end{enumerate}
+\end{description}
+
+

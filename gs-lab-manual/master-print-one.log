@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  17 JAN 2016 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  27 APR 2016 11:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -491,33 +491,34 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 137.
 )
-(./lmmath.sty) (./master-print-one.aux (./glowscript-intro/glowscript-intro.aux
-))
+(./lmmath.sty) (./master-print-one.aux
+(./arduino-gamecontroller/arduino-gamecontroller.aux))
 \openout1 = `master-print-one.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 237.
-LaTeX Font Info:    ... okay on input line 237.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 237.
-LaTeX Font Info:    ... okay on input line 237.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 237.
-LaTeX Font Info:    ... okay on input line 237.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 237.
-LaTeX Font Info:    ... okay on input line 237.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 237.
-LaTeX Font Info:    ... okay on input line 237.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 237.
-LaTeX Font Info:    ... okay on input line 237.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 237.
-LaTeX Font Info:    ... okay on input line 237.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 237.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 237.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 238.
+LaTeX Font Info:    ... okay on input line 238.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 238.
+LaTeX Font Info:    ... okay on input line 238.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 238.
+LaTeX Font Info:    ... okay on input line 238.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 238.
+LaTeX Font Info:    ... okay on input line 238.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 238.
+LaTeX Font Info:    ... okay on input line 238.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 238.
+LaTeX Font Info:    ... okay on input line 238.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 238.
+LaTeX Font Info:    ... okay on input line 238.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 238.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 238.
 
- (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 237.
+LaTeX Font Info:    ... okay on input line 238.
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 237.
+Package hyperref Info: Link coloring OFF on input line 238.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -527,9 +528,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 237.
-LaTeX Info: Redefining \pageref on input line 237.
-LaTeX Info: Redefining \nameref on input line 237.
+LaTeX Info: Redefining \ref on input line 238.
+LaTeX Info: Redefining \pageref on input line 238.
+LaTeX Info: Redefining \nameref on input line 238.
 
 (./master-print-one.out) (./master-print-one.out)
 \@outlinefile=\write4
@@ -555,164 +556,220 @@ LaTeX Info: Redefining \nameref on input line 237.
 Option `amssymb' provided! 
  Command \square redefined by SIunits package!
 
-\openout2 = `glowscript-intro/glowscript-intro.aux'.
+\openout2 = `arduino-gamecontroller/arduino-gamecontroller.aux'.
 
-(./glowscript-intro/glowscript-intro.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
+(./arduino-gamecontroller/arduino-gamecontroller.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--15
 
  []
 
-<glowscript-intro/gs-add-folder.png, id=5, 68.255pt x 16.06pt>
-File: glowscript-intro/gs-add-folder.png Graphic file (type png)
-
-<use glowscript-intro/gs-add-folder.png>
-Package pdftex.def Info: glowscript-intro/gs-add-folder.png used on input line 
-31.
-(pdftex.def)             Requested size: 51.19112pt x 12.04495pt.
-
-<glowscript-intro/gs-new-folder.png, id=8, 305.14pt x 149.55875pt>
-File: glowscript-intro/gs-new-folder.png Graphic file (type png)
-
-<use glowscript-intro/gs-new-folder.png>
-Package pdftex.def Info: glowscript-intro/gs-new-folder.png used on input line 
-35.
-(pdftex.def)             Requested size: 152.56961pt x 74.77919pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 38.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [1
-
-
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./glows
-cript-intro/gs-add-folder.png> <./glowscript-intro/gs-new-folder.png>]
-<glowscript-intro/sphere.png, id=26, 664.4825pt x 450.68375pt>
-File: glowscript-intro/sphere.png Graphic file (type png)
-
-<use glowscript-intro/sphere.png>
-Package pdftex.def Info: glowscript-intro/sphere.png used on input line 65.
-(pdftex.def)             Requested size: 332.24043pt x 225.34131pt.
- [2 <./glowscript-intro/sphere.png>]
-<glowscript-intro/gs-error.png, id=44, 613.29124pt x 155.58125pt>
-File: glowscript-intro/gs-error.png Graphic file (type png)
-
-<use glowscript-intro/gs-error.png>
-Package pdftex.def Info: glowscript-intro/gs-error.png used on input line 92.
-(pdftex.def)             Requested size: 306.64487pt x 77.79042pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 107.
-
+LaTeX Font Info:    Try loading font information for U+msa on input line 41.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 107.
+LaTeX Font Info:    Try loading font information for U+msb on input line 41.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (2.33006pt too wide) in paragraph at lines 124--125
-[]
- []
+<arduino-gamecontroller/terminal.png, id=4, 779.91376pt x 568.1225pt>
+File: arduino-gamecontroller/terminal.png Graphic file (type png)
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-
- []
-
-[3 <./glowscript-intro/gs-error.png>]
-<glowscript-intro/box.jpg, id=65, 194.7275pt x 254.9525pt>
-File: glowscript-intro/box.jpg Graphic file (type jpg)
-
-<use glowscript-intro/box.jpg>
-Package pdftex.def Info: glowscript-intro/box.jpg used on input line 134.
-(pdftex.def)             Requested size: 136.3083pt x 178.46552pt.
- [4 <./glowscript-intro/box.jpg>]
-Overfull \hbox (17.57658pt too wide) in paragraph at lines 142--143
-[]\T1/cmr/m/n/10 The length, width, and height of the box are ex-pressed as a v
-ec-tor with the at-tribute:  \T1/cmtt/m/n/10 size=vector(L,H,W)
- []
-
-
-Overfull \hbox (2.33006pt too wide) in paragraph at lines 162--163
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-
- []
-
-[5] [6] <glowscript-intro/gs-frogger-B.png, id=131, 648.4225pt x 407.5225pt>
-File: glowscript-intro/gs-frogger-B.png Graphic file (type png)
-
-<use glowscript-intro/gs-frogger-B.png>
-Package pdftex.def Info: glowscript-intro/gs-frogger-B.png used on input line 2
-90.
-(pdftex.def)             Requested size: 324.21045pt x 203.76074pt.
+<use arduino-gamecontroller/terminal.png>
+Package pdftex.def Info: arduino-gamecontroller/terminal.png used on input line
+ 43.
+(pdftex.def)             Requested size: 233.97594pt x 170.43805pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<glowscript-intro/gs-help.png, id=133, 489.83pt x 309.155pt>
-File: glowscript-intro/gs-help.png Graphic file (type png)
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 47.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+<arduino-gamecontroller/which.png, id=7, 779.91376pt x 568.1225pt>
+File: arduino-gamecontroller/which.png Graphic file (type png)
 
-<use glowscript-intro/gs-help.png>
-Package pdftex.def Info: glowscript-intro/gs-help.png used on input line 300.
-(pdftex.def)             Requested size: 244.9144pt x 154.57712pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<glowscript-intro/gs-frogger-A.png, id=135, 650.43pt x 408.52625pt>
-File: glowscript-intro/gs-frogger-A.png Graphic file (type png)
-
-<use glowscript-intro/gs-frogger-A.png>
-Package pdftex.def Info: glowscript-intro/gs-frogger-A.png used on input line 3
-16.
-(pdftex.def)             Requested size: 325.2142pt x 204.26262pt.
+<use arduino-gamecontroller/which.png>
+Package pdftex.def Info: arduino-gamecontroller/which.png used on input line 55
+.
+(pdftex.def)             Requested size: 233.97594pt x 170.43805pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [7] [8 <./glowscript-intro/gs-frogger-B.png> <./glowscript-intro/gs-help.png>
-] [9 <./glowscript-intro/gs-frogger-A.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
+[1
+
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2 <./arduino-gamecontroller/terminal.png> <./arduino-gamecontroller/which.png>
+] <arduino-gamecontroller/jupyter.png, id=41, 837.1275pt x 363.3575pt>
+File: arduino-gamecontroller/jupyter.png Graphic file (type png)
+
+<use arduino-gamecontroller/jupyter.png>
+Package pdftex.def Info: arduino-gamecontroller/jupyter.png used on input line 
+86.
+(pdftex.def)             Requested size: 418.56273pt x 181.6783pt.
+
+<arduino-gamecontroller/new.png, id=43, 265.99374pt x 327.2225pt>
+File: arduino-gamecontroller/new.png Graphic file (type png)
+
+<use arduino-gamecontroller/new.png>
+Package pdftex.def Info: arduino-gamecontroller/new.png used on input line 90.
+(pdftex.def)             Requested size: 132.99654pt x 163.61084pt.
+
+<arduino-gamecontroller/nb.png, id=45, 1020.81375pt x 258.9675pt>
+File: arduino-gamecontroller/nb.png Graphic file (type png)
+
+<use arduino-gamecontroller/nb.png>
+Package pdftex.def Info: arduino-gamecontroller/nb.png used on input line 94.
+(pdftex.def)             Requested size: 306.24649pt x 77.69084pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3 <./arduino-gamecontroller/jupyter.png> <./arduino-gamecontroller/new.png>]
+<arduino-gamecontroller/sphere.png, id=62, 959.585pt x 798.985pt>
+File: arduino-gamecontroller/sphere.png Graphic file (type png)
+
+<use arduino-gamecontroller/sphere.png>
+Package pdftex.def Info: arduino-gamecontroller/sphere.png used on input line 1
+25.
+(pdftex.def)             Requested size: 287.87772pt x 239.69734pt.
+ [4 <./arduino-gamecontroller/nb.png> <./arduino-gamecontroller/sphere.png>]
+<arduino-gamecontroller/project.jpg, id=82, 1541.76pt x 2056.68375pt>
+File: arduino-gamecontroller/project.jpg Graphic file (type jpg)
+
+<use arduino-gamecontroller/project.jpg>
+Package pdftex.def Info: arduino-gamecontroller/project.jpg used on input line 
+147.
+(pdftex.def)             Requested size: 154.18503pt x 205.68042pt.
+
+<arduino-gamecontroller/project-top.jpg, id=83, 1541.76pt x 2056.68375pt>
+File: arduino-gamecontroller/project-top.jpg Graphic file (type jpg)
+
+<use arduino-gamecontroller/project-top.jpg>
+Package pdftex.def Info: arduino-gamecontroller/project-top.jpg used on input l
+ine 147.
+(pdftex.def)             Requested size: 154.18503pt x 205.68042pt.
+
+<arduino-gamecontroller/project-left.jpg, id=84, 2056.68375pt x 1541.76pt>
+File: arduino-gamecontroller/project-left.jpg Graphic file (type jpg)
+
+<use arduino-gamecontroller/project-left.jpg>
+Package pdftex.def Info: arduino-gamecontroller/project-left.jpg used on input 
+line 148.
+(pdftex.def)             Requested size: 205.68042pt x 154.18503pt.
+
+<arduino-gamecontroller/project-right.jpg, id=85, 1541.76pt x 2056.68375pt>
+File: arduino-gamecontroller/project-right.jpg Graphic file (type jpg)
+
+<use arduino-gamecontroller/project-right.jpg>
+Package pdftex.def Info: arduino-gamecontroller/project-right.jpg used on input
+ line 148.
+(pdftex.def)             Requested size: 154.18503pt x 205.68042pt.
+ [5 <./arduino-gamecontroller/project.jpg> <./arduino-gamecontroller/project-to
+p.jpg> <./arduino-gamecontroller/project-left.jpg> <./arduino-gamecontroller/pr
+oject-right.jpg>]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+) [6]
+<arduino-gamecontroller/arduino-program.png, id=143, 862.22125pt x 902.37125pt>
+File: arduino-gamecontroller/arduino-program.png Graphic file (type png)
+<use arduino-gamecontroller/arduino-program.png>
+Package pdftex.def Info: arduino-gamecontroller/arduino-program.png used on inp
+ut line 215.
+(pdftex.def)             Requested size: 258.66837pt x 270.71346pt.
+
+<arduino-gamecontroller/arduino-port.png, id=145, 937.5025pt x 825.0825pt>
+File: arduino-gamecontroller/arduino-port.png Graphic file (type png)
+
+<use arduino-gamecontroller/arduino-port.png>
+Package pdftex.def Info: arduino-gamecontroller/arduino-port.png used on input 
+line 219.
+(pdftex.def)             Requested size: 281.25291pt x 247.52666pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<arduino-gamecontroller/arduino-buttons.png, id=147, 160.6pt x 118.4425pt>
+File: arduino-gamecontroller/arduino-buttons.png Graphic file (type png)
+
+<use arduino-gamecontroller/arduino-buttons.png>
+Package pdftex.def Info: arduino-gamecontroller/arduino-buttons.png used on inp
+ut line 223.
+(pdftex.def)             Requested size: 48.18036pt x 35.53302pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <./arduino-gamecontroller/arduino-program.png>] [8 <./arduino-gamecontroller
+/arduino-port.png> <./arduino-gamecontroller/arduino-buttons.png>] [9])
+[10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 270.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 270.
  (./master-print-one.aux
-(./glowscript-intro/glowscript-intro.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 269.
+(./arduino-gamecontroller/arduino-gamecontroller.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 270.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 270.
 Package rerunfilecheck Info: File `master-print-one.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 269.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 270.
  ) 
 Here is how much of TeX's memory you used:
- 10264 strings out of 493117
- 143892 string characters out of 6135433
- 271555 words of memory out of 5000000
- 13437 multiletter control sequences out of 15000+600000
- 19877 words of font info for 55 fonts, out of 8000000 for 9000
+ 10393 strings out of 493117
+ 146662 string characters out of 6135433
+ 309503 words of memory out of 5000000
+ 13550 multiletter control sequences out of 15000+600000
+ 13600 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,74p,698b,1885s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on master-print-one.pdf (9 pages, 404631 bytes).
+ 42i,7n,74p,495b,1919s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.25.9} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.25.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.25.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.25.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.25.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.25.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.25.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.25.2} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
+usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on master-print-one.pdf (10 pages, 3444088 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
- 103 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 260 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

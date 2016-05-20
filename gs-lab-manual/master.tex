@@ -1,3 +1,4 @@
+
 %Aaron Titus
 %PHY 2010 Lab Manual
 %
@@ -15,10 +16,11 @@
 
 % Typeset a block of code
 % Use this as an alias for the lstlisting environment provided by listings package
-\lstnewenvironment{myvpython}{\lstset{language=Python,numbers=none,upquote=true,breaklines}}{}
+\lstnewenvironment{myvpython}{\lstset{language=Python,numbers=none,upquote=true,breaklines,showstringspaces=false}}{}
 \definecolor{vpythoncolor}{rgb}{0.95,0.95,0.95}
 \lstset{backgroundcolor=\color{vpythoncolor}} 
-\lstnewenvironment{vpythonprogram}{\lstset{language=Python,numbers=left,upquote=true,breaklines}}{}
+\lstnewenvironment{vpythonprogram}{\lstset{language=Python,numbers=left,upquote=true,breaklines,showstringspaces=false}}{}
+\lstnewenvironment{arduinoblock}{\lstset{language=C,numbers=left,numberstyle=\tiny,upquote=true,breaklines}}{}
 
 
 %commands for frames
@@ -215,7 +217,7 @@
 \frontmatter
 \thispagestyle{empty}
 \noindent\vspace{0mm}\\
-\noindent\vspace{10mm}\hspace{6mm}\textsf{\textbf{\Huge{PHY 1200: Physics for Video Games}}}\\
+\noindent\vspace{10mm}\hspace{1mm}\textsf{\textbf{\LARGE{PHY 1200: Physics for Video Games (with GlowScript)}}}\\
 \noindent\vspace{4mm}\hspace{4in}\textsf{\Large{Notes, Labs, and Programs}}\\
 \noindent\vspace{4mm}\hspace{4in}\textsf{\Large{Aaron Titus}}\\
 \noindent\vspace{4mm}\hspace{4in}\textsf{\Large{High Point University}}\\
@@ -252,27 +254,28 @@ Copyright (c) 2011 by A. Titus. This lab manual is
 \include{coordinates/coordinates}
 \include{lab-coordinates/lab-coordinates}
 \include{glowscript-intro/glowscript-intro}
-%\include{vectors/vectors}
-%\include{uniform-motion/uniform-motion}
-%\include{video-uniform-motion/video-uniform-motion}
-%\include{vpython-uniform-motion/vpython-uniform-motion}
-%\include{vpython-lists-and-ifs/vpython-lists-and-ifs}
-%\include{vpython-keyboard/vpython-keyboard}
-%\include{vpython-collision-detection/vpython-collision-detection}
-%\include{galilean-relativity/galilean-relativity}
-%\include{collision-barrier/collision-barrier}
-%\include{lab-coefficient-of-restitution/lab-coefficient-of-restitution}
-%\include{game-pong/game-pong}
-%\include{video-fancart/video-fancart}
-%\include{newtons-second-law/newtons-second-law}
-%\include{vpython-fancart/vpython-fancart}
-%\include{game-lunar-lander/game-lunar-lander}
-%\include{video-projectile-motion/video-projectile-motion}
-%\include{video-angry-birds/video-angry-birds}
-%\include{game-tank-wars/game-tank-wars}
-%\include{vpython-friction/vpython-friction}
-%\include{video-center-of-mass/video-center-of-mass}
-%\include{game-asteroids/game-asteroids}
+\include{vectors/vectors}
+\include{uniform-motion/uniform-motion}
+\include{video-uniform-motion/video-uniform-motion}
+\include{vpython-uniform-motion/vpython-uniform-motion}
+\include{vpython-lists-and-ifs/vpython-lists-and-ifs}
+\include{vpython-keyboard/vpython-keyboard}
+\include{vpython-collision-detection/vpython-collision-detection}
+\include{galilean-relativity/galilean-relativity}
+\include{collision-barrier/collision-barrier}
+\include{lab-coefficient-of-restitution/lab-coefficient-of-restitution}
+\include{game-pong/game-pong}
+\include{video-fancart/video-fancart}
+\include{newtons-second-law/newtons-second-law}
+\include{vpython-fancart/vpython-fancart}
+\include{game-lunar-lander/game-lunar-lander}
+\include{video-projectile-motion/video-projectile-motion}
+\include{video-angry-birds/video-angry-birds}
+\include{game-tank-wars/game-tank-wars}
+\include{vpython-friction/vpython-friction}
+\include{video-center-of-mass/video-center-of-mass}
+\include{game-asteroids/game-asteroids}
+\include{arduino-gamecontroller/arduino-gamecontroller}
 
 
 %Appendices
@@ -281,8 +284,8 @@ Copyright (c) 2011 by A. Titus. This lab manual is
 %
 %\include{appendix-lab-notebook/appendix-lab-notebook}
 %\include{appendix-functions-and-graphs/appendix-functions-and-graphs}
-%\include{project1/project1}
-%\include{project-final/project-final}
-%\include{appendix-tracker/appendix-tracker}
+\include{appendix-tracker/appendix-tracker}
+\include{project1/project1}
+\include{project-final/project-final}
 
 \end{document}

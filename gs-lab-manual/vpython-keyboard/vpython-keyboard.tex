@@ -1,0 +1,275 @@
+\lab{PROGRAM -- Keyboard Interactions}
+
+\apparatus
+\equip{Computer}
+\equip{GlowScript -- www.glowscript.org}
+
+\longgoal
+
+The purpose of this activity is to incorporate keyboard and mouse interactions into a VPython program running in GlowScript.
+
+\procedure
+
+\begin{enumerate}
+
+	\subsection*{Using the keyboard to set the velocity of an object}
+
+	\item Open the program from \emph{PROGRAM--Lists, Loops, and Ifs} of the four balls bouncing back and forth within the scene. We will use this program as our starting point. If you did not do this exercise, then the code for the program is shown below.
+	
+\begin{myvpython}
+GlowScript 2.0 VPython
+
+scene.width=500
+scene.height=500
+scene.range=5
+scene.autoscale=False
+
+ball1=sphere(pos=vector(-5,3,0), radius=0.2, color=color.magenta)
+ball2=sphere(pos=vector(-5,1,0), radius=0.2, color=color.cyan)
+ball3=sphere(pos=vector(-5,-1,0), radius=0.2, color=color.yellow)
+ball4=sphere(pos=vector(-5,-3,0), radius=0.2, color=color.orange)
+
+ball1.v=0.5*vector(1,0,0)
+ball2.v=1*vector(1,0,0)
+ball3.v=1.5*vector(1,0,0)
+ball4.v=2*vector(1,0,0)
+
+ballsList = [ball1, ball2, ball3, ball4]
+
+t=0
+dt=0.01
+
+while 1:
+    rate(100)
+    for thisball in ballsList:
+        thisball.pos=thisball.pos+thisball.v*dt
+        if thisball.pos.x>5:
+            thisball.v=-1*thisball.v
+        elif thisball.pos.x<-5:
+            thisball.v=-1*thisball.v
+    t=t+dt
+\end{myvpython}
+
+	\item Above your \code{while} loop, create a box that is at the position $(-4.5, -4.5, 0)$. Name it \texttt{shooter} and make its width, length, and height appropriate units so that it looks like it is sitting at the bottom left corner of the window.
+	
+	\item Run your program and verify that the box is of correct dimensions and is in the left corner of the screen without appearing off screen.
+	
+	\item Define the velocity of the box to be to the right with a speed of 2 m/s. Name it \texttt{shooter.v}.
+	
+	\item Inside the \code{while} loop, after the \code{for} loop updates the positions of the balls, add a line to update the position of the shooter as shown below.
+	
+\begin{myvpython}
+    shooter.pos = shooter.pos + shooter.v*dt
+\end{myvpython}
+
+	\item Run your program. You should see the shooter move to the right, and it will continue moving off the screen. If this does not occur, then check for errors of logic in your program.
+
+Now we want to use the keyboard to control the velocity of the box. We will use the following strategy:
+
+\begin{itemize}
+	\item Look to see if a key is pressed.
+	\item Check to see which key is pressed.
+	\item If the right-arrow is pressed, set the velocity of the shooter to be to the right.
+	\item If the left-arrow is pressed, set the velocity of the shooter to be to the left.
+	\item If any other key is pressed, set the velocity of the shooter to be zero.
+	\item Move the box.
+\end{itemize}
+
+	Moving the box occurs inside the while loop. However, we need the GlowScript environment to continually monitor whether a key has been pressed on the keyboard. Then, when the key is pressed, our code will take over by checking which key it is and setting the velocity of the shooter.
+	
+	\item On line 3 of your program, immediately after the ``GlowScript 2.0 VPython'' statement, write the following function.
+
+\begin{myvpython}
+def keyboard(event):
+    if event.type=='keydown':
+        k = event.which
+        print(k)
+        
+scene.bind('keydown', keyboard) 
+\end{myvpython}
+
+Let me explain what this code is doing. GlowScript continually monitors for keyboard and mouse events. The \code{scene.bind(`keydown', keyboard)} function tells VPython that it should call the \emph{keyboard} function whenever a \emph{keydown} event is detected. The \emph{keyboard} function is a custom-defined function. We could have named it anything. (I picked the name \emph{keyboard} just because it made sense to me.) In this function, I first check to see what \code{type} of event occurred. If it is \emph{keydown} then I get the key and print it.
+
+	\item Run your program. Press various keys and note the number that is printed.
+	
+\tightframe{What are the numbers that correspond to these keys?
+
+j:
+
+k:
+
+l:
+
+a:
+
+s:
+
+d:
+
+spacebar:
+
+left arrow:
+
+right arrow:
+
+up arrow:
+
+down arrow:
+}
+
+	In the previous code, we printed the key because we wanted to see the unique number for each key. But now we want to use the keyboard to control the velocity of the box. Let's set the velocity of the box to be to the right, if the right arrow is pressed, and to the left, if the left arrow is pressed.
+	
+	\item Comment out the \code{print} statement since you already figured out the numbers that correspond to the arrow keys.
+	
+	\item Change the \code{keyboard} function to be the following:
+	
+\begin{myvpython}
+def keyboard(event):
+    if event.type=='keydown':
+        k = event.which
+#        print(k)
+        if k == 39:
+            shooter.v=2*vector(1,0,0)
+        elif k == 37:
+            shooter.v=2*vector(-1,0,0)
+        else:
+            shooter.v=vector(0,0,0)
+\end{myvpython}
+
+	The function \emph{keyboard} checks to see which key is pressed and sets the velocity accordingly. 
+	
+	\item Run your program. Press various keys to see if the program works as expected.
+	
+	\item Change your program so that pressing \texttt{a} causes a fast leftward velocity and pressing \texttt{s} causes a fast rightward velocity. In summary, the left and right arrows create slow velocities to the left and right; the \texttt{a} and \texttt{s} keys create fast velocities to the left and right.
+	
+	\item Run your program and verify that it works as expected.
+
+	\item You probably noticed that it's annoying when the box moves past the edge of the edge of the screen. Use an \texttt{if} statement in the \code{while} loop to check if the box passes the edge of the screen. If it does, then reverse its velocity. The best way to reverse the velocity is to multiply it by -1 as shown below.
+
+\begin{myvpython}
+            shooter.v=-shooter.v
+\end{myvpython}
+
+	\item Run your program. The box should reverse, with the same speed, whenever it reaches the edge of the screen. Furthermore, you should be able to set the velocity (fast or slow) of the box using right arrow, left arrow, a, or s, and stop the box with any other key.
+
+	
+	\subsection*{Using the keyboard to create a moving object}
+
+We are now going to use the keyboard to launch bullets from our shooter. We need another list where we can store the bullets. Before the \code{while} loop, create an empty list called \texttt{bulletsList}.
+
+\begin{myvpython}
+bulletsList=[ ]
+\end{myvpython}
+
+	\item In your \code{if} statement where you check for keyboard events, add the following \code{elif} statement to check for the spacebar.
+	
+\begin{myvpython}
+        elif k==32:
+            bullet=sphere(pos=shooter.pos, radius=0.1, color=color.white)
+            bullet.v=3*vector(0,1,0)
+            bulletsList.append(bullet)
+\end{myvpython}
+            
+            Study this section of code and know what each line does. If you press the spacebar, a white sphere is created at the center of the shooter. Its name is assigned to be \texttt{bullet}. Then, its velocity is set to be in the $+y$ direction with a speed of 3 m/s. Finally, and this is really important, the bullet is added (i.e. appended) to the end of the \texttt{bulletsList}. Later, in the \code{while} loop, we can update the positions of all the bullets in this list.
+            
+            \item Now we have to update the positions of the bullets (i.e. make them move). In your \code{while} statement before you update the clock, add a \code{for} loop that updates the positions of the bullets in the bulletsList.
+            
+\begin{myvpython}
+    for thisbullet in bulletsList:
+        thisbullet.pos=thisbullet.pos+thisbullet.v*dt
+\end{myvpython}  
+    
+Your final \code{while} loop should look like this:
+
+\begin{myvpython}
+while 1:
+    rate(100)
+    for thisball in ballsList:
+        thisball.pos=thisball.pos+thisball.v*dt
+        if thisball.pos.x>5:
+            thisball.v=-thisball.v
+        elif thisball.pos.x<-5:
+            thisball.v=-thisball.v
+
+    shooter.pos = shooter.pos + shooter.v*dt
+    if(shooter.pos.x>5):
+        shooter.v=-shooter.v
+    elif(shooter.pos.x<-5):
+        shooter.v=-shooter.v
+
+    for thisbullet in bulletsList:
+        thisbullet.pos=thisbullet.pos+thisbullet.v*dt
+
+    t=t+dt
+\end{myvpython}  
+
+You should study this code and know what each line means. There are three important sections. One section updates the positions of the balls and reverses their velocities if they reach the edge of the screen. The next section updates the position of the shooter and reverses its velocity if it reaches the edge of the screen. The last section updates the positions of the bullets.
+
+\item Run your program and verify that all aspects work as expected.
+
+\end{enumerate}
+
+\pagebreak
+
+\analysis
+
+\begin{description}
+
+\item[C] Do all of the following.
+\begin{enumerate}
+	\item Create a new file and give it an appropriate name. Copy and paste previous code to do the following tasks.
+	\item Assign variables to the speed of the shooter (both slow and fast) and the speed of the bullet. Call them: \texttt{sfast}, \texttt{sslow}, and \texttt{sbullet}. Write these at the top of your program since you will use them later in the program.
+	\item When setting the velocity of the shooter in your keyboard function, use the variable for the speed of the shooter. Here is an example:
+	
+\begin{myvpython}
+        if k == 39:
+            shooter.v=sslow*vector(1,0,0)
+\end{myvpython}
+
+	\item Set \texttt{sslow} to be very low, like 0.5. And set \texttt{sfast} to be very fast, perhaps 5. Also change \texttt{sbullet}. See how changing these values affects the game. By using variables, it makes it much easier to change their values for the purpose of gameplay. If you do not use variables, then you have many lines to change if you want to test higher or lower speeds.
+	\item Give instructions about your game by adding this code at line 2 or 3 of your program, just after the line that says, \texttt{GlowScript 2.0 VPython}.  These statements add text to the \texttt{title} of the scene and will appear above the scene. HTML tags like \texttt{<b>} are needed to format the text.
+	
+\begin{myvpython}
+scene.title.append('<h2>Instuctions</h2>')
+scene.title.append('<br><br>')
+scene.title.append('Use the following keys to control the shooter.')
+scene.title.append('<br> -- Right arrow - slow, to the right')
+scene.title.append('<br> -- Left arrow - slow, to the left')
+scene.title.append('<br> -- s - fast, to the right')
+scene.title.append('<br> -- a - fast, to the right')
+scene.title.append('<br> -- spacebar - shoot a bullet')
+scene.title.append('<br> -- any other key - stop')
+\end{myvpython}	
+
+
+\end{enumerate}
+
+\item[B] Do everything for {\bf C} and the following.
+
+\begin{enumerate}
+	\item Create a new file and give it an appropriate name. Copy and paste previous code to do the following tasks.
+	\item It looks strange for the bullets to come from the center of the box. Fire the bullets from the center of the top plane of the box instead of its center. To do this, you'll have to change the initial position of the bullet when it is created.
+	\item Check to see if the up arrow key is pressed or the down arrow key is pressed. If one of these keys is pressed, set the velocity of the shooter to be up or down, respectively.
+	\item Add additional keystrokes that will fire a bullet to the left, to the right, or downward. You may wish to use the arrow keys to fire bullets and other keys for changing the velocity of the shooter. Feel free to reassign keys to whatever makes sense. Change the instructions at the top to match the keys you choose.
+\end{enumerate}
+
+\item[A] Do everything for {\bf B} with the following modifications and additions.
+
+\begin{enumerate}
+	\item Create a new file and give it an appropriate name. Copy and paste previous code to do the following tasks.
+	\item Add a counter variable called \texttt{shots} and set \vpythonline{shots=0} before your \code{while} loop. Update the value of \texttt{shots} and print the value of \texttt{shots} every time a bullet is fired. To do this, you must add the following line immediately after the defining the keyboard function with \vpythonline{def keyboard()}. It should look like the lines shown below.
+	
+\begin{myvpython}
+def keyboard(event):
+	global shots
+\end{myvpython}
+	
+	This line makes the \vpythonline{shots} variable, which was defined outside the function, available within the function.
+	
+	\item Suppose that the shooter only has 10 bullets. Write code so that if the shooter reaches a maximum of 10 bullets, hitting the spacebar will no longer file a bullet.
+	\item Create a keystroke that will replenish the shooter, meaning that after hitting this keystroke, you can fire 10 more bullets.
+\end{enumerate}
+
+
+\end{description}
+

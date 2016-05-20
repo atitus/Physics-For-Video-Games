@@ -1,0 +1,149 @@
+\lab{LAB: Angry Birds}
+
+\apparatus
+
+\equip{Tracker software (free; download from \href{http://www.cabrillo.edu/~dbrown/tracker/}{http://www.cabrillo.edu/$\sim$dbrown/tracker/})}
+\equip{video: \code{Angry\_Birds.mp4} from our course web site.}
+\equip{Tracker file: \code{Angry\_Birds\_projectile.trk} from our course web site.}
+
+\longgoal
+
+In this experiment, you will measure the motion of a bird in Angry Birds and will assume $g=10\ \meter\per\second^2$ in order to calibrate distance in the video. You will also see if the resulting motion of the bird is consistent with projectile motion. In other words, has the programmer of Angry Birds used correct physics in the game?
+
+\introduction
+
+In the game Angry Birds, birds are launched with a slingshot. Is their motion described by ideal projectile motion? If so, what is the acceleration of a bird and can we use its acceleration to figure out the length of a bird? 
+
+When we do video analysis, we typically use an object of known length in the video to calibrate the video and determine how many pixels is 1 m. In the case of Angry Birds, instead of scaling the video with a known object on the screen, we can scale the video by the acceleration due to gravity, assuming the Angry Birds world is Earth. That is, we can assume that $a_y=-g=-10\ \meter\per\second^2$, then calculate the scaling factor, and use the scaling factor determine the length of objects in the video in units of meters.
+
+\procedure
+
+\begin{enumerate}
+	\item Download the file \file{Angry\_Birds.mp4} from our course web site.
+	\item Download the file \file{Angry\_Birds\_projectile.trk} from our course web site.
+	\item The \file{.trk} file is a partially marked Tracker file. Open the Tracker software. Go to \menu{File$\to$Open File...} and select the file \file{Angry\_Birds\_projectile.trk}. It should load the video or ask you where it is located.
+	\item Play the video and notice that the ``camera'' both moves (i.e. pans) and zooms. This makes analyzing the video more difficult than what you've encountered before.
+
+In order to track the bird, we will need a fixed origin (the sling slot), and since the origin goes off screen, we need an offset point (the distance from the sling shot to a blade of grass that shows up for most of the trajectory of the bird).
+
+	We also need a set length since the movie zooms in and out. It turns out that the height to the fork of the slingshot is the same as the height of the first pedestal the pig sits on. We will define the height of the fork of the slingshot as ``1'' \emph{slingshot} in the Tracker file. So, even as the image zooms and pans, the length of the slingshot and the pig's pedestal is always ``1'' and the location of the origin is set. DO NOT adjust the ``Coordinate Offset'' or the ``Calibration Stick'' or the data will no longer account for the panning and zooming of the camera.
+	
+	\tightframe{Remember that our unit of distance in the video will be \emph{slingshots} because this is the height of the slingshot from its base to the fork. Thus, all distances are in $slingshots$ and all velocities are in $slingshots/s$.}
+	
+	\smallframe{The Tracker file already has the position of the angry bird marked.  The track of the marked points is not a parabola on the video. Why not?}
+	
+	\item Verify that the graph plots $y(x)$. If necessary, click on the vertical axis variable and change it to $y$, and click on the horizontal axis variable and change it to $x$. This will display the calculated path of the bird after accounting for the zooming and panning of the camera.
+	
+	\smallframe{What is the calculated path of the bird? Describe it in words and sketch it.}
+	
+	\smallframe{Explain why some points are missing.}
+	
+	\smallframe{If the bird follows correct physics, what should a graph of x(t) look like? Sketch it below.}
+	
+	\item Change the vertical axis variable to $x$ and change the horizontal axis variable to $t$. 
+	
+	\smallframe{Explain why the plot of x(t) is a straight line.}
+	
+	\smallframe{What is the best-fit function for $x(t)$?}
+	
+	\smallframe{From this best-fit function, what is $v_x$ in units of slingshots/s?}
+
+	\item Change the vertical axis variable to $y$ and change the horizontal axis variable to $t$. Notice that it is parabolic. At first the slope decreases, showing that the bird slows down as it rises. Then the slope increases, showing that the bird speeds up as it falls.
+	
+	\item Change the vertical axis variable to $v_y$. Due to measurement error there is variation in the data; however, it generally appears linear. Do a linear fit.
+	
+	\smallframe{What is the best-fit function for the $v_y(t)$ graph?}
+	
+	\smallframe{From the best-fit function, what is the y-acceleration in units of slingshots/s$^2$?}
+	
+	\smallframe{What is the initial y-velocity in slingshots/s?}
+	
+	\smallframe{By comparing the measured y-acceleration in slingshots/s$^2$ to free-acceleration on Earth of $-10$ m/s$^2$, how many slingshots are in 10 m?}
+		
+	\smallframe{How many meters is 1 slingshot?}
+	
+	\smallframe{Use the tape measure to measure the radius of the bird in units of slingshots. Convert this to meters. Is this a realistic size for a bird?}
+	
+	\smallframe{Convert the x-velocity and initial y-velocity to m/s. What is the initial velocity vector in m/s?  What is the initial speed of the bird in m/s?}
+	
+\end{enumerate}
+
+\report
+
+\begin{description}
+
+\item[C]  Complete the experiment and report your answers to the following questions.
+
+\begin{enumerate}
+	 \item What is the x-velocity of the bird in units of slingshots/s?
+	 \item Is the x-velocity of the bird increasing, decreasing, or constant?
+	 \item What is the x-acceleration?
+	 \item What is the initial y-velocity of the bird in units of slingshots/s?
+	 \item Is the y-velocity of the bird increasing, decreasing, or constant?
+	 \item What is the y-acceleration of the bird in units of slingshots/s$^2$?
+\end{enumerate}
+
+\item[B] Do all parts for {\bf C} and answer the following questions.
+
+\begin{enumerate}
+	\item Generally, the videos that we analyze have an object of known distance. In this case, what is the ``known'' quantity that we used to determine distance in meters in the video?
+	\item How many meters are in 1 slingshot?
+	\item What is the radius of the bird in units of meters?
+	\item What is the initial velocity vector of the bird in m/s?
+	\item What is the initial speed of the bird in m/s?
+\end{enumerate}
+
+\item[A] Do all parts for {\bf B} and answer the following questions.
+
+\begin{enumerate}
+	\item Suppose that you analyze a video screen capture of a tank wars game. You use the length of the tank as the unit ``1 tank'' and find that the free-fall y-acceleration in the world of the game is $-2.5\ tanks/s^2$. How many meters long is the tank?
+	\item You analyze a bullet in the tank wars game. Its x(t) graph with x in meters is shown below. What is the x-velocity of the projectile?
+	
+\scaledimage{video-angry-birds/x-t-graph}{x(t) for a projectile.}{0.8}
+
+	\item What is the x-acceleration of the projectile?
+	
+	\item The projectile's $v_y(t)$ graph is shown below. What is the initial y-velocity of the projectile?
+
+\scaledimage{video-angry-birds/vy-t-graph}{$v_y(t)$ for a projectile.}{0.8}
+	
+	\item What is the y-acceleration of the projectile?
+	
+	\item At what time (i.e. clock reading) did the projectile reach its peak?
+	
+	\item What is the initial velocity vector of the projectile?
+	
+	\item What is the initial launch speed of the projectile?
+	
+\end{enumerate}
+\end{description}
+
+% Answers
+
+%[C]
+%
+%(a) 4.64 slingshots/s
+%(b) vx is constant
+%(c) 0
+%(d) 6.97 slingshots/s
+%(e) vy decreases
+%(f) ay = -3.8 slingshots/s/s
+%
+%[B]
+%
+%(a) free-fall acceleration due to gravity on earth (-10 m/s/s)
+%(b) 2.6 m in 1 slingshot
+%(c) 0.47 m
+%(d) v=(12,18) m/s
+%(e) |v| = 22 m/s
+%
+%[A]
+%
+%(a) 3.9 m
+%(b) 4 m/s
+%(c) 0
+%(d) vy=10 m/s
+%(e) ay=-2.5 m/s/s
+%(f)  t = 4 s
+%(g) v=(4,10) m/s
+%(h) |v| = 11 m/s

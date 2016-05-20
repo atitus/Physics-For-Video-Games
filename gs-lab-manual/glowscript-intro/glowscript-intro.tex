@@ -28,7 +28,7 @@ Go to \href{http://www.glowscript.org/}{http://www.glowscript.org/} and create a
 
 	\subsection*{Creating folders and files}
 	
-	\item Once you log in and follow the link to your programs, you are in the GlowScript IDE. Click the \includegraphics[scale=0.75]{glowscript-intro/gs-add-folder} tab to create a new folder. A pop-up window appears as shown in Figure \ref{glowscript-intro/gs-new-folder}. Because I must run your programs, make the folder public.
+	\item Once you log in and follow the link to your programs, you are in the GlowScript IDE. Click the \includegraphics[scale=0.75]{glowscript-intro/gs-add-folder} tab to create a new folder. A pop-up window appears as shown in Figure \ref{glowscript-intro/gs-new-folder}. Because I must run your programs, make the folder public. Name it ``phy1200'' if you wish.
 	
 	%{\bf \emph{Uncheck}} Public in order to make the folder PRIVATE. This is important so others cannot see your work as you are developing. After you create games for your projects, you will copy them to a public folder to share them with the world. Name the folder ``phy1200private'' or whatever you wish. Later you will probably make a ``phy1200public'' folder.
 	
@@ -71,7 +71,7 @@ By default the sphere is at the center of the scene, and the ``camera'' (your po
 	
 	\item If you are on a PC, hold down both mouse buttons and move the mouse forward and backward to make the camera move closer or farther away from the center of the scene. On a Mac, hold down the option key while moving the mouse forward and backward. This is how you \emph{zoom} in VPython.
 	
-	\item Hold down the right mouse button alone and move the mouse to make the camera ``revolve'' around the scene, while always looking at the center. On a Mac, in order to rotate the view, hold down the Control key while you click and drag the mouse. This is how you \emph{rotate} the scene in VPython.
+	\item Hold down the right mouse button alone and move the mouse to make the camera ``revolve'' around the scene, while always looking at the center. On a Mac, in order to rotate the view, hold down the Control key while you click and drag the mouse. This is how you \emph{rotate} the scene in VPython. Because this is a sphere, you won't notice a significant change except for lighting.
 
 By default, when you first run the program, the coordinate system is defined with the positive x direction to the right, the positive y direction pointing up toward the top edge of the monitor, and the positive z direction coming out of the screen toward you. You can then rotate the camera view to make these axes point in other directions relative to the camera. 
 		
@@ -79,7 +79,7 @@ By default, when you first run the program, the coordinate system is defined wit
 	
 	GlowScript tells you when there is a syntax error in  your program. (Logic errors are much more difficult to fix!) To see an example of an error message, let's try making a spelling mistake.
 	
-	\item Change line 3 of the program to the following:
+	\item Click {\bf Edit} to return to editing mode, and change line 3 of the program to the following:
 	
 \begin{myvpython}
 phere()
@@ -95,7 +95,7 @@ The line number may be off, as it is in this case but is usually close.
 
 	\item Correct the error in the program by clicking {\bf Edit this program} and returning to the editor. Once in editing mode, you can click the \frame{X} to close the error message.
 
-There are two types of errors: (1) syntax errors which might be a typing or coding mistake and (2) a programmatic errors so the program runs correctly but does something other than what you intended. The error message helps you find the first of these. Finding errors that cause a program to act differently than you intended is much more difficult and is a skill you will develop in this course.
+There are two types of errors: (1) syntax errors which might be a typing or coding mistake and (2) programmatic errors so the program runs correctly but does something other than what you intended. The error message helps you find the first of these. Finding errors that cause a program to act differently than you intended is much more difficult and is a skill you will develop in this course.
 	
 	\subsection*{Changing attributes (position, size, color, shape, etc.) of an object}
 	
@@ -129,9 +129,9 @@ VPython automatically zooms the camera in or out so all objects appear in the wi
 
 	\subsection*{Creating a box object}
 
-Another object we will often create is a box. A box is defined by its position, axis, length, width, and height as shown in Figure \ref{glowscript-intro/box}\footnote{Image from  \url{http://www.glowscript.org/docs/VPythonDocs/box.html}}.
+Another object we will often create is a box. A box is defined by its position, axis, length, width, and height as shown in Figure \ref{glowscript-intro/box}.
 
-\scaledimage{glowscript-intro/box}{Attributes of a box.}{0.7}
+\scaledimage{glowscript-intro/box}{Attributes of a box. (Image from  \url{http://www.glowscript.org/docs/VPythonDocs/box.html})}{0.7}
 
 	\item Type the following on a new line, then run the program:
 
@@ -139,7 +139,8 @@ Another object we will often create is a box. A box is defined by its position, 
 box(pos=vector(0,0,0), size=vector(2,1,0.5), color=color.orange)
 \end{myvpython}
 
-The length, width, and height of the box are expressed as a vector with the attribute: \code{size=vector(L,H,W)}.  
+The length, width, and height of the box are expressed as a vector with the attribute:\\
+  \code{size=vector(L,H,W)}.  
 
 	\item Change the length to 4 and rerun the program.
 	
@@ -265,7 +266,8 @@ All games with graphics include objects on the screen. The game programmer must 
 \item[C] Do all of the following.
 You are going to create objects for the game \emph{Frogger}. We will only use spheres and boxes for this part.
 \begin{enumerate}
-	\item Create a new blank file and name it \emph{frogger-C}. 
+	\item Click the link to your username to return to your folders.
+	\item If necessary, click the phy1200 folder. Create a new blank file and name it \emph{frogger-C}. 
 	\item Create a green box for the frog that is at the location $<0,-100,0>$, has a length=10, height=10, and width=10 units. Name the box \code{frog}.
 	\item Create a yellow sphere for a lily pad at $<-60,100,0>$ with a radius of 10. Name the sphere \code{lilypad}.
 	\item Create a blue box for the water that is at the location $<0,0,-10>$, has a length=150, height=220, and width=10 units. Name the box \code{water}.
@@ -276,7 +278,7 @@ You are going to create objects for the game \emph{Frogger}. We will only use sp
 \item[B] Do everything for {\bf C} along with the following modifications and additions.
 
 \begin{enumerate}
-	\item Create a new blank file and name it \emph{frogger-B}. 
+	\item Return to your phy1200 folder and create a new blank file and name it \emph{frogger-B}. 
 	\item Copy from your previous program (labeled C) and paste it into this program. Often, this is the fastest way to start a new program.
 	\item Create another yellow sphere for a lily pad at $<60,100,0>$ with a radius of 10. Name the sphere \code{lilypad4}.
 	\item In between these two lily pads, create two more named  \code{lilypad2} and  \code{lilypad3} so the lily pads are equally spaced.
@@ -293,11 +295,11 @@ Figure \ref{glowscript-intro/gs-frogger-B} is an example program that fits the c
 \item[A] Do everything for {\bf B} along with the following modifications and additions.
 
 \begin{enumerate}
-	\item Create a new blank file and name it \emph{frogger-A}. 
+	\item Return to your phy1200 folder and csreate a new blank file and name it \emph{frogger-A}. 
 	\item Copy from your previous program (labeled B) and paste it into this program.
 	\item In the top right corner of the GlowScript window, click the link to {\bf Help}. This opens the documentation window. Click the menu to {\bf Choose a 3D object} and view the list of objects shown in Figure \ref{glowscript-intro/gs-frogger-B}.
 
-	\scaledimage{glowscript-intro/gs-help}{The scene required for a B.}{0.5}
+	\scaledimage{glowscript-intro/gs-help}{GlowScript documentation}{0.5}
 
 	\item Select the cylinder and read how to create a cylinder.
 	
@@ -305,13 +307,13 @@ Figure \ref{glowscript-intro/gs-frogger-B} is an example program that fits the c
 	
 	\item Use the cylinder object to create 3 logs of different lengths in the water.
 	
-	\item Now, click the menu to {\bf Work with 3D objects} in the documentation and select {\bf Textures}. Read how to specify a texture. You will probably want to click the link to the example program that demonstrates the pre-defined textures.
+	\item Now, click the menu to {\bf Work with 3D objects} in the documentation and select {\bf Materials/Textures}. Read how to specify a texture. You will probably want to click the link to the example program that demonstrates the pre-defined textures.
 	
 	\item Change the three wooden logs so they use the wood texture.
 
 \end{enumerate}
 
-Figure \ref{glowscript-intro/gs-frogger-A} is an example program that fits the criteria for a B.
+Figure \ref{glowscript-intro/gs-frogger-A} is an example program that fits the criteria for program A.
 
 	\scaledimage{glowscript-intro/gs-frogger-A}{The scene required for an A.}{0.5}
 

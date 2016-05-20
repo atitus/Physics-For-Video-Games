@@ -1,0 +1,225 @@
+\lab{GAME -- Pong}
+
+\apparatus
+\equip{Computer}
+\equip{GlowScript -- www.glowscript.org}
+
+\longgoal
+
+The purpose of this activity is to study the classic arcade game Pong and use GlowScript VPython to develop both a physical and an unphysical version of the game.
+
+\procedure
+
+\begin{enumerate}
+
+\subsection*{Playing Pong}
+
+\item Go to \url{http://www.ponggame.org/} and play the classic Pong Game. Try both the keyboard and mouse to control the paddle.
+
+\smallframe{Pay attention to the motion of the puck when colliding with the wall and a paddle. \\
+
+1.  Is the collision of the puck and a side wall elastic or inelastic? Explain your answer by referring to observations of the motion of the puck.
+
+\vspace{0.5in}
+
+2.  Are the side walls frictionless or not? Explain your answer by referring to observations of the motion of the puck.
+
+
+\vspace{0.5in}
+
+3.  Is the collision of the puck and a paddle elastic or inelastic? Explain your answer by referring to observations of the motion of the puck.
+
+
+\vspace{0.5in}
+
+4.  Is the paddle frictionless or not? Explain your answer by referring to observations of the motion of the puck.
+
+}
+
+\subsection*{Creating a ``bouncing'' puck in a box}
+
+We are going to simulate a puck on an air hockey table that is bouncing around the table. In this simulation, we will assume that the walls and paddle are rigid, frictionless barriers. We will also assume that the puck and barriers make elastic collisions. Thus, the COR is 1 for all collisions. For simplicity, we will draw the puck as a puck and refer to it as a puck.
+
+\item Begin a new program. Import the visual package.
+
+\item Set the size of the scene. You may want to set the height and width of the window in pixels. The example below will set the range to be 10 (meters or whatever unit you wish you use), the width to be 600 pixels, and the height to be 600 pixels.
+
+\begin{myvpython}
+scene.range=20
+scene.width=600
+scene.height=600
+\end{myvpython}
+
+\item Create walls at the top, bottom, and sides of the screen.
+
+\item Run your program and verify that you have four walls around the perimeter.
+
+\item Create a puck at the center using the cylinder object. For a cylinder, the axis determines the length (or height) and orientation of the cylinder. In this case, we want a top view of the cylinder so the axis points in the $+z$ direction.
+
+\begin{myvpython}
+puck=cylinder(pos=vector(0,0,0), axis=vector(0,0,0.1), radius=0.5, color=color.white)
+\end{myvpython}
+
+\item Define the initial velocity of the puck (\code{\vpythonline{puck.v=vector(5,8,0)}}), the initial clock reading (\code{t=0}), and the time step (\code{dt=0.01}).
+
+\item Create an infinite while loop.
+
+\item Use \code{rate(100)} to slow down the simulation so that the motion is smooth.
+
+\item Update the position of the puck.
+
+\begin{myvpython}
+    puck.pos=puck.pos+puck.v*dt
+\end{myvpython}
+
+\item Use an \code{if-elif} statement to check for a collision between the puck and each wall. If there is a collision, change the velocity of the puck in an appropriate way.
+
+\item Run your program and verify that it works properly.
+
+\subsection*{Creating inelastic collisions}
+
+In the real world, a puck would lose energy upon colliding with a rigid barrier. Said another way, the coefficient of restitution is always less than 1. Now we will change the last program by adding friction and a coefficient of restitution.
+
+\item Create a new program with a different name and copy all of your code to this new program. This way, you are saving your previous work as a reference.
+
+\item Make the left wall a ``real wall'' that causes the puck to lose speed upon colliding with the wall. In other words, after colliding with the left wall, the puck's perpendicular velocity component would be reduced by a factor less than 1. Define a variable $COR$ which you can change to be whatever value you want (between 0 and 1).  A COR of 0 means that the puck will not bounce off the wall. A COR of 1 is an elastic collision. A COR greater than one is superelastic, like a bumper in pinball.
+
+Since the left wall is vertical, then the perpendicular component of the puck's velocity is its $x$ component.
+
+\begin{myvpython}
+        puck.v.x = -COR*puck.v.x
+\end{myvpython}
+
+It helps to use a smaller COR, like 0.5 or less, to notice the effect after one collision.
+
+\smallframe{Describe the motion of the puck after a long time. Could we have predicted this given the fact that only one wall results in inelastic collisions?}
+
+Suppose that a wall has a spring in it that ``punches'' the puck during the collision, similar to bumpers in a pinball machine. Then, you could model this wall by giving it a COR greater than 1.
+
+\item Make one of the walls ``super elastic'' by giving it a COR greater than 1. (This is like the bumper in a pinball machine.)
+
+\item Run your program and observe the effect of the collisions on the motion of the puck.
+
+\subsection*{Adding friction to a collision}
+
+Friction acts parallel to the wall in order to reduce the parallel component of the velocity of the puck.
+
+\item Create a new program with a different name and copy all of your code to this new program. This way, you are saving your previous work as a reference.
+
+\item Start by make all collisions elastic collisions (i.e. $COR=1$).
+
+Now, we will add friction to the left wall by changing the y-component of the velocity of the puck when it collides with the wall.  Exactly how friction affects the velocity of the puck is a bit complicated. Let's use a simple (albeit unphysical) model that reduces the parallel component of the velocity of the puck by a certain percentage. This is similar to the COR for the perpendicular component of the velocity.
+
+\item When the puck collides with the left wall, change the y-component of the velocity by a factor of 20\% or something like that. (A factor of 1 is no friction and a factor of 0 is maximum friction. 20\% is a factor of 0.2.)
+
+\begin{myvpython}
+        puck.v.y=0.2*puck.v.y
+\end{myvpython}
+
+\item Run your program.
+
+\smallframe{Describe the motion of the puck after a long time. Could we have predicted this given the fact that only one wall has friction?}
+
+\subsection*{Making a 1-player Pong game}
+
+\item Create a new program. We will start with a blank page.
+
+\item It might be nice to set the width and height of the window in pixels. Use the code below to set the range to 20 (m or whatever units you want to imagine), the width to 600 pixels, and the height to 450 pixels. You are welcome to use a larger width and height if you wish.
+
+\begin{myvpython}
+scene.range=20
+scene.width=600
+scene.height=450
+\end{myvpython}
+
+\item Create walls for the ceiling and floor. Also create a wall on the left side that has a hole in it that represents a goal. This is similar to what you see in air hockey, for example. You'll need two boxes on the left side, with a space between them for the goal.
+
+\item Create small box as a paddle on the right side. You will eventually use your mouse to move this box up and down.
+
+\item Create a puck and make its initial velocity something like (15,12,0) m/s.
+
+\item Create variables for the clock and time step.
+
+A this point, there is no motion, and your scene should look something like Fig. \ref{game-pong/pong-screen}.
+
+\scaledimage{game-pong/pong-screen}{The initial scene of our version of Pong.}{0.4}	
+
+
+\item Create an infinite while loop. Update the position of the puck. To check for collisions with the walls and paddle, set the initial velocity of the puck so it collides off the various objects. For now, assume elastic, frictionless collisions. Run your program, check every wall and the paddle, and verify that everything works as expected.
+
+\subsection*{Controlling the paddle}
+
+Think about how you want to control the paddle. You can use the up and down arrow on the keyboard, click and drag with the mouse, or simply hover with the mouse and move the paddle up and down in sync with the mouse as the mouse moves up and down. All of these ideas are possible, but with different levels of difficulty and experience required. We will explore these options.
+
+{\bf Controlling the paddle with the keyboard}
+
+\item Create a new program with a different name and copy all of your previous code to this new program. This way, you are saving your previous work as a reference.
+
+\item We are going to make the paddle move up and down by pressing the up and down arrow keys. Therefore, create a velocity for the paddle and set its initial value to zero. At the same place in the code where you define the puck's velocity, define the paddle's velocity. I called my object \code{paddle2} so you will have to be consistent with using the name of your paddle object.
+
+\begin{myvpython}
+paddle2.v=vector(0,0,0)
+\end{myvpython}
+
+\item We will have to update the position of the paddle (i.e. make it move). In the same place in the code where you update the position of the puck  (inside the \code{while} loop) , add a line to update the position of the paddle.
+
+\begin{myvpython}
+    paddle2.pos=paddle2.pos+paddle2.v*dt
+\end{myvpython}
+
+\item Now you need to create a function that checks for a keypress of the up and down arrow keys. Near the top of the program, at approximately line 3, add the following \code{movePaddlewithKeyboard} function. Read what it does!  If an up or down arrow key is pressed, it sets the velocity of the paddle to be upward or downward. When the key is released (\code{keyup}) The \code{scene.bind} function tells GlowScript to look for a \code{keydown} or \code{keyup} event and called the \code{movePaddlewithKeyboard} function. Note that the name of the function \code{movePaddlewithKeyboard} is not important. I could have named this anything I want. In fact, I happened to pick a really long name, but at least it's descriptive.
+
+\begin{myvpython}
+def movePaddle(event):
+#    print(event.type, event.which)
+    if event.type=='keydown':
+            k = event.which
+            if k == 38:
+                paddle2.v=50*vector(0,1,0)
+            elif k == 40:
+                paddle2.v=50*vector(0,-1,0)
+    elif event.type=='keyup':
+            paddle2.v=vector(0,0,0)
+
+scene.bind('keydown keyup', movePaddle) 
+\end{myvpython}
+
+\item Run the program and see if you can control the paddle. You might find that it is quite dissatisfying. For example, the paddle can go through the top and bottom walls. Also, it is hard to stop the paddle at just the right moment to collide with the puck. To improve the paddle control, adjust the paddle's velocity that is set in this function.
+
+\vspace{5in}
+
+\end{enumerate}
+
+\pagebreak
+
+\analysis
+
+\begin{description}
+
+\item[C] Complete this exercise.
+
+\item[B] Do everything for {\bf C} and the following.
+
+\begin{enumerate}
+	\item Make one of the left walls a super-elastic wall with $COR>1$ and one of the left walls an inelastic wall with $COR<1$.
+	\item Make half your paddle a super elastic paddle with $COR>1$ and half your paddle an inelastic paddle with $COR<1$. Give each half different colors.
+\end{enumerate}
+
+\item[A] Do everything for {\bf B} with the following modifications and additions.
+
+\begin{enumerate}
+	\item Place your infinite loop inside another infinite loop. When the puck goes past the paddle or through the goal, increment a score, reset the puck to the middle of the scene, and pause the game and wait for a mouse click or key press. Use the function below to pause the game. This function pauses the program and waits for a mouse click to continue.
+	
+\begin{myvpython}
+scene.waitfor('click')
+\end{myvpython}
+
+	\item Change your program so that the puck bounces off the paddle in a similar way as the \emph{Pong} game that you played at the beginning of this chapter. Note that the physics is incorrect unless you invent a mechanical device that would cause the puck to bounce in this way.
+	
+\end{enumerate}
+
+
+
+
+\end{description}
+

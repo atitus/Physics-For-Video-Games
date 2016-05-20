@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object class="org.opensourcephysics.cabrillo.tracker.TrackerPanel">
+    <property name="version" type="string">4.62</property>
+    <property name="width" type="double">480.0</property>
+    <property name="height" type="double">288.0</property>
+    <property name="magnification" type="double">-1.0</property>
+    <property name="center_x" type="int">341</property>
+    <property name="center_y" type="int">282</property>
+    <property name="videoclip" type="object">
+    <object class="org.opensourcephysics.media.core.VideoClip">
+        <property name="video" type="object">
+        <object class="org.opensourcephysics.media.quicktime.QTVideo">
+            <property name="path" type="string">Angry_Birds.mp4</property>
+        </object>
+        </property>
+        <property name="startframe" type="int">84</property>
+        <property name="stepsize" type="int">1</property>
+        <property name="stepcount" type="int">93</property>
+        <property name="starttime" type="double">0.0</property>
+        <property name="frameshift" type="int">0</property>
+        <property name="readout" type="string">frame</property>
+        <property name="playallsteps" type="boolean">true</property>
+    </object>
+    </property>
+    <property name="clipcontrol" type="object">
+    <object class="org.opensourcephysics.media.core.StepperClipControl">
+        <property name="rate" type="double">1.0</property>
+        <property name="delta_t" type="double">33.36956521739131</property>
+        <property name="frame" type="int">84</property>
+    </object>
+    </property>
+    <property name="coords" type="object">
+    <object class="org.opensourcephysics.media.core.ImageCoordSystem">
+        <property name="fixedorigin" type="boolean">false</property>
+        <property name="fixedangle" type="boolean">true</property>
+        <property name="fixedscale" type="boolean">false</property>
+        <property name="locked" type="boolean">false</property>
+        <property name="framedata" type="array" class="[Lorg.opensourcephysics.media.core.ImageCoordSystem$FrameData;">
+            <property name="[0]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">142.5</property>
+                <property name="yorigin" type="double">224.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">24.0</property>
+                <property name="yscale" type="double">24.0</property>
+            </object>
+            </property>
+            <property name="[84]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">144.13884399977724</property>
+                <property name="yorigin" type="double">241.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">54.49253000004284</property>
+                <property name="yscale" type="double">54.49253000004284</property>
+            </object>
+            </property>
+            <property name="[85]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">129.53933783465095</property>
+                <property name="yorigin" type="double">240.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">54.99243503179789</property>
+                <property name="yscale" type="double">54.99243503179789</property>
+            </object>
+            </property>
+            <property name="[86]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">120.56983736384439</property>
+                <property name="yorigin" type="double">241.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">53.255800506953</property>
+                <property name="yscale" type="double">53.255800506953</property>
+            </object>
+            </property>
+            <property name="[87]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">98.69999999999999</property>
+                <property name="yorigin" type="double">240.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">54.0</property>
+                <property name="yscale" type="double">54.0</property>
+            </object>
+            </property>
+            <property name="[88]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">95.29999999999995</property>
+                <property name="yorigin" type="double">239.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">51.00000000000001</property>
+                <property name="yscale" type="double">51.00000000000001</property>
+            </object>
+            </property>
+            <property name="[89]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">67.45048068161702</property>
+                <property name="yorigin" type="double">237.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">52.509522945842875</property>
+                <property name="yscale" type="double">52.509522945842875</property>
+            </object>
+            </property>
+            <property name="[90]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">46.89999999999998</property>
+                <property name="yorigin" type="double">235.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">53.0</property>
+                <property name="yscale" type="double">53.0</property>
+            </object>
+            </property>
+            <property name="[91]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">41.89999999999998</property>
+                <property name="yorigin" type="double">233.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">50.50000000000001</property>
+                <property name="yscale" type="double">50.50000000000001</property>
+            </object>
+            </property>
+            <property name="[92]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">37.89999999999998</property>
+                <property name="yorigin" type="double">232.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">48.0</property>
+                <property name="yscale" type="double">48.0</property>
+            </object>
+            </property>
+            <property name="[93]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">21.899999999999977</property>
+                <property name="yorigin" type="double">230.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">48.0</property>
+                <property name="yscale" type="double">48.0</property>
+            </object>
+            </property>
+            <property name="[94]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">17.26820863438735</property>
+                <property name="yorigin" type="double">228.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">46.00611372415627</property>
+                <property name="yscale" type="double">46.00611372415627</property>
+            </object>
+            </property>
+            <property name="[95]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">13.684104317193885</property>
+                <property name="yorigin" type="double">227.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">44.0030568620781</property>
+                <property name="yscale" type="double">44.0030568620781</property>
+            </object>
+            </property>
+            <property name="[96]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">0.684104317193885</property>
+                <property name="yorigin" type="double">227.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">44.01441824229054</property>
+                <property name="yscale" type="double">44.01441824229054</property>
+            </object>
+            </property>
+            <property name="[97]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-0.8330478626683373</property>
+                <property name="yorigin" type="double">226.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">41.98712458897468</property>
+                <property name="yscale" type="double">41.98712458897468</property>
+            </object>
+            </property>
+            <property name="[98]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-12.833047862668337</property>
+                <property name="yorigin" type="double">226.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">41.98712458897468</property>
+                <property name="yscale" type="double">41.98712458897468</property>
+            </object>
+            </property>
+            <property name="[99]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-12.833047862668337</property>
+                <property name="yorigin" type="double">226.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">39.996109829805235</property>
+                <property name="yscale" type="double">39.996109829805235</property>
+            </object>
+            </property>
+            <property name="[100]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-21.48047461829475</property>
+                <property name="yorigin" type="double">226.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">39.996245118902834</property>
+                <property name="yscale" type="double">39.996245118902834</property>
+            </object>
+            </property>
+            <property name="[101]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-31.48047461829475</property>
+                <property name="yorigin" type="double">227.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">39.996245118902834</property>
+                <property name="yscale" type="double">39.996245118902834</property>
+            </object>
+            </property>
+            <property name="[102]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-34.28779551907661</property>
+                <property name="yorigin" type="double">228.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">38.997652984437806</property>
+                <property name="yscale" type="double">38.997652984437806</property>
+            </object>
+            </property>
+            <property name="[103]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-46.4847067169741</property>
+                <property name="yorigin" type="double">229.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">39.99705898403348</property>
+                <property name="yscale" type="double">39.99705898403348</property>
+            </object>
+            </property>
+            <property name="[104]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-44.10115939942065</property>
+                <property name="yorigin" type="double">231.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">38.00022296142705</property>
+                <property name="yscale" type="double">38.00022296142705</property>
+            </object>
+            </property>
+            <property name="[105]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-52.10115985846829</property>
+                <property name="yorigin" type="double">233.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">38.00022304970544</property>
+                <property name="yscale" type="double">38.00022304970544</property>
+            </object>
+            </property>
+            <property name="[106]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-58.10115985846829</property>
+                <property name="yorigin" type="double">234.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">38.00022304970544</property>
+                <property name="yscale" type="double">38.00022304970544</property>
+            </object>
+            </property>
+            <property name="[136]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-77.70193328963859</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.000371786468957</property>
+                <property name="yscale" type="double">31.000371786468957</property>
+            </object>
+            </property>
+            <property name="[137]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-76.75889391399372</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">30.91517190653725</property>
+                <property name="yscale" type="double">30.91517190653725</property>
+            </object>
+            </property>
+            <property name="[138]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-76.20193328963859</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.000371786468957</property>
+                <property name="yscale" type="double">31.000371786468957</property>
+            </object>
+            </property>
+            <property name="[139]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-77.08039944057282</property>
+                <property name="yorigin" type="double">262.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.457769123187077</property>
+                <property name="yscale" type="double">31.457769123187077</property>
+            </object>
+            </property>
+            <property name="[140]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-76.23726389502647</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.295627672120474</property>
+                <property name="yscale" type="double">31.295627672120474</property>
+            </object>
+            </property>
+            <property name="[141]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-73.48337514149645</property>
+                <property name="yorigin" type="double">262.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">30.862187527210857</property>
+                <property name="yscale" type="double">30.862187527210857</property>
+            </object>
+            </property>
+            <property name="[142]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-74.20193328963859</property>
+                <property name="yorigin" type="double">263.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.000371786468957</property>
+                <property name="yscale" type="double">31.000371786468957</property>
+            </object>
+            </property>
+            <property name="[143]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-73.40247643165557</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.038937775318377</property>
+                <property name="yscale" type="double">31.038937775318377</property>
+            </object>
+            </property>
+            <property name="[144]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-73.72096637844595</property>
+                <property name="yorigin" type="double">263.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.004031995854987</property>
+                <property name="yscale" type="double">31.004031995854987</property>
+            </object>
+            </property>
+            <property name="[145]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-73.21082676552203</property>
+                <property name="yorigin" type="double">263.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.002082070292698</property>
+                <property name="yscale" type="double">31.002082070292698</property>
+            </object>
+            </property>
+            <property name="[146]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-73.2158966609802</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.0030570501885</property>
+                <property name="yscale" type="double">31.0030570501885</property>
+            </object>
+            </property>
+            <property name="[148]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-75.76461356228762</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.108579531209156</property>
+                <property name="yscale" type="double">31.108579531209156</property>
+            </object>
+            </property>
+            <property name="[149]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-79.05098611483791</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.740574252853445</property>
+                <property name="yscale" type="double">31.740574252853445</property>
+            </object>
+            </property>
+            <property name="[150]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-75.98230985464173</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.05429035666187</property>
+                <property name="yscale" type="double">31.05429035666187</property>
+            </object>
+            </property>
+            <property name="[151]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-76.86026532274823</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.030820254374657</property>
+                <property name="yscale" type="double">31.030820254374657</property>
+            </object>
+            </property>
+            <property name="[152]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-77.1472852262514</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">30.89370869735604</property>
+                <property name="yscale" type="double">30.89370869735604</property>
+            </object>
+            </property>
+            <property name="[153]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-80.56525950576957</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.262549904955687</property>
+                <property name="yscale" type="double">31.262549904955687</property>
+            </object>
+            </property>
+            <property name="[154]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-85.4</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">32.0</property>
+                <property name="yscale" type="double">32.0</property>
+            </object>
+            </property>
+            <property name="[155]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-86.9</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">32.0</property>
+                <property name="yscale" type="double">32.0</property>
+            </object>
+            </property>
+            <property name="[156]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-88.9</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">32.0</property>
+                <property name="yscale" type="double">32.0</property>
+            </object>
+            </property>
+            <property name="[157]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-90.4</property>
+                <property name="yorigin" type="double">262.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">32.0</property>
+                <property name="yscale" type="double">32.0</property>
+            </object>
+            </property>
+            <property name="[158]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-93.4</property>
+                <property name="yorigin" type="double">263.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">32.0</property>
+                <property name="yscale" type="double">32.0</property>
+            </object>
+            </property>
+            <property name="[159]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-94.36632231404957</property>
+                <property name="yorigin" type="double">262.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.70506198347107</property>
+                <property name="yscale" type="double">31.70506198347107</property>
+            </object>
+            </property>
+            <property name="[160]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-99.70000000000002</property>
+                <property name="yorigin" type="double">262.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">32.25</property>
+                <property name="yscale" type="double">32.25</property>
+            </object>
+            </property>
+            <property name="[161]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-101.15356644174295</property>
+                <property name="yorigin" type="double">262.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">31.856455084950564</property>
+                <property name="yscale" type="double">31.856455084950564</property>
+            </object>
+            </property>
+            <property name="[162]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-109.6</property>
+                <property name="yorigin" type="double">262.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">33.0</property>
+                <property name="yscale" type="double">33.0</property>
+            </object>
+            </property>
+            <property name="[163]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-110.24900025544937</property>
+                <property name="yorigin" type="double">261.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">32.45173081835565</property>
+                <property name="yscale" type="double">32.45173081835565</property>
+            </object>
+            </property>
+            <property name="[164]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-116.6</property>
+                <property name="yorigin" type="double">261.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">33.0</property>
+                <property name="yscale" type="double">33.0</property>
+            </object>
+            </property>
+            <property name="[165]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-123.858812463184</property>
+                <property name="yorigin" type="double">261.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">33.722848550612305</property>
+                <property name="yscale" type="double">33.722848550612305</property>
+            </object>
+            </property>
+            <property name="[166]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-127.77010443541846</property>
+                <property name="yorigin" type="double">261.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">33.6096354683497</property>
+                <property name="yscale" type="double">33.6096354683497</property>
+            </object>
+            </property>
+            <property name="[167]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-130.17378581298004</property>
+                <property name="yorigin" type="double">261.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">33.30265111788078</property>
+                <property name="yscale" type="double">33.30265111788078</property>
+            </object>
+            </property>
+            <property name="[168]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-140.10461226770792</property>
+                <property name="yorigin" type="double">260.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">34.15473312840537</property>
+                <property name="yscale" type="double">34.15473312840537</property>
+            </object>
+            </property>
+            <property name="[169]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-149.9447609670006</property>
+                <property name="yorigin" type="double">260.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">35.085530955192425</property>
+                <property name="yscale" type="double">35.085530955192425</property>
+            </object>
+            </property>
+            <property name="[170]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-153.12307964543504</property>
+                <property name="yorigin" type="double">260.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">34.54289993181443</property>
+                <property name="yscale" type="double">34.54289993181443</property>
+            </object>
+            </property>
+            <property name="[171]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-167.1659382082324</property>
+                <property name="yorigin" type="double">260.5</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">36.089603501583156</property>
+                <property name="yscale" type="double">36.089603501583156</property>
+            </object>
+            </property>
+            <property name="[172]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-173.0621885567501</property>
+                <property name="yorigin" type="double">260.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">36.069651645528864</property>
+                <property name="yscale" type="double">36.069651645528864</property>
+            </object>
+            </property>
+            <property name="[173]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-181.45000000000002</property>
+                <property name="yorigin" type="double">260.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">36.625</property>
+                <property name="yscale" type="double">36.625</property>
+            </object>
+            </property>
+            <property name="[174]" type="object">
+            <object class="org.opensourcephysics.media.core.ImageCoordSystem$FrameData">
+                <property name="xorigin" type="double">-187.45000000000002</property>
+                <property name="yorigin" type="double">260.0</property>
+                <property name="angle" type="double">0.0</property>
+                <property name="xscale" type="double">36.625</property>
+                <property name="yscale" type="double">36.625</property>
+            </object>
+            </property>
+        </property>
+    </object>
+    </property>
+    <property name="tracks" type="collection" class="java.util.ArrayList">
+        <property name="item" type="object">
+        <object class="org.opensourcephysics.cabrillo.tracker.CoordAxes">
+            <property name="name" type="string">axes</property>
+            <property name="color" type="object">
+            <object class="java.awt.Color">
+                <property name="red" type="int">200</property>
+                <property name="green" type="int">0</property>
+                <property name="blue" type="int">200</property>
+                <property name="alpha" type="int">255</property>
+            </object>
+            </property>
+            <property name="footprint" type="string">Footprint.BoldSimpleAxes</property>
+            <property name="visible" type="boolean">false</property>
+            <property name="trail" type="boolean">false</property>
+        </object>
+        </property>
+        <property name="item" type="object">
+        <object class="org.opensourcephysics.cabrillo.tracker.TapeMeasure">
+            <property name="name" type="string">calibration stick</property>
+            <property name="description" type="string">Calibration of zoom. Do NOT adjust.
+</property>
+            <property name="color" type="object">
+            <object class="java.awt.Color">
+                <property name="red" type="int">0</property>
+                <property name="green" type="int">0</property>
+                <property name="blue" type="int">255</property>
+                <property name="alpha" type="int">255</property>
+            </object>
+            </property>
+            <property name="footprint" type="string">Footprint.BoldDoubleTarget</property>
+            <property name="visible" type="boolean">false</property>
+            <property name="trail" type="boolean">false</property>
+            <property name="fixedtape" type="boolean">true</property>
+            <property name="fixedlength" type="boolean">true</property>
+            <property name="readonly" type="boolean">false</property>
+            <property name="stickmode" type="boolean">true</property>
+            <property name="framedata" type="array" class="[Lorg.opensourcephysics.cabrillo.tracker.TapeMeasure$FrameData;">
+                <property name="[0]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.TapeMeasure$FrameData">
+                    <property name="x1" type="double">219.97163546248615</property>
+                    <property name="y1" type="double">239.0532623607225</property>
+                    <property name="x2" type="double">219.77413686478835</property>
+                    <property name="y2" type="double">215.05407499314884</property>
+                </object>
+                </property>
+            </property>
+            <property name="worldlengths" type="array" class="[Ljava.lang.Double;">
+                <property name="[0]" type="double">1.0</property>
+            </property>
+        </object>
+        </property>
+        <property name="item" type="object">
+        <object class="org.opensourcephysics.cabrillo.tracker.OffsetOrigin">
+            <property name="name" type="string">offset origin</property>
+            <property name="color" type="object">
+            <object class="java.awt.Color">
+                <property name="red" type="int">0</property>
+                <property name="green" type="int">255</property>
+                <property name="blue" type="int">255</property>
+                <property name="alpha" type="int">255</property>
+            </object>
+            </property>
+            <property name="footprint" type="string">Footprint.BoldCrosshair</property>
+            <property name="visible" type="boolean">true</property>
+            <property name="trail" type="boolean">false</property>
+            <property name="fixed_coordinates" type="boolean">true</property>
+            <property name="worldX" type="double">5.2</property>
+            <property name="worldY" type="double">0.0</property>
+            <property name="world_coordinates" type="array" class="[[D">
+                <property name="array" type="string">{{5.2,0.0},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null}</property>
+            </property>
+        </object>
+        </property>
+        <property name="item" type="object">
+        <object class="org.opensourcephysics.cabrillo.tracker.PointMass">
+            <property name="mass" type="double">1.0</property>
+            <property name="name" type="string">Bird</property>
+            <property name="color" type="object">
+            <object class="java.awt.Color">
+                <property name="red" type="int">255</property>
+                <property name="green" type="int">0</property>
+                <property name="blue" type="int">0</property>
+                <property name="alpha" type="int">255</property>
+            </object>
+            </property>
+            <property name="footprint" type="string">Footprint.Diamond</property>
+            <property name="visible" type="boolean">true</property>
+            <property name="trail" type="boolean">true</property>
+            <property name="framedata" type="array" class="[Lorg.opensourcephysics.cabrillo.tracker.PointMass$FrameData;">
+                <property name="[84]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">145.5</property>
+                    <property name="y" type="double">135.5</property>
+                </object>
+                </property>
+                <property name="[85]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">139.5</property>
+                    <property name="y" type="double">123.5</property>
+                </object>
+                </property>
+                <property name="[86]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">133.5</property>
+                    <property name="y" type="double">109.5</property>
+                </object>
+                </property>
+                <property name="[87]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">126.49999999999999</property>
+                    <property name="y" type="double">99.5</property>
+                </object>
+                </property>
+                <property name="[88]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">119.49999999999999</property>
+                    <property name="y" type="double">91.5</property>
+                </object>
+                </property>
+                <property name="[89]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">112.49999999999999</property>
+                    <property name="y" type="double">81.5</property>
+                </object>
+                </property>
+                <property name="[90]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">106.49999999999999</property>
+                    <property name="y" type="double">72.5</property>
+                </object>
+                </property>
+                <property name="[91]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">101.49999999999999</property>
+                    <property name="y" type="double">64.5</property>
+                </object>
+                </property>
+                <property name="[92]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">94.49999999999999</property>
+                    <property name="y" type="double">56.5</property>
+                </object>
+                </property>
+                <property name="[93]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">90.49999999999999</property>
+                    <property name="y" type="double">48.5</property>
+                </object>
+                </property>
+                <property name="[94]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">84.49999999999999</property>
+                    <property name="y" type="double">43.5</property>
+                </object>
+                </property>
+                <property name="[95]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">83.49999999999999</property>
+                    <property name="y" type="double">36.5</property>
+                </object>
+                </property>
+                <property name="[96]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">79.49999999999999</property>
+                    <property name="y" type="double">32.5</property>
+                </object>
+                </property>
+                <property name="[97]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">76.49999999999999</property>
+                    <property name="y" type="double">28.5</property>
+                </object>
+                </property>
+                <property name="[98]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">75.49999999999999</property>
+                    <property name="y" type="double">24.5</property>
+                </object>
+                </property>
+                <property name="[99]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">71.49999999999999</property>
+                    <property name="y" type="double">22.5</property>
+                </object>
+                </property>
+                <property name="[100]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">70.49999999999999</property>
+                    <property name="y" type="double">17.5</property>
+                </object>
+                </property>
+                <property name="[101]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">68.49999999999999</property>
+                    <property name="y" type="double">14.5</property>
+                </object>
+                </property>
+                <property name="[102]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">69.49999999999999</property>
+                    <property name="y" type="double">13.5</property>
+                </object>
+                </property>
+                <property name="[103]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">68.49999999999999</property>
+                    <property name="y" type="double">9.5</property>
+                </object>
+                </property>
+                <property name="[104]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">66.49999999999999</property>
+                    <property name="y" type="double">7.5</property>
+                </object>
+                </property>
+                <property name="[105]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">67.49999999999999</property>
+                    <property name="y" type="double">7.5</property>
+                </object>
+                </property>
+                <property name="[106]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">65.49999999999999</property>
+                    <property name="y" type="double">2.5</property>
+                </object>
+                </property>
+                <property name="[136]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">170.5</property>
+                    <property name="y" type="double">5.5</property>
+                </object>
+                </property>
+                <property name="[137]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">175.5</property>
+                    <property name="y" type="double">5.5</property>
+                </object>
+                </property>
+                <property name="[138]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">182.5</property>
+                    <property name="y" type="double">6.5</property>
+                </object>
+                </property>
+                <property name="[139]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">186.5</property>
+                    <property name="y" type="double">6.5</property>
+                </object>
+                </property>
+                <property name="[140]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">192.5</property>
+                    <property name="y" type="double">8.5</property>
+                </object>
+                </property>
+                <property name="[141]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">196.5</property>
+                    <property name="y" type="double">8.5</property>
+                </object>
+                </property>
+                <property name="[142]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">201.5</property>
+                    <property name="y" type="double">10.5</property>
+                </object>
+                </property>
+                <property name="[143]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">206.0</property>
+                    <property name="y" type="double">11.0</property>
+                </object>
+                </property>
+                <property name="[144]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">211.0</property>
+                    <property name="y" type="double">12.0</property>
+                </object>
+                </property>
+                <property name="[145]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">216.5</property>
+                    <property name="y" type="double">13.5</property>
+                </object>
+                </property>
+                <property name="[146]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">219.5</property>
+                    <property name="y" type="double">13.5</property>
+                </object>
+                </property>
+                <property name="[147]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">225.5</property>
+                    <property name="y" type="double">15.5</property>
+                </object>
+                </property>
+                <property name="[148]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">229.5</property>
+                    <property name="y" type="double">16.5</property>
+                </object>
+                </property>
+                <property name="[149]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">232.5</property>
+                    <property name="y" type="double">17.5</property>
+                </object>
+                </property>
+                <property name="[150]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">237.5</property>
+                    <property name="y" type="double">18.5</property>
+                </object>
+                </property>
+                <property name="[151]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">241.5</property>
+                    <property name="y" type="double">20.5</property>
+                </object>
+                </property>
+                <property name="[152]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">246.5</property>
+                    <property name="y" type="double">21.5</property>
+                </object>
+                </property>
+                <property name="[153]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">249.5</property>
+                    <property name="y" type="double">21.5</property>
+                </object>
+                </property>
+                <property name="[154]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">252.5</property>
+                    <property name="y" type="double">23.5</property>
+                </object>
+                </property>
+                <property name="[155]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">257.5</property>
+                    <property name="y" type="double">24.5</property>
+                </object>
+                </property>
+                <property name="[156]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">262.5</property>
+                    <property name="y" type="double">25.5</property>
+                </object>
+                </property>
+                <property name="[157]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">265.5</property>
+                    <property name="y" type="double">26.5</property>
+                </object>
+                </property>
+                <property name="[158]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">269.5</property>
+                    <property name="y" type="double">26.5</property>
+                </object>
+                </property>
+                <property name="[159]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">273.5</property>
+                    <property name="y" type="double">28.5</property>
+                </object>
+                </property>
+                <property name="[160]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">277.5</property>
+                    <property name="y" type="double">30.5</property>
+                </object>
+                </property>
+                <property name="[161]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">280.5</property>
+                    <property name="y" type="double">31.5</property>
+                </object>
+                </property>
+                <property name="[162]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">284.5</property>
+                    <property name="y" type="double">32.5</property>
+                </object>
+                </property>
+                <property name="[163]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">286.5</property>
+                    <property name="y" type="double">35.5</property>
+                </object>
+                </property>
+                <property name="[164]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">291.5</property>
+                    <property name="y" type="double">35.5</property>
+                </object>
+                </property>
+                <property name="[165]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">295.5</property>
+                    <property name="y" type="double">36.5</property>
+                </object>
+                </property>
+                <property name="[166]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">297.5</property>
+                    <property name="y" type="double">38.5</property>
+                </object>
+                </property>
+                <property name="[167]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">301.5</property>
+                    <property name="y" type="double">38.5</property>
+                </object>
+                </property>
+                <property name="[168]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">303.5</property>
+                    <property name="y" type="double">42.5</property>
+                </object>
+                </property>
+                <property name="[169]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">308.5</property>
+                    <property name="y" type="double">42.5</property>
+                </object>
+                </property>
+                <property name="[170]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">311.5</property>
+                    <property name="y" type="double">46.5</property>
+                </object>
+                </property>
+                <property name="[171]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">315.5</property>
+                    <property name="y" type="double">46.5</property>
+                </object>
+                </property>
+                <property name="[172]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">319.5</property>
+                    <property name="y" type="double">49.5</property>
+                </object>
+                </property>
+                <property name="[173]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">322.5</property>
+                    <property name="y" type="double">50.5</property>
+                </object>
+                </property>
+                <property name="[174]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.PointMass$FrameData">
+                    <property name="x" type="double">328.5</property>
+                    <property name="y" type="double">52.5</property>
+                </object>
+                </property>
+            </property>
+        </object>
+        </property>
+        <property name="item" type="object">
+        <object class="org.opensourcephysics.cabrillo.tracker.TapeMeasure">
+            <property name="name" type="string">tape A</property>
+            <property name="color" type="object">
+            <object class="java.awt.Color">
+                <property name="red" type="int">204</property>
+                <property name="green" type="int">0</property>
+                <property name="blue" type="int">0</property>
+                <property name="alpha" type="int">255</property>
+            </object>
+            </property>
+            <property name="footprint" type="string">Footprint.DoubleArrow</property>
+            <property name="visible" type="boolean">true</property>
+            <property name="trail" type="boolean">false</property>
+            <property name="fixedtape" type="boolean">true</property>
+            <property name="fixedlength" type="boolean">true</property>
+            <property name="readonly" type="boolean">true</property>
+            <property name="stickmode" type="boolean">false</property>
+            <property name="framedata" type="array" class="[Lorg.opensourcephysics.cabrillo.tracker.TapeMeasure$FrameData;">
+                <property name="[0]" type="object">
+                <object class="org.opensourcephysics.cabrillo.tracker.TapeMeasure$FrameData">
+                    <property name="x1" type="double">124.6389020350213</property>
+                    <property name="y1" type="double">224.0286322763843</property>
+                    <property name="x2" type="double">123.1389020350213</property>
+                    <property name="y2" type="double">126.52863227638429</property>
+                </object>
+                </property>
+            </property>
+            <property name="worldlengths" type="array" class="[Ljava.lang.Double;">
+                <property name="[0]" type="double">100.0</property>
+            </property>
+        </object>
+        </property>
+    </property>
+    <property name="selectedtrack" type="string">tape A</property>
+    <property name="dividers" type="array" class="[D">
+        <property name="array" type="string">{0.6947791164658634,0.48796147672552165,0.9967637540453075,0.0}</property>
+    </property>
+    <property name="views" type="array" class="[[Lorg.opensourcephysics.cabrillo.tracker.TView;">
+        <property name="[0]" type="array" class="[Lorg.opensourcephysics.cabrillo.tracker.TView;">
+            <property name="[0]" type="object">
+            <object class="org.opensourcephysics.cabrillo.tracker.PlotTView">
+                <property name="selected_track" type="string">Bird</property>
+                <property name="track_views" type="collection" class="java.util.ArrayList">
+                    <property name="item" type="object">
+                    <object class="org.opensourcephysics.cabrillo.tracker.PlotTrackView">
+                        <property name="track" type="string">Bird</property>
+                        <property name="plot0" type="object">
+                        <object class="org.opensourcephysics.cabrillo.tracker.TrackPlottingPanel">
+                            <property name="x_var" type="string">x</property>
+                            <property name="y_var" type="string">y</property>
+                            <property name="lines" type="boolean">false</property>
+                            <property name="points" type="boolean">true</property>
+                        </object>
+                        </property>
+                        <property name="linked" type="boolean">false</property>
+                    </object>
+                    </property>
+                </property>
+            </object>
+            </property>
+        </property>
+    </property>
+    <property name="selected_views" type="array" class="[Ljava.lang.String;">
+        <property name="[0]" type="string">Plot View</property>
+        <property name="[1]" type="string">Table View</property>
+        <property name="[2]" type="string">World View</property>
+        <property name="[3]" type="string">Page View</property>
+    </property>
+    <property name="toolbar" type="object">
+    <object class="org.opensourcephysics.cabrillo.tracker.TToolBar">
+        <property name="trace" type="boolean">false</property>
+        <property name="position" type="boolean">true</property>
+        <property name="velocity" type="boolean">false</property>
+        <property name="acceleration" type="boolean">false</property>
+        <property name="labels" type="boolean">true</property>
+        <property name="multiply_by_mass" type="boolean">false</property>
+        <property name="trail_length" type="int">0</property>
+        <property name="stretch" type="int">6</property>
+    </object>
+    </property>
+    <property name="track_control_x" type="int">14</property>
+    <property name="track_control_y" type="int">119</property>
+</object>

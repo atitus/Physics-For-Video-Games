@@ -1,0 +1,256 @@
+\lab{PROGRAM -- Collision Detection}
+
+\apparatus
+\equip{Computer}
+\equip{GlowScript -- www.glowscript.org}
+
+\longgoal
+
+The purpose of this activity is to detect collisions between moving objects. You will learn to create a function, and you will learn about boolean variables that are either \code{True} or \code{False}.
+
+\introduction
+
+The idea of collision detection is a fairly simple one: \emph{check to see if two objects overlap.} If their boundaries overlap, then the objects have collided.
+
+\subsection*{Distance between spheres}
+
+Suppose that two spheres have radii $R_1$ and $R_2$, respectively. Define the center-to-center distance between the two spheres as $d$. 
+
+\scaledimage{vpython-collision-detection/spheres}{Condition for whether two spheres collide.}{0.4}
+
+
+As shown in Figure \ref{vpython-collision-detection/spheres}:
+
+\begin{description}
+	\item[if $d>(R_1+R_2)$] the spheres do not overlap.
+	\item[if $d<(R_1+R_2)$] the spheres overlap.
+	\item[if $d=(R_1+R_2)$] the spheres exactly touch. Note that this will never happen in a computer game because calculations of the positions of the spheres result in 16-digit numbers (or more) that will never be exactly the same.
+\end{description}
+
+
+If the spheres are at coordinates $(x_1, y_1, z_1)$ and $(x_2, y_2, z_2)$, then the distance between the spheres is:
+
+\begin{eqnarray*}
+	d & = & \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}
+\end{eqnarray*}
+
+This is the magnitude of a vector that points from one sphere to the other sphere, as shown in Figure \ref{vpython-collision-detection/d-spheres}. 
+
+\scaledimage{vpython-collision-detection/d-spheres}{Distance between two spheres.}{0.5} 
+
+Because we only want the magnitude of the vector from one sphere to the other, it does not matter which sphere you call Sphere 1. Thus, you can just as easily calculate the distance using:
+
+\begin{eqnarray*}
+	d & = & \sqrt{(x_1-x_2)^2 + (y_1-y_2)^2 + (z_1-z_2)^2}
+\end{eqnarray*}
+
+Because you square the vector's components, the sum of the squares of the components will always be positive.
+
+\subsection*{Exercises}
+
+\smallframe{Ball1 is at $(-3, 2, 0)$ m and has a radius of 0.05 m. Ball2 is at $(1,-5,0)$ m and has a radius of 0.1 m. What is the distance between them?}
+
+\smallframe{Ball1 is at $(1, 2, 0)$ m and has a radius of 0.05 m. Ball2 is at $(1.08,1.88,0)$ m and has a radius of 0.1 m. What is the distance between them? At this instant, have the balls collided?}
+
+
+\procedure
+
+\begin{enumerate}
+
+\subsection*{Starting program}
+
+	\item Begin with the program that you wrote in \emph{Chapter 9 PROGRAM -- Keyboard Interactions}. It should have a shooter (that moves horizontally and shoots missiles) and four balls that move horizontally and bounce back and forth within the window.
+	
+	If you do not have that program, type the one shown below.
+	
+\begin{myvpython}
+GlowScript 2.0 VPython
+
+def keyboard(event):
+    if event.type=='keydown':
+        k = event.which
+#        print(k)
+        if k == 39:
+            shooter.v=2*vector(1,0,0)
+        elif k == 37:
+            shooter.v=2*vector(-1,0,0)
+        elif k == 65:
+            shooter.v=4*vector(-1,0,0)
+        elif k == 83:
+            shooter.v=4*vector(1,0,0)
+        elif k==32:
+            bullet=sphere(pos=shooter.pos, radius=0.1, color=color.white)
+            bullet.v=3*vector(0,1,0)
+            bulletsList.append(bullet)
+        else:
+            shooter.v=vector(0,0,0)
+       
+scene.bind('keydown', keyboard) 
+
+scene.width=500
+scene.height=500
+scene.range=5
+scene.autoscale=False
+
+ball1=sphere(pos=vector(-5,3,0), radius=0.2, color=color.magenta)
+ball2=sphere(pos=vector(-5,1,0), radius=0.2, color=color.cyan)
+ball3=sphere(pos=vector(-5,-1,0), radius=0.2, color=color.yellow)
+ball4=sphere(pos=vector(-5,-3,0), radius=0.2, color=color.orange)
+
+ball1.v=0.5*vector(1,0,0)
+ball2.v=1*vector(1,0,0)
+ball3.v=1.5*vector(1,0,0)
+ball4.v=2*vector(1,0,0)
+
+ballsList = [ball1, ball2, ball3, ball4]
+
+shooter=box(pos=vector(-4.5,-4.5,0), width=1, height=1, length=1, color=color.red)
+shooter.v=2*vector(1,0,0)
+
+t=0
+dt=0.01
+
+bulletsList=[ ]
+
+while 1:
+    rate(100)
+    for thisball in ballsList:
+        thisball.pos=thisball.pos+thisball.v*dt
+        if thisball.pos.x>5:
+            thisball.v=-thisball.v
+        elif thisball.pos.x<-5:
+            thisball.v=-thisball.v
+
+    shooter.pos = shooter.pos + shooter.v*dt
+    if(shooter.pos.x>5):
+        shooter.v=-shooter.v
+    elif(shooter.pos.x<-5):
+        shooter.v=-shooter.v
+
+    for thisbullet in bulletsList:
+        thisbullet.pos=thisbullet.pos+thisbullet.v*dt
+
+    t=t+dt
+\end{myvpython}
+		
+
+\subsection*{Defining a function}
+
+When you have to do a repetitive task, like check whether each missile collides with a ball, it is convenient to define a function. This section will teach you how to write a function, and then we will write a custom function to check for a collision between two spheres.
+
+A function has a \emph{signature} and a \emph{block}.  In the signature, you begin with \code{def} and an \emph{optional parameter list}. In the block, you type the code that will be executed when the function is called.  
+
+\item To see how a function works, type the following code near the top of your program after the \code{GlowScript} statement, perhaps on line 2 or 3.
+
+\begin{myvpython}
+def printDistance(object1, object2):
+    distance=mag(object1.pos-object2.pos)
+    print(distance)
+\end{myvpython}
+
+This function accepts two parameters named \texttt{object1} and \texttt{object2}.  It then calculates the distance between the objects by finding the magnitude of the difference in the positions of the objects. (Note that \code{mag()} is also a function. It calculates the magnitude of a vector.) Then, it prints the distance to the web page.
+
+\item Inside of and at the end of the \code{while} loop, call your function to print the distance between a ball and the shooter by typing this line. Now each iteration through the loop, it will print the distance between the shooter and \texttt{ball1}.
+
+\begin{myvpython}
+    printDistance(shooter,ball1)
+\end{myvpython}
+
+\item Run the program. You will notice that it prints the distance between the shooter and \texttt{ball1} after each iteration (each time step) of the loop.
+
+\item Change your program to print the distance between \texttt{ball1} and \texttt{ball4} and run your program. 
+
+Note that you didn't have to reprogram the function. You just changed the parameters sent to the function. This is what makes functions such a valuable programming tool.
+
+Many functions return a value or object. For example, the \code{mag()} function returns the value obtained by calculating the square root of the sum of the squares of the components of a vector. This way, you can write \code{distance=mag(object1.pos-object2.pos)}, and the variable \code{distance} will be assigned the value obtained by finding the magnitude of the given vector. To return a value, the function must have a \code{return} statement.
+
+\item You can delete the \code{printDistance} function and the \code{printDistance} statement because will not use them in the rest of our program.
+
+\item Near the top of your program, after the \code{GlowScript 2.0 VPython} statement, write the following function. It determines whether two spheres collide or not.
+
+\begin{myvpython}
+def collisionSpheres(sphere1, sphere2):
+    dist=mag(sphere1.pos-sphere2.pos)
+    if(dist<sphere1.radius+sphere2.radius):
+        return True
+    else:
+        return False
+\end{myvpython}
+
+Study the logic of this function. Its parameters are two spheres, so when you call the function, you have to give it the names of two spheres. The function then calculates the distance between the spheres. If this distance is less than the sum of the radii of the spheres, the function returns \code{True}, meaning that the spheres indeed collided. Otherwise, it returns \code{False}, meaning that the spheres did not collide. 
+
+\emph{This function will only work for two spheres because we are comparing the distance between them to the sum of their radii. Detecting collisions between boxes and spheres will come later.}
+
+\item Inside the \code{for} loop that updates the position of the \emph{bullet}, add the following lines:
+
+\begin{myvpython}
+        for thisball in ballsList:
+            if collisionSpheres(thisbullet, thisball):
+                thisball.pos=vector(0,-10,0)
+                thisball.v=vector(0,0,0)
+\end{myvpython}
+
+After adding these lines, the bullet \code{for} loop will look like this: (You should not need to type this, just compare it to your program.)
+
+\begin{myvpython}
+    for thisbullet in bulletsList:
+        thisbullet.pos=thisbullet.pos+thisbullet.v*dt
+        for thisball in ballsList:
+            if collisionSpheres(thisbullet, thisball):
+                thisball.pos=vector(0,-10,0)
+                thisball.v=vector(0,0,0)
+\end{myvpython}
+
+For each bullet in the bulletsList, the program updates the position of the given bullet and then loops through each ball in the ballsList. For each ball, the program checks to see if the given bullet collides with the given ball. If they collide, then it sets the position of the ball to be below the scene at $y=-10$, and it sets the velocity of the ball to be zero. If they do not collide, nothing happens because there is no \code{else} statement.
+
+\item Run your program. You will notice that when a bullet hits a ball, the ball disappears from the scene. Note that it is technically still there, and the computer is still calculating its position with each time step. It is simply not in the scene, and its velocity is zero. If you zoom outward, you will see the balls. (They are drawn on top of each other, so you might only see one of them.)
+
+\end{enumerate}
+
+\pagebreak
+
+\analysis
+
+We now have the tools to make a game. In a future chapter you will have the freedom to create a game of your choice based on what we've learned. However, in these exercises, you will merely add functionality to this program to make it a more interesting game.
+
+\begin{description}
+	\item[C] Create a new file. Copy and paste your program from this lesson. 
+	Add all of the following features.
+\begin{enumerate}
+	\item If a bullet exits the scene (i.e. \code{bullet.pos.y $>$ 5}), set its velocity to zero.
+	\item Create a variable called \code{hits} and add one to this variable every time a missile hits a sphere. Remember, you increment a variable like the example shown below.
+\begin{myvpython}
+	hits=hits+1	
+\end{myvpython}
+	\item Print \code{hits} every time a missile hits a ball.
+\end{enumerate}
+
+	\item[B] Create a new file. Copy and paste your program from {\bf C}. Add the following features.
+
+\begin{enumerate}
+	\item Make 10 balls that move back and forth on the screen and set their y-positions to be greater than $y=0$ so that they are all on the top half of the screen.
+	\item Add a variable called \code{shots} and increment this variable every time a bullet is fired.
+\end{enumerate}
+
+	\item[A] Create a new file. Copy and paste your program from {\bf B}. Add the following features.
+
+\begin{enumerate}
+	\item The score should not be simply based on whether a bullet hits a ball, but it should also be based on how many missiles are needed. For example, if you hit all four balls with only four bullets shot, then you should get a higher score. Also, if you hit all four balls with only four bullets shot in only 1 s, then you should get a higher score than if it required 10 s. Design a scoring system  based on bullets fired, hits, and time. This will require a mathematical function of your choosing that gives you the desired outcome. Write your scoring system below. Describe the goals of your scoring system, how points are awarded or subtracted, and write a mathematical function that either computes the score as a function of shots, hits, and time or write a function that updates the score whenever a shot, hit, or time changes. 
+
+\tightframe{\vspace{1.5in} \ }
+
+	\item Program your scoring system into the code. Use a variable \code{score} for the total score. Use a \code{print()} statement to update the score every time it changes.
+		
+	\item After you are confident that it is working, write down your top 5 scores.
+
+\tightframe{\vspace{0.75in} \ }
+	
+	\item Ask at least three friends to play the game one or more times and write down the top score(s) by each friend.
+
+\tightframe{\vspace{0.75in} \ }
+
+	\item What would you like to change about your scoring system or game based on the experience of your friends?
+
+\end{enumerate}
+
+\end{description}

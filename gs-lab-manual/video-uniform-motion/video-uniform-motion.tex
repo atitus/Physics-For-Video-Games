@@ -1,0 +1,244 @@
+
+\lab{LAB:  Video Analysis of Uniform Motion}
+
+\apparatus
+
+\equip{Tracker software (free; download from \href{http://www.opensourcephysics.org/items/detail.cfm?ID=7365}{http://www.opensourcephysics.org/items/detail.cfm?ID=7365})}
+\equip{video: \code{uniform-motion-ball-slow.mov} from \href{http://physics.highpoint.edu/~atitus/videos/}{http://physics.highpoint.edu/$\sim$atitus/videos/}}
+\equip{video: \code{uniform-motion-ball-fast.mov} from \href{http://physics.highpoint.edu/~atitus/videos/}{http://physics.highpoint.edu/$\sim$atitus/videos/}}
+
+\longgoal
+
+In this experiment, you will measure and graph the x-position of a rolling steel ball as a function of time. In addition, you will learn how to use video analysis software \emph{Tracker} to measure position as a function of time for an object and find the best-fit curve to a graph.
+
+\introduction
+
+A video is basically a set of images recorded at a rate of 30 frames per second, or in other words a time interval of 1/30 s between frames. (However, high-speed video has a higher frame rate.) To measure an object's position in a video, you need to:
+
+\begin{enumerate}
+	\item define a coordinate system including an origin and x,y axes.
+	\item define a scale; in other words define a standard length, perhaps 1 m, in the video. For this, it helps to have an object of known length, such as a meterstick, in the video. This is called a \emph{calibration}.
+\end{enumerate}
+
+%	(1) define a coordinate system including an origin and x,y axes.\\
+%	\\	
+%	\indent
+%	(2) define a scale; in other words define a standard length, perhaps 1 m, in the video. For this, it helps to have an object of known length, such as a meterstick, in the video. \\ 
+	
+	It's very important that the calibration instrument, like a meterstick, is in the same plane as the object's motion. If the meterstick is closer to the camera or further from the camera than the object you are studying, then your measurement of position will be inaccurate.
+
+Consider the object in Fig. \ref{video-uniform-motion/x-y-plane}. To measure its x-position, draw a perpendicular line from the object to the x-axis. To measure its y-position, draw a perpendicular line from the object to the y-axis.
+
+\scaledimage{video-uniform-motion/x-y-plane}{Position of an object depends on the origin and scale of the coordinate system.}{0.5}
+
+
+\smallframe{Using the 1 m scale shown in the image, estimate the (x,y) coordinate of the object and use this to calculate the approximate distance of the object from the origin in Fig. \ref{video-uniform-motion/x-y-plane}}
+
+Video analysis software makes it easy to measure position coordinates (both x and y) and time for an object. After defining the scale and the coordinate system, you click on the object. The software shows a dot where you clicked and advances the video to the next frame. The software measures the position of where you clicked in units of pixels and then uses the calibration and your definition of the coordinate system to convert this position in pixels to a position in meters (or whatever units are used in the calibration).
+
+The software also measures time because it knows that the video is recorded at 30 frames per second (or perhaps higher for high-speed video). Thus, whenever you advance the video, time advances 1/30 s. With time and position measured by the software, you can calculate velocity by numerically calculating the derivative of the position with respect to time. Other variables can also be calculated and graphed. All of these calculations can be done by the software.
+
+%Suppose an object moves with uniform motion in the +x direction. Fig. \ref{video-uniform-motion/motion-map} shows an object at intervals of 1/30 s between the first image on the left and the last image  on the right.
+
+%\scaledimage{video-uniform-motion/motion-map}{Position of an object at equal time intervals of 1/30 s.}{0.8}
+
+%\tightframe{Suppose that we define $t=0$ to occur at the initial position of the object (the left image). In Fig. \ref{video-uniform-motion/motion-map}, label the time $t$ for each subsequent position of the object.}
+
+%\bigframe{Measure the x-position of the object from the first image to the last image. Define the origin $x=0$ to be the position of the object at $t=0$.  Make a data table below showing x-position ($x$) and time ($t$) for the object.
+%}
+
+%\smallframe{By examining the x-coordinate of the object as a function of time, is the x-motion characterized by uniform motion or non-uniform motion (speeding up or slowing down, for example)? Give a reason for your answer.}
+
+%\medframe{Sketch a graph of x vs. t for the object. No numbers are needed.}
+
+%\medframe{If the object instead moves to the left and if the origin is defined to be the furthest image on the right, what would the graph look like? }
+
+\procedure
+
+{\bf(Note: icons and screen captures in this handout refer to an older version of Tracker. You will notice some differences in the newest version of Tracker.)}
+
+\begin{enumerate}
+	\item Download the file \file{constant-velocity-slow.mov} from the given web site by right-clicking on the link and choosing {\bf Save As...} to save it to your desktop.
+	\item Open the \file{Tracker} software on your computer.
+	\item Use the menu \menu{Video$\to$Import...} to import your video, as shown in Figure \ref{video-uniform-motion/video-import}.
+
+\scaledimage{video-uniform-motion/video-import}{Video$\to$Import menu}{0.5}
+	
+	\item To zoom in or out on the video, click on the toolbar's magnifying glass icon that is shown in Figure \ref{video-uniform-motion/zoom}. When it appears with a \button{+}, then clicking once on the video will zoom in (thus making it larger).  Clicking the magnifying glass again will make it \button{--}; then clicking on the video will zoom out (thus making it smaller). Zoom in and out on the video to see how it works.
+	
+\scaledimage{video-uniform-motion/zoom}{The icon used to expand the video.}{1}	
+	
+	\item At this point, it's nice to lay out the video and graphs so that you can clearly see everything. The middle border between panes, seen in Fig. \ref{video-uniform-motion/page-arrange}, can be dragged left and right to make the video pane smaller and graphs larger. The same is true of any other bar that separates panes in the window.
+	
+	\scaledimage{video-uniform-motion/page-arrange}{Drag the vertical or horizontal bars the make panes larger or smaller.}{0.4}
+		
+	\item Note the video controls at the bottom of the video pane. Go ahead and play the video, step it forward, backward, etc. in order to learn how the video controls work. Note the counter that merely shows the frame number for any frame. Also, click on each of the icons in the video control bar to see what they are used for. Finally, use the left and right arrow keys on your keyboard, and note that they can be used to control the video as well.
+
+	\item Rewind to the first frame of the video. This is the instant that you will begin making measurements of the position of the moving object.
+	
+	\item Since the ball moves fairly slowly on the track, we can skip frames between marking the ball and thus take fewer data points. Click on the \menu{Step Size} button, as shown in Figure \ref{video-uniform-motion/step-size} and change it to {\bf 5}.
+	
+\scaledimage{video-uniform-motion/step-size}{Change the step size in order to skip frames.}{0.5}
+	
+	\item You now need to define the origin of the coordinate system. In the toolbar, click the \menu{Axes} icon shown in Fig. \ref{video-uniform-motion/coord-icon} to show the axes of the coordinate system. (By now, you have probably noticed that you can hover the mouse over each icon to see what they do).
+	
+	\image{video-uniform-motion/coord-icon}{Icon used to set the coordinate system axes.}
+
+	\item Click and drag on the video to place the origin of the coordinate system at the location where you would like to define (0,0), as shown in Figure \ref{video-uniform-motion/coord-sys}. You can place the origin at any point you choose, but in this case, it makes sense to put the origin at the location of the ball in the first frame being analyzed. 
+		
+	\scaledimage{video-uniform-motion/coord-sys}{Click and drag to set the origin of the coordinate system}{0.5}
+	
+	\item If you click the x-axis and drag, you can rotate the coordinate system. In this case, the video camera was not level; therefore, rotate the x-axis until it is parallel to the track.
+	
+	\item Click the \menu{Axes} tool again to hide the axes from the video pane. You can click this icon at any time to show or hide the axes.
+
+	\item Now, you must calibrate distances measured in the video. In the toolbar, click on the \menu{Tape Measure} icon shown in Figure \ref{video-uniform-motion/ruler} to set the scale for the video.
+		
+	\scaledimage{video-uniform-motion/ruler}{Icon used to set the scale.}{1}
+
+	\item A blue double-sided arrow will appear. Move the left end of the arrow to the left end of the track, and move the right end of the arrow to the right end of the track. Double-click the number that is in the center of the arrow, and enter the length of the track, 2.2. (Our units are meters, but Tracker does not use units. You must remember that the number 2.2 is given in meters.) The scale will appear as shown in Figure \ref{video-uniform-motion/set-scale}.
+
+	\scaledimage{video-uniform-motion/set-scale}{Enter the length of the track.}{0.6}
+	
+	\item Click the tape measure icon again to hide the blue scale from the video.
+
+	\item You are ready to add markers to the video to mark the position of the ball. Let's not show the coordinate system and scale. It's too distracting. So, make sure you've clicked the \menu{Axes} and \menu{Tape Measure} icons in the toolbar to hide them.
+		
+	\item To add markers, click on the \button{Create} button and select \menu{Point Mass} as shown in Figure \ref{video-uniform-motion/add-markers}. Then, {\bf mass A} will be created, and a new $x$ vs. $t$ graph will appear in a different pane. You will now be able to mark the position of the ball which will be referred to as {\bf mass A}.
+
+	\scaledimage{video-uniform-motion/add-markers}{The Track Control toolbar.}{0.5}
+	
+	\item We will want to set the frame step size to 5 so that it will skip 4 frames every time we step forward in the video. Double check that the step size is 5 in the video control toolbar.
+
+	\item  {\bf To mark the center of the ball, hold the SHIFT key down and click once on the center of the ball.} You should notice that a marker appears at the position of the ball where you clicked and that the video advances one step.
+	
+	\item Again, shift-click on the ball to mark its position. You should now see two marks.
+	
+	\item Continue marking the position of the ball until it reaches the right end of the track. Note that only a few of the marks are shown in the video pane. To display all of the marks or a few of the marks or none of the marks, use the \menu{Set Trail Length} icon shown in Figure \ref{video-uniform-motion/set-trail}. Clicking this icon continuously will cycle through no trail, short trail, and full trail which will show you no marks, a few marks, or all marks. 
+
+	\scaledimage{video-uniform-motion/set-trail}{The Set Trail icon is used to vary the number of marks shown.}{1}
+	
+	
+	 After marking the ball as it moves from the left end to the right end of the track, your video should look like the picture shown in Fig. \ref{video-uniform-motion/final-dots} if you have set the trail length to show the full trail.
+		
+	\scaledimage{video-uniform-motion/final-dots}{Marks showing the ball's position.}{0.4}
+		
+	\item Tracker uses the frame and frame rate to calculate $t$, and it uses the scale and coordinates of the marks to calculate $x$ and $y$ coordinates for the ball. It uses numerical differentiation to calculate x-velocity and y-velocity.
+\end{enumerate}
+
+\analysis
+
+\subsection*{$x$ vs. $t$ graph}
+
+\begin{enumerate}
+	\item We will now analyze the $x$ vs. $t$ graph. You can click and drag the border of the video pane to make it smaller so that you can focus on the graph.
+	\item Play the video. (You can hide the marks if you wish by clicking the \menu{Show or hide positions} icon, and you can show the path by clicking the \menu{Show or hide paths} icon. Both of these icons are in the toolbar.) Note how the graph and video are synced. Each video frame data point is shown in the graph using a filled rectangle.
+	
+	Also, when you click on a data point on the graph, the video moves to the corresponding frame.
+	
+	\item Observe the $x$ vs. $t$ graph.
+		
+	\tinyframe{Describe in words the type of function that describes this graph of x vs. t? (i.e. linear, quadratic, square root, sinusoidal, etc.)}
+	
+	\item  Right-click (or ctrl-click) on the graph and select \menu{Analyze...}. In the resulting window, check the checkbox for \menu{Fit}, and additional input boxes will appear, as shown in Figure \ref{video-uniform-motion/curve-fit}. The Fit Name should be ``Line'' and the equation will be $x=a*t+b$ where $a$ is the slope and $b$ is the vertical intercept. Check the checkbox for \menu{Autofit} and the best-fit line will appear in the graph.
+	
+	\scaledimage{video-uniform-motion/curve-fit}{The Data Tool for finding the best-fit curve for the data.}{0.5}
+	
+	
+	\smallframe{Record the function and the values of the constants for your curve fit. Write the function for x(t), with the appropriate constants (also called fit parameters).}
+
+	\smallframe{In general, what does the slope of the x vs t graph tell you? (Consider its units. Your answer should be a sentence, not a number.) }
+	
+	\smallframe{From the curve fit parameters, determine the x-velocity of the ball.}
+	
+\subsection*{$v_x$ vs. $t$ graph}
+
+	
+	\item Now, we will look at the x-velocity vs. time graph.
+	
+	\smallframe{What do you expect the x-velocity vs. time graph to look like? Sketch your prediction below.}
+	
+	
+	\item Close the Data Tool window and return to the main window. Click once on the vertical axis label and change it from $x$ to $vx$, as shown in Figure \ref{video-uniform-motion/x-velocity}.
+	
+	\scaledimage{video-uniform-motion/x-velocity}{Changing the variables plotted on the graph.}{0.4}
+		
+	
+Note that the data appears to be all over the place. That's because by default, the graph is ``zoomed in'' on the data. If you examine the numbers on the vertical axis, you'll notice that the data probably lies between 0.3 m/s and 0.35 m/s (though your data might also vary from mine). That's a very small variation in the velocity during the 5-second time interval that the ball is moving. And the variation is likely due to measurement error such as not clicking exactly on the center of the ball for every mark.
+	
+	\item Hover over the lowest part of the vertical axis (near the graph's origin, on the vertical axis). Click once and change the minimum on the vertical scale to 0. Do the same thing at the top of the scale and change the maximum to 0.5. The data now appears to be along a horizontal line, though there is some scattering in the data due to uncertainty in the measurements, as shown in Figure \ref{video-uniform-motion/velocity-data}.
+	
+	\scaledimage{video-uniform-motion/velocity-data}{The x-velocity vs. time graph.}{0.4}
+	
+	\item Right-click (or ctrl-click) on the graph and select \menu{Analyze...} in order to analyze the $v_x$ vs. $t$ graph. You may notice that the data for both $x$ and $v_x$ are displayed on the same graph. If this occurs, uncheck the checkboxes for $x$ in the upper right corner of the window.  
+	
+	\item Once again, change the minimum and maximum values on the scale so that the graph is not zoomed in on the data. Do an auto-fit. 
+	
+	\smallframe{Record the fit constants and equation for the curve fit. From the curve fit, determine the initial x-velocity.}
+	
+	\smallframe{You will notice a slight downward slope of this graph. What does this tell you? Answer in a complete sentence.}
+	
+	\item Since the x-velocity is nearly constant, we would like to have an average of the x-velocity measured at each instant. Thus, check the checkbox for \menu{Statistics}.
+	
+	\smallframe{Record the mean x-velocity and the standard deviation.}
+	
+	\smallframe{Is the slope of the $x$ vs. $t$ graph within $\overline{v_x}\pm \sigma$?}
+
+	\item Be sure to save the Tracker file in the same folder as your video. Keep these files for your records. In fact, it is best to save as you go. {\bf \emph{Remember, save early and often!}}
+	
+\end{enumerate}
+
+\report
+
+\begin{description}
+
+\item[C]  Complete the experiment and report your answers for the following questions.
+
+\begin{enumerate}
+	 \item If you were to only see the marks in the video and not see any graphs, how would you know that it is uniform motion (as opposed to non-uniform motion)?
+	\item What is the x-velocity of the ball as measured by the slope of your graph of x vs. t?
+	\item What is the x-velocity of the ball as measured by the average of the values of $v_x$ on the graph of $v_x$ vs. $t$?
+	\item When you found the mean value of $v_x$, you also recorded the standard deviation. What was the standard deviation and did your results reported in parts (2) and (3) agree within this standard deviation?
+\end{enumerate}
+
+\item[B] Do all parts for {\bf C}, analyze the motion of the ball in the video \file{constant-velocity-fast.mov} and answer the following questions.
+
+\begin{enumerate}
+ \item What is the x-velocity of the ball as determined from the $x$ vs. $t$ graph?
+ \item What is the average and standard deviation of the x-velocity of the ball as determined from the $v_x$ vs. $t$ graph?
+\end{enumerate}
+
+\item[A] Do all parts for {\bf B} and answer the following questions. Note that you can make a sketch using a ruler. You don't have to use graph paper. However, you may use graph paper or a computer to do your sketches.
+
+\begin{enumerate}
+
+ \item Car A travels with a constant x-velocity of 30 mph for two hours, and Car B travels with a constant x-velocity of 60 mph for two hours. Each of them start at the origin at $t=0$. On the same set of axes, sketch a graph of $x$ vs. $t$ for each car. (There should be two lines on your graph. Be sure to label the axes with correct units.)
+% \item For the cars in the previous question, sketch a graph of $v_x$ vs. $t$ for the two cars on the same set of axes.
+ \item Suppose that the ball in the video started at the right end of the track and traveled with a constant velocity to the left. If the origin is set at the left end of the track with the $+x$ axis pointing to the right (just as before), sketch a graph of $x$ vs. $t$ for the ball.
+% \item What would a graph of $v_x$ vs. $t$ look like for the ball in the previous question?
+ \item Suppose that the ball in the video started at the right end of the track and traveled with a constant velocity to the left. If the origin is set at the right end of the track with the $+x$ axis pointing to the right, sketch a graph of $x$ vs. $t$ for the ball.
+% \item What would a graph of $v_x$ vs. $t$ look like for the ball in the previous question?
+\end{enumerate}
+\end{description}
+
+
+%Key%
+
+%C
+
+%1.  The marks are evenly spaced.
+%2.  0.319 m/s
+%3.  0.318 m/s
+%4.  0.015 m/s
+
+%B
+
+%1.  0.529 m/s
+%2.  0.526 +- 0.016 m/s
+
+%A
+
+%1. Car B has twice the slope as Car A.
+%2. Slope is negative. y-intercept is at 2 m.
+%3. Slope is negative. y-intercept is at 0.
+

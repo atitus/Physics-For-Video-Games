@@ -1,0 +1,9 @@
+mark top and bottom and right and left
+calculate center of mass
+
+vyi = -1082 cm/s
+vyf = 629 cm/s
+
+vxi = 200 cm/s
+vxf = 67.6 cm/s
+

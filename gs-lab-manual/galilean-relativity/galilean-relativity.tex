@@ -1,0 +1,117 @@
+\lab{Galilean Relativity}
+
+\section*{Introduction}
+
+In a Mythbusters episode called \emph{Vector Vengeance}, the crew shoots a soccer ball out the back of a pickup truck. However, they chose the muzzle speed to be exactly the same speed as the truck, with the muzzle velocity opposite the truck's velocity. (A single frame is shown in Figure \ref{galilean-relativity/soccer-ball}.)
+
+\scaledimage{galilean-relativity/soccer-ball}{A soccer ball shot out the back of a pickup truck.}{0.35}
+
+\smallframe{When the ball exits the barrel, what will be its path as viewed by a person on the ground?}
+
+\smallframe{If the crew increases the muzzle speed of the ball, what will be its path as viewed by a person on the ground?}
+
+\smallframe{If the crew decreases the muzzle speed of the ball, what will be its path as viewed by a person on the ground?}
+
+\section*{Relative Velocity}
+
+There are three velocities to think about in the Mythbusters video:
+
+\begin{enumerate}
+
+\item The muzzle velocity of the ball $\vec{v^\prime}$ is the velocity of the ball as measured by a person who is sitting at rest with respect to the gun. We will call this the \emph{Other} frame because it is not the frame of reference of you who is presumably holding the camera or standing next to it.
+
+\item The velocity of the ball with respect to the ground $\vec{v}$ is the velocity of the ball as measured by a person who is at rest with respect to the ground. This is \emph{you} and is called the \emph{Home} frame.
+
+\item The velocity of the \emph{frame} itself $\vec{\beta}$ is the velocity of the truck as measured by a person on the ground.
+
+\end{enumerate}
+
+
+These three velocities are related by:
+
+\begin{eqnarray*}
+	\vec{v^\prime} & : & \mbox{velocity of an object measured by an observer in the \emph{Other} frame} \\
+	\vec{v} & : &  \mbox{velocity of an object measured by an observer in the \emph{Home} frame} \\
+	\vec{\beta} & : &  \mbox{velocity of the \emph{Other} frame as measured in the \emph{Home} frame}\\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+	\vec{v^\prime} & = & \vec{v} - \vec{\beta} \qquad \mbox{Galilean Transformation Equation}
+\end{eqnarray*}
+
+Note that this is a vector equation, so it must hold true for the x, y, and z components respectively.
+
+\begin{eqnarray*}
+	v^\prime_x & = & v_x - \beta_x \\
+	v^\prime_y & = & v_y - \beta_y \\
+	v^\prime_z & = & v_z - \beta_z \\
+\end{eqnarray*}
+
+A very important point to realize is that \emph{your} velocity in \emph{your} reference frame is always zero. Observers are not moving in their own reference frames. Thus, the velocity of the \emph{Home} frame is always zero by definition.
+
+\subsection*{Example}
+
+\tightframe{
+
+{\bf Question:}
+
+A Mythbusters crew shoots a soccer ball to the right out the back of a pickup truck with a muzzle speed of 20 m/s. The truck is moving with a speed of 25 m/s to the left. 
+
+(a) In what direction is the ball moving, relative to a person on the ground, after it exits the muzzle?
+
+(b) What is the ball's x-velocity and speed, relative to a person on the ground, after it exits the muzzle?
+
+{\bf Answer:}
+
+The ``Other'' reference frame in this case is the pickup truck. The soccer ball's x-velocity relative to the muzzle is $v^\prime_x=+20$ m/s. The soccer ball's x-velocity relative to the ground is the unknown $\vec{v}$. Solve the Galilean transformation equation above for the unknown.
+
+\begin{eqnarray*}
+	v_x & = & v^\prime_x + \beta_x \\
+	& = & 20 \meter\per\second - 25 \meter\per\second \\
+	& = & -5 \meter\per\second
+\end{eqnarray*}
+
+The x-velocity is $v_x=-5$ m/s which means that the ball is moving to the left with a speed $|v|=5\ m/s$ when it leaves the gun. 
+}
+
+\section*{Back to the shooter game.}
+
+In the last chapter, you finished writing a simple shooter game where you move a box right and left on a keyboard and press the spacebar to fire bullets. \emph{But there was one major problem with our simulation. It violated physics (unless you design a special mechanism inside the box.}
+
+\smallframe{What is wrong with the motion of the bullets in our simulation?}
+
+\subsection*{Example}
+
+\tightframe{
+
+{\bf Question:}
+
+A shooter is moving with a velocity of 2 m/s in the $-x$ direction when it fires a bullet in the $+y$ direction with a muzzle speed of 5 m/s. What is the velocity of the bullet for a stationary observer?
+
+{\bf Answer:}
+
+The ``Other'' reference frame in this case is the shooter which has a velocity $\vec{\beta}=(-2,0,0)$ m/s. The bullet's muzzle velocity is $\vect{v^\prime}=(0,5,0)$ m/s. The bullet's velocity in the Home frame is 
+
+\begin{eqnarray*}
+	\vect{v} & = & \vec{v^\prime} + \vec{\beta} \\
+	& = & (0,5,0)\ \meter \per \second + (-2,0,0)\ \meter \per \second \\
+	& = & (-2,5,0)
+\end{eqnarray*}
+
+Though the bullet is moving upward at a speed of 5 m/s, it still moves to the left with a velocity of $-2$ m/s. As a result, it will stay above the shooter as long as the shooter continues to move with a constant velocity.
+
+}
+
+
+\pagebreak
+
+\section{Homework}
+
+\begin{enumerate}
+	\item	A shooter is moving with a velocity of 3 m/s in the $+x$ direction. You want it to fire a bullet so that the bullet will move vertically (+y direction) in the Home frame with a speed of 4 m/s. What should be the velocity of the bullet in the reference frame of the shooter?
+	
+	\item A frog is riding a log that is moving in the $+y$ direction with a speed of 3 m/s. If the frog launches itself in the $-x$ direction with a speed of 1.5 m/s, what will be the frog's velocity relative to an observer on the riverbank?
+	
+	\item A person in a spaceship reports to you that a bullet was launched with a velocity of (3,-4,0) m/s. You measure the velocity of the ball and find that it is (0,-2,0) m/s. What is the velocity of the spaceship relative to you?
+
+\end{enumerate}
