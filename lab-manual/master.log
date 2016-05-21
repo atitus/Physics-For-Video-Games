@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 FEB 2016 20:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 MAY 2016 15:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,12 +615,12 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 213.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 213.
-LaTeX Font Info:    Try loading font information for U+msa on input line 218.
+LaTeX Font Info:    Try loading font information for U+msa on input line 219.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 218.
+LaTeX Font Info:    Try loading font information for U+msb on input line 219.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -632,14 +632,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (17.67337pt too wide) in paragraph at lines 223--234
+Overfull \hbox (17.67337pt too wide) in paragraph at lines 224--235
 \T1/cmr/m/n/10 also copy this book un-der the GNU Free Doc-u-men-ta-tion Li-cen
 se ver-sion 1.2, http://www.gnu.org/licenses/fdl.txt,
  []
 
 [2]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 236.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 237.
  (./master.toc)
 \tf@toc=\write5
 \openout5 = `master.toc'.
@@ -1189,7 +1189,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--69
 
  []
 
-<vpython-lists-and-ifs/4-balls.png, id=920, 511.9125pt x 531.9875pt>
+<vpython-lists-and-ifs/4-balls.png, id=921, 511.9125pt x 531.9875pt>
 File: vpython-lists-and-ifs/4-balls.png Graphic file (type png)
 
 <use vpython-lists-and-ifs/4-balls.png>
@@ -1235,7 +1235,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-<vpython-collision-detection/spheres.pdf, id=1134, 443.6575pt x 577.15625pt>
+<vpython-collision-detection/spheres.pdf, id=1135, 443.6575pt x 577.15625pt>
 File: vpython-collision-detection/spheres.pdf Graphic file (type pdf)
 
 <use vpython-collision-detection/spheres.pdf>
@@ -1246,7 +1246,7 @@ line 25.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<vpython-collision-detection/d-spheres.png, id=1136, 493.845pt x 388.45125pt>
+<vpython-collision-detection/d-spheres.png, id=1137, 493.845pt x 388.45125pt>
 File: vpython-collision-detection/d-spheres.png Graphic file (type png)
 
 <use vpython-collision-detection/d-spheres.png>
@@ -1271,7 +1271,7 @@ Underfull \vbox (badness 5924) has occurred while \output is active []
 
  (./galilean-relativity/galilean-relativity.tex
 Chapter 11.
-<galilean-relativity/soccer-ball.png, id=1316, 1061.9675pt x 632.3625pt>
+<galilean-relativity/soccer-ball.png, id=1317, 1061.9675pt x 632.3625pt>
 File: galilean-relativity/soccer-ball.png Graphic file (type png)
 
 <use galilean-relativity/soccer-ball.png>
@@ -1304,14 +1304,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 12.
-<collision-barrier/ball-1d.pdf, id=1354, 266.9975pt x 288.07625pt>
+<collision-barrier/ball-1d.pdf, id=1355, 266.9975pt x 288.07625pt>
 File: collision-barrier/ball-1d.pdf Graphic file (type pdf)
 
 <use collision-barrier/ball-1d.pdf>
 Package pdftex.def Info: collision-barrier/ball-1d.pdf used on input line 37.
 (pdftex.def)             Requested size: 133.49841pt x 144.03777pt.
  [80] [81 <./collision-barrier/ball-1d.pdf>] <collision-barrier/ball-2d-no-fric
-tion.pdf, id=1419, 483.8075pt x 289.08pt>
+tion.pdf, id=1420, 483.8075pt x 289.08pt>
 File: collision-barrier/ball-2d-no-friction.pdf Graphic file (type pdf)
 
 <use collision-barrier/ball-2d-no-friction.pdf>
@@ -1319,7 +1319,7 @@ Package pdftex.def Info: collision-barrier/ball-2d-no-friction.pdf used on inpu
 t line 83.
 (pdftex.def)             Requested size: 241.90315pt x 144.53964pt.
  [82 <./collision-barrier/ball-2d-no-friction.pdf>]
-<collision-barrier/ball-2d-friction.pdf, id=1505, 539.01375pt x 288.07625pt>
+<collision-barrier/ball-2d-friction.pdf, id=1506, 539.01375pt x 288.07625pt>
 File: collision-barrier/ball-2d-friction.pdf Graphic file (type pdf)
 
 <use collision-barrier/ball-2d-friction.pdf>
@@ -1330,7 +1330,7 @@ ine 103.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [83 <./collision-barrier/ball-2d-friction.pdf>]
-<collision-barrier/ball-2d-hw.pdf, id=1601, 331.2375pt x 163.61125pt>
+<collision-barrier/ball-2d-hw.pdf, id=1602, 331.2375pt x 163.61125pt>
 File: collision-barrier/ball-2d-hw.pdf Graphic file (type pdf)
 
 <use collision-barrier/ball-2d-hw.pdf>
@@ -1338,7 +1338,7 @@ Package pdftex.def Info: collision-barrier/ball-2d-hw.pdf used on input line 11
 5.
 (pdftex.def)             Requested size: 165.61833pt x 81.80542pt.
 
-<collision-barrier/ball-2d-fric-hw.pdf, id=1603, 406.51875pt x 177.66376pt>
+<collision-barrier/ball-2d-fric-hw.pdf, id=1604, 406.51875pt x 177.66376pt>
 File: collision-barrier/ball-2d-fric-hw.pdf Graphic file (type pdf)
 
 <use collision-barrier/ball-2d-fric-hw.pdf>
@@ -1363,7 +1363,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
  []
 
 
-<lab-coefficient-of-restitution/video-import.jpg, id=1728, 534.99875pt x 149.55
+<lab-coefficient-of-restitution/video-import.jpg, id=1729, 534.99875pt x 149.55
 875pt>
 File: lab-coefficient-of-restitution/video-import.jpg Graphic file (type jpg)
  <use lab-coefficient-of-restitution/video-import.jpg>
@@ -1371,7 +1371,7 @@ Package pdftex.def Info: lab-coefficient-of-restitution/video-import.jpg used o
 n input line 22.
 (pdftex.def)             Requested size: 267.49872pt x 74.77919pt.
 
-<lab-coefficient-of-restitution/zoom.jpg, id=1730, 31.11626pt x 27.10126pt>
+<lab-coefficient-of-restitution/zoom.jpg, id=1731, 31.11626pt x 27.10126pt>
 File: lab-coefficient-of-restitution/zoom.jpg Graphic file (type jpg)
 
 <use lab-coefficient-of-restitution/zoom.jpg>
@@ -1380,7 +1380,7 @@ line 26.
 (pdftex.def)             Requested size: 31.11617pt x 27.10118pt.
  [86 <./lab-coefficient-of-restitution/video-import.jpg> <./lab-coefficient-of-
 restitution/zoom.jpg>]
-<lab-coefficient-of-restitution/clip-settings-icon.jpg, id=1744, 26.0975pt x 25
+<lab-coefficient-of-restitution/clip-settings-icon.jpg, id=1745, 26.0975pt x 25
 .09375pt>
 File: lab-coefficient-of-restitution/clip-settings-icon.jpg Graphic file (type 
 jpg)
@@ -1389,7 +1389,7 @@ Package pdftex.def Info: lab-coefficient-of-restitution/clip-settings-icon.jpg
 used on input line 36.
 (pdftex.def)             Requested size: 26.09743pt x 25.09367pt.
 
-<lab-coefficient-of-restitution/step-size.jpg, id=1746, 864.22874pt x 79.29625p
+<lab-coefficient-of-restitution/step-size.jpg, id=1747, 864.22874pt x 79.29625p
 t>
 File: lab-coefficient-of-restitution/step-size.jpg Graphic file (type jpg)
  <use lab-coefficient-of-restitution/step-size.jpg>
@@ -1397,7 +1397,7 @@ Package pdftex.def Info: lab-coefficient-of-restitution/step-size.jpg used on i
 nput line 41.
 (pdftex.def)             Requested size: 432.11331pt x 39.64801pt.
 
-<lab-coefficient-of-restitution/ruler.jpg, id=1748, 32.12pt x 30.1125pt>
+<lab-coefficient-of-restitution/ruler.jpg, id=1749, 32.12pt x 30.1125pt>
 File: lab-coefficient-of-restitution/ruler.jpg Graphic file (type jpg)
 
 <use lab-coefficient-of-restitution/ruler.jpg>
@@ -1405,7 +1405,7 @@ Package pdftex.def Info: lab-coefficient-of-restitution/ruler.jpg used on input
  line 45.
 (pdftex.def)             Requested size: 32.1199pt x 30.11241pt.
 
-<lab-coefficient-of-restitution/coord-icon.jpg, id=1750, 33.12375pt x 29.10875p
+<lab-coefficient-of-restitution/coord-icon.jpg, id=1751, 33.12375pt x 29.10875p
 t>
 File: lab-coefficient-of-restitution/coord-icon.jpg Graphic file (type jpg)
  <use lab-coefficient-of-restitution/coord-icon.jpg>
@@ -1415,14 +1415,14 @@ input line 53.
  [87 <./lab-coefficient-of-restitution/clip-settings-icon.jpg> <./lab-coefficie
 nt-of-restitution/step-size.jpg> <./lab-coefficient-of-restitution/ruler.jpg> <
 ./lab-coefficient-of-restitution/coord-icon.jpg>]
-<lab-coefficient-of-restitution/set-trail.jpg, id=1767, 34.1275pt x 29.10875pt>
+<lab-coefficient-of-restitution/set-trail.jpg, id=1768, 34.1275pt x 29.10875pt>
 File: lab-coefficient-of-restitution/set-trail.jpg Graphic file (type jpg)
 <use lab-coefficient-of-restitution/set-trail.jpg>
 Package pdftex.def Info: lab-coefficient-of-restitution/set-trail.jpg used on i
 nput line 73.
 (pdftex.def)             Requested size: 34.1274pt x 29.10867pt.
 
-<lab-coefficient-of-restitution/create-menu.jpg, id=1769, 169.63374pt x 263.986
+<lab-coefficient-of-restitution/create-menu.jpg, id=1770, 169.63374pt x 263.986
 25pt>
 File: lab-coefficient-of-restitution/create-menu.jpg Graphic file (type jpg)
  <use lab-coefficient-of-restitution/create-menu.jpg>
@@ -1434,7 +1434,7 @@ Package pdftex.def Info: lab-coefficient-of-restitution/create-menu.jpg used on
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<lab-coefficient-of-restitution/select-masses-menu.jpg, id=1771, 169.63374pt x 
+<lab-coefficient-of-restitution/select-masses-menu.jpg, id=1772, 169.63374pt x 
 128.48pt>
 File: lab-coefficient-of-restitution/select-masses-menu.jpg Graphic file (type 
 jpg)
@@ -1485,28 +1485,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
 
  []
 
-<video-fancart/video-import.jpg, id=1927, 534.99875pt x 149.55875pt>
+<video-fancart/video-import.jpg, id=1928, 534.99875pt x 149.55875pt>
 File: video-fancart/video-import.jpg Graphic file (type jpg)
 
 <use video-fancart/video-import.jpg>
 Package pdftex.def Info: video-fancart/video-import.jpg used on input line 26.
 (pdftex.def)             Requested size: 267.49872pt x 74.77919pt.
  [98 <./video-fancart/video-import.jpg>]
-<video-fancart/coord-icon.jpg, id=1938, 33.12375pt x 29.10875pt>
+<video-fancart/coord-icon.jpg, id=1939, 33.12375pt x 29.10875pt>
 File: video-fancart/coord-icon.jpg Graphic file (type jpg)
 
 <use video-fancart/coord-icon.jpg>
 Package pdftex.def Info: video-fancart/coord-icon.jpg used on input line 33.
 (pdftex.def)             Requested size: 33.12366pt x 29.10867pt.
 
-<video-fancart/ruler.jpg, id=1940, 32.12pt x 30.1125pt>
+<video-fancart/ruler.jpg, id=1941, 32.12pt x 30.1125pt>
 File: video-fancart/ruler.jpg Graphic file (type jpg)
 
 <use video-fancart/ruler.jpg>
 Package pdftex.def Info: video-fancart/ruler.jpg used on input line 39.
 (pdftex.def)             Requested size: 32.1199pt x 30.11241pt.
 
-<video-fancart/set-trail.jpg, id=1942, 34.1275pt x 29.10875pt>
+<video-fancart/set-trail.jpg, id=1943, 34.1275pt x 29.10875pt>
 File: video-fancart/set-trail.jpg Graphic file (type jpg)
 
 <use video-fancart/set-trail.jpg>
@@ -1529,7 +1529,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 16.
-<newtons-second-law/puck.png, id=2003, 523.9575pt x 47.17625pt>
+<newtons-second-law/puck.png, id=2004, 523.9575pt x 47.17625pt>
 File: newtons-second-law/puck.png Graphic file (type png)
 
 <use newtons-second-law/puck.png>
@@ -1539,7 +1539,7 @@ Package pdftex.def Info: newtons-second-law/puck.png used on input line 41.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [106 <./newtons-second-law/puck.png>]
-<newtons-second-law/v-vectors.png, id=2011, 417.56pt x 386.44376pt>
+<newtons-second-law/v-vectors.png, id=2012, 417.56pt x 386.44376pt>
 File: newtons-second-law/v-vectors.png Graphic file (type png)
 
 <use newtons-second-law/v-vectors.png>
@@ -1547,14 +1547,14 @@ Package pdftex.def Info: newtons-second-law/v-vectors.png used on input line 72
 .
 (pdftex.def)             Requested size: 208.77948pt x 193.2214pt.
 
-<newtons-second-law/wall.pdf, id=2012, 223.83624pt x 260.975pt>
+<newtons-second-law/wall.pdf, id=2013, 223.83624pt x 260.975pt>
 File: newtons-second-law/wall.pdf Graphic file (type pdf)
 
 <use newtons-second-law/wall.pdf>
 Package pdftex.def Info: newtons-second-law/wall.pdf used on input line 101.
 (pdftex.def)             Requested size: 111.91785pt x 130.48718pt.
 
-<newtons-second-law/collision-acc.pdf, id=2013, 177.66376pt x 124.465pt>
+<newtons-second-law/collision-acc.pdf, id=2014, 177.66376pt x 124.465pt>
 File: newtons-second-law/collision-acc.pdf Graphic file (type pdf)
 
 <use newtons-second-law/collision-acc.pdf>
@@ -1570,7 +1570,7 @@ Overfull \vbox (14.12495pt too high) has occurred while \output is active []
 
 
 [111]
-<newtons-second-law/football-bounce.pdf, id=2137, 185.69376pt x 90.83937pt>
+<newtons-second-law/football-bounce.pdf, id=2138, 185.69376pt x 90.83937pt>
 File: newtons-second-law/football-bounce.pdf Graphic file (type pdf)
 
 <use newtons-second-law/football-bounce.pdf>
@@ -1591,7 +1591,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-[114] [115] <vpython-fancart/arrow.jpg, id=2234, 175.65625pt x 258.9675pt>
+[114] [115] <vpython-fancart/arrow.jpg, id=2235, 175.65625pt x 258.9675pt>
 File: vpython-fancart/arrow.jpg Graphic file (type jpg)
 
 <use vpython-fancart/arrow.jpg>
@@ -1628,7 +1628,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--12
  []
 
 
-<video-projectile-motion/projectile-with-axes.jpg, id=2412, 482.80376pt x 205.7
+<video-projectile-motion/projectile-with-axes.jpg, id=2413, 482.80376pt x 205.7
 6875pt>
 File: video-projectile-motion/projectile-with-axes.jpg Graphic file (type jpg)
  <use video-projectile-motion/projectile-with-axes.jpg>
@@ -1636,7 +1636,7 @@ Package pdftex.def Info: video-projectile-motion/projectile-with-axes.jpg used
 on input line 21.
 (pdftex.def)             Requested size: 386.24353pt x 164.6152pt.
 
-<video-projectile-motion/projectile-x.jpg, id=2416, 482.80376pt x 205.76875pt>
+<video-projectile-motion/projectile-x.jpg, id=2417, 482.80376pt x 205.76875pt>
 File: video-projectile-motion/projectile-x.jpg Graphic file (type jpg)
 
 <use video-projectile-motion/projectile-x.jpg>
@@ -1654,7 +1654,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 2213) has occurred while \output is active []
 
  [127 <./video-projectile-motion/projectile-x.jpg>]
-<video-projectile-motion/video-import.jpg, id=2430, 534.99875pt x 149.55875pt>
+<video-projectile-motion/video-import.jpg, id=2431, 534.99875pt x 149.55875pt>
 File: video-projectile-motion/video-import.jpg Graphic file (type jpg)
 
 <use video-projectile-motion/video-import.jpg>
@@ -1662,7 +1662,7 @@ Package pdftex.def Info: video-projectile-motion/video-import.jpg used on input
  line 46.
 (pdftex.def)             Requested size: 267.49872pt x 74.77919pt.
 
-<video-projectile-motion/coord-icon.jpg, id=2432, 33.12375pt x 29.10875pt>
+<video-projectile-motion/coord-icon.jpg, id=2433, 33.12375pt x 29.10875pt>
 File: video-projectile-motion/coord-icon.jpg Graphic file (type jpg)
 
 <use video-projectile-motion/coord-icon.jpg>
@@ -1670,7 +1670,7 @@ Package pdftex.def Info: video-projectile-motion/coord-icon.jpg used on input l
 ine 58.
 (pdftex.def)             Requested size: 33.12366pt x 29.10867pt.
 
-<video-projectile-motion/ruler.jpg, id=2434, 32.12pt x 30.1125pt>
+<video-projectile-motion/ruler.jpg, id=2435, 32.12pt x 30.1125pt>
 File: video-projectile-motion/ruler.jpg Graphic file (type jpg)
 
 <use video-projectile-motion/ruler.jpg>
@@ -1679,7 +1679,7 @@ Package pdftex.def Info: video-projectile-motion/ruler.jpg used on input line 6
 (pdftex.def)             Requested size: 32.1199pt x 30.11241pt.
  [128 <./video-projectile-motion/video-import.jpg> <./video-projectile-motion/c
 oord-icon.jpg>]
-<video-projectile-motion/set-scale.jpg, id=2449, 639.38875pt x 477.785pt>
+<video-projectile-motion/set-scale.jpg, id=2450, 639.38875pt x 477.785pt>
 File: video-projectile-motion/set-scale.jpg Graphic file (type jpg)
 
 <use video-projectile-motion/set-scale.jpg>
@@ -1687,7 +1687,7 @@ Package pdftex.def Info: video-projectile-motion/set-scale.jpg used on input li
 ne 70.
 (pdftex.def)             Requested size: 191.8181pt x 143.3366pt.
 
-<video-projectile-motion/set-trail.jpg, id=2451, 34.1275pt x 29.10875pt>
+<video-projectile-motion/set-trail.jpg, id=2452, 34.1275pt x 29.10875pt>
 File: video-projectile-motion/set-trail.jpg Graphic file (type jpg)
 
 <use video-projectile-motion/set-trail.jpg>
@@ -1695,7 +1695,7 @@ Package pdftex.def Info: video-projectile-motion/set-trail.jpg used on input li
 ne 82.
 (pdftex.def)             Requested size: 34.1274pt x 29.10867pt.
 
-<video-projectile-motion/trail.jpg, id=2453, 639.38875pt x 477.785pt>
+<video-projectile-motion/trail.jpg, id=2454, 639.38875pt x 477.785pt>
 File: video-projectile-motion/trail.jpg Graphic file (type jpg)
 
 <use video-projectile-motion/trail.jpg>
@@ -1705,7 +1705,7 @@ Package pdftex.def Info: video-projectile-motion/trail.jpg used on input line 8
  [129 <./video-projectile-motion/ruler.jpg> <./video-projectile-motion/set-scal
 e.jpg> <./video-projectile-motion/set-trail.jpg>] [130 <./video-projectile-moti
 on/trail.jpg>]
-<video-projectile-motion/x-t-fit.jpg, id=2477, 728.7225pt x 551.05875pt>
+<video-projectile-motion/x-t-fit.jpg, id=2478, 728.7225pt x 551.05875pt>
 File: video-projectile-motion/x-t-fit.jpg Graphic file (type jpg)
 
 <use video-projectile-motion/x-t-fit.jpg>
@@ -1713,7 +1713,7 @@ Package pdftex.def Info: video-projectile-motion/x-t-fit.jpg used on input line
  107.
 (pdftex.def)             Requested size: 218.61844pt x 165.3189pt.
  [131 <./video-projectile-motion/x-t-fit.jpg>] [132]
-<video-projectile-motion/vy-t-fit.jpg, id=2493, 728.7225pt x 551.05875pt>
+<video-projectile-motion/vy-t-fit.jpg, id=2494, 728.7225pt x 551.05875pt>
 File: video-projectile-motion/vy-t-fit.jpg Graphic file (type jpg)
 
 <use video-projectile-motion/vy-t-fit.jpg>
@@ -1735,7 +1735,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--8
  []
 
 [136] [137] [138] [139]
-<video-angry-birds/x-t-graph.pdf, id=2546, 361.35pt x 252.945pt>
+<video-angry-birds/x-t-graph.pdf, id=2547, 361.35pt x 252.945pt>
 File: video-angry-birds/x-t-graph.pdf Graphic file (type pdf)
 
 <use video-angry-birds/x-t-graph.pdf>
@@ -1743,7 +1743,7 @@ Package pdftex.def Info: video-angry-birds/x-t-graph.pdf used on input line 102
 .
 (pdftex.def)             Requested size: 289.0804pt x 202.35626pt.
 
-<video-angry-birds/vy-t-graph.pdf, id=2547, 361.35pt x 252.945pt>
+<video-angry-birds/vy-t-graph.pdf, id=2548, 361.35pt x 252.945pt>
 File: video-angry-birds/vy-t-graph.pdf Graphic file (type pdf)
 
 <use video-angry-birds/vy-t-graph.pdf>
@@ -1808,7 +1808,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
  []
 
 [154] [155]
-<video-center-of-mass/define-menu.jpg, id=2877, 396.48125pt x 353.32pt>
+<video-center-of-mass/define-menu.jpg, id=2878, 396.48125pt x 353.32pt>
 File: video-center-of-mass/define-menu.jpg Graphic file (type jpg)
 
 <use video-center-of-mass/define-menu.jpg>
@@ -1819,7 +1819,7 @@ e 108.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<video-center-of-mass/create-menu.jpg, id=2879, 169.63374pt x 263.98625pt>
+<video-center-of-mass/create-menu.jpg, id=2880, 169.63374pt x 263.98625pt>
 File: video-center-of-mass/create-menu.jpg Graphic file (type jpg)
 
 <use video-center-of-mass/create-menu.jpg>
@@ -1830,7 +1830,7 @@ e 114.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<video-center-of-mass/cm-menu.jpg, id=2881, 304.13625pt x 293.095pt>
+<video-center-of-mass/cm-menu.jpg, id=2882, 304.13625pt x 293.095pt>
 File: video-center-of-mass/cm-menu.jpg Graphic file (type jpg)
 
 <use video-center-of-mass/cm-menu.jpg>
@@ -1842,7 +1842,7 @@ Package pdftex.def Info: video-center-of-mass/cm-menu.jpg used on input line 11
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<video-center-of-mass/select-masses-menu.jpg, id=2883, 169.63374pt x 128.48pt>
+<video-center-of-mass/select-masses-menu.jpg, id=2884, 169.63374pt x 128.48pt>
 File: video-center-of-mass/select-masses-menu.jpg Graphic file (type jpg)
 
 <use video-center-of-mass/select-masses-menu.jpg>
@@ -1928,14 +1928,14 @@ Overfull \hbox (14.85571pt too wide) in paragraph at lines 5--6
 teps re-quired to an-a-lyze videos with Tracker.Tracker
  []
 
-<./appendix-tracker/import.png, id=3346, 538.01pt x 198.7425pt>
+<./appendix-tracker/import.png, id=3347, 538.01pt x 198.7425pt>
 File: ./appendix-tracker/import.png Graphic file (type png)
 
 <use ./appendix-tracker/import.png>
 Package pdftex.def Info: ./appendix-tracker/import.png used on input line 12.
 (pdftex.def)             Requested size: 161.40424pt x 59.6232pt.
 
-<./appendix-tracker/movie-settings.png, id=3347, 26.0975pt x 24.09pt>
+<./appendix-tracker/movie-settings.png, id=3348, 26.0975pt x 24.09pt>
 File: ./appendix-tracker/movie-settings.png Graphic file (type png)
 
 <use ./appendix-tracker/movie-settings.png>
@@ -1943,7 +1943,7 @@ Package pdftex.def Info: ./appendix-tracker/movie-settings.png used on input li
 ne 14.
 (pdftex.def)             Requested size: 20.87802pt x 19.272pt.
 
-<./appendix-tracker/calibration.png, id=3348, 40.15pt x 29.10875pt>
+<./appendix-tracker/calibration.png, id=3349, 40.15pt x 29.10875pt>
 File: ./appendix-tracker/calibration.png Graphic file (type png)
 
 <use ./appendix-tracker/calibration.png>
@@ -1951,7 +1951,7 @@ Package pdftex.def Info: ./appendix-tracker/calibration.png used on input line
 16.
 (pdftex.def)             Requested size: 28.1048pt x 20.37598pt.
 
-<./appendix-tracker/coord-sys.png, id=3349, 28.105pt x 26.0975pt>
+<./appendix-tracker/coord-sys.png, id=3350, 28.105pt x 26.0975pt>
 File: ./appendix-tracker/coord-sys.png Graphic file (type png)
 
 <use ./appendix-tracker/coord-sys.png>
@@ -1959,7 +1959,7 @@ Package pdftex.def Info: ./appendix-tracker/coord-sys.png used on input line 18
 .
 (pdftex.def)             Requested size: 19.67336pt x 18.26811pt.
 
-<./appendix-tracker/massA.png, id=3350, 191.71625pt x 25.09375pt>
+<./appendix-tracker/massA.png, id=3351, 191.71625pt x 25.09375pt>
 File: ./appendix-tracker/massA.png Graphic file (type png)
 
 <use ./appendix-tracker/massA.png>
@@ -1972,8 +1972,8 @@ Package pdftex.def Info: ./appendix-tracker/massA.png used on input line 26.
  <./appendix-tracker/import.png> <./appendix-tracker/movie-settings.png> <./app
 endix-tracker/calibration.png> <./appendix-tracker/coord-sys.png> <./appendix-t
 racker/massA.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./master.aux
 (./coordinates/coordinates.aux) (./lab-coordinates/lab-coordinates.aux)
 (./vpython-intro/vpython-intro.aux) (./vectors/vectors.aux)
@@ -1996,48 +1996,51 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
 (./video-center-of-mass/video-center-of-mass.aux)
 (./game-asteroids/game-asteroids.aux) (./project1/project1.aux)
 (./project-final/project-final.aux) (./appendix-tracker/appendix-tracker.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
 Package rerunfilecheck Info: File `master.out' has not changed.
 (rerunfilecheck)             Checksum: 191540E6603C993214E03CB52C380021;1813.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 12995 strings out of 493117
- 192082 string characters out of 6135433
+ 12996 strings out of 493117
+ 192092 string characters out of 6135433
  395193 words of memory out of 5000000
  14153 multiletter control sequences out of 15000+600000
  33867 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,15n,74p,816b,1883s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
-/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
-/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/h
-elvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/zapfding
-/uzdr.pfb>
-Output written on master.pdf (176 pages, 3184850 bytes).
+pdfTeX warning (dest): name{figure.2.1} has been referenced but does not exis
+t, replaced by a fixed one
+
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
+usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/u
+sr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/u
+rw/helvetic/uhvbo8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/hel
+vetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/zapfding/u
+zdr.pfb>
+Output written on master.pdf (176 pages, 3186056 bytes).
 PDF statistics:
- 3810 PDF objects out of 4296 (max. 8388607)
- 3327 compressed objects within 34 object streams
- 1838 named destinations out of 2073 (max. 500000)
+ 3811 PDF objects out of 4296 (max. 8388607)
+ 3328 compressed objects within 34 object streams
+ 1839 named destinations out of 2073 (max. 500000)
  652 words of extra memory for PDF output out of 10000 (max. 10000000)
 

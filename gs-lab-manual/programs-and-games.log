@@ -1,0 +1,1311 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 MAY 2016 15:59
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**programs-and-games.tex
+(./programs-and-games.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(./tituslab.cls
+Document Class: tituslab 
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/Users/atitus/Library/texmf/tex/latex/misc/wrapfig.sty
+\wrapoverhang=\dimen103
+\WF@size=\dimen104
+\c@WF@wrappedlines=\count88
+\WF@box=\box26
+\WF@everypar=\toks14
+Package: wrapfig 1995/11/02  v 3.1
+)
+(/Users/atitus/Library/texmf/tex/latex/misc/fancyhdr.sty
+\headwidth=\dimen105
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count89
+\calc@Bcount=\count90
+\calc@Adimen=\dimen106
+\calc@Bdimen=\dimen107
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count91
+\calc@Cskip=\skip45
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box27
+\beforetitleunit=\skip46
+\aftertitleunit=\skip47
+\ttl@plus=\dimen108
+\ttl@minus=\dimen109
+\ttl@toksa=\toks15
+\titlewidth=\dimen110
+\titlewidthlast=\dimen111
+\titlewidthfirst=\dimen112
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2011/12/15 v1.6 TOC entries
+\ttl@leftsep=\dimen113
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/Users/atitus/Library/texmf/tex/latex/misc/moreverb.sty
+Package: moreverb 1997/12/07 v2.2d.2 `more' verbatim facilities
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks17
+\verbatim@line=\toks18
+\verbatim@in@stream=\read1
+)
+\verbatim@out=\write3
+\tab@position=\count92
+\tab@size=\count93
+\listing@line=\count94
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 137.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count95
+))
+(./lmmath.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks19
+\ex@=\dimen114
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen115
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count96
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count97
+\leftroot@=\count98
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count99
+\DOTSCASE@=\count100
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen116
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count101
+\c@MaxMatrixCols=\count102
+\dotsspace@=\muskip10
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
+\tag@help=\toks20
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
+\andhelp@=\toks21
+\eqnshift@=\dimen117
+\alignsep@=\dimen118
+\tagshift@=\dimen119
+\tagwidth@=\dimen120
+\totwidth@=\dimen121
+\lineht@=\dimen122
+\@envbody=\toks22
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+\c@prelabctr=\count108
+\c@labpartctr=\count109
+\c@appendixctr=\count110
+\egindent=\skip51
+\saveleftskip=\skip52
+\myfooterspace=\skip53
+\myfooterspacep=\skip54
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen123
+\Gin@req@width=\dimen124
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+
+
+/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty:3539
+: Package ifpdf Error: Name clash, \ifpdf is already defined.
+
+See the ifpdf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3539 }
+        %
+? 
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen125
+\Hy@linkcounter=\count111
+\Hy@pagecounter=\count112
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count113
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count114
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen126
+\Fld@menulength=\count115
+\Field@Width=\dimen127
+\Fld@charsize=\dimen128
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count116
+\c@Item=\count117
+\c@Hfootnote=\count118
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count119
+\c@bookmark@seq@number=\count120
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip55
+)
+(./mandi131.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/extarrows/extarrows.sty
+Package: extarrows 2008/05/15 v1.0b Some extensible arrows
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count121
+\lst@gtempboxa=\box30
+\lst@token=\toks25
+\lst@length=\count122
+\lst@currlwidth=\dimen129
+\lst@column=\count123
+\lst@pos=\count124
+\lst@lostspace=\dimen130
+\lst@width=\dimen131
+\lst@newlines=\count125
+\lst@lineno=\count126
+\lst@maxwidth=\dimen132
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count127
+\lst@skipnumbers=\count128
+\lst@framebox=\box31
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
+(/Users/atitus/Library/texmf/tex/latex/misc/SIunits.sty
+Package: SIunits 2002/08/01 v1.33 Support for the International System of units
+ (MH)
+
+
+\@qskwidth=\skip56
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 46.
+\symgreek=\mathgroup6
+(/usr/local/texlive/2014/texmf-dist/tex/latex/SIunits/SIunits.cfg)
+LaTeX Info: Redefining \usk on input line 558.
+
+Option `cdot' provided!
+LaTeX Info: Redefining \@qsk on input line 558.
+Option `thickqspace' provided!
+Option `amssymb' provided!
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5 Variant command support
+)
+(/Users/atitus/Library/texmf/tex/latex/xargs.sty
+Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
+
+(/Users/atitus/Library/texmf/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2005/11/25 v2.5e package option processing (HA)
+
+(/Users/atitus/Library/texmf/tex/latex/xkeyval/xkeyval.tex
+\XKV@toks=\toks26
+\XKV@depth=\count129
+File: xkeyval.tex 2005/11/25 v2.5e key=value parser (HA)
+))
+\xargs@max=\count130
+\xargs@toksa=\toks27
+\xargs@toksb=\toks28
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen133
+\extrarowheight=\dimen134
+\NC@list=\toks29
+\extratabsurround=\skip57
+\backup@length=\skip58
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(./programs-and-games.aux (./glowscript-intro/glowscript-intro.aux)
+(./vpython-uniform-motion/vpython-uniform-motion.aux)
+(./vpython-lists-and-ifs/vpython-lists-and-ifs.aux)
+(./vpython-keyboard/vpython-keyboard.aux)
+(./vpython-collision-detection/vpython-collision-detection.aux)
+(./game-pong/game-pong.aux) (./vpython-fancart/vpython-fancart.aux)
+(./game-lunar-lander/game-lunar-lander.aux)
+(./game-tank-wars/game-tank-wars.aux) (./vpython-friction/vpython-friction.aux)
+(./game-asteroids/game-asteroids.aux)
+(./arduino-gamecontroller/arduino-gamecontroller.aux)
+(./appendix-tracker/appendix-tracker.aux) (./project1/project1.aux)
+(./project-final/project-final.aux))
+\openout1 = `programs-and-games.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 212.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 212.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 212.
+
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count131
+\scratchdimen=\dimen135
+\scratchbox=\box32
+\nofMPsegments=\count132
+\nofMParguments=\count133
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count134
+\MPscratchDim=\dimen136
+\MPnumerator=\count135
+\makeMPintoPDFobject=\count136
+\everyMPtoPDFconversion=\toks31
+)
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring OFF on input line 212.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count137
+)
+LaTeX Info: Redefining \ref on input line 212.
+LaTeX Info: Redefining \pageref on input line 212.
+LaTeX Info: Redefining \nameref on input line 212.
+
+(./programs-and-games.out) (./programs-and-games.out)
+\@outlinefile=\write4
+\openout4 = `programs-and-games.out'.
+
+\c@lstlisting=\count138
+
+Option `amssymb' provided! 
+ Command \square redefined by SIunits package!
+
+LaTeX Font Info:    Try loading font information for T1+phv on input line 220.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 220.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 220.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 244.
+
+(./programs-and-games.toc)
+\tf@toc=\write5
+\openout5 = `programs-and-games.toc'.
+
+ [3
+
+] [4
+
+]
+\normalparindent=\skip59
+\openout2 = `glowscript-intro/glowscript-intro.aux'.
+
+ (./glowscript-intro/glowscript-intro.tex
+[5
+
+
+]
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 1.
+
+Overfull \hbox (2.11223pt too wide) in paragraph at lines 1--1
+ |[]\T1/phv/b/n/20.74 PROGRAM: In-tro-duc-tion to GlowScript and
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Overfull \hbox (0.19727pt too wide) in paragraph at lines 23--24
+\T1/cmr/m/n/10 Go to []http://www.glowscript.org/[] and cre-ate an ac-count. Yo
+u will need a Google ac-count be-cause GlowScript
+ []
+
+<glowscript-intro/gs-add-folder.png, id=130, 68.255pt x 16.06pt>
+File: glowscript-intro/gs-add-folder.png Graphic file (type png)
+
+<use glowscript-intro/gs-add-folder.png>
+Package pdftex.def Info: glowscript-intro/gs-add-folder.png used on input line 
+31.
+(pdftex.def)             Requested size: 51.19112pt x 12.04495pt.
+
+<glowscript-intro/gs-new-folder.png, id=133, 305.14pt x 149.55875pt>
+File: glowscript-intro/gs-new-folder.png Graphic file (type png)
+
+<use glowscript-intro/gs-new-folder.png>
+Package pdftex.def Info: glowscript-intro/gs-new-folder.png used on input line 
+35.
+(pdftex.def)             Requested size: 152.56961pt x 74.77919pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 38.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [6 <./glowscript-intro/gs-add-folder.png>]
+<glowscript-intro/sphere.png, id=150, 664.4825pt x 450.68375pt>
+File: glowscript-intro/sphere.png Graphic file (type png)
+
+<use glowscript-intro/sphere.png>
+Package pdftex.def Info: glowscript-intro/sphere.png used on input line 65.
+(pdftex.def)             Requested size: 332.24043pt x 225.34131pt.
+ [7 <./glowscript-intro/gs-new-folder.png> <./glowscript-intro/sphere.png>]
+<glowscript-intro/gs-error.png, id=169, 613.29124pt x 155.58125pt>
+File: glowscript-intro/gs-error.png Graphic file (type png)
+
+<use glowscript-intro/gs-error.png>
+Package pdftex.def Info: glowscript-intro/gs-error.png used on input line 92.
+(pdftex.def)             Requested size: 306.64487pt x 77.79042pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 107.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 107.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [8 <./glowscript-intro/gs-error.png>]
+<glowscript-intro/box.jpg, id=193, 194.7275pt x 254.9525pt>
+File: glowscript-intro/box.jpg Graphic file (type jpg)
+
+<use glowscript-intro/box.jpg>
+Package pdftex.def Info: glowscript-intro/box.jpg used on input line 134.
+(pdftex.def)             Requested size: 136.3083pt x 178.46552pt.
+ [9 <./glowscript-intro/box.jpg>] [10] [11]
+<glowscript-intro/gs-frogger-B.png, id=264, 648.4225pt x 407.5225pt>
+File: glowscript-intro/gs-frogger-B.png Graphic file (type png)
+
+<use glowscript-intro/gs-frogger-B.png>
+Package pdftex.def Info: glowscript-intro/gs-frogger-B.png used on input line 2
+92.
+(pdftex.def)             Requested size: 324.21045pt x 203.76074pt.
+
+<glowscript-intro/gs-help.png, id=266, 489.83pt x 309.155pt>
+File: glowscript-intro/gs-help.png Graphic file (type png)
+
+<use glowscript-intro/gs-help.png>
+Package pdftex.def Info: glowscript-intro/gs-help.png used on input line 302.
+(pdftex.def)             Requested size: 244.9144pt x 154.57712pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12 <./glowscript-intro/gs-frogger-B.png>]
+<glowscript-intro/gs-frogger-A.png, id=288, 642.4pt x 400.49625pt>
+File: glowscript-intro/gs-frogger-A.png Graphic file (type png)
+
+<use glowscript-intro/gs-frogger-A.png>
+Package pdftex.def Info: glowscript-intro/gs-frogger-A.png used on input line 3
+18.
+(pdftex.def)             Requested size: 321.19922pt x 200.24763pt.
+) [13 <./glowscript-intro/gs-help.png> <./glowscript-intro/gs-frogger-A.png>]
+\openout2 = `vpython-uniform-motion/vpython-uniform-motion.aux'.
+
+
+(./vpython-uniform-motion/vpython-uniform-motion.tex
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 24.
+<vpython-uniform-motion/track.png, id=304, 432.61626pt x 102.3825pt>
+File: vpython-uniform-motion/track.png Graphic file (type png)
+
+<use vpython-uniform-motion/track.png>
+Package pdftex.def Info: vpython-uniform-motion/track.png used on input line 46
+.
+(pdftex.def)             Requested size: 216.3076pt x 51.19112pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14
+
+
+
+] [15 <./vpython-uniform-motion/track.png>] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+[17] [18]
+Overfull \hbox (5.18903pt too wide) in paragraph at lines 238--239
+[]\T1/cmr/m/n/10 Start a new pro-gram in GlowScript and save this file with a n
+ew name like \T1/cmtt/m/n/10 ball-uniform-motion-C\T1/cmr/m/n/10 . 
+ []
+
+
+Overfull \hbox (5.18903pt too wide) in paragraph at lines 246--247
+[]\T1/cmr/m/n/10 Start a new pro-gram in GlowScript and save this file with a n
+ew name like \T1/cmtt/m/n/10 ball-uniform-motion-B\T1/cmr/m/n/10 . 
+ []
+
+
+Overfull \hbox (5.18903pt too wide) in paragraph at lines 257--258
+[]\T1/cmr/m/n/10 Start a new pro-gram in GlowScript and save this file with a n
+ew name like \T1/cmtt/m/n/10 ball-uniform-motion-A\T1/cmr/m/n/10 . 
+ []
+
+) [19]
+\openout2 = `vpython-lists-and-ifs/vpython-lists-and-ifs.aux'.
+
+ (./vpython-lists-and-ifs/vpython-lists-and-ifs.tex
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+[20
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+
+ []
+
+<vpython-lists-and-ifs/4-balls.png, id=432, 511.9125pt x 531.9875pt>
+File: vpython-lists-and-ifs/4-balls.png Graphic file (type png)
+
+<use vpython-lists-and-ifs/4-balls.png>
+Package pdftex.def Info: vpython-lists-and-ifs/4-balls.png used on input line 7
+4.
+(pdftex.def)             Requested size: 255.95563pt x 265.9931pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21] [22 <./vpython-lists-and-ifs/4-balls.png>] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
+
+ []
+
+) [25]
+\openout2 = `vpython-keyboard/vpython-keyboard.aux'.
+
+ (./vpython-keyboard/vpython-keyboard.tex
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+[26
+
+
+
+] [27] [28]
+Underfull \vbox (badness 4144) has occurred while \output is active []
+
+ [29]
+[30]) [31]
+\openout2 = `vpython-collision-detection/vpython-collision-detection.aux'.
+
+ (./vpython-collision-detection/vpython-collision-detection.tex
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+<vpython-collision-detection/spheres.pdf, id=687, 443.6575pt x 577.15625pt>
+File: vpython-collision-detection/spheres.pdf Graphic file (type pdf)
+
+<use vpython-collision-detection/spheres.pdf>
+Package pdftex.def Info: vpython-collision-detection/spheres.pdf used on input 
+line 19.
+(pdftex.def)             Requested size: 177.45984pt x 230.8584pt.
+ [32
+
+
+
+ <./vpython-collision-detection/spheres.pdf>]
+<vpython-collision-detection/d-spheres.png, id=745, 493.845pt x 388.45125pt>
+File: vpython-collision-detection/d-spheres.png Graphic file (type png)
+
+<use vpython-collision-detection/d-spheres.png>
+Package pdftex.def Info: vpython-collision-detection/d-spheres.png used on inpu
+t line 39.
+(pdftex.def)             Requested size: 246.92189pt x 194.22514pt.
+ [33 <./vpython-collision-detection/d-spheres.png>] [34] [35] [36]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+[38]) [39]
+\openout2 = `game-pong/game-pong.aux'.
+
+ (./game-pong/game-pong.tex
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+
+ []
+
+[40
+
+
+
+] [41] [42] <game-pong/pong-screen.png, id=953, 656.4525pt x 366.36874pt>
+File: game-pong/pong-screen.png Graphic file (type png)
+
+<use game-pong/pong-screen.png>
+Package pdftex.def Info: game-pong/pong-screen.png used on input line 145.
+(pdftex.def)             Requested size: 262.57634pt x 146.54489pt.
+ [43 <./game-pong/pong-screen.png>] [44])
+[45]
+\openout2 = `vpython-fancart/vpython-fancart.aux'.
+
+ (./vpython-fancart/vpython-fancart.tex
+Chapter 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+[46
+
+
+
+] [47] <vpython-fancart/arrow.jpg, id=1041, 175.65625pt x 258.9675pt>
+File: vpython-fancart/arrow.jpg Graphic file (type jpg)
+
+<use vpython-fancart/arrow.jpg>
+Package pdftex.def Info: vpython-fancart/arrow.jpg used on input line 103.
+(pdftex.def)             Requested size: 131.74185pt x 194.22513pt.
+ [48 <./vpython-fancart/arrow.jpg>] [49])
+[50]
+\openout2 = `game-lunar-lander/game-lunar-lander.aux'.
+
+ (./game-lunar-lander/game-lunar-lander.tex [51
+
+
+
+]
+Chapter 8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+[52] [53] <game-lunar-lander/apollo.jpg, id=1136, 128.3997pt x 115.632pt>
+File: game-lunar-lander/apollo.jpg Graphic file (type jpg)
+
+<use game-lunar-lander/apollo.jpg>
+Package pdftex.def Info: game-lunar-lander/apollo.jpg used on input line 89.
+(pdftex.def)             Requested size: 128.39938pt x 115.63171pt.
+ [54 <./game-lunar-lander/apollo.jpg>]
+[55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56])
+[57]
+\openout2 = `game-tank-wars/game-tank-wars.aux'.
+
+ (./game-tank-wars/game-tank-wars.tex
+Chapter 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+[60]
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [61]
+[62] [63]) [64]
+\openout2 = `vpython-friction/vpython-friction.aux'.
+
+ (./vpython-friction/vpython-friction.tex [65
+
+
+
+]
+Chapter 10.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+[66]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67]
+[68] [69] [70] [71]) [72]
+\openout2 = `game-asteroids/game-asteroids.aux'.
+
+ (./game-asteroids/game-asteroids.tex [73
+
+
+
+]
+Chapter 11.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+[74] [75] [76]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+[78]) [79]
+\openout2 = `arduino-gamecontroller/arduino-gamecontroller.aux'.
+
+ (./arduino-gamecontroller/arduino-gamecontroller.tex
+Chapter 12.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--15
+
+ []
+
+<arduino-gamecontroller/terminal.png, id=1671, 779.91376pt x 568.1225pt>
+File: arduino-gamecontroller/terminal.png Graphic file (type png)
+
+<use arduino-gamecontroller/terminal.png>
+Package pdftex.def Info: arduino-gamecontroller/terminal.png used on input line
+ 43.
+(pdftex.def)             Requested size: 233.97594pt x 170.43805pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[80
+
+
+
+] <arduino-gamecontroller/which.png, id=1687, 779.91376pt x 568.1225pt>
+File: arduino-gamecontroller/which.png Graphic file (type png)
+
+<use arduino-gamecontroller/which.png>
+Package pdftex.def Info: arduino-gamecontroller/which.png used on input line 55
+.
+(pdftex.def)             Requested size: 233.97594pt x 170.43805pt.
+ [81 <./arduino-gamecontroller/terminal.png> <./arduino-gamecontroller/which.pn
+g>]
+<arduino-gamecontroller/jupyter.png, id=1700, 837.1275pt x 363.3575pt>
+File: arduino-gamecontroller/jupyter.png Graphic file (type png)
+
+<use arduino-gamecontroller/jupyter.png>
+Package pdftex.def Info: arduino-gamecontroller/jupyter.png used on input line 
+86.
+(pdftex.def)             Requested size: 418.56273pt x 181.6783pt.
+
+<arduino-gamecontroller/new.png, id=1702, 265.99374pt x 327.2225pt>
+File: arduino-gamecontroller/new.png Graphic file (type png)
+
+<use arduino-gamecontroller/new.png>
+Package pdftex.def Info: arduino-gamecontroller/new.png used on input line 90.
+(pdftex.def)             Requested size: 132.99654pt x 163.61084pt.
+
+<arduino-gamecontroller/nb.png, id=1704, 1020.81375pt x 258.9675pt>
+File: arduino-gamecontroller/nb.png Graphic file (type png)
+
+<use arduino-gamecontroller/nb.png>
+Package pdftex.def Info: arduino-gamecontroller/nb.png used on input line 94.
+(pdftex.def)             Requested size: 306.24649pt x 77.69084pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[82 <./arduino-gamecontroller/jupyter.png> <./arduino-gamecontroller/new.png>]
+<arduino-gamecontroller/sphere.png, id=1718, 959.585pt x 798.985pt>
+File: arduino-gamecontroller/sphere.png Graphic file (type png)
+
+<use arduino-gamecontroller/sphere.png>
+Package pdftex.def Info: arduino-gamecontroller/sphere.png used on input line 1
+25.
+(pdftex.def)             Requested size: 287.87772pt x 239.69734pt.
+ [83 <./arduino-gamecontroller/nb.png> <./arduino-gamecontroller/sphere.png>]
+<arduino-gamecontroller/project.jpg, id=1737, 1541.76pt x 2056.68375pt>
+File: arduino-gamecontroller/project.jpg Graphic file (type jpg)
+
+<use arduino-gamecontroller/project.jpg>
+Package pdftex.def Info: arduino-gamecontroller/project.jpg used on input line 
+147.
+(pdftex.def)             Requested size: 154.18503pt x 205.68042pt.
+
+<arduino-gamecontroller/project-top.jpg, id=1738, 1541.76pt x 2056.68375pt>
+File: arduino-gamecontroller/project-top.jpg Graphic file (type jpg)
+
+<use arduino-gamecontroller/project-top.jpg>
+Package pdftex.def Info: arduino-gamecontroller/project-top.jpg used on input l
+ine 147.
+(pdftex.def)             Requested size: 154.18503pt x 205.68042pt.
+
+<arduino-gamecontroller/project-left.jpg, id=1739, 2056.68375pt x 1541.76pt>
+File: arduino-gamecontroller/project-left.jpg Graphic file (type jpg)
+
+<use arduino-gamecontroller/project-left.jpg>
+Package pdftex.def Info: arduino-gamecontroller/project-left.jpg used on input 
+line 148.
+(pdftex.def)             Requested size: 205.68042pt x 154.18503pt.
+
+<arduino-gamecontroller/project-right.jpg, id=1740, 1541.76pt x 2056.68375pt>
+File: arduino-gamecontroller/project-right.jpg Graphic file (type jpg)
+
+<use arduino-gamecontroller/project-right.jpg>
+Package pdftex.def Info: arduino-gamecontroller/project-right.jpg used on input
+ line 148.
+(pdftex.def)             Requested size: 154.18503pt x 205.68042pt.
+ [84 <./arduino-gamecontroller/project.jpg> <./arduino-gamecontroller/project-t
+op.jpg> <./arduino-gamecontroller/project-left.jpg> <./arduino-gamecontroller/p
+roject-right.jpg>]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+) [85]
+<arduino-gamecontroller/arduino-program.png, id=1798, 862.22125pt x 902.37125pt
+>
+File: arduino-gamecontroller/arduino-program.png Graphic file (type png)
+ <use arduino-gamecontroller/arduino-program.png>
+Package pdftex.def Info: arduino-gamecontroller/arduino-program.png used on inp
+ut line 215.
+(pdftex.def)             Requested size: 258.66837pt x 270.71346pt.
+
+<arduino-gamecontroller/arduino-port.png, id=1800, 937.5025pt x 825.0825pt>
+File: arduino-gamecontroller/arduino-port.png Graphic file (type png)
+
+<use arduino-gamecontroller/arduino-port.png>
+Package pdftex.def Info: arduino-gamecontroller/arduino-port.png used on input 
+line 219.
+(pdftex.def)             Requested size: 281.25291pt x 247.52666pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<arduino-gamecontroller/arduino-buttons.png, id=1802, 160.6pt x 118.4425pt>
+File: arduino-gamecontroller/arduino-buttons.png Graphic file (type png)
+
+<use arduino-gamecontroller/arduino-buttons.png>
+Package pdftex.def Info: arduino-gamecontroller/arduino-buttons.png used on inp
+ut line 223.
+(pdftex.def)             Requested size: 48.18036pt x 35.53302pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[86 <./arduino-gamecontroller/arduino-program.png>] [87 <./arduino-gamecontroll
+er/arduino-port.png> <./arduino-gamecontroller/arduino-buttons.png>]) [88]
+\openout2 = `appendix-tracker/appendix-tracker.aux'.
+
+
+(./appendix-tracker/appendix-tracker.tex [89
+
+
+
+]
+Chapter .
+
+Overfull \hbox (14.85571pt too wide) in paragraph at lines 5--6
+[]\T1/cmr/m/n/10 This one-page ``cheat sheet'' will show you the most com-mon s
+teps re-quired to an-a-lyze videos with Tracker.Tracker
+ []
+
+<./appendix-tracker/import.png, id=1853, 538.01pt x 198.7425pt>
+File: ./appendix-tracker/import.png Graphic file (type png)
+
+<use ./appendix-tracker/import.png>
+Package pdftex.def Info: ./appendix-tracker/import.png used on input line 12.
+(pdftex.def)             Requested size: 161.40424pt x 59.6232pt.
+
+<./appendix-tracker/movie-settings.png, id=1854, 26.0975pt x 24.09pt>
+File: ./appendix-tracker/movie-settings.png Graphic file (type png)
+
+<use ./appendix-tracker/movie-settings.png>
+Package pdftex.def Info: ./appendix-tracker/movie-settings.png used on input li
+ne 14.
+(pdftex.def)             Requested size: 20.87802pt x 19.272pt.
+
+<./appendix-tracker/calibration.png, id=1855, 40.15pt x 29.10875pt>
+File: ./appendix-tracker/calibration.png Graphic file (type png)
+
+<use ./appendix-tracker/calibration.png>
+Package pdftex.def Info: ./appendix-tracker/calibration.png used on input line 
+16.
+(pdftex.def)             Requested size: 28.1048pt x 20.37598pt.
+
+<./appendix-tracker/coord-sys.png, id=1856, 28.105pt x 26.0975pt>
+File: ./appendix-tracker/coord-sys.png Graphic file (type png)
+
+<use ./appendix-tracker/coord-sys.png>
+Package pdftex.def Info: ./appendix-tracker/coord-sys.png used on input line 18
+.
+(pdftex.def)             Requested size: 19.67336pt x 18.26811pt.
+
+<./appendix-tracker/massA.png, id=1857, 191.71625pt x 25.09375pt>
+File: ./appendix-tracker/massA.png Graphic file (type png)
+
+<use ./appendix-tracker/massA.png>
+Package pdftex.def Info: ./appendix-tracker/massA.png used on input line 26.
+(pdftex.def)             Requested size: 95.85788pt x 12.54683pt.
+) [90 <./appendix-tracker/import.png> <./appendix-tracker/movie-settings.png> <
+./appendix-tracker/calibration.png> <./appendix-tracker/coord-sys.png> <./appen
+dix-tracker/massA.png>]
+\openout2 = `project1/project1.aux'.
+
+
+(./project1/project1.tex [91
+
+
+
+]
+Chapter .
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+[92]) [93]
+\openout2 = `project-final/project-final.aux'.
+
+ (./project-final/project-final.tex
+Chapter .
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+[94
+
+
+
+]) [95]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
+ (./programs-and-games.aux (./glowscript-intro/glowscript-intro.aux)
+(./vpython-uniform-motion/vpython-uniform-motion.aux)
+(./vpython-lists-and-ifs/vpython-lists-and-ifs.aux)
+(./vpython-keyboard/vpython-keyboard.aux)
+(./vpython-collision-detection/vpython-collision-detection.aux)
+(./game-pong/game-pong.aux) (./vpython-fancart/vpython-fancart.aux)
+(./game-lunar-lander/game-lunar-lander.aux)
+(./game-tank-wars/game-tank-wars.aux) (./vpython-friction/vpython-friction.aux)
+(./game-asteroids/game-asteroids.aux)
+(./arduino-gamecontroller/arduino-gamecontroller.aux)
+(./appendix-tracker/appendix-tracker.aux) (./project1/project1.aux)
+(./project-final/project-final.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
+
+
+Package rerunfilecheck Warning: File `programs-and-games.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `programs-and-games.out':
+(rerunfilecheck)             Before: 6E431235BAEC515789301CB09B72FA6C;1070
+(rerunfilecheck)             After:  DA88CE0E357BFB4AD487DCE0C6B5BB8A;1067.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 292.
+ ) 
+Here is how much of TeX's memory you used:
+ 12237 strings out of 493117
+ 174430 string characters out of 6135433
+ 371606 words of memory out of 5000000
+ 13965 multiletter control sequences out of 15000+600000
+ 33867 words of font info for 52 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,12n,74p,944b,1920s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
+/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/h
+elvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/zapfding
+/uzdr.pfb>
+Output written on programs-and-games.pdf (95 pages, 4070812 bytes).
+PDF statistics:
+ 2294 PDF objects out of 2487 (max. 8388607)
+ 2069 compressed objects within 21 object streams
+ 1393 named destinations out of 1440 (max. 500000)
+ 286 words of extra memory for PDF output out of 10000 (max. 10000000)
+

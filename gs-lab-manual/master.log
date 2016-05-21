@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  27 APR 2016 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 MAY 2016 15:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -620,32 +620,18 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 220.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 220.
-LaTeX Font Info:    Try loading font information for U+msa on input line 225.
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 225.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
 
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (17.67337pt too wide) in paragraph at lines 230--241
-\T1/cmr/m/n/10 also copy this book un-der the GNU Free Doc-u-men-ta-tion Li-cen
-se ver-sion 1.2, http://www.gnu.org/licenses/fdl.txt,
- []
-
-[2]
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 243.
- (./master.toc)
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 244.
+
+(./master.toc)
 \tf@toc=\write5
 \openout5 = `master.toc'.
 
@@ -668,21 +654,30 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <20.74> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
-<coordinates/2d-coordsystem.jpg, id=210, 459.7175pt x 367.3725pt>
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<coordinates/2d-coordsystem.jpg, id=209, 459.7175pt x 367.3725pt>
 File: coordinates/2d-coordsystem.jpg Graphic file (type jpg)
 
 <use coordinates/2d-coordsystem.jpg>
 Package pdftex.def Info: coordinates/2d-coordsystem.jpg used on input line 7.
 (pdftex.def)             Requested size: 229.85818pt x 183.68579pt.
 
-<coordinates/3d-coordsystem.jpg, id=212, 466.74374pt x 398.48875pt>
+<coordinates/3d-coordsystem.jpg, id=211, 466.74374pt x 398.48875pt>
 File: coordinates/3d-coordsystem.jpg Graphic file (type jpg)
 
 <use coordinates/3d-coordsystem.jpg>
 Package pdftex.def Info: coordinates/3d-coordsystem.jpg used on input line 11.
 (pdftex.def)             Requested size: 233.37129pt x 199.24388pt.
  [6 <./coordinates/2d-coordsystem.jpg> <./coordinates/3d-coordsystem.jpg>]
-<coordinates/x-y-points.jpg, id=223, 459.7175pt x 369.38pt>
+<coordinates/x-y-points.jpg, id=222, 459.7175pt x 369.38pt>
 File: coordinates/x-y-points.jpg Graphic file (type jpg)
 
 <use coordinates/x-y-points.jpg>
@@ -2225,8 +2220,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
 
 ]) [195]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
  (./master.aux (./coordinates/coordinates.aux)
 (./lab-coordinates/lab-coordinates.aux)
 (./glowscript-intro/glowscript-intro.aux) (./vectors/vectors.aux)
@@ -2251,20 +2246,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
 (./arduino-gamecontroller/arduino-gamecontroller.aux)
 (./appendix-tracker/appendix-tracker.aux) (./project1/project1.aux)
 (./project-final/project-final.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
 Package rerunfilecheck Info: File `master.out' has not changed.
 (rerunfilecheck)             Checksum: 698B78153D44F2B5642B5EDE054A6428;1892.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 291.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 292.
  ) 
 Here is how much of TeX's memory you used:
  13310 strings out of 493117
  198394 string characters out of 6135433
- 386937 words of memory out of 5000000
+ 386933 words of memory out of 5000000
  14382 multiletter control sequences out of 15000+600000
  33867 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2289,7 +2284,7 @@ s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
 /urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/h
 elvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/zapfding
 /uzdr.pfb>
-Output written on master.pdf (195 pages, 6766133 bytes).
+Output written on master.pdf (195 pages, 6771403 bytes).
 PDF statistics:
  4001 PDF objects out of 4296 (max. 8388607)
  3453 compressed objects within 35 object streams
