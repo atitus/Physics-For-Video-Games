@@ -1,6 +1,6 @@
 \contentsline {chapter}{\numberline {1}Coordinates}{6}{chapter.1}
 \contentsline {chapter}{\numberline {2}LAB: Coordinates}{10}{chapter.2}
-\contentsline {chapter}{\numberline {3}PROGRAM: Introduction to GlowScript and VPython}{12}{chapter.3}
+\contentsline {chapter}{\numberline {3}PROGRAM -- Introduction to GlowScript and VPython}{12}{chapter.3}
 \contentsline {chapter}{\numberline {4}Vectors}{20}{chapter.4}
 \contentsline {chapter}{\numberline {5}Uniform Motion}{30}{chapter.5}
 \contentsline {section}{\numberline {5.1}Homework}{40}{section.5.1}

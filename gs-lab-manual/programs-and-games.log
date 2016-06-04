@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 MAY 2016 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  2 JUN 2016 14:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -529,10 +529,7 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 (./game-pong/game-pong.aux) (./vpython-fancart/vpython-fancart.aux)
 (./game-lunar-lander/game-lunar-lander.aux)
 (./game-tank-wars/game-tank-wars.aux) (./vpython-friction/vpython-friction.aux)
-(./game-asteroids/game-asteroids.aux)
-(./arduino-gamecontroller/arduino-gamecontroller.aux)
-(./appendix-tracker/appendix-tracker.aux) (./project1/project1.aux)
-(./project-final/project-final.aux))
+(./game-asteroids/game-asteroids.aux))
 \openout1 = `programs-and-games.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 212.
@@ -637,8 +634,8 @@ LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <20.74> not available
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <20.74> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 1.
 
-Overfull \hbox (2.11223pt too wide) in paragraph at lines 1--1
- |[]\T1/phv/b/n/20.74 PROGRAM: In-tro-duc-tion to GlowScript and
+Overfull \hbox (11.1327pt too wide) in paragraph at lines 1--1
+ |[]\T1/phv/b/n/20.74 PROGRAM -- In-tro-duc-tion to GlowScript and
  []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
@@ -654,7 +651,7 @@ Overfull \hbox (0.19727pt too wide) in paragraph at lines 23--24
 u will need a Google ac-count be-cause GlowScript
  []
 
-<glowscript-intro/gs-add-folder.png, id=130, 68.255pt x 16.06pt>
+<glowscript-intro/gs-add-folder.png, id=97, 68.255pt x 16.06pt>
 File: glowscript-intro/gs-add-folder.png Graphic file (type png)
 
 <use glowscript-intro/gs-add-folder.png>
@@ -662,7 +659,7 @@ Package pdftex.def Info: glowscript-intro/gs-add-folder.png used on input line
 31.
 (pdftex.def)             Requested size: 51.19112pt x 12.04495pt.
 
-<glowscript-intro/gs-new-folder.png, id=133, 305.14pt x 149.55875pt>
+<glowscript-intro/gs-new-folder.png, id=100, 305.14pt x 149.55875pt>
 File: glowscript-intro/gs-new-folder.png Graphic file (type png)
 
 <use glowscript-intro/gs-new-folder.png>
@@ -677,14 +674,14 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 38.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ) [6 <./glowscript-intro/gs-add-folder.png>]
-<glowscript-intro/sphere.png, id=150, 664.4825pt x 450.68375pt>
+<glowscript-intro/sphere.png, id=117, 664.4825pt x 450.68375pt>
 File: glowscript-intro/sphere.png Graphic file (type png)
 
 <use glowscript-intro/sphere.png>
 Package pdftex.def Info: glowscript-intro/sphere.png used on input line 65.
 (pdftex.def)             Requested size: 332.24043pt x 225.34131pt.
  [7 <./glowscript-intro/gs-new-folder.png> <./glowscript-intro/sphere.png>]
-<glowscript-intro/gs-error.png, id=169, 613.29124pt x 155.58125pt>
+<glowscript-intro/gs-error.png, id=135, 613.29124pt x 155.58125pt>
 File: glowscript-intro/gs-error.png Graphic file (type png)
 
 <use glowscript-intro/gs-error.png>
@@ -700,14 +697,14 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 107.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [8 <./glowscript-intro/gs-error.png>]
-<glowscript-intro/box.jpg, id=193, 194.7275pt x 254.9525pt>
+<glowscript-intro/box.jpg, id=158, 194.7275pt x 254.9525pt>
 File: glowscript-intro/box.jpg Graphic file (type jpg)
 
 <use glowscript-intro/box.jpg>
 Package pdftex.def Info: glowscript-intro/box.jpg used on input line 134.
 (pdftex.def)             Requested size: 136.3083pt x 178.46552pt.
  [9 <./glowscript-intro/box.jpg>] [10] [11]
-<glowscript-intro/gs-frogger-B.png, id=264, 648.4225pt x 407.5225pt>
+<glowscript-intro/gs-frogger-B.png, id=231, 648.4225pt x 407.5225pt>
 File: glowscript-intro/gs-frogger-B.png Graphic file (type png)
 
 <use glowscript-intro/gs-frogger-B.png>
@@ -715,7 +712,7 @@ Package pdftex.def Info: glowscript-intro/gs-frogger-B.png used on input line 2
 92.
 (pdftex.def)             Requested size: 324.21045pt x 203.76074pt.
 
-<glowscript-intro/gs-help.png, id=266, 489.83pt x 309.155pt>
+<glowscript-intro/gs-help.png, id=233, 489.83pt x 309.155pt>
 File: glowscript-intro/gs-help.png Graphic file (type png)
 
 <use glowscript-intro/gs-help.png>
@@ -726,7 +723,7 @@ Package pdftex.def Info: glowscript-intro/gs-help.png used on input line 302.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [12 <./glowscript-intro/gs-frogger-B.png>]
-<glowscript-intro/gs-frogger-A.png, id=288, 642.4pt x 400.49625pt>
+<glowscript-intro/gs-frogger-A.png, id=255, 642.4pt x 400.49625pt>
 File: glowscript-intro/gs-frogger-A.png Graphic file (type png)
 
 <use glowscript-intro/gs-frogger-A.png>
@@ -746,7 +743,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 24.
-<vpython-uniform-motion/track.png, id=304, 432.61626pt x 102.3825pt>
+<vpython-uniform-motion/track.png, id=270, 432.61626pt x 102.3825pt>
 File: vpython-uniform-motion/track.png Graphic file (type png)
 
 <use vpython-uniform-motion/track.png>
@@ -818,7 +815,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--62
 
  []
 
-<vpython-lists-and-ifs/4-balls.png, id=432, 511.9125pt x 531.9875pt>
+<vpython-lists-and-ifs/4-balls.png, id=399, 511.9125pt x 531.9875pt>
 File: vpython-lists-and-ifs/4-balls.png Graphic file (type png)
 
 <use vpython-lists-and-ifs/4-balls.png>
@@ -867,7 +864,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-<vpython-collision-detection/spheres.pdf, id=687, 443.6575pt x 577.15625pt>
+<vpython-collision-detection/spheres.pdf, id=654, 443.6575pt x 577.15625pt>
 File: vpython-collision-detection/spheres.pdf Graphic file (type pdf)
 
 <use vpython-collision-detection/spheres.pdf>
@@ -879,7 +876,7 @@ line 19.
 
 
  <./vpython-collision-detection/spheres.pdf>]
-<vpython-collision-detection/d-spheres.png, id=745, 493.845pt x 388.45125pt>
+<vpython-collision-detection/d-spheres.png, id=712, 493.845pt x 388.45125pt>
 File: vpython-collision-detection/d-spheres.png Graphic file (type png)
 
 <use vpython-collision-detection/d-spheres.png>
@@ -909,7 +906,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--37
 
 
 
-] [41] [42] <game-pong/pong-screen.png, id=953, 656.4525pt x 366.36874pt>
+] [41] [42] <game-pong/pong-screen.png, id=920, 656.4525pt x 366.36874pt>
 File: game-pong/pong-screen.png Graphic file (type png)
 
 <use game-pong/pong-screen.png>
@@ -930,7 +927,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
 
 
-] [47] <vpython-fancart/arrow.jpg, id=1041, 175.65625pt x 258.9675pt>
+] [47] <vpython-fancart/arrow.jpg, id=1008, 175.65625pt x 258.9675pt>
 File: vpython-fancart/arrow.jpg Graphic file (type jpg)
 
 <use vpython-fancart/arrow.jpg>
@@ -951,7 +948,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-[52] [53] <game-lunar-lander/apollo.jpg, id=1136, 128.3997pt x 115.632pt>
+[52] [53] <game-lunar-lander/apollo.jpg, id=1103, 128.3997pt x 115.632pt>
 File: game-lunar-lander/apollo.jpg Graphic file (type jpg)
 
 <use game-lunar-lander/apollo.jpg>
@@ -1024,229 +1021,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [77]
 [78]) [79]
-\openout2 = `arduino-gamecontroller/arduino-gamecontroller.aux'.
-
- (./arduino-gamecontroller/arduino-gamecontroller.tex
-Chapter 12.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--15
-
- []
-
-<arduino-gamecontroller/terminal.png, id=1671, 779.91376pt x 568.1225pt>
-File: arduino-gamecontroller/terminal.png Graphic file (type png)
-
-<use arduino-gamecontroller/terminal.png>
-Package pdftex.def Info: arduino-gamecontroller/terminal.png used on input line
- 43.
-(pdftex.def)             Requested size: 233.97594pt x 170.43805pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[80
-
-
-
-] <arduino-gamecontroller/which.png, id=1687, 779.91376pt x 568.1225pt>
-File: arduino-gamecontroller/which.png Graphic file (type png)
-
-<use arduino-gamecontroller/which.png>
-Package pdftex.def Info: arduino-gamecontroller/which.png used on input line 55
-.
-(pdftex.def)             Requested size: 233.97594pt x 170.43805pt.
- [81 <./arduino-gamecontroller/terminal.png> <./arduino-gamecontroller/which.pn
-g>]
-<arduino-gamecontroller/jupyter.png, id=1700, 837.1275pt x 363.3575pt>
-File: arduino-gamecontroller/jupyter.png Graphic file (type png)
-
-<use arduino-gamecontroller/jupyter.png>
-Package pdftex.def Info: arduino-gamecontroller/jupyter.png used on input line 
-86.
-(pdftex.def)             Requested size: 418.56273pt x 181.6783pt.
-
-<arduino-gamecontroller/new.png, id=1702, 265.99374pt x 327.2225pt>
-File: arduino-gamecontroller/new.png Graphic file (type png)
-
-<use arduino-gamecontroller/new.png>
-Package pdftex.def Info: arduino-gamecontroller/new.png used on input line 90.
-(pdftex.def)             Requested size: 132.99654pt x 163.61084pt.
-
-<arduino-gamecontroller/nb.png, id=1704, 1020.81375pt x 258.9675pt>
-File: arduino-gamecontroller/nb.png Graphic file (type png)
-
-<use arduino-gamecontroller/nb.png>
-Package pdftex.def Info: arduino-gamecontroller/nb.png used on input line 94.
-(pdftex.def)             Requested size: 306.24649pt x 77.69084pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[82 <./arduino-gamecontroller/jupyter.png> <./arduino-gamecontroller/new.png>]
-<arduino-gamecontroller/sphere.png, id=1718, 959.585pt x 798.985pt>
-File: arduino-gamecontroller/sphere.png Graphic file (type png)
-
-<use arduino-gamecontroller/sphere.png>
-Package pdftex.def Info: arduino-gamecontroller/sphere.png used on input line 1
-25.
-(pdftex.def)             Requested size: 287.87772pt x 239.69734pt.
- [83 <./arduino-gamecontroller/nb.png> <./arduino-gamecontroller/sphere.png>]
-<arduino-gamecontroller/project.jpg, id=1737, 1541.76pt x 2056.68375pt>
-File: arduino-gamecontroller/project.jpg Graphic file (type jpg)
-
-<use arduino-gamecontroller/project.jpg>
-Package pdftex.def Info: arduino-gamecontroller/project.jpg used on input line 
-147.
-(pdftex.def)             Requested size: 154.18503pt x 205.68042pt.
-
-<arduino-gamecontroller/project-top.jpg, id=1738, 1541.76pt x 2056.68375pt>
-File: arduino-gamecontroller/project-top.jpg Graphic file (type jpg)
-
-<use arduino-gamecontroller/project-top.jpg>
-Package pdftex.def Info: arduino-gamecontroller/project-top.jpg used on input l
-ine 147.
-(pdftex.def)             Requested size: 154.18503pt x 205.68042pt.
-
-<arduino-gamecontroller/project-left.jpg, id=1739, 2056.68375pt x 1541.76pt>
-File: arduino-gamecontroller/project-left.jpg Graphic file (type jpg)
-
-<use arduino-gamecontroller/project-left.jpg>
-Package pdftex.def Info: arduino-gamecontroller/project-left.jpg used on input 
-line 148.
-(pdftex.def)             Requested size: 205.68042pt x 154.18503pt.
-
-<arduino-gamecontroller/project-right.jpg, id=1740, 1541.76pt x 2056.68375pt>
-File: arduino-gamecontroller/project-right.jpg Graphic file (type jpg)
-
-<use arduino-gamecontroller/project-right.jpg>
-Package pdftex.def Info: arduino-gamecontroller/project-right.jpg used on input
- line 148.
-(pdftex.def)             Requested size: 154.18503pt x 205.68042pt.
- [84 <./arduino-gamecontroller/project.jpg> <./arduino-gamecontroller/project-t
-op.jpg> <./arduino-gamecontroller/project-left.jpg> <./arduino-gamecontroller/p
-roject-right.jpg>]
-(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/03/04 1.5c listings language file
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
-) [85]
-<arduino-gamecontroller/arduino-program.png, id=1798, 862.22125pt x 902.37125pt
->
-File: arduino-gamecontroller/arduino-program.png Graphic file (type png)
- <use arduino-gamecontroller/arduino-program.png>
-Package pdftex.def Info: arduino-gamecontroller/arduino-program.png used on inp
-ut line 215.
-(pdftex.def)             Requested size: 258.66837pt x 270.71346pt.
-
-<arduino-gamecontroller/arduino-port.png, id=1800, 937.5025pt x 825.0825pt>
-File: arduino-gamecontroller/arduino-port.png Graphic file (type png)
-
-<use arduino-gamecontroller/arduino-port.png>
-Package pdftex.def Info: arduino-gamecontroller/arduino-port.png used on input 
-line 219.
-(pdftex.def)             Requested size: 281.25291pt x 247.52666pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<arduino-gamecontroller/arduino-buttons.png, id=1802, 160.6pt x 118.4425pt>
-File: arduino-gamecontroller/arduino-buttons.png Graphic file (type png)
-
-<use arduino-gamecontroller/arduino-buttons.png>
-Package pdftex.def Info: arduino-gamecontroller/arduino-buttons.png used on inp
-ut line 223.
-(pdftex.def)             Requested size: 48.18036pt x 35.53302pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[86 <./arduino-gamecontroller/arduino-program.png>] [87 <./arduino-gamecontroll
-er/arduino-port.png> <./arduino-gamecontroller/arduino-buttons.png>]) [88]
-\openout2 = `appendix-tracker/appendix-tracker.aux'.
-
-
-(./appendix-tracker/appendix-tracker.tex [89
-
-
-
-]
-Chapter .
-
-Overfull \hbox (14.85571pt too wide) in paragraph at lines 5--6
-[]\T1/cmr/m/n/10 This one-page ``cheat sheet'' will show you the most com-mon s
-teps re-quired to an-a-lyze videos with Tracker.Tracker
- []
-
-<./appendix-tracker/import.png, id=1853, 538.01pt x 198.7425pt>
-File: ./appendix-tracker/import.png Graphic file (type png)
-
-<use ./appendix-tracker/import.png>
-Package pdftex.def Info: ./appendix-tracker/import.png used on input line 12.
-(pdftex.def)             Requested size: 161.40424pt x 59.6232pt.
-
-<./appendix-tracker/movie-settings.png, id=1854, 26.0975pt x 24.09pt>
-File: ./appendix-tracker/movie-settings.png Graphic file (type png)
-
-<use ./appendix-tracker/movie-settings.png>
-Package pdftex.def Info: ./appendix-tracker/movie-settings.png used on input li
-ne 14.
-(pdftex.def)             Requested size: 20.87802pt x 19.272pt.
-
-<./appendix-tracker/calibration.png, id=1855, 40.15pt x 29.10875pt>
-File: ./appendix-tracker/calibration.png Graphic file (type png)
-
-<use ./appendix-tracker/calibration.png>
-Package pdftex.def Info: ./appendix-tracker/calibration.png used on input line 
-16.
-(pdftex.def)             Requested size: 28.1048pt x 20.37598pt.
-
-<./appendix-tracker/coord-sys.png, id=1856, 28.105pt x 26.0975pt>
-File: ./appendix-tracker/coord-sys.png Graphic file (type png)
-
-<use ./appendix-tracker/coord-sys.png>
-Package pdftex.def Info: ./appendix-tracker/coord-sys.png used on input line 18
-.
-(pdftex.def)             Requested size: 19.67336pt x 18.26811pt.
-
-<./appendix-tracker/massA.png, id=1857, 191.71625pt x 25.09375pt>
-File: ./appendix-tracker/massA.png Graphic file (type png)
-
-<use ./appendix-tracker/massA.png>
-Package pdftex.def Info: ./appendix-tracker/massA.png used on input line 26.
-(pdftex.def)             Requested size: 95.85788pt x 12.54683pt.
-) [90 <./appendix-tracker/import.png> <./appendix-tracker/movie-settings.png> <
-./appendix-tracker/calibration.png> <./appendix-tracker/coord-sys.png> <./appen
-dix-tracker/massA.png>]
-\openout2 = `project1/project1.aux'.
-
-
-(./project1/project1.tex [91
-
-
-
-]
-Chapter .
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-[92]) [93]
-\openout2 = `project-final/project-final.aux'.
-
- (./project-final/project-final.tex
-Chapter .
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-[94
-
-
-
-]) [95]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
  (./programs-and-games.aux (./glowscript-intro/glowscript-intro.aux)
@@ -1257,31 +1031,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
 (./game-pong/game-pong.aux) (./vpython-fancart/vpython-fancart.aux)
 (./game-lunar-lander/game-lunar-lander.aux)
 (./game-tank-wars/game-tank-wars.aux) (./vpython-friction/vpython-friction.aux)
-(./game-asteroids/game-asteroids.aux)
-(./arduino-gamecontroller/arduino-gamecontroller.aux)
-(./appendix-tracker/appendix-tracker.aux) (./project1/project1.aux)
-(./project-final/project-final.aux))
+(./game-asteroids/game-asteroids.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
-
-
-Package rerunfilecheck Warning: File `programs-and-games.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `programs-and-games.out':
-(rerunfilecheck)             Before: 6E431235BAEC515789301CB09B72FA6C;1070
-(rerunfilecheck)             After:  DA88CE0E357BFB4AD487DCE0C6B5BB8A;1067.
+Package rerunfilecheck Info: File `programs-and-games.out' has not changed.
+(rerunfilecheck)             Checksum: 7690BC0CAE458B65BBF73F2B3934DCBE;724.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 292.
  ) 
 Here is how much of TeX's memory you used:
- 12237 strings out of 493117
- 174430 string characters out of 6135433
- 371606 words of memory out of 5000000
- 13965 multiletter control sequences out of 15000+600000
- 33867 words of font info for 52 fonts, out of 8000000 for 9000
+ 11785 strings out of 493117
+ 166260 string characters out of 6135433
+ 368193 words of memory out of 5000000
+ 13753 multiletter control sequences out of 15000+600000
+ 33166 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,74p,944b,1920s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,12n,74p,944b,1877s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{
 /usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texl
@@ -1292,20 +1056,18 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/
 14/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
-/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/h
-elvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/zapfding
-/uzdr.pfb>
-Output written on programs-and-games.pdf (95 pages, 4070812 bytes).
+mf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw
+/helvetic/uhvr8a.pfb>
+Output written on programs-and-games.pdf (79 pages, 733924 bytes).
 PDF statistics:
- 2294 PDF objects out of 2487 (max. 8388607)
- 2069 compressed objects within 21 object streams
- 1393 named destinations out of 1440 (max. 500000)
- 286 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1941 PDF objects out of 2073 (max. 8388607)
+ 1771 compressed objects within 18 object streams
+ 1208 named destinations out of 1440 (max. 500000)
+ 164 words of extra memory for PDF output out of 10000 (max. 10000000)
 

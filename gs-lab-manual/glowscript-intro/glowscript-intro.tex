@@ -1,4 +1,4 @@
-\lab{PROGRAM:  Introduction to GlowScript and VPython}
+\lab{PROGRAM -- Introduction to GlowScript and VPython}
 
 \apparatus
 \equip{Computer}
@@ -43,16 +43,16 @@ Go to \href{http://www.glowscript.org/}{http://www.glowscript.org/} and create a
 	\item Notice GlowScript types the first line of the program for you.
 	
 \begin{myvpython}
-GlowScript 1.1 VPython
+GlowScript 2.1 VPython
 \end{myvpython}
 	
-Every GlowScript program begins with this setup statement. It tells GlowScript you are writing VPython code.
+Every GlowScript program begins with this setup statement. It tells GlowScript you are writing VPython code. The version number (2.1 in this case) is included to ensure that older programs will continue to run without errors, even if GlowScript is updated to newer versions.
 
 	\item Also, notice there is no ``save'' menu. Like Google Docs, GlowScript automatically saves your program as you are typing it. 
 	
 	\subsection*{Creating an object}
 
-	\item Now for your first VPython command, let's make a sphere. Skip a line in order to make your code more readable, and on line 3, type:
+	\item As your first VPython command, let's make a sphere. Skip a line in order to make your code more readable, and on line 3, type:
 
 \begin{myvpython}
 sphere()
@@ -60,7 +60,7 @@ sphere()
 
 This statement tells the computer to create a sphere object.
 
-	\item Run the program by clicking {\bf Run this program}. GlowScript exits the edit mode and enters the run mode. You should see a white sphere on a black background like Figure \ref{glowscript-intro/sphere}. This is called the \code{scene}.
+	\item Run the program by clicking \menu{Run this program}. GlowScript exits the edit mode and enters the run mode. You should see a white sphere on a black background like Figure \ref{glowscript-intro/sphere}. This is called the \code{scene}.
 
 	\scaledimage{glowscript-intro/sphere}{Your first VPython program--a sphere.}{0.5}
 
@@ -69,7 +69,7 @@ This statement tells the computer to create a sphere object.
 	
 By default the sphere is at the center of the scene, and the ``camera'' (your point of view) is looking directly at the center.
 	
-	\item If you are on a PC, hold down both mouse buttons and move the mouse forward and backward to make the camera move closer or farther away from the center of the scene. On a Mac, hold down the option key while moving the mouse forward and backward. This is how you \emph{zoom} in VPython.
+	\item If you are on a PC or have a two-button mouse, hold down both mouse buttons and move the mouse forward and backward to make the camera move closer or farther away from the center of the scene. On a Mac, hold down the option key and mouse button while moving the mouse forward and backward. This is how you \emph{zoom} in VPython. A scroll wheel also zooms in and out.
 	
 	\item Hold down the right mouse button alone and move the mouse to make the camera ``revolve'' around the scene, while always looking at the center. On a Mac, in order to rotate the view, hold down the Control key while you click and drag the mouse. This is how you \emph{rotate} the scene in VPython. Because this is a sphere, you won't notice a significant change except for lighting.
 
@@ -87,11 +87,11 @@ phere()
 
 	\item Run the program.
 
-There is no function or object in VPython called phere(). As a result, an error message pops up. The message gives the \emph{approximate} line number where the error occurred and a description of the error, as shown in Figure \ref{glowscript-intro/gs-error}.
+There is no function or object in VPython called \code{phere()}. As a result, an error message pops up. The message gives the \emph{approximate} line number where the error occurred and a description of the error, as shown in Figure \ref{glowscript-intro/gs-error}.
 
 	\scaledimage{glowscript-intro/gs-error}{An error message in GlowScript.}{0.5}
 
-The line number may be off, as it is in this case but is usually close.
+The line number may be off but is usually close.
 
 	\item Correct the error in the program by clicking {\bf Edit this program} and returning to the editor. Once in editing mode, you can click the \frame{X} to close the error message.
 
@@ -107,7 +107,7 @@ Now let's give the sphere a different position in space and a radius.
 sphere(pos=vector(-5,2,3), radius=0.40, color=color.red)
 \end{myvpython}
 
-	\item Run the program.  Experiment with other changes to pos, radius, and color, running the program each time you change an attribute.
+	\item Run the program.  Experiment with other changes to \code{pos}, \code{radius}, and \code{color}. Run the program each time you change an attribute.
 	
 	\item Answer the following questions:
 	
@@ -149,7 +149,7 @@ The length, width, and height of the box are expressed as a vector with the attr
 	\item Similarly change its width and position.
 
 \tightframe{
-Which dimension (length, width, or height) should be changed to make a box longer along the y-axis? Change your code now to check your answer.\\
+Which dimension (length, height, or width) should be changed to make a box longer along the y-axis? Change your code now to check your answer.\\
 \vspace{0.25in}
 
 What point does the position of the box refer to?
